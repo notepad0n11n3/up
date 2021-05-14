@@ -42,9 +42,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 
-"Recomendacion de palabras usadas    SE USA CON TAB PARA MOSTRAR EL MENU
-"CONTEXTUAL DE RECOMENDACIONES
- "Plug 'ervandew/supertab'  
+"Plug 'ervandew/supertab'  
+  "CONTEXTUAL DE RECOMENDACIONES
+  "Recomendacion de palabras usadas    SE USA CON TAB PARA MOSTRAR EL MENU
 
 "Themes
 Plug 'joshdick/onedark.vim'
@@ -57,8 +57,11 @@ Plug 'itchyny/lightline.vim'
 "Lineas de identacion
 Plug 'nathanaelkane/vim-indent-guides'
 
+
 Plug 'git@github.com:Valloric/YouCompleteMe.git'
-https://www.youtube.com/watch?v=n9k9scbTuvQ
+  "https://www.youtube.com/watch?v=n9k9scbTuvQ
+
+
 call plug#end()
 
 
