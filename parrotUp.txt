@@ -1,0 +1,11 @@
+
+
+::: sudo su
+
+::: apt update
+
+::: apt list --upgradable    !!!!!!!! 
+
+
+	::: apt upgrade   !!??!!??!!??    no apt upgrade parrotBurn no apt NO NO no
+	::: parrot-upgrade     *** *** ***      yes...!!!

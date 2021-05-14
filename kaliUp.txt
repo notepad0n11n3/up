@@ -1,0 +1,9 @@
+
+::: vim /etc/apt/sources.list 
+					- last #
+
+::: sudo su
+
+::: apt update
+
+::: apt-get full-upgrade -y
