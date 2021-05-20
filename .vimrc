@@ -1,17 +1,15 @@
 "  :source %
 syntax on 
-set number  "obvio...
-set mouse=a   "integra mouse para poder seleccionar traer texto externo con el mouse
+set number 
+set mouse=a
 set numberwidth=1   "ancho de los número set number  set relativenumber
 set clipboard=unnamedplus	"habilita el elClipboard para poder llevar textodeVim afueraPEGAR
-
 set showcmd "muestra los comandos que estoy ejecutando NOfuncioaCOMOesperaba :(
 set ruler   "número de linea y número de columna
 set encoding=utf-8
 set showmatch "si me paro sobre un ({[ muestra el otro que esta cerrando 
-
 set sw=2  "tabulador   ahora es 2 espacios
-set relativenumber "obvio...   
+set relativenumber 
 set laststatus=2  "muestra barra inferior ( si we si... esaBarra de color :u )
 set noshowmode   "quita el aviso -- INSERTAR --  al entrar en modo inserción noFunciona:(
 
@@ -21,12 +19,16 @@ set smartindent
 set incsearch "no espera a dar ENTER para mostrar resultados de busqueda con /
 set hlsearch "Resalta las letras al hacer búsquedas
 
-set nu "Indica el número de lineas
+set nu " == set number
 
 "ThePrimeagen
 set noerrorbells
 set expandtab
-set nowrap
+set nowrap "don't work :'u
+  "solution
+set wrap
+set textwidth=0 wrapmargin=0
+  "noitulos
 set smartcase
 set noswapfile
 set nobackup
@@ -58,8 +60,10 @@ Plug 'itchyny/lightline.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 
 
-Plug 'git@github.com:Valloric/YouCompleteMe.git'
+#Plug 'git@github.com:Valloric/YouCompleteMe.git'
+Plug 'ycm-core/YouCompleteMe'
   "https://www.youtube.com/watch?v=n9k9scbTuvQ
+
 
 
 call plug#end()
