@@ -61,7 +61,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'yggdroot/indentline'
 
 
-#Plug 'git@github.com:Valloric/YouCompleteMe.git'
+"Auto completado  go github for help men... go github ...
 Plug 'ycm-core/YouCompleteMe'
   "https://www.youtube.com/watch?v=n9k9scbTuvQ
 
