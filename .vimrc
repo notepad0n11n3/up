@@ -57,7 +57,8 @@ Plug 'dikiaap/minimalist'
 Plug 'itchyny/lightline.vim'
 
 "Lineas de identacion
-Plug 'nathanaelkane/vim-indent-guides'
+"Plug 'nathanaelkane/vim-indent-guides'
+Plug 'yggdroot/indentline'
 
 
 #Plug 'git@github.com:Valloric/YouCompleteMe.git'

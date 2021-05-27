@@ -1,0 +1,28 @@
+-------------------------------------------------- ---------------------------------
+ Exploit Title                                    |  Path
+-------------------------------------------------- ---------------------------------
+[01;31m[KWordPress[m[K Core [01;31m[K4.7[m[K.0/[01;31m[K4.7[m[K.1 - Content Injection    | linux/webapps/41223.py
+[01;31m[KWordPress[m[K Core [01;31m[K4.7[m[K.0/[01;31m[K4.7[m[K.1 - Content Injection (R | linux/webapps/41224.rb
+[01;31m[KWordPress[m[K Core < [01;31m[K4.7[m[K.1 - Username Enumeration     | php/webapps/41[01;31m[K497[m[K.php
+[01;31m[KWordPress[m[K Core < [01;31m[K4.7[m[K.4 - Unauthorized Password Re | linux/webapps/41963.txt
+[01;31m[KWordPress[m[K Core < 4.9.6 - (Authenticated) Arbitrar | php/webapps/44949.txt
+[01;31m[KWordPress[m[K Core < 5.2.3 - Viewing Unauthenticated/ | multiple/webapps/47690.md
+[01;31m[KWordPress[m[K Core < 5.3.x - 'xmlrpc.php' Denial of S | php/dos/47800.py
+[01;31m[KWordPress[m[K Plugin Cforms 1[01;31m[K4.7[m[K - Remote Code Execut | php/webapps/35879.txt
+[01;31m[KWordPress[m[K Plugin Database Backup < 5.2 - Remote C | php/remote/47187.rb
+[01;31m[KWordPress[m[K Plugin DZS Videogallery < 8.60 - Multip | php/webapps/39553.txt
+[01;31m[KWordPress[m[K Plugin Email Subscribers & Newsletters  | php/webapps/43872.html
+[01;31m[KWordPress[m[K Plugin EZ SQL Reports < 4.11.37 - Multi | php/webapps/38176.txt
+[01;31m[KWordPress[m[K Plugin iThemes Security < 7.0.3 - SQL I | php/webapps/44943.txt
+[01;31m[KWordPress[m[K Plugin ProPlayer [01;31m[K4.7[m[K.7 - SQL Injection  | php/webapps/17616.txt
+[01;31m[KWordPress[m[K Plugin ProPlayer [01;31m[K4.7[m[K.9.1 - SQL Injectio | php/webapps/25605.txt
+[01;31m[KWordPress[m[K Plugin Quiz And Survey Master 4.5.4/[01;31m[K4.7[m[K | php/webapps/40934.html
+[01;31m[KWordPress[m[K Plugin RB Agency 2.[01;31m[K4.7[m[K - Local File Dis | php/webapps/40333.txt
+[01;31m[KWordPress[m[K Plugin Rest Google Maps < 7.11.18 - SQL | php/webapps/48918.sh
+[01;31m[KWordPress[m[K Plugin Supsystic Membership 1.[01;31m[K4.7[m[K - 'si | php/webapps/49540.txt
+[01;31m[KWordPress[m[K Plugin TheCartPress 1.[01;31m[K4.7[m[K - Multiple Vu | php/webapps/38869.txt
+[01;31m[KWordPress[m[K Plugin User Role Editor < 4.25 - Privil | php/webapps/44595.rb
+[01;31m[KWordPress[m[K Plugin Userpro < 4.9.17.1 - Authenticat | php/webapps/43117.txt
+[01;31m[KWordPress[m[K Plugin UserPro < 4.9.21 - User Registra | php/webapps/46083.txt
+-------------------------------------------------- ---------------------------------
+Shellcodes: No Results
