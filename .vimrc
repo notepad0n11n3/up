@@ -9,6 +9,7 @@ set numberwidth=1 "number width ==> relative number
 
 " Copy Paste 
 set clipboard=unnamedplus	
+      "::: vim -- version | grep clipboard  ==>> -clipboard -xterm_clipboard ===> sudo apt install vim-gtk
 
 set showcmd "muestra los comandos que estoy ejecutando NOfuncioaCOMOesperaba :(
 set ruler   "número de linea y número de columna
@@ -49,10 +50,6 @@ Plug 'easymotion/vim-easymotion'
 " explorador lateral carpetaActual
 Plug 'scrooloose/nerdtree'
 
-"Plug 'ervandew/supertab'  
-  "CONTEXTUAL DE RECOMENDACIONES
-  "Recomendacion de palabras usadas    SE USA CON TAB PARA MOSTRAR EL MENU
-
 "Themes
 Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
@@ -67,6 +64,18 @@ Plug 'yggdroot/indentline'
 "Auto completado  go github for help men... go github ...
 Plug 'ycm-core/YouCompleteMe'
   "https://www.youtube.com/watch?v=n9k9scbTuvQ
+
+
+  " :!git  ===>>>  :Git  :: :G commit/log/status/....
+Plug 'tpope/vim-fugitive' 
+" git left signs[+-~] lineas modificadas
+Plug 'airblade/vim-gitgutter'
+" commit trees
+Plug 'junegunn/gv.vim'
+  " [c ]c salta entre las modificaciones del archivo, arriba/abajo :) hunks
+
+  " time tree
+Plug 'mbbill/undotree'
   
 call plug#end()
 
@@ -80,7 +89,63 @@ let g:indent_guides_enable_on_vim_startup = 1 "" Lineas de identacion enable des
 let mapleader=" "
 nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>s <Plug>(easymotion-s2)
+nmap <Leader>q :q<CR>
+nmap <Leader>w :w<CR>
+nmap <Leader>z :! clear && zsh<CR>
+nmap <Leader>x :! 
+nmap <Leader>n :nohlsearch<CR> 
+nmap <Leader>g :Git 
+    " :nohl === :noh  === :nohlsearch
 
+              "" GIT GIT GIT GIT en vim...@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+" resaltado de lineas modificadas git LIGHT DARKNES  vim-gitgutter
+nmap <Leader>gl :GitGutterLineHighlightsEnable<CR>
+nmap <Leader>gd :GitGutterLineHighlightsDisable<CR>
+
+" commit tree  junegunn/gv.vim
+nmap <Leader>ct :GV<CR>
+" file commit's junegunn/gv.vim
+nmap <Leader>cf :GV!<CR>
+
+" time tree  mbbill/undotree
+nmap <Leader>tt :UndotreeToggle<CR>
+
+
+" disable all key mappings vim-gitgutter
+let g:gitgutter_map_keys = 0
+let g:gitgutter_preview_win_floating = 1
+" signos git desde arranque  vim-gitgutter
+set signcolumn=yes
+"refresco de vim para EJECUTAR vim-gitgutter
+set updatetime=100 " este se QUEDA :)
+
+
+" branch 
+let g:lightline = {
+        \ 'colorscheme': 'powerline',
+      \ 'active': {
+        \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+        \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+
+"  OwO, UmU!
+let g:lightline = {
+        \ 'colorscheme': 'powerline',
+      \ 'active': {
+        \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified', 'x89p' ] ]
+      \ },
+      \ 'component': {
+        \   'x89p': 'OwO UmU!'
+      \ },
+      \ }
+      "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      "
 " Atajo personalizado
 imap zz <Esc>
 
