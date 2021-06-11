@@ -1,4 +1,6 @@
-"  :source %     " cargar archivo .vimrc actual
+"  :source %  :: so %   " cargar archivo .vimrc actual
+"  :h tabstop    :h noerrorblells    " infoHelp para los opci[ones de confi.
+"  :options      " todas las opciones de configuraci[on
 syntax on 
 set encoding=utf-8
 set number 
@@ -34,13 +36,21 @@ set wrap
 set textwidth=0 wrapmargin=0
   "noitulos
 set smartcase
+
 set noswapfile
 set nobackup
+  "pre- mkdir $HOME/.vim/undodir
 set undodir=~/.vim/undodir
 set undofile
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+" TP 21
+"colorscheme gruvbox ==>> 'gruvbox-community/gruvbox'    nvim???
+"highlight Normal guibg=none     ##fondo transparente    nvim???
+"set hidden
+    
 
 
 call plug#begin('~/.vim/plugged')
@@ -64,6 +74,7 @@ Plug 'yggdroot/indentline'
 "Auto completado  go github for help men... go github ...
 Plug 'ycm-core/YouCompleteMe'
   "https://www.youtube.com/watch?v=n9k9scbTuvQ
+   "al reinstalar da un error ./.vim/***/***/YouCompleteMe/ ::: ./install.py --ts-completer
 
 
   " :!git  ===>>>  :Git  :: :G commit/log/status/....
@@ -85,6 +96,9 @@ let NERDTreeQuitOnOpen=1
 " Lineas de identacion desde el inicio
 let g:indent_guides_enable_on_vim_startup = 1 "" Lineas de identacion enable desde inicio
 
+
+" Atajo personalizado
+imap zz <Esc>
 " Tecla lider
 let mapleader=" "
 nmap <Leader>nt :NERDTreeFind<CR>
@@ -93,15 +107,15 @@ nmap <Leader>q :q<CR>
 nmap <Leader>w :w<CR>
 nmap <Leader>z :! clear && zsh<CR>
 nmap <Leader>x :! 
-nmap <Leader>n :nohlsearch<CR> 
-nmap <Leader>g :Git 
+nmap <Leader>. :nohlsearch<CR> 
+nmap <Leader>g :Git<CR>
     " :nohl === :noh  === :nohlsearch
 
               "" GIT GIT GIT GIT en vim...@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 " resaltado de lineas modificadas git LIGHT DARKNES  vim-gitgutter
-nmap <Leader>gl :GitGutterLineHighlightsEnable<CR>
-nmap <Leader>gd :GitGutterLineHighlightsDisable<CR>
+nmap <Leader>o :GitGutterLineHighlightsEnable<CR>
+nmap <Leader>O :GitGutterLineHighlightsDisable<CR>
 
 " commit tree  junegunn/gv.vim
 nmap <Leader>ct :GV<CR>
@@ -146,8 +160,6 @@ let g:lightline = {
       \ }
       "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
       "
-" Atajo personalizado
-imap zz <Esc>
 
 " Transparencia en grubox
 set t_Co=256
