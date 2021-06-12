@@ -54,7 +54,7 @@ function rmk () {
 ::: zsh
 ::: vim .p10k.zsh
 
-   ~~~~~            typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='#'                              #  entre comillas fue a~adido
+   ~~~~~            typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE=' @w@ '                              #  entre comillas fue a~adido
                     # Context format when in SSH without privileges: user@hostname.
                     typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
                     # Default context format (no privileges, no SSH): user@hostname.
