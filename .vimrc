@@ -1,3 +1,4 @@
+"             for nvim go tail here
 "  :source %  :: so %   " cargar archivo .vimrc actual
 "  :h tabstop    :h noerrorblells    " infoHelp para los opci[ones de confi.
 "  :options      " todas las opciones de configuraci[on
@@ -97,7 +98,7 @@ let NERDTreeQuitOnOpen=1
 let g:indent_guides_enable_on_vim_startup = 1 "" Lineas de identacion enable desde inicio
 
 
-" Atajo personalizado
+""""""""======>>>>> Atajo personalizado <<<<<<<========""""""""""""""
 imap zz <Esc>
 " Tecla lider
 let mapleader=" "
@@ -110,6 +111,20 @@ nmap <Leader>x :!
 nmap <Leader>. :nohlsearch<CR> 
 nmap <Leader>g :Git<CR>
     " :nohl === :noh  === :nohlsearch
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+
+set copyindent    " copy the previous indentation on autoindenting
+
+"like a nerdTree pero con Ex
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+
+" YCM
+" The best part
+nnoremap <silent> <Leader>yd :YcmCompleter GoTo<CR>
+nnoremap <silent> <Leader>yf :YcmCompleter FixIt<CR>
 
               "" GIT GIT GIT GIT en vim...@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -171,3 +186,14 @@ hi! Normal ctermbg=NONE guibg=NONE
 " no lineas al infinito :')
 set wrap
 set textwidth=0 wrapmargin=0
+
+"""""""""""""""""""""""""'NVIM""""""""""""""""""""""""""""""""""""''
+"mismo archivo de configuraci[on para vim nvim
+"
+"       $HOME/.config/nvim/init.vim
+"     ::: vim init.vim
+"
+"         set runtimepath^=~/.vim runtimepath+=~/.vim/after
+"         let &packpath=&runtimepath
+"         source ~/.vimrc
+"
