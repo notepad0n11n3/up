@@ -1,0 +1,81 @@
+      antiForence...!!!
+scrub  ==>>  borra la tabla de indices  
+shred  ==>>  
+
+function rmk () {
+  scrub -p dod $1; shred -zun 10 -v $1
+}
+*************************** MAIN MAIN ZSH  ********************************************
+
+::: vim .zrhrc          -------- sufri tanto csm, solo solin solito mrd :'u
+
+    ::: r ! echo $PATH
+
+    INTRODUCIR **** COMANDS PERSO ****   AL FINAL DEL $HOME/.zshrc
+*************************** COMANDOS PERSONALIZADOS ZSH  ********************************************
+          PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+
+            function mkt(){
+              mkdir {nmap,content,exploits,scripts}
+            }
+
+            # Set 'man' colors
+            function man() {
+                env \
+                LESS_TERMCAP_mb=$'\e[01;31m' \
+                LESS_TERMCAP_md=$'\e[01;31m' \
+                LESS_TERMCAP_me=$'\e[0m' \
+                LESS_TERMCAP_se=$'\e[0m' \
+                LESS_TERMCAP_so=$'\e[01;44;33m' \
+                LESS_TERMCAP_ue=$'\e[0m' \
+                LESS_TERMCAP_us=$'\e[01;32m' \
+                man "$@"
+            }
+
+
+function rmk () {
+  scrub -p dod $1; shred -zun 10 -v $1
+}
+
+*************************** COMANDOS PERSONALIZADOS ZSH  ********************************************
+
+# google:   hack nerd fonts     :  fonts downloads   : Hack Nerd Font '$(DOWNLOAD)'
+
+::: cd /usr/local/share/fonts/
+::: mv $HOME/Downloads/Hack*.zip .
+::: unzip Hack*.zip
+::: sudo rm Hack*.zip
+
+  ===>>> Editar en console
+      preferencias del perfil : font Hack Nerd Font Mono Regular
+
+# github installation powerlevel10k
+::: git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+::: zsh
+::: vim .p10k.zsh
+
+   ~~~~~            typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='#'                              #  entre comillas fue a~adido
+                    # Context format when in SSH without privileges: user@hostname.
+                    typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
+                    # Default context format (no privileges, no SSH): user@hostname.
+              @@ ****   code fold here @@ ***     code fold here   @@ ***   code fold here    @@ **** code fold here
+                    # typeset -g POWERLEVEL9K_CONTEXT_VISUAL_IDENTIFIER_EXPANSION='⭐'
+                    # Custom prefix.
+   ~~~~~~           #typeset -g POWERLEVEL9K_CONTEXT_PREFIX='with '                               comentamos esta linea
+
+
+------------------------- shell predeterminada zsh -------------------------------
+::: usermod --shell /usr/bin/zsh kali
+::: usermod --shell /usr/bin/zsh root
+::: usermod --shell /usr/bin/zsh aeo8
+
+Root:: rm .zshrc
+Root:: ln -s -f /home/kali/.zshrc .zshrc     # archivo simbolico
+
+##  https://s4vitar.github.io/bspwm-configuration-files/#   solo dale una mirada, no es importante
+
+solucion alerta compinit al entrar en root
+            # Use modern completion system
+              autoload -Uz compinit
+      ~~~     compinit -i               " se a~adio -i
+
