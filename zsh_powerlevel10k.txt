@@ -1,3 +1,4 @@
+                                    FOR .p10k.zsh  GOT TAIL here *************
       antiForence...!!!
 scrub  ==>>  borra la tabla de indices  
 shred  ==>>  
@@ -79,3 +80,45 @@ solucion alerta compinit al entrar en root
               autoload -Uz compinit
       ~~~     compinit -i               " se a~adio -i
 
+
+
+
+................p10k.zsh .p10k.zsh .p10k.zsh .p10k.zsh .p10k.zsh ................................
+::: vim .p10k.zsh
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+    # =========================[ Line #1 ]=========================
+    os_icon                 # os identifier
+    dir                     # current directory
+    vcs                     # git status
+    context                 # user@hostname
+    public_ip             # public IP address
+    ip                    # ip address and bandwidth usage for a specified network interface
+    # =========================[ Line #2 ]=========================
+    newline                 # \n
+    prompt_char             # prompt symbol
+    command_execution_time  # duration of the last command
+    vim_shell               # vim shell indicator (:sh)
+    ram                   # free RAM
+    load                  # CPU load
+    vpn_ip                # virtual private network indicator
+    vi_mode               # vi mode (you don't need this if you've enabled prompt_char)
+    status                  # exit code of the last command
+    context                 # user@hostname
+  )
+
+
+  @@@ segunda linea lado derecho :)
+    battery               # internal battery
+
+
+
+
+  # Context format when running with privileges: bold user@hostname.
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE=' @w@ '
+  # Context format when in SSH without privileges: user@hostname.
+  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
+  # Default context format (no privileges, no SSH): user@hostname.
+  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE=' UmU '
+
+
+  #typeset -g POWERLEVEL9K_CONTEXT_PREFIX='%246Fwith '    """coment this line
