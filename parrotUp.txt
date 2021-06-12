@@ -1,11 +1,12 @@
 
-
 ::: sudo su
 
-::: apt update
+::: apt update   # OK OK OK OK....!!!
 
-::: apt list --upgradable    !!!!!!!! 
+::: apt list --upgradable ## muestra lista de los paquetes que se pueden actualizar...!!!
 
 
 	::: apt upgrade   !!??!!??!!??    no apt upgrade parrotBurn no apt NO NO no
-	::: parrot-upgrade     *** *** ***      yes...!!!  <<<===<<<
+
+
+	::: parrot-upgrade     *** *** ***      yes...!!!  <<<===<<<    OK OK OK OK....!!!
