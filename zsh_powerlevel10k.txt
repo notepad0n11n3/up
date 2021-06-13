@@ -109,6 +109,7 @@ solucion alerta compinit al entrar en root
     newline                 # \n
     context                 # user@hostname
     prompt_char             # prompt symbol
+    vim_shell               # vim shell indicator (:sh)
   )
 
 
