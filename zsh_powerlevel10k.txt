@@ -1,4 +1,5 @@
 links zimbolicos desde root a /home/kali   .vimrc   .zshrc   .p10k.zsh                      ya cumpli tu deseo men, quedate tranquilo <3
+  ln -s -f /home/kali/*.*    .vimrc  .zshrc  .p10k.zsh  .tmux.conf.local  .tmux/.tmux.conf
 
                                     FOR .p10k.zsh  GOT TAIL here *************
       antiForence...!!!
@@ -62,7 +63,7 @@ function rmk () {
 ::: usermod --shell /usr/bin/zsh aeo8
 
 Root:: rm .zshrc
-Root:: ln -s -f /home/kali/.zshrc .zshrc     # archivo simbolico
+Root:: ln -s -f /home/kali/.zshrc .zshrc     # archivo simbolico  ENLACE SIMBOLICO ENLACE SIMBOLICO
 
 ##  https://s4vitar.github.io/bspwm-configuration-files/#   solo dale una mirada, no es importante
 
