@@ -1,3 +1,5 @@
+links zimbolicos desde root a /home/kali   .vimrc   .zshrc   .p10k.zsh                      ya cumpli tu deseo men, quedate tranquilo <3
+
                                     FOR .p10k.zsh  GOT TAIL here *************
       antiForence...!!!
 scrub  ==>>  borra la tabla de indices  
@@ -14,6 +16,7 @@ function rmk () {
 
     INTRODUCIR **** COMANDS PERSO ****   AL FINAL DEL $HOME/.zshrc
 *************************** COMANDOS PERSONALIZADOS ZSH  ********************************************
+                          ZSH ZSH ZSH ZSH ZSH ZSH ZSH ZSH ZSH ZSH 
           PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 
             function mkt(){
@@ -38,7 +41,7 @@ function rmk () {
   scrub -p dod $1; shred -zun 10 -v $1
 }
 
-*************************** COMANDOS PERSONALIZADOS ZSH  ********************************************
+***********************************************************************
 
 # google:   hack nerd fonts     :  fonts downloads   : Hack Nerd Font '$(DOWNLOAD)'
 
@@ -53,18 +56,6 @@ function rmk () {
 # github installation powerlevel10k
 ::: git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ::: zsh
-::: vim .p10k.zsh
-
-   ~~~~~            typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE=' @w@ '                              #  entre comillas fue a~adido
-                    # Context format when in SSH without privileges: user@hostname.
-                    typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
-                    # Default context format (no privileges, no SSH): user@hostname.
-              @@ ****   code fold here @@ ***     code fold here   @@ ***   code fold here    @@ **** code fold here
-                    # typeset -g POWERLEVEL9K_CONTEXT_VISUAL_IDENTIFIER_EXPANSION='⭐'
-                    # Custom prefix.
-   ~~~~~~           #typeset -g POWERLEVEL9K_CONTEXT_PREFIX='with '                               comentamos esta linea
-
-
 ------------------------- shell predeterminada zsh -------------------------------
 ::: usermod --shell /usr/bin/zsh kali
 ::: usermod --shell /usr/bin/zsh root
@@ -84,41 +75,97 @@ solucion alerta compinit al entrar en root
 
 
 ................p10k.zsh .p10k.zsh .p10k.zsh .p10k.zsh .p10k.zsh ................................
+
 ::: vim .p10k.zsh
+
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
-    os_icon                 # os identifier
-    dir                     # current directory
-    vcs                     # git status
-    context                 # user@hostname
-    public_ip             # public IP address
-    ip                    # ip address and bandwidth usage for a specified network interface
-    # =========================[ Line #2 ]=========================
-    newline                 # \n
-    prompt_char             # prompt symbol
+    battery               # internal battery
+    time                    # current time
     command_execution_time  # duration of the last command
+    prompt_char             # prompt symbol
+    #command_execution_time  # duration of the last command
     vim_shell               # vim shell indicator (:sh)
     ram                   # free RAM
     load                  # CPU load
+    prompt_char             # prompt symbol
     vpn_ip                # virtual private network indicator
-    vi_mode               # vi mode (you don't need this if you've enabled prompt_char)
+    #vi_mode               # vi mode (you don't need this if you've enabled prompt_char)
+    #context                 # user@hostname
+    prompt_char             # prompt symbol
+    # =========================[ Line #2 ]=========================
+    newline                 # \n
+    os_icon                 # os identifier
+    prompt_char             # prompt symbol
+    dir                     # current directory
+    prompt_char             # prompt symbol
+    vcs                     # git status
+    prompt_char             # prompt symbol
+    public_ip             # public IP address
+    prompt_char             # prompt symbol
+    ip                    # ip address and bandwidth usage for a specified network interface
     status                  # exit code of the last command
+    # =========================[ Line #3 ]=========================
+    newline                 # \n
     context                 # user@hostname
+    prompt_char             # prompt symbol
   )
 
 
-  @@@ segunda linea lado derecho :)
-    battery               # internal battery
 
-
-
+  ##################################[ context: user@hostname ]##################################
+  # Context color when running with privileges.
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=83   """ set COLOR HERE HERE....!!!!!!***
+  # Context color in SSH without privileges.
+  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND=180
+  # Default context color (no privileges, no SSH).
+  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=140 """ set COLOR HERE HERE....!!!!!!***
 
   # Context format when running with privileges: bold user@hostname.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE=' @w@ '
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%n (ノ｀⌒´)ノ***'
   # Context format when in SSH without privileges: user@hostname.
   typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
   # Default context format (no privileges, no SSH): user@hostname.
-  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE=' UmU '
+  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n (~‾▿‾)~'
+
+
+
+  # Tip: Remove the next line to always show context. .......!!!!!!******!!!!!!*****
+  #typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION=         """coment this line
 
 
   #typeset -g POWERLEVEL9K_CONTEXT_PREFIX='%246Fwith '    """coment this line
+ 
+  
+ 
+
+  ###############################[ public_ip: public IP address ]###############################
+  # Public IP color.
+  typeset -g POWERLEVEL9K_PUBLIC_IP_FOREGROUND=80   """ set color HERE HERE HERE ....!!!
+  # Custom icon.
+  typeset -g POWERLEVEL9K_PUBLIC_IP_VISUAL_IDENTIFIER_EXPANSION='(￣ヘ￣;)^ω^）'    """ descomentar 
+  ########################[ vpn_ip: virtual private network indicator ]#########################
+  # VPN IP color.
+  typeset -g POWERLEVEL9K_VPN_IP_FOREGROUND=81
+
+
+
+  typeset -g POWERLEVEL9K_IP_FOREGROUND=39    """ set color HERE HERE HERE.....!!!
+  # The following parameters are accessible within the expansion:
+  #
+  #   Parameter             | Meaning
+  #   ----------------------+-------------------------------------------
+  #   P9K_IP_IP             | IP address
+  #   P9K_IP_RX_RATE        | receive rate (since last prompt)
+  #   P9K_IP_TX_RATE        | send rate (since last prompt)
+  typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='${P9K_IP_INTERFACE}::$P9K_IP_IP (；^ω^）'  """modificar Variables
+
+
+  COLORE COLORES COLOREE...
+  colores     83    verdeLimon inten.
+              85    unVerde precioso csm :')
+              86    hermoso men :')
+              39    azul brillante
+              81    celecte sutil brillante
+             145    blanco
+             140    morado
