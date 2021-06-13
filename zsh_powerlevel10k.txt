@@ -159,7 +159,7 @@ solucion alerta compinit al entrar en root
   #   P9K_IP_IP             | IP address
   #   P9K_IP_RX_RATE        | receive rate (since last prompt)
   #   P9K_IP_TX_RATE        | send rate (since last prompt)
-  typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='${P9K_IP_INTERFACE}::$P9K_IP_IP (；^ω^）'  """modificar Variables
+  typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='${P9K_IP_INTERFACE}:$P9K_IP_IPノ( º _ ºノ)^ω^）'  """modificar Variables
 
 
   COLORE COLORES COLOREE...
