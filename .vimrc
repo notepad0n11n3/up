@@ -174,14 +174,27 @@ let g:lightline = {
       \ },
       \ }
       "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-      "
 
+
+"-----------------parece tonto pero NOO... es mi logica funciona XD :'U.....
+"{{{
 " Transparencia en grubox
 set t_Co=256
 colorscheme gruvbox
+colorscheme onedark
 let g:gruvbox_transparent_bg=1
 
+" NO ESTOY SEGURO DE LA FUNCION PRICIPAL DE ESTO 
+"  *x* ===>>> probado en parrotOs
+" *x*solo descrubi que a onedark se la un colorBackground oscuro genial
+" *x*transparencia background en vim, un colorBackground oscuro genial
 hi! Normal ctermbg=NONE guibg=NONE
+
+colorscheme gruvbox
+hi! Normal ctermbg=NONE guibg=NONE
+
+"-----------------parece tonto pero NOO... es mi logica funciona XD :'U.....
+"}}}
 
 " no lineas al infinito :')
 set wrap
