@@ -150,51 +150,71 @@ set signcolumn=yes
 set updatetime=100 " este se QUEDA :)
 
 
-" branch 
+" config addd  https://github.com/itchyny/lightline.vim
+" LEFT left
+  " branch 
 let g:lightline = {
-        \ 'colorscheme': 'powerline',
+      \ 'colorscheme': 'powerline',
       \ 'active': {
-        \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \   'left': [ 
+      \             [ 'modified', 'fire', 'x89p', 'modified' ],
+      \             [ 'percent', 'filename', 'modified' ], 
+      \             [ 'lineinfo' ],
+      \             [ 'readonly', 'gitbranch'], [ 'goewe', 'modified', 'midewe', 'modified', 'endewe' ],
+      \             ],
+      \  'right': [ 
+      \             [ 'modified', 'mode', 'paste', 'fire', 'modified' ],
+      \             [ 'modified', 'filename', 'lineinfo' ],
+      \             [ 'percent', 'gitbranch' ],
+      \             [ 'fileformat', 'fileencoding', 'rightHere' ] ]
       \ },
       \ 'component_function': {
-        \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
-
-"  OwO, UmU!
-let g:lightline = {
-        \ 'colorscheme': 'powerline',
-      \ 'active': {
-        \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified', 'x89p' ] ]
+      \   'gitbranch': 'FugitiveHead'
       \ },
       \ 'component': {
-        \   'x89p': 'OwO UmU!'
+      \      'x89p': '(；^ω^）︵',
+      \      'goewe': '“ψ(｀∇´)ψ (~‾▿‾)~🔥',
+      \     'midewe': '🔥☣☠ 乁 ˘ o ˘ ㄏ☠☣🔥',
+      \    'endewe': '🔥┬──┬◡ﾉ(° -°ﾉ) (￣ヘ￣;)',
+      \     'rightHere': '🎼O̲ppa̲︵‿ S̲t̲yl̲e̲♩♪♫ 💪(◡̀_◡́҂)',
+      \      'fire': '🔥'
       \ },
       \ }
-      "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+""  OwO, UmU!
+"let g:lightline = {
+"        \ 'colorscheme': 'powerline',
+"      \ 'active': {
+"        \   'left': [ [ 'mode', 'paste' ],
+"      \             [ 'readonly', 'filename', 'modified', 'x89p' ] ]
+"      \ },
+"      \ 'component': {
+"        \   'x89p': 'OwO UmU!'
+"      \ },
+"      \ }
+"
+"RIGHT right
+"if you want to print the value of character under the cursor in hexadecimal
+"let g:lightline = {
+"      \ 'colorscheme': 'wombat',
+"      \ 'active': {
+"      \   'right': [ [ 'lineinfo' ],
+"      \              [ 'percent' ],
+"      \              [ 'fileformat', 'fileencoding', 'hello', 'filetype', 'charvaluehex' ] ]
+"      \ },
+"      \ 'component': {
+"      \   'charvaluehex': '0x%B',
+"      \   'hello': 'hello right'
+"      \   'onemore': 'KYAAaaa....'
+"      \ },
+"      \ }
 
-"-----------------parece tonto pero NOO... es mi logica funciona XD :'U.....
-"{{{
 " Transparencia en grubox
 set t_Co=256
 colorscheme gruvbox
-colorscheme onedark
 let g:gruvbox_transparent_bg=1
 
-" NO ESTOY SEGURO DE LA FUNCION PRICIPAL DE ESTO 
-"  *x* ===>>> probado en parrotOs
-" *x*solo descrubi que a onedark se la un colorBackground oscuro genial
-" *x*transparencia background en vim, un colorBackground oscuro genial
 hi! Normal ctermbg=NONE guibg=NONE
-
-colorscheme gruvbox
-hi! Normal ctermbg=NONE guibg=NONE
-
-"-----------------parece tonto pero NOO... es mi logica funciona XD :'U.....
-"}}}
 
 " no lineas al infinito :')
 set wrap

@@ -117,23 +117,23 @@ solucion alerta compinit al entrar en root
 
   ##################################[ context: user@hostname ]##################################
   # Context color when running with privileges.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=83   """ set COLOR HERE HERE....!!!!!!***
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=83   '''''''''''''''''''''''''''''''''''''''''''''''''''''''""" set COLOR HERE HERE....!!!!!!***
   # Context color in SSH without privileges.
   typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND=180
   # Default context color (no privileges, no SSH).
-  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=140 """ set COLOR HERE HERE....!!!!!!***
+  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=140 '''''''''''''''''''''''''''''''''''''''''''''''''''''''""" set COLOR HERE HERE....!!!!!!***
 
   # Context format when running with privileges: bold user@hostname.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%n (ノ｀⌒´)ノ***'
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%n (ノ｀⌒´)ノ***' '''''''''''''''''''''''''''''''''''''''''''''''''''''''''
   # Context format when in SSH without privileges: user@hostname.
   typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
   # Default context format (no privileges, no SSH): user@hostname.
-  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n (~‾▿‾)~'
+  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n (~‾▿‾)~' '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 
 
-  # Tip: Remove the next line to always show context. .......!!!!!!******!!!!!!*****
-  #typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION=         """coment this line
+  # Tip: Remove the next line to always show context. ...''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''READ READ....!!!!!!******!!!!!!*****
+  #typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION=        ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' """coment this line
 
 
   #typeset -g POWERLEVEL9K_CONTEXT_PREFIX='%246Fwith '    """coment this line
@@ -143,16 +143,16 @@ solucion alerta compinit al entrar en root
 
   ###############################[ public_ip: public IP address ]###############################
   # Public IP color.
-  typeset -g POWERLEVEL9K_PUBLIC_IP_FOREGROUND=80   """ set color HERE HERE HERE ....!!!
+  typeset -g POWERLEVEL9K_PUBLIC_IP_FOREGROUND=80   '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''""" set color HERE HERE HERE ....!!!
   # Custom icon.
-  typeset -g POWERLEVEL9K_PUBLIC_IP_VISUAL_IDENTIFIER_EXPANSION='(￣ヘ￣;)^ω^）'    """ descomentar 
+  typeset -g POWERLEVEL9K_PUBLIC_IP_VISUAL_IDENTIFIER_EXPANSION='(￣ヘ￣;)^ω^）'   '''''''''''''''''''''''''''''''''''''''''''' '''''''''""" descomentar 
   ########################[ vpn_ip: virtual private network indicator ]#########################
   # VPN IP color.
   typeset -g POWERLEVEL9K_VPN_IP_FOREGROUND=81
 
 
 
-  typeset -g POWERLEVEL9K_IP_FOREGROUND=39    """ set color HERE HERE HERE.....!!!
+  typeset -g POWERLEVEL9K_IP_FOREGROUND=39    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''""" set color HERE HERE HERE.....!!!
   # The following parameters are accessible within the expansion:
   #
   #   Parameter             | Meaning
@@ -160,8 +160,25 @@ solucion alerta compinit al entrar en root
   #   P9K_IP_IP             | IP address
   #   P9K_IP_RX_RATE        | receive rate (since last prompt)
   #   P9K_IP_TX_RATE        | send rate (since last prompt)
-  typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='${P9K_IP_INTERFACE}:${P9K_IP_IP}( º _ ºノ)^ω^）'  """modificar Variables
+  typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='${P9K_IP_INTERFACE}:$P9K_IP_IPノ( º _ ºノ)^ω^）'  '''''''''''''''"''''''''''''''''""modificar Variables
 
+
+
+  ##################################[ dir: current directory ]##################################
+  # Default current directory color.
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=81     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''modificar
+  # If directory is too long, shorten some of its segments to the shortest possible unique
+  # prefix. The shortened directory can be tab-completed to the original.
+  typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
+  # Replace removed segment suffixes with this symbol.
+  typeset -g POWERLEVEL9K_SHORTEN_DELIMITER=
+  # Color of the shortened directory segments.
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=103
+  # Color of the anchor directory segments. Anchor segments are never shortened. The first
+  # segment is always an anchor.
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=83   ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''modificar
+  # Display anchor directory segments in bold.
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
 
   COLORE COLORES COLOREE...
   colores     83    verdeLimon inten.
@@ -169,5 +186,5 @@ solucion alerta compinit al entrar en root
               86    hermoso men :')
               39    azul brillante
               81    celecte sutil brillante
-             145    blanco
+             145    blanco   
              140    morado
