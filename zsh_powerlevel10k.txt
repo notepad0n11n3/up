@@ -145,7 +145,7 @@ solucion alerta compinit al entrar en root
   # Public IP color.
   typeset -g POWERLEVEL9K_PUBLIC_IP_FOREGROUND=80   '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''""" set color HERE HERE HERE ....!!!
   # Custom icon.
-  typeset -g POWERLEVEL9K_PUBLIC_IP_VISUAL_IDENTIFIER_EXPANSION='(￣ヘ￣;)^ω^）'   '''''''''''''''''''''''''''''''''''''''''''' '''''''''""" descomentar 
+  typeset -g POWERLEVEL9K_PUBLIC_IP_VISUAL_IDENTIFIER_EXPANSION='☢(￣ヘ￣;)^ω^）☠'   '''''''''''''''''''''''''''''''''''''''''''' '''''''''""" descomentar 
   ########################[ vpn_ip: virtual private network indicator ]#########################
   # VPN IP color.
   typeset -g POWERLEVEL9K_VPN_IP_FOREGROUND=81
@@ -160,8 +160,7 @@ solucion alerta compinit al entrar en root
   #   P9K_IP_IP             | IP address
   #   P9K_IP_RX_RATE        | receive rate (since last prompt)
   #   P9K_IP_TX_RATE        | send rate (since last prompt)
-  typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='${P9K_IP_INTERFACE}:$P9K_IP_IPノ( º _ ºノ)^ω^）'  '''''''''''''''"''''''''''''''''""modificar Variables
-
+  typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='☣${P9K_IP_INTERFACE}☣${P9K_IP_IP}  🔥'  '''''''''''''''"''''''''''''''''""modificar Variables
 
 
   ##################################[ dir: current directory ]##################################
@@ -179,6 +178,8 @@ solucion alerta compinit al entrar en root
   typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=83   ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''modificar
   # Display anchor directory segments in bold.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
+
+
 
   COLORE COLORES COLOREE...
   colores     83    verdeLimon inten.

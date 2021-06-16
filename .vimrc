@@ -158,13 +158,13 @@ let g:lightline = {
       \ 'active': {
       \   'left': [ 
       \             [ 'modified', 'fire', 'x89p', 'modified' ],
-      \             [ 'percent', 'filename', 'modified' ], 
+      \             [ 'filename', 'percent', 'modified' ], 
       \             [ 'lineinfo' ],
-      \             [ 'readonly', 'gitbranch'], [ 'goewe', 'modified', 'midewe', 'modified', 'endewe' ],
+      \             [ 'readonly', 'gitbranch'], [ 'goewe', 'modified', 'endewe' ],
       \             ],
       \  'right': [ 
       \             [ 'modified', 'mode', 'paste', 'fire', 'modified' ],
-      \             [ 'modified', 'filename', 'lineinfo' ],
+      \             [ 'modified', 'lineinfo', 'filename' ],
       \             [ 'percent', 'gitbranch' ],
       \             [ 'fileformat', 'fileencoding', 'rightHere' ] ]
       \ },
@@ -172,11 +172,10 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ 'component': {
-      \      'x89p': '(；^ω^）︵',
-      \      'goewe': '“ψ(｀∇´)ψ (~‾▿‾)~🔥',
-      \     'midewe': '🔥☣☠ 乁 ˘ o ˘ ㄏ☠☣🔥',
-      \    'endewe': '🔥┬──┬◡ﾉ(° -°ﾉ) (￣ヘ￣;)',
-      \     'rightHere': '🎼O̲ppa̲︵‿ S̲t̲yl̲e̲♩♪♫ 💪(◡̀_◡́҂)',
+      \      'x89p': '“ψ(｀∇´)ψ',
+      \      'goewe': ' (~‾▿‾)~🔥',
+      \    'endewe': '🔥ﾉ(° -°ﾉ)',
+      \     'rightHere': '🎼♩♪♫ 💪(￣ヘ￣;)',
       \      'fire': '🔥'
       \ },
       \ }
