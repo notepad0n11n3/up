@@ -44,7 +44,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 
-set colorcolumn=80
+set colorcolumn=80,75,70,1
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " TP 21
@@ -75,7 +75,7 @@ Plug 'yggdroot/indentline'
 "Auto completado  go github for help men... go github ...
 Plug 'ycm-core/YouCompleteMe'
   "https://www.youtube.com/watch?v=n9k9scbTuvQ
-   "al reinstalar da un error ./.vim/***/***/YouCompleteMe/ ::: ./install.py --ts-completer
+  "al reinstalar da un error ./.vim/***/***/YouCompleteMe/ ::: ./install.py --ts-completer
 
 
   " :!git  ===>>>  :Git  :: :G commit/log/status/....
