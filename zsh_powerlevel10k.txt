@@ -9,6 +9,7 @@ shred  ==>>
 function rmk () {
   scrub -p dod $1; shred -zun 10 -v $1
 }
+==================================================================================            
 *************************** MAIN MAIN ZSH  ********************************************
 
 ::: vim .zrhrc          -------- sufri tanto csm, solo solin solito mrd :'u
@@ -57,6 +58,7 @@ function rmk () {
 # github installation powerlevel10k
 ::: git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ::: zsh
+==================================================================================            
 ------------------------- shell predeterminada zsh -------------------------------
 ::: usermod --shell /usr/bin/zsh kali
 ::: usermod --shell /usr/bin/zsh root
@@ -75,6 +77,7 @@ solucion alerta compinit al entrar en root
 
 
 
+==================================================================================            
 ................p10k.zsh .p10k.zsh .p10k.zsh .p10k.zsh .p10k.zsh ................................
 
 ::: vim .p10k.zsh
@@ -189,3 +192,20 @@ solucion alerta compinit al entrar en root
               81    celecte sutil brillante
              145    blanco   
              140    morado
+
+
+==================================================================================            TMUX TMUX TMUX TMUX TMUX 
+
+
+tmux_conf_theme_colour_9="#00ff08"    # yellow
+tmux_conf_theme_colour_10="#000000"   # pink
+
+
+tmux_conf_battery_bar_symbol_full="☢"
+tmux_conf_battery_bar_symbol_empty="☣"
+
+
+tmux_conf_battery_status_charging="↑"       # U+2191
+#tmux_conf_battery_status_discharging="↓"    # U+2193
+#tmux_conf_battery_status_charging="🔌"     # U+1F50C
+tmux_conf_battery_status_discharging="🔋"  # U+1F50B

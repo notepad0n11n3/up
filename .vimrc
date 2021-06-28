@@ -44,7 +44,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 
-set colorcolumn=80
+set colorcolumn=80,75,70,1
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " TP 21
@@ -75,7 +75,7 @@ Plug 'yggdroot/indentline'
 "Auto completado  go github for help men... go github ...
 Plug 'ycm-core/YouCompleteMe'
   "https://www.youtube.com/watch?v=n9k9scbTuvQ
-   "al reinstalar da un error ./.vim/***/***/YouCompleteMe/ ::: ./install.py --ts-completer
+  "al reinstalar da un error ./.vim/***/***/YouCompleteMe/ ::: ./install.py --ts-completer
 
 
   " :!git  ===>>>  :Git  :: :G commit/log/status/....
@@ -157,13 +157,13 @@ let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ 
-      \             [ 'modified', 'fire', 'x89p', 'modified' ],
+      \             [ 'x89p', 'modified' ],
       \             [ 'filename', 'percent', 'modified' ], 
       \             [ 'lineinfo' ],
-      \             [ 'readonly', 'gitbranch'], [ 'goewe', 'modified', 'endewe' ],
+      \             [ 'readonly', 'gitbranch'], [ 'goewe', 'modified' ],
       \             ],
       \  'right': [ 
-      \             [ 'modified', 'mode', 'paste', 'fire', 'modified' ],
+      \             [ 'modified', 'mode', 'paste', 'fire' ],
       \             [ 'modified', 'lineinfo', 'filename' ],
       \             [ 'percent', 'gitbranch' ],
       \             [ 'fileformat', 'fileencoding', 'rightHere' ] ]
@@ -172,9 +172,8 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ 'component': {
-      \      'x89p': '“ψ(｀∇´)ψ',
-      \      'goewe': ' (~‾▿‾)~🔥',
-      \    'endewe': '🔥ﾉ(° -°ﾉ)',
+      \      'x89p': '🔥ψ(｀∇´)ψ(ノ｀⌒´)ノ🔥',
+      \      'goewe': ' (~‾▿‾)~🔥ﾉ(° -°ﾉ)',
       \     'rightHere': '🎼♩♪♫ 💪(￣ヘ￣;)',
       \      'fire': '🔥'
       \ },
