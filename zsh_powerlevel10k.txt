@@ -93,30 +93,32 @@ solucion alerta compinit al entrar en root
     ram                   # free RAM
     load                  # CPU load
     prompt_char             # prompt symbol
+    public_ip             # public IP address
     vpn_ip                # virtual private network indicator
+    prompt_char             # prompt symbol
     #vi_mode               # vi mode (you don't need this if you've enabled prompt_char)
     #context                 # user@hostname
-    prompt_char             # prompt symbol
     # =========================[ Line #2 ]=========================
     newline                 # \n
-    os_icon                 # os identifier
+    #os_icon                 # os identifier
+    prompt_char             # prompt symbol
     prompt_char             # prompt symbol
     dir                     # current directory
     prompt_char             # prompt symbol
     vcs                     # git status
     prompt_char             # prompt symbol
-    public_ip             # public IP address
-    prompt_char             # prompt symbol
+    #public_ip             # public IP address
+    #prompt_char             # prompt symbol
     ip                    # ip address and bandwidth usage for a specified network interface
-    status                  # exit code of the last command
+    prompt_char             # prompt symbol
+    #status                  # exit code of the last command
     # =========================[ Line #3 ]=========================
     newline                 # \n
     context                 # user@hostname
     prompt_char             # prompt symbol
     vim_shell               # vim shell indicator (:sh)
+    status                  # exit code of the last command
   )
-
-
 
   ##################################[ context: user@hostname ]##################################
   # Context color when running with privileges.
@@ -184,6 +186,14 @@ solucion alerta compinit al entrar en root
 
 
 
+  ##########################[ status: exit code of the last command ]###########################
+  
+  
+  # it will signify success by turning green.
+  typeset -g POWERLEVEL9K_STATUS_OK=true  #goro goro goro goro
+  typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=70
+  typeset -g POWERLEVEL9K_STATUS_OK_VISUAL_IDENTIFIER_EXPANSION='✔'
+
   COLORE COLORES COLOREE...
   colores     83    verdeLimon inten.
               85    unVerde precioso csm :')
@@ -192,6 +202,12 @@ solucion alerta compinit al entrar en root
               81    celecte sutil brillante
              145    blanco   
              140    morado
+
+
+  # it will signify error by turning red.
+  typeset -g POWERLEVEL9K_STATUS_ERROR=true  #goro goro goro goro
+  typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=160
+  typeset -g POWERLEVEL9K_STATUS_ERROR_VISUAL_IDENTIFIER_EXPANSION='✘'
 
 
 ==================================================================================            TMUX TMUX TMUX TMUX TMUX 
