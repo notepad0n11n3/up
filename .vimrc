@@ -179,34 +179,6 @@ let g:lightline = {
       \ },
       \ }
 
-""  OwO, UmU!
-"let g:lightline = {
-"        \ 'colorscheme': 'powerline',
-"      \ 'active': {
-"        \   'left': [ [ 'mode', 'paste' ],
-"      \             [ 'readonly', 'filename', 'modified', 'x89p' ] ]
-"      \ },
-"      \ 'component': {
-"        \   'x89p': 'OwO UmU!'
-"      \ },
-"      \ }
-"
-"RIGHT right
-"if you want to print the value of character under the cursor in hexadecimal
-"let g:lightline = {
-"      \ 'colorscheme': 'wombat',
-"      \ 'active': {
-"      \   'right': [ [ 'lineinfo' ],
-"      \              [ 'percent' ],
-"      \              [ 'fileformat', 'fileencoding', 'hello', 'filetype', 'charvaluehex' ] ]
-"      \ },
-"      \ 'component': {
-"      \   'charvaluehex': '0x%B',
-"      \   'hello': 'hello right'
-"      \   'onemore': 'KYAAaaa....'
-"      \ },
-"      \ }
-
 " Transparencia en grubox
 set t_Co=256
 colorscheme gruvbox
