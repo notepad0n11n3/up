@@ -12,7 +12,7 @@ set numberwidth=1 "number width ==> relative number
 
 " Copy Paste 
 set clipboard=unnamedplus	
-      "::: vim -- version | grep clipboard  ==>> -clipboard -xterm_clipboard ===> sudo apt install vim-gtk
+  "::: vim -- version | grep clipboard  ==>> -clipboard -xterm_clipboard ===> sudo apt install vim-gtk
 
 set showcmd "muestra los comandos que estoy ejecutando NOfuncioaCOMOesperaba :(
 set ruler   "número de linea y número de columna
@@ -26,7 +26,6 @@ set shiftwidth=2
 set smartindent
 set incsearch "no espera a dar ENTER para mostrar resultados de busqueda con /
 set hlsearch "Resalta las letras al hacer búsquedas
-
 
 "ThePrimeagen
 set noerrorbells
@@ -51,8 +50,6 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 "colorscheme gruvbox ==>> 'gruvbox-community/gruvbox'    nvim???
 "highlight Normal guibg=none     ##fondo transparente    nvim???
 "set hidden
-    
-
 
 call plug#begin('~/.vim/plugged')
 " busqueda por coincidencia " "s
@@ -97,7 +94,6 @@ let NERDTreeQuitOnOpen=1
 " Lineas de identacion desde el inicio
 let g:indent_guides_enable_on_vim_startup = 1 "" Lineas de identacion enable desde inicio
 
-
 """"""""======>>>>> Atajo aeo8 personalizado <<<<<<<========""""""""""""""
 imap zz <Esc>
 " Tecla lider
@@ -127,7 +123,6 @@ nnoremap <silent> <Leader>yd :YcmCompleter GoTo<CR>
 nnoremap <silent> <Leader>yf :YcmCompleter FixIt<CR>
 
               "" GIT GIT GIT GIT en vim...@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
 " resaltado de lineas modificadas git LIGHT DARKNES  vim-gitgutter
 nmap <Leader>o :GitGutterLineHighlightsEnable<CR>
 nmap <Leader>O :GitGutterLineHighlightsDisable<CR>
@@ -140,7 +135,6 @@ nmap <Leader>cf :GV!<CR>
 " time tree  mbbill/undotree
 nmap <Leader>tt :UndotreeToggle<CR>
 
-
 " disable all key mappings vim-gitgutter
 let g:gitgutter_map_keys = 0
 let g:gitgutter_preview_win_floating = 1
@@ -148,7 +142,6 @@ let g:gitgutter_preview_win_floating = 1
 set signcolumn=yes
 "refresco de vim para EJECUTAR vim-gitgutter
 set updatetime=100 " este se QUEDA :)
-
 
 " config addd  https://github.com/itchyny/lightline.vim
 " LEFT left
@@ -184,6 +177,9 @@ set t_Co=256
 colorscheme gruvbox
 let g:gruvbox_transparent_bg=1
 
+colorscheme minimalist "tambien vale onedark :)  <3<3<3
+colorscheme gruvbox
+
 hi! Normal ctermbg=NONE guibg=NONE
 
 " no lineas al infinito :')
@@ -200,3 +196,5 @@ set textwidth=0 wrapmargin=0
 "         let &packpath=&runtimepath
 "         source ~/.vimrc
 "
+set cursorline cursorcolumn
+
