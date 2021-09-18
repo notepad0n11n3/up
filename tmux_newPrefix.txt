@@ -3,10 +3,18 @@
 
 Cambiar el prefijo tmux de Ctrl + B a Ctrl + A agregando la siguiente línea en el archivo tmux.conf .
 
+
+set -g prefix2 C-a                        # GNU-Screen compatible prefix
+bind C-a send-prefix -2
+
+set -g prefix C-k
+unbind C-b
+
+
         set -g prefix C-k
-        unbind C-b
+        unbind C-b                  ------   <3
 
 
 ::: Ctrl + k + r      #! recargar archivo de configuraci[on
 
- Desvincular la clave predeterminada nos permite reasignarla para un comando diferente. Entonces, la segunda línea es una buena práctica, nada obligatorio.
+ <3 --->>Desvincular la clave predeterminada nos permite reasignarla para un comando diferente. Entonces, la segunda línea es una buena pr[actica, nada obligatorio.
