@@ -1,0 +1,3 @@
+:::vim  /etc/default/grub
+
+::: sudo update-grub

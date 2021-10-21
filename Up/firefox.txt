@@ -1,4 +1,8 @@
 
-
 https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
 
+
+ Ctrl   r         recarga sin usar cache, carga limpia
+ Ctrl   u         codigo fuente p[agina actual
+
+ Alt  numberHere      saltar a pesta~a n[umero...

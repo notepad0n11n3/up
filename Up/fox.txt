@@ -1,5 +1,0 @@
-
- Ctrl   r         recarga sin usar cache, carga limpia
- Ctrl   u         codigo fuente p[agina actual
-
- Alt  numberHere      saltar a pesta~a n[umero...

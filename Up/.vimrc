@@ -52,7 +52,7 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 "set hidden
 
 call plug#begin('~/.vim/plugged')
-" busqueda por coincidencia " "s
+" busqueda por coincidencia <Espace>+s
 Plug 'easymotion/vim-easymotion' 
 
 " explorador lateral carpetaActual
