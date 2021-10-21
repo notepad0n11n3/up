@@ -1,0 +1,11 @@
+        no tiene orden especifico, smbserver.py funciono y no tengo idea del porque :u   
+
+  sudo pip install impacket --upgrade 
+
+  locate smbserver.py
+
+  sudo python3 -m pip install .  (dentro de impacket(xAhora elObtenido deGit))
+
+  sudo pip install -r requirements.txt (dentro de impacket (xAhora elObtenido deGit))
+
+
