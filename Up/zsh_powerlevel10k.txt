@@ -9,6 +9,10 @@ shred  ==>>
 function rmk () {
   scrub -p dod $1; shred -zun 10 -v $1
 }
+
+function rmk () {
+  scrub -p dod $1; shred -zun 10 -v $1
+}
 ==================================================================================            
 *************************** MAIN MAIN ZSH  ********************************************
 
@@ -37,43 +41,6 @@ function rmk () {
                 LESS_TERMCAP_us=$'\e[01;32m' \
                 man "$@"
             }
-
-
-function rmk () {
-  scrub -p dod $1; shred -zun 10 -v $1
-}
-
-***********************************************************************
-
-# google:   hack nerd fonts     :  fonts downloads   : Hack Nerd Font '$(DOWNLOAD)'
-
-::: cd /usr/local/share/fonts/
-::: mv $HOME/Downloads/Hack*.zip .
-::: unzip Hack*.zip
-::: sudo rm Hack*.zip
-
-  ===>>> Editar en console
-      preferencias del perfil : font Hack Nerd Font Mono Regular
-
-# github installation powerlevel10k
-::: git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-::: zsh
-==================================================================================            
-------------------------- shell predeterminada zsh -------------------------------
-::: usermod --shell /usr/bin/zsh kali
-::: usermod --shell /usr/bin/zsh root
-::: usermod --shell /usr/bin/zsh aeo8
-
-Root:: rm .zshrc
-Root:: ln -s -f /home/kali/.zshrc .zshrc     # archivo simbolico  ENLACE SIMBOLICO ENLACE SIMBOLICO
-
-##  https://s4vitar.github.io/bspwm-configuration-files/#   solo dale una mirada, no es importante
-
-solucion alerta compinit al entrar en root
-            # Use modern completion system
-              autoload -Uz compinit
-      ~~~     compinit -i               " se a~adio -i
-
 
 
 
@@ -208,6 +175,8 @@ solucion alerta compinit al entrar en root
   typeset -g POWERLEVEL9K_STATUS_ERROR=true  #goro goro goro goro
   typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=160
   typeset -g POWERLEVEL9K_STATUS_ERROR_VISUAL_IDENTIFIER_EXPANSION='✘'
+
+
 
 
 ==================================================================================            TMUX TMUX TMUX TMUX TMUX 
