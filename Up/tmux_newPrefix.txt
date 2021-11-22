@@ -39,6 +39,18 @@ tmux_conf_battery_status_charging="↑"       # U+2191
 tmux_conf_battery_status_discharging="🔋"  # U+1F50B
 
 
+# -- clipboard -----------------------------------------------------------------
+
+# in copy mode, copying selection also copies to the OS clipboard
+#   - true
+#   - false (default)
+# on macOS, this requires installing reattach-to-user-namespace, see README.md
+# on Linux, this requires xsel or xclip
+tmux_conf_copy_to_os_clipboard=true     <<--  false to true
+
+
+
+
 ::: vim $HOME/.p10k.zsh
 
   # The list of segments shown on the left. Fill it with the most important segments.
@@ -57,3 +69,4 @@ tmux_conf_battery_status_discharging="🔋"  # U+1F50B
     vim_shell               # vim shell indicator (:sh)
     prompt_char             # prompt symbol
   )
+
