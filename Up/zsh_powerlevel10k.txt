@@ -179,18 +179,41 @@ function rmk () {
 
 
 
-==================================================================================            TMUX TMUX TMUX TMUX TMUX 
+================================  TMUX TMUX TMUX TMUX TMUX  =======================================
+
+# new window retains current path, possible values are:
+#   - true
+#   - false (default)
+tmux_conf_new_window_retain_current_path=true
 
 
 tmux_conf_theme_colour_9="#00ff08"    # yellow
 tmux_conf_theme_colour_10="#000000"   # pink
 
-
 tmux_conf_battery_bar_symbol_full="☢"
 tmux_conf_battery_bar_symbol_empty="☣"
-
 
 tmux_conf_battery_status_charging="↑"       # U+2191
 #tmux_conf_battery_status_discharging="↓"    # U+2193
 #tmux_conf_battery_status_charging="🔌"     # U+1F50C
 tmux_conf_battery_status_discharging="🔋"  # U+1F50B
+
+
+::: vim $HOME/.p10k.zsh
+
+  # The list of segments shown on the left. Fill it with the most important segments.
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+    # =========================[ Line #1 ]=========================
+    # os_icon               # os identifier
+    dir                     # current directory
+    prompt_char             # prompt symbol
+    vcs                     # git status
+    prompt_char             # prompt symbol
+    # =========================[ Line #2 ]=========================
+    newline                 # \n
+    prompt_char             # prompt symbol
+    status                  # exit code of the last command
+    command_execution_time  # duration of the last command
+    vim_shell               # vim shell indicator (:sh)
+    prompt_char             # prompt symbol
+  )
