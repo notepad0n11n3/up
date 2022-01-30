@@ -1,0 +1,11 @@
+
+
+
+function cpwd(){
+  pwd | tr -d "\n" | xclip -sel clip | xclip -sel clip
+}
+
+function zz(){
+  exit
+}
+
