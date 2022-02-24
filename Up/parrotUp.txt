@@ -10,3 +10,21 @@
 
 
 	::: parrot-upgrade     *** *** ***      yes...!!!  <<<===<<<    OK OK OK OK....!!!
+
+
+
+
+
+
+::: vim /etc/apt/sources.list.d/parrot.list
+
+    deb https://deb.parrot.sh/parrot/ rolling main contrib non-free
+    deb https://deb.parrot.sh/parrot/ rolling-security main contrib non-free
+
+  v:: w ! sudo tee
+
+
+
+// homeEdition upgradeFullSecurityEdition
+
+  ::: sudo apt install parrot-tools-full
