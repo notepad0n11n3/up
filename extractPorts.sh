@@ -1,5 +1,5 @@
 
-extractPorts(){
+function extractPorts(){
   ports="$(cat $1 | grep -oP '\d{1,5}/open' | awk '{printf $1}' FS='/' | xargs | tr ' ' ',')"
   ip_address="$(cat $1 | grep initiated | awk 'NF{print $NF}')"
   echo -e "\n[*] Extracting information...\n" > extractPorts.tmp
