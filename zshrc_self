@@ -9,3 +9,6 @@ function zz(){
   exit
 }
 
+function ports(){
+  echo "$(cat ${1} | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip
+}

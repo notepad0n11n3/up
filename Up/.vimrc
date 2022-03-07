@@ -96,6 +96,7 @@ let g:indent_guides_enable_on_vim_startup = 1 "" Lineas de identacion enable des
 
 """"""""======>>>>> Atajo aeo8 personalizado <<<<<<<========""""""""""""""
 imap zz <Esc>
+imap Zz <Esc>
 " Tecla lider
 let mapleader=" "
 nmap <Leader>nt :NERDTreeFind<CR>
