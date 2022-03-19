@@ -1,0 +1,1 @@
+::: sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && sudo updatedb && echo -e "\n\tU.U"
