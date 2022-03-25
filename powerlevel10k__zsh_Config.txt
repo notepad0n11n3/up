@@ -17,12 +17,12 @@ function rmk () {
 
    ::: r ! echo $PATH
 
+
 ........p10k.zsh .p10k.zsh .p10k.zsh .p10k.zsh .p10k.zsh .............
 
 ::: vim .p10k.zsh
 
-
-  ##################################[ context: user@hostname ]##################################
+  ##############################[ context: user@hostname ]###############################
   # Context color when running with privileges.
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=83   '''''''''''''''''''''''''''''''''''''''''''''''''''''''""" set COLOR HERE HERE....!!!!!!***
   # Context color in SSH without privileges.
@@ -48,7 +48,7 @@ function rmk () {
   
  
 
-  ##########################[ status: exit code of the last command ]###########################
+  ########################[ status: exit code of the last command ]######################
   
   
   # it will signify success by turning green.
