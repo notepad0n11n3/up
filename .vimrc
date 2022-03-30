@@ -122,6 +122,7 @@ nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
 " YCM
   " The best part
+  " https://github.com/ycm-core/YouCompleteMe#the-gycm_autoclose_preview_window_after_completion-option
 nnoremap <silent> <Leader>yd :YcmCompleter GoTo<CR>
 nnoremap <silent> <Leader>yf :YcmCompleter FixIt<CR>
 "let g:ycm_autoclose_preview_window_after_insertion = 1  "cerrar despu[esDeElegir splitSuperior con las sugerencias
