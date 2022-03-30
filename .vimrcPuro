@@ -1,0 +1,98 @@
+"             for nvim go tail here
+"  :source %  :: so %   " cargar archivo .vimrc actual
+"  :h tabstop    :h noerrorblells    " infoHelp para los opci[ones de confi.
+"  :options      " todas las opciones de configuraci[on
+syntax on 
+set encoding=utf-8
+set number 
+  "set nu " == set number
+set mouse=a "mouseIntegration
+set relativenumber 
+set numberwidth=1 "number width ==> relative number
+
+" Copy Paste 
+set clipboard=unnamedplus	
+  "::: vim -- version | grep clipboard  ==>> -clipboard -xterm_clipboard ===> sudo apt install vim-gtk
+
+set showcmd "muestra los comandos que estoy ejecutando NOfuncioaCOMOesperaba :(
+set ruler   "número de linea y número de columna
+set showmatch "si me paro sobre un ({[]}) muestra el otro que esta cerrando 
+set laststatus=2  "muestra barra inferior ( si we si... esaBarra de color :u )
+"set noshowmode   "quita el aviso -- INSERTAR --  al entrar en modo inserción noFunciona:(
+
+set sw=2  "tabulador   ahora es 2 espacios
+set tabstop=2 softtabstop=2
+set shiftwidth=2
+set smartindent
+set incsearch "no espera a dar ENTER para mostrar resultados de busqueda con /
+set hlsearch "Resalta las letras al hacer búsquedas
+
+"ThePrimeagen
+set noerrorbells
+set expandtab
+set nowrap "don't work :'u
+  "solution
+set wrap
+set textwidth=0 wrapmargin=0
+  "noitulos
+set smartcase
+
+set noswapfile
+set nobackup
+  "pre- mkdir $HOME/.vim/undodir
+set undodir=~/.vim/undodir
+set undofile
+
+set colorcolumn=80,75,70,1
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+" TP 21
+"colorscheme gruvbox ==>> 'gruvbox-community/gruvbox'    nvim???
+"highlight Normal guibg=none     ##fondo transparente    nvim???
+"set hidden
+
+" Lineas de identacion desde el inicio
+let g:indent_guides_enable_on_vim_startup = 1 "" Lineas de identacion enable desde inicio
+
+""""""""======>>>>> Atajo personalizado <<<<<<<========""""""""""""""
+imap zz <Esc>
+imap Zz <Esc>
+" Tecla lider
+let mapleader=" "
+nmap <Leader>q :q<CR>
+nmap <Leader>w :w<CR>
+nmap <Leader>z :! clear && zsh<CR>
+nmap <Leader>x :! 
+nmap <Leader>. :nohlsearch<CR> 
+    " :nohl === :noh  === :nohlsearch
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+
+set copyindent    " copy the previous indentation on autoindenting
+
+"like a nerdTree pero con Ex
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+
+" Transparencia en grubox
+set t_Co=256
+"let g:gruvbox_transparent_bg=1
+
+hi! Normal ctermbg=NONE guibg=NONE
+
+" no lineas al infinito :')
+set wrap
+set textwidth=0 wrapmargin=0
+
+"""""""""""""""""""""""""'NVIM""""""""""""""""""""""""""""""""""""''
+"mismo archivo de configuraci[on para vim nvim
+"
+"       $HOME/.config/nvim/init.vim
+"     ::: vim init.vim
+"
+"         set runtimepath^=~/.vim runtimepath+=~/.vim/after
+"         let &packpath=&runtimepath
+"         source ~/.vimrc
+"
+"set cursorline cursorcolumn

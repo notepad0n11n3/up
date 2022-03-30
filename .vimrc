@@ -94,7 +94,7 @@ let NERDTreeQuitOnOpen=1
 " Lineas de identacion desde el inicio
 let g:indent_guides_enable_on_vim_startup = 1 "" Lineas de identacion enable desde inicio
 
-""""""""======>>>>> Atajo aeo8 personalizado <<<<<<<========""""""""""""""
+""""""""======>>>>> Atajo personalizado <<<<<<<========""""""""""""""
 imap zz <Esc>
 imap Zz <Esc>
 " Tecla lider
@@ -198,4 +198,3 @@ set textwidth=0 wrapmargin=0
 "         source ~/.vimrc
 "
 set cursorline cursorcolumn
-
