@@ -18,7 +18,7 @@ set showcmd "muestra los comandos que estoy ejecutando NOfuncioaCOMOesperaba :(
 set ruler   "número de linea y número de columna
 set showmatch "si me paro sobre un ({[]}) muestra el otro que esta cerrando 
 set laststatus=2  "muestra barra inferior ( si we si... esaBarra de color :u )
-"set noshowmode   "quita el aviso -- INSERTAR --  al entrar en modo inserción noFunciona:(
+set noshowmode   "quita el aviso -- INSERTAR --  al entrar en modo inserción noFunciona:(
 
 set sw=2  "tabulador   ahora es 2 espacios
 set tabstop=2 softtabstop=2
@@ -46,38 +46,37 @@ set undofile
 set colorcolumn=80,75,70,1
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+set copyindent    " copy the previous indentation on autoindenting
 " TP 21
 "colorscheme gruvbox ==>> 'gruvbox-community/gruvbox'    nvim???
 "highlight Normal guibg=none     ##fondo transparente    nvim???
 "set hidden
-
-" Lineas de identacion desde el inicio
-let g:indent_guides_enable_on_vim_startup = 1 "" Lineas de identacion enable desde inicio
 
 """"""""======>>>>> Atajo personalizado <<<<<<<========""""""""""""""
 imap zz <Esc>
 imap Zz <Esc>
 " Tecla lider
 let mapleader=" "
+nmap <Leader>nt :NERDTreeFind<CR>
+nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>q :q<CR>
 nmap <Leader>w :w<CR>
 nmap <Leader>z :! clear && zsh<CR>
 nmap <Leader>x :! 
 nmap <Leader>. :nohlsearch<CR> 
+nmap <Leader>g :Git<CR>
     " :nohl === :noh  === :nohlsearch
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
-set copyindent    " copy the previous indentation on autoindenting
-
 "like a nerdTree pero con Ex
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
 " Transparencia en grubox
 set t_Co=256
-"let g:gruvbox_transparent_bg=1
+colorscheme industry
 
 hi! Normal ctermbg=NONE guibg=NONE
 
@@ -96,3 +95,4 @@ set textwidth=0 wrapmargin=0
 "         source ~/.vimrc
 "
 "set cursorline cursorcolumn
+

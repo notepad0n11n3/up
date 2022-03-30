@@ -1,3 +1,5 @@
+" v:: PlugStatus        v:: PlugInstall       v:: PlugUpgrade  etc...
+"
 "             for nvim go tail here
 "  :source %  :: so %   " cargar archivo .vimrc actual
 "  :h tabstop    :h noerrorblells    " infoHelp para los opci[ones de confi.
@@ -46,6 +48,7 @@ set undofile
 set colorcolumn=80,75,70,1
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+set copyindent    " copy the previous indentation on autoindenting
 " TP 21
 "colorscheme gruvbox ==>> 'gruvbox-community/gruvbox'    nvim???
 "highlight Normal guibg=none     ##fondo transparente    nvim???
@@ -73,6 +76,7 @@ Plug 'yggdroot/indentline'
 Plug 'ycm-core/YouCompleteMe'
   "https://www.youtube.com/watch?v=n9k9scbTuvQ
   "al reinstalar da un error ./.vim/***/***/YouCompleteMe/ ::: ./install.py --ts-completer
+" python3 install.py --clangd-completer --ts-completer --cs-completer --rust-completer --java-completer --all
 
 
   " :!git  ===>>>  :Git  :: :G commit/log/status/....
@@ -81,7 +85,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " commit trees
 Plug 'junegunn/gv.vim'
-  " [c ]c salta entre las modificaciones del archivo, arriba/abajo :) hunks
+  " [c   ]c salta entre las modificaciones del archivo, arriba/abajo :) hunks
 
   " time tree
 Plug 'mbbill/undotree'
@@ -113,15 +117,15 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
-set copyindent    " copy the previous indentation on autoindenting
-
 "like a nerdTree pero con Ex
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
 " YCM
-" The best part
+  " The best part
 nnoremap <silent> <Leader>yd :YcmCompleter GoTo<CR>
 nnoremap <silent> <Leader>yf :YcmCompleter FixIt<CR>
+"let g:ycm_autoclose_preview_window_after_insertion = 1  "cerrar despu[esDeElegir splitSuperior con las sugerencias
+set completeopt-=preview  " noMostrarSplitSuperior con las sugerencias  <3...
 
               "" GIT GIT GIT GIT en vim...@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 " resaltado de lineas modificadas git LIGHT DARKNES  vim-gitgutter
@@ -197,4 +201,5 @@ set textwidth=0 wrapmargin=0
 "         let &packpath=&runtimepath
 "         source ~/.vimrc
 "
-set cursorline cursorcolumn
+"set cursorline cursorcolumn
+
