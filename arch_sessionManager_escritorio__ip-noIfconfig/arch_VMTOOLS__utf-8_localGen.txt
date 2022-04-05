@@ -1,0 +1,15 @@
+
+::: pacman -S open-vm-tools
+
+::: pacman -S xf86-video-vmware xf86-input-vmmouse
+
+::: systemctl  enable  vmtoolsd
+
+
+
+*** *** *** utf-8
+
+// uncoment utf-8
+root::: vim /etc/locale.gen
+
+root::: locale-gen
