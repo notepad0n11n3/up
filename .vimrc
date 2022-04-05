@@ -96,11 +96,10 @@ call plug#end()
 
 " Cerrar nerdTree despues de seleccionar un archivo
 let NERDTreeQuitOnOpen=1
-
 " Lineas de identacion desde el inicio
 let g:indent_guides_enable_on_vim_startup = 1 "" Lineas de identacion enable desde inicio
 
-""""""""======>>>>> Atajo personalizado <<<<<<<========""""""""""""""
+"***********======>>>>> Atajo personalizado <<<<<<<========********************
 imap zz <Esc>
 imap Zz <Esc>
 " Tecla lider
@@ -122,7 +121,7 @@ nnoremap <leader>l :wincmd l<CR>
 "like a nerdTree pero con Ex
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
-" YCM
+" YCM      *****************************************************************
   " The best part
   " https://github.com/ycm-core/YouCompleteMe#the-gycm_autoclose_preview_window_after_completion-option
 nnoremap <silent> <Leader>yd :YcmCompleter GoTo<CR>
@@ -130,20 +129,20 @@ nnoremap <silent> <Leader>yf :YcmCompleter FixIt<CR>
 "let g:ycm_autoclose_preview_window_after_insertion = 1  "cerrar despu[esDeElegir splitSuperior con las sugerencias
 set completeopt-=preview  " noMostrarSplitSuperior con las sugerencias  <3...
 
-              "" GIT GIT GIT GIT en vim...@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+              "" GIT GIT GIT GIT en vim...**********************************
 " resaltado de lineas modificadas git LIGHT DARKNES  vim-gitgutter
 nmap <Leader>o :GitGutterLineHighlightsEnable<CR>
 nmap <Leader>O :GitGutterLineHighlightsDisable<CR>
 
-" commit tree  junegunn/gv.vim
+" commit tree  junegunn/gv.vim  *****************************
 nmap <Leader>ct :GV<CR>
 " file commit's junegunn/gv.vim
 nmap <Leader>cf :GV!<CR>
 
-" time tree  mbbill/undotree
+" time tree  mbbill/undotree     ****************************
 nmap <Leader>tt :UndotreeToggle<CR>
 
-" disable all key mappings vim-gitgutter
+" disable all key mappings vim-gitgutter ********************
 let g:gitgutter_map_keys = 0
 let g:gitgutter_preview_win_floating = 1
 " signos git desde arranque  vim-gitgutter
@@ -151,7 +150,7 @@ set signcolumn=yes
 "refresco de vim para EJECUTAR vim-gitgutter
 set updatetime=100 " este se QUEDA :)
 
-" config addd  https://github.com/itchyny/lightline.vim
+" config addd  https://github.com/itchyny/lightline.vim  *********************
 " LEFT left
   " branch 
 let g:lightline = {
@@ -180,7 +179,15 @@ let g:lightline = {
       \ },
       \ }
 
-" Transparencia en grubox
+" ayuda a que el color de la lineaCeleste cambieColor
+if !has('gui_running')
+  set t_Co=256
+endif
+"  Si no funciona add   .zshrc
+"           export TERM=xterm-256color
+
+
+" Transparencia en grubox *********************************
 set t_Co=256
 colorscheme gruvbox
 let g:gruvbox_transparent_bg=1
@@ -190,7 +197,7 @@ colorscheme gruvbox
 
 hi! Normal ctermbg=NONE guibg=NONE
 
-" no lineas al infinito :')
+" no lineas al infinito :') *************************************
 set wrap
 set textwidth=0 wrapmargin=0
 
@@ -206,4 +213,5 @@ set textwidth=0 wrapmargin=0
 "
 "set cursorline cursorcolumn
 
-set nowrap "don't work :'u
+"set nowrap "don't work :'u
+
