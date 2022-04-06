@@ -1,0 +1,2 @@
+::: dpkg -s vim
+::: apt list vim
