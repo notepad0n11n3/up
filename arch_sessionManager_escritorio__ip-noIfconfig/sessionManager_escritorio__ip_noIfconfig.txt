@@ -6,7 +6,7 @@
 
 *** *** opci[on m[as liviana
 
-::: sudo pacman -S lightm  lightdm-gtk-greeter   // sessionManger apt-get READY...lubuKaliOK
+::: sudo pacman -S lightdm  lightdm-gtk-greeter   // sessionManger apt-get READY...lubuKaliOK
 
 ::: systemctl  enable  lightdm.service
 
