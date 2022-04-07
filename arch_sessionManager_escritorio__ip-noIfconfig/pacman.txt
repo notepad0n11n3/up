@@ -1,4 +1,11 @@
 
+::: pacman -Sgg | grep blackarch
+  
+  ::: pacman -Sgg | grep blackarch | awk '{print $1}' | sort -u
+
+    ::: pacman -S blackarch-bluetooth             /// instalar[a todas las herramientas para bluetooth del repositorioBlackarch <3 <3 <3 
+
+
 #Instalar paquetes
 pacman -S “paquete” #Instala un paquete.
 pacman -Sy “paquete” #Sincroniza repositorios e instala el paquete.
