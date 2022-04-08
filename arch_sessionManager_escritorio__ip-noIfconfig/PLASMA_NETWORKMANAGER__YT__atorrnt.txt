@@ -1,0 +1,6 @@
+
+::: pacman -S plasma-meta networkmanager plasma-nm 
+
+
+
+        plasma-nm    networkmanagerDePlasma, include wifi try-icon(eso espero)
