@@ -3,7 +3,7 @@
 "             for nvim go tail here
 "  :source %  :: so %   " cargar archivo .vimrc actual
 "  :h tabstop    :h noerrorblells    " infoHelp para los opci[ones de confi.
-"  :options      " todas las opciones de configuraci[on
+"  :options      " todas las opciones de configuraci[on   <3 <3 <3 <3 <3 <3 <3 <3 <3 
 syntax on 
 set encoding=utf-8
 set number 
@@ -30,6 +30,7 @@ set shiftwidth=2
 set smartindent
 set incsearch "no espera a dar ENTER para mostrar resultados de busqueda con /
 set hlsearch "Resalta las letras al hacer búsquedas
+"set ignorecase  " Ignore capital letters during search.
 
 "ThePrimeagen
 set noerrorbells
@@ -213,5 +214,24 @@ set textwidth=0 wrapmargin=0
 "
 "set cursorline cursorcolumn
 
-"set nowrap "don't work :'u
+set scrolloff=10  " No scroll hasta el fondo <3
+set nocompatible   " disable compatibility with vi which can cause unexpected issues.
+
+set scr=10     "" number of lines to scroll for Ctrl-u  and Ctrl-d  <3 <3 <3 <3 <3 <3 <3 
+
+set wildmenu    "" command-line copletion shows a list of matches
+
+    "linebreak	wrap long lines at a character in 'breakat'
+    " (local to window)
+"set nolbr	lbr
+
+    "window	number of lines to scroll for CTRL-F and CTRL-B
+"set window=64
+
+      "textwidth	line length above which to break a line
+      "	(local to buffer)
+"set tw=0
+      "wrapmargin	margin from the right in which to break a line
+      "	(local to buffer)
+"set wm=0
 
