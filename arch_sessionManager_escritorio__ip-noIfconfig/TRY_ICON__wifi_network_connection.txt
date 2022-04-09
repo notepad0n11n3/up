@@ -1,13 +1,16 @@
+      prueba instalando !!!   1 a la vez y reinicia, creo q no son todos necesarios
 
-::: sudo pacman -S wpa_supplicant
+::: sudo pacman -S wpa_supplicant     OK
 
-::: sudo pacman -S wireless_tools
+::: sudo pacman -S wireless_tools     !!!
 
-::: sudo pacman -S networkmanager
+::: sudo pacman -S networkmanager     OK
 
-::: sudo pacman -S network-manager-applet
+::: sudo pacman -S network-manager-applet  !!! 
 
-::: sudo pacman -S gnome-keyring
+::: sudo pacman -S gnome-keyring           !!!
+
+
 
 
 ::: sudo systemctl enable NetworkManager.service

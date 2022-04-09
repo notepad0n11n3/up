@@ -130,7 +130,10 @@ INTERNET POST_REBOOT{
   ::: nmcli dev wifi connect nombreWIFIhere password passWIFIhere
 }
 
-{
+ESCRITORIO__SESSION-MANAGER__PROGRAMS{
+
+  ::: pacman -S pulseaudio pulseaudio-alsa
+
   ::: pacman -S xorg xorg-server xorg-xinit xf86.... lightdm lightdm-gtk-greeter xfce4 xfce4-goodies
                 
                       xf86-video-amdgpu                  //   archlinux.com/packages     busca el controlador para tu tarjeta de video
@@ -140,4 +143,5 @@ INTERNET POST_REBOOT{
   ::: systemctl start lightdm.service
 }
 
-#############!!! NO PULSEAUDIO POR DEFECTO :U
+
+    #### Unistall vim...  install gvim    
