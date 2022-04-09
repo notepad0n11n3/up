@@ -1,0 +1,11 @@
+
+
+::: lsblk               /// muestraParticiones deSistema
+
+::: sudo vim /etc/fstab
+
+
+    /dev/sda(numeroSwapPartition)         swap            swap        rw.relatime      0.3  
+
+        ... 0.3 o 0.4... etc  seg[un yt
+            0.0   para swap segun chat
