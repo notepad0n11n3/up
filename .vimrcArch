@@ -161,21 +161,21 @@ let g:lightline = {
       \             [ 'x89p', 'modified' ],
       \             [ 'filename', 'percent', 'modified' ], 
       \             [ 'lineinfo' ],
-      \             [ 'readonly', 'gitbranch'], [ 'goewe', 'modified' ] ],
+      \             [ 'readonly', 'gitbranch' , 'modified'], [ 'modified' ,'goewe', 'modified' ] ],
       \  'right': [ 
-      \             [ 'modified', 'mode', 'paste', 'fire' ],
-      \             [ 'modified', 'lineinfo', 'filename' ],
-      \             [ 'percent', 'gitbranch' ],
-      \             [ 'fileformat', 'fileencoding', 'rightHere' ] ]
+      \             [ 'modified', 'mode', 'paste', 'fire', 'modified' ],
+      \             [ 'modified', 'lineinfo', 'filename', 'modified' ],
+      \             [ 'percent', 'gitbranch', 'modified' ],
+      \             [ 'modified' , 'fileformat', 'fileencoding', 'rightHere' , 'modified'] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ 'component': {
-      \      'x89p': '🔥ψ(｀∇´)ψ(ノ｀⌒´)ノ🔥',
-      \      'goewe': ' (~‾▿‾)~🔥ﾉ(° -°ﾉ)',
-      \     'rightHere': '🎼♩♪♫ 💪(￣ヘ￣;)',
-      \      'fire': '🔥'
+      \      'x89p': 'OmO',
+      \      'goewe': 'UnU',
+      \     'rightHere': 'ewe',
+      \      'fire': 'owo'
       \ },
       \ }
 

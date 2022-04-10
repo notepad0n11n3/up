@@ -1,6 +1,5 @@
 
 *****************************************************************************************
-
 ::: vim $HOME/.tmux/.tmux.conf
 
 Cambiar el prefijo tmux de Ctrl + B a Ctrl + A agregando la siguiente línea en el archivo .tmux/.tmux.conf 
@@ -9,12 +8,13 @@ Cambiar el prefijo tmux de Ctrl + B a Ctrl + A agregando la siguiente línea en 
   #set -g prefix2 C-a                 # GNU-Screen compatible prefix
   #bind C-a send-prefix -2
 
-  set -g prefix C-k
+  set -g prefix2 C-k
+  bind C-k send-prefix -2
   unbind C-b
 
 
-
-          set -g prefix C-k
+          set -g prefix2 C-k
+          bind C-k send-prefix -2
           unbind C-b                  ------   <3
 
 ::: Ctrl + k + r      #! recargar archivo de configuraci[on
@@ -22,6 +22,7 @@ Cambiar el prefijo tmux de Ctrl + B a Ctrl + A agregando la siguiente línea en 
  <3 --->>Desvincular la clave predeterminada nos permite reasignarla para un comando diferente. Entonces, la segunda línea es una buena pr[actica, nada obligatorio.
 
 
+*****************************************************************************************
 ::: vim $HOME/.tmux.conf.local
 
 # new window retains current path, possible values are:
@@ -51,9 +52,7 @@ tmux_conf_battery_status_discharging="🔋"  # U+1F50B
 # on Linux, this requires xsel or xclip
 tmux_conf_copy_to_os_clipboard=true     <<--  false to true
 
-
-
-
+*****************************************************************************************
 ::: vim $HOME/.p10k.zsh
 
   # The list of segments shown on the left. Fill it with the most important segments.
@@ -74,8 +73,9 @@ tmux_conf_copy_to_os_clipboard=true     <<--  false to true
   )
 
 
-********************  TMUX TMUX TMUX TMUX TMUX  ===========================
 
+********************  TMUX TMUX TMUX TMUX TMUX  ===========================
+*****************************************************************************************
 ===---  $HOME/.tmux.conf.local 
 
 # new window retains current path, possible values are:
