@@ -6,3 +6,13 @@ https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=
  Ctrl   u         codigo fuente p[agina actual
 
  Alt  numberHere      saltar a pesta~a n[umero...
+
+
+   ******************************EXTENSIONS************************************
+
+Wappalyzer
+FoxyProxy
+
+HTTPS Everywhere
+uBlock Origin
+Privacy Badger
