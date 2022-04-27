@@ -8,7 +8,7 @@ syntax on
 set encoding=utf-8
 set number 
   "set nu " == set number
-set mouse=a "mouseIntegration
+"set mouse=a "mouseIntegration
 set relativenumber 
 set numberwidth=1 "number width ==> relative number
 

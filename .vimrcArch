@@ -8,7 +8,7 @@ syntax on
 set encoding=utf-8
 set number 
   "set nu " == set number
-set mouse=a "mouseIntegration
+"set mouse=a "mouseIntegration
 set relativenumber 
 set numberwidth=1 "number width ==> relative number
 
@@ -58,40 +58,40 @@ set copyindent    " copy the previous indentation on autoindenting
 "set hidden
 
 call plug#begin('~/.vim/plugged')
-" busqueda por coincidencia <Espace>+s
-Plug 'easymotion/vim-easymotion' 
-
-" explorador lateral carpetaActual
-Plug 'scrooloose/nerdtree'
-
-"Themes
-Plug 'joshdick/onedark.vim'
-Plug 'morhetz/gruvbox'
-Plug 'dikiaap/minimalist'
-
-"Linea celeste INSERT 
-Plug 'itchyny/lightline.vim'
-
-"Lineas de identacion
-Plug 'yggdroot/indentline'
-
-"Auto completado  go github for help men... go github ...
-Plug 'ycm-core/YouCompleteMe'
-  "https://www.youtube.com/watch?v=n9k9scbTuvQ
-  "al reinstalar da un error ./.vim/***/***/YouCompleteMe/ ::: ./install.py --ts-completer
-" python3 install.py --clangd-completer --ts-completer --cs-completer --rust-completer --java-completer --all
-
-
-  " :!git  ===>>>  :Git  :: :G commit/log/status/....
-Plug 'tpope/vim-fugitive' 
-" git left signs[+-~] lineas modificadas
-Plug 'airblade/vim-gitgutter'
-" commit trees
-Plug 'junegunn/gv.vim'
-  " [c   ]c salta entre las modificaciones del archivo, arriba/abajo :) hunks
-
-  " time tree
-Plug 'mbbill/undotree'
+"" busqueda por coincidencia <Espace>+s
+"Plug 'easymotion/vim-easymotion' 
+"
+"" explorador lateral carpetaActual
+"Plug 'scrooloose/nerdtree'
+"
+""Themes
+"Plug 'joshdick/onedark.vim'
+"Plug 'morhetz/gruvbox'
+"Plug 'dikiaap/minimalist'
+"
+""Linea celeste INSERT 
+"Plug 'itchyny/lightline.vim'
+"
+""Lineas de identacion
+"Plug 'yggdroot/indentline'
+"
+""Auto completado  go github for help men... go github ...
+"Plug 'ycm-core/YouCompleteMe'
+"  "https://www.youtube.com/watch?v=n9k9scbTuvQ
+"  "al reinstalar da un error ./.vim/***/***/YouCompleteMe/ ::: ./install.py --ts-completer
+"" python3 install.py --clangd-completer --ts-completer --cs-completer --rust-completer --java-completer --all
+"
+"
+"  " :!git  ===>>>  :Git  :: :G commit/log/status/....
+"Plug 'tpope/vim-fugitive' 
+"" git left signs[+-~] lineas modificadas
+"Plug 'airblade/vim-gitgutter'
+"" commit trees
+"Plug 'junegunn/gv.vim'
+"  " [c   ]c salta entre las modificaciones del archivo, arriba/abajo :) hunks
+"
+"  " time tree
+"Plug 'mbbill/undotree'
   
 call plug#end()
 
@@ -109,7 +109,7 @@ nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>q :q<CR>
 nmap <Leader>w :w<CR>
-nmap <Leader>z :! clear && zsh<CR>
+nmap <Leader>z :! clear && bash<CR>
 nmap <Leader>x :! 
 nmap <Leader>. :nohlsearch<CR> 
 nmap <Leader>g :Git<CR>
@@ -188,14 +188,14 @@ endif
 
 
 " Transparencia en grubox *********************************
-set t_Co=256
-colorscheme gruvbox
-let g:gruvbox_transparent_bg=1
-
-colorscheme minimalist "tambien vale onedark :)  <3<3<3
-colorscheme gruvbox
-
-hi! Normal ctermbg=NONE guibg=NONE
+"set t_Co=256
+"colorscheme gruvbox
+"let g:gruvbox_transparent_bg=1
+"
+"colorscheme minimalist "tambien vale onedark :)  <3<3<3
+"colorscheme gruvbox
+"
+"hi! Normal ctermbg=NONE guibg=NONE
 
 " no lineas al infinito :') *************************************
 set wrap
