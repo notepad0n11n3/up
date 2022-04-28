@@ -1,0 +1,13 @@
+
+  :::vim  /etc/default/grub
+
+  ::: sudo update-grub
+
+
+WALLPAPER_GRUB 
+  remplaza todo por la nueva imagen
+
+  /boot/grub/themes/kali
+  /usr/share/grub/themes/kali               /// llegu[e aqu[i gracias al archivo .sh del anteriorDirectorio <3  :)
+
+  ::: sudo update-grub                  /// solo para asegurar, a[un no lo prob[e sin esto :/
