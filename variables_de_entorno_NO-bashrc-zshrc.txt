@@ -47,6 +47,6 @@
     burn="/home/aeo8/Desktop/burningArea/"
     up="/home/aeo8/Desktop/up/"
     box="/home/aeo8/Desktop/blackbox/"
-    brain="$HOME/Desktop/brain/"
+    brain="$HOME/Desktop/brain/"          <<---<<< con $HOME no funciona, tiene que ser ruta absoluta, no relativa  :/
     bored="$HOME/Desktop/bored/"
     
