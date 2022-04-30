@@ -40,7 +40,7 @@
 
 
 
-### *** ### *** ### *** Variables entorno Globales PERSISTENTES/AllUsers
+### *** ### *** ### *** Variables entorno Globales PERSISTENTES/AllUsers     !!!  post_reinicio POST_REINICIO  !!!
 
 ::: vim /etc/environment
     
@@ -48,4 +48,5 @@
     up="/home/aeo8/Desktop/up/"
     box="/home/aeo8/Desktop/blackbox/"
     brain="$HOME/Desktop/brain/"
+    bored="$HOME/Desktop/bored/"
     
