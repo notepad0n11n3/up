@@ -1,3 +1,4 @@
+                    --noconfirm       ===       -y   
 
 ::: pacman -Sgg | grep blackarch
   
