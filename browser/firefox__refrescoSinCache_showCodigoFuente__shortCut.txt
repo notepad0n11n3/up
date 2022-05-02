@@ -2,8 +2,20 @@
 https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
 
 
- Ctrl   r         recarga sin usar cache, carga limpia
+ Ctrl   r         recarga sin usar cache, carga limpia  ACTUALIZAR_PESTA~N   <3 <3 <3
  Ctrl   u         codigo fuente p[agina actual
+
+ Ctrl   k       editar url
+        j
+        l
+
+ Ctrl   h       historial menu_Lateral
+ Ctrl   b       bookmarks menu_Lateral
+ Ctrl   d       agregar a bookMark_Menu
+
+ Ctrl   t       nueva Pesta~a               ||         Ctrl Shif p     nueva_Pesta~a_PRIVADA
+ Ctrl   n       nueva Ventana
+ Ctrl   m       mutear la pesta~a
 
  Alt  numberHere      saltar a pesta~a n[umero...
 
