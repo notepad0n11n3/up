@@ -18,3 +18,9 @@
 
         bi/tri        leg             del          leg          bi/tri                       del||               bi/tri
           2            2               2            2             2                           2                     2
+          
+
+
+
+
+
