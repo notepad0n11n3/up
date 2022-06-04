@@ -9,7 +9,7 @@
 
 
 
-  =>   Legs           Delt           Back          Del||         Bi/Tri        Legs         Pech                  Legs
+  =>   Legs       Delt/BiceBarra     Back          Del||        Bi/Tri        Legs       Pech/TriExter            Legs
   =>   anteBr                        braqu                      anteBr                      braqu                 anteBr 
          2             2              1             2              1             2           1                      2
         palo          silla          palo          silla         palo          piso         silla                  palo          
