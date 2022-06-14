@@ -101,8 +101,8 @@ let NERDTreeQuitOnOpen=1
 let g:indent_guides_enable_on_vim_startup = 1 "" Lineas de identacion enable desde inicio
 
 "***********======>>>>> Atajo personalizado <<<<<<<========********************
-imap mm <Esc>
-imap Mm <Esc>
+imap ;; <Esc>
+"imap Mm <Esc>
 " Tecla lider
 let mapleader=" "
 nmap <Leader>nt :NERDTreeFind<CR>
