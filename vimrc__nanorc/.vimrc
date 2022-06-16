@@ -58,6 +58,7 @@ set copyindent    " copy the previous indentation on autoindenting
 "set hidden
 
 call plug#begin('~/.vim/plugged')
+                                        "" google:: vim plug   && v::PlugStatus   PlugInstall  PlugUpdate PlugUpgrade 
 " busqueda por coincidencia <Espace>+s
 Plug 'easymotion/vim-easymotion' 
 
