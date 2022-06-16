@@ -11,3 +11,9 @@ WALLPAPER_GRUB
   /usr/share/grub/themes/kali               /// llegu[e aqu[i gracias al archivo .sh del anteriorDirectorio <3  :)
 
   ::: sudo update-grub                  /// solo para asegurar, a[un no lo prob[e sin esto :/
+
+
+OS WINDOWS NO DETECTADO...!!! <<3 <3
+
+ ::: sudo  echo "#Activar os-prober" >> /etc/default/grub
+ ::: sudo  echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub
