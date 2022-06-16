@@ -19,6 +19,7 @@ https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=
 
  Alt  numberHere      saltar a pesta~a n[umero...
 
+Ctrl Shift k      consoleFirefox
 
    ******************************EXTENSIONS************************************
 
