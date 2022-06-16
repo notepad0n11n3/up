@@ -1,7 +1,7 @@
 
 
 function cpwd(){
-  pwd | tr -d "\n" | xclip -sel clip | xclip -sel clip
+  pwd | tr -d "\n" | xclip -sel clip 
 }
 
 function q(){
