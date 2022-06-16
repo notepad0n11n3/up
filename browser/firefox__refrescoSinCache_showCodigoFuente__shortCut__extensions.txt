@@ -28,3 +28,4 @@ FoxyProxy
 HTTPS Everywhere
 uBlock Origin
 Privacy Badger
+Dark Reader
