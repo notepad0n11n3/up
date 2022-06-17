@@ -7,3 +7,11 @@
 ::: apt update
 
 ::: apt-get full-upgrade -y
+
+
+
+####  QTERMINAL  
+
+           Application transparency  9% 
+           Terminal transparency 79% 
+           Terminal margin 5px 
