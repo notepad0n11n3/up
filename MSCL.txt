@@ -6,7 +6,7 @@
 
       lunes         martes        miercoles       jueves        viernes        sab         Domngo                 lun
 
-      Bi/Tri         Legs            Pech          Esp           Legs          Del         Bra/ABS               Bi/Tri
+      Bi/Tri         Legs            Pech          Esp           Legs          Del        Braqu/ABS              Bi/Tri
         1             2               1             1             2             1             1                     1
 
 
@@ -14,10 +14,10 @@
 
 
 
-  =>   Legs       Delt/BiceBarra     Back          Del||        Bi/Tri        Legs       Pech/TriExter            Legs
-       branqu         anteBr         braqu         anteBr                                   braqu                 anteBr 
   =>     2             2              1             2              1             2           1                      2
-       silla          palo           silla         palo          silla         piso         palo                   silla         
+  =>   Legs       Delt/BiceBarra     Back          Del||        Bi/Tri         Legs      Pech/TriExter             Legs
+       branqu         anteBr         braqu        anteBr                                    braqu                 branq  
+                      palo                         palo                        piso         palo                                 
 
 
 
@@ -25,9 +25,9 @@
 
 
 
-        bi/tri        leg             del          leg          bi/tri                       del||               bi/tri
-          2            2               2            2             2                           2                     2
-          
+        bi/tri        leg             del          leg          bi/tri      pechCable||     del||                bi/tri
+          2            2               2            2             2             1             2                     2
+ 
 
 
 
