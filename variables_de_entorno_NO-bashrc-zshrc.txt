@@ -50,3 +50,12 @@
     brain="$HOME/Desktop/brain/"          <<---<<< con $HOME no funciona, tiene que ser ruta absoluta, no relativa  :/
     bored="$HOME/Desktop/bored/"  <<-- $HOME don't work, we need absolute path. <3 <3 <3
     desktop="/home/userFolderHere/Desktop"
+
+
+
+burn="/home/aeo8/Desktop/burningArea/"      // el '/' al final PUEDE causar conflictos enOtro entorno/sistema
+up="/home/aeo8/Desktop/up"
+box="/home/aeo8/Desktop/blackbox"
+brain="/home/aeo8/Desktop/brain"
+bored="/home/aeo8/Desktop/bored"
+desktop="/home/aeo8/Desktop"
