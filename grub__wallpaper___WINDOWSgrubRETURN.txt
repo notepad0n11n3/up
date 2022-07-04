@@ -10,7 +10,7 @@ WALLPAPER_GRUB
   /boot/grub/themes/kali/
   /usr/share/grub/themes/kali/      /// llegu[e aqu[i gracias al archivo .sh del anteriorDirectorio <3  :)
 
-  ::: sudo update-grub           /// solo para asegurar, lo prob[e sin esto NO ES NECESARIO pero... noTaDemas
+  ::: sudo update-grub           /// solo para asegurar, lo prob[e sin esto, NO ES NECESARIO!!!  pero... noTaDemas
 
 
 OS WINDOWS NO DETECTADO...!!! <<3 <3
