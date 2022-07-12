@@ -1,9 +1,0 @@
-
-	::: apt-get install open-vm-tools
-
-
-## Menu desplegable de vmware.exe (pantallaCompleta)
-
-
-    Ctrl Atl      Atl Espace
-  (liberaMouse)   (menuContextualAplication__likeLinux)
