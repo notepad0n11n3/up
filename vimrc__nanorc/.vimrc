@@ -102,8 +102,9 @@ let NERDTreeQuitOnOpen=1
 let g:indent_guides_enable_on_vim_startup = 1 "" Lineas de identacion enable desde inicio
 
 "***********======>>>>> Atajo personalizado <<<<<<<========********************
-imap vv <Esc>
-imap Vv <Esc>
+imap ;l <Esc>
+"imap vv <Esc>
+"imap Vv <Esc>
 " Tecla lider
 let mapleader=" "
 " refrescar archivo, post salto de rama :::git checkout nameBranchHere
