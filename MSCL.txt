@@ -1,7 +1,8 @@
 
-                    Bi/Tri      Deltoi      Pech      Back      Legs
-
-
+          Bi           Tri        braq       Deltoi          Pech         Back           Legs
+       6(2)--6(2)   6(2)--6(2)             9(5(2))||dela    10||10                       8||8
+                                           9(5(2))||late
+                                             10(5)||post
 
 
       lunes         martes        miercoles       jueves        viernes        sab         Domngo                 lun
@@ -10,10 +11,6 @@
         1             2               1             1             2             1             1                     1
 
 
-
-
-
-                                                                                                                                               
   =>     2             2              1             2              1             2           1                      2                          banca(`)   parado\./
   =>   Legs       Delt/BiceBarra     Back      DelLat/Del||     Bi/Tri         Legs      Pech/TriExter             Legs                         paloLowAbs
        braqu          anteBr         braqu        anteBr                                                          braqu                        bancaV
@@ -22,14 +19,8 @@
 
 
 
-
-
-
         bi/tri        leg             del          leg          bi/tri      pechCable||     del||                bi/tri
           2            2               2            2             2             1             2                     2
  
-
-
-
 
 
