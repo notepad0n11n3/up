@@ -52,10 +52,19 @@
     desktop="/home/userFolderHere/Desktop"
 
 
-
-burn="/home/aeo8/Desktop/burningArea/"      // el '/' al final PUEDE causar conflictos enOtro entorno/sistema
-up="/home/aeo8/Desktop/up"
-box="/home/aeo8/Desktop/blackbox"
-brain="/home/aeo8/Desktop/brain"
-bored="/home/aeo8/Desktop/bored"
+   burn="/home/aeo8/Desktop/burningArea/"   // el '/' al final PUEDE causar conflictos enOtro entorno/sistema
 desktop="/home/aeo8/Desktop"
+     up="/home/aeo8/Desktop/up"
+    box="/home/aeo8/Desktop/blackbox"
+  brain="/home/aeo8/Desktop/brain"
+  bored="/home/aeo8/Desktop/bored"
+
+
+   up="/home/x89p/Desktop/0n11n3/up/"
+  box="/home/x89p/Desktop/0n11n3/blackbox/"
+brain="/home/x89p/Desktop/0n11n3/brain/"
+bored="/home/x89p/Desktop/0n11n3/bored/"
+
+   burn="/home/x89p/Desktop/burningArea/"
+desktop="/home/x89p/Desktop/"
+
