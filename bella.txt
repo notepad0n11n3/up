@@ -3,3 +3,8 @@ teclas F en unix:
 
   Cambia a distribuci[on de teclas para Mac OS, ahora con fn + number accedemos a la fila de las F
       -->> Tecla 'Windows' ahora es 'Alt' y viceversa, el resto por ahora todo OK. 
+
+
+SCREENSHOT  imp pnt
+
+    FN Supr('arriba del arrowUp')  "Linux"
