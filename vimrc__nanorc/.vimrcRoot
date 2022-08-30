@@ -14,19 +14,24 @@ function! StatuslineGit()
 	return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
 
-function! Panda8hat()
+function! Panda8hatPre()
 	return system("whoami 2>/dev/null | tr -d '\n' | tr '[:lower:]' '[:upper:]' ")
 endfunction
 
-function! Battery_mango()
-	return system("upower --dump 2>/dev/null | grep -E 'DisplayDevice' -A 15 | grep -E 'state|percentage' | awk '{print $2}' | tr '\n' ':' | tr -d '\n' ")
+function! Panda8hat()
+	let l:panda = Panda8hatPre()
+	return strlen(l:panda) > 0?'  '.l:panda.' ':''
 endfunction
+
+"function! Battery_mango()
+"	return system("upower --dump 2>/dev/null | grep -E 'DisplayDevice' -A 15 | grep -E 'state|percentage' | awk '{print $2}' | tr '\n' ':' | tr -d '\n' ")
+"endfunction
 " PANDA8HAT end
 
 " STATUSLINE begin
 set laststatus=2
 " \ === espacio entre stdout,  % === variables,  vim:: help statusline
-set statusline=
+"set statusline=
 "set statusline+=%#LineNr#
 set statusline+=%m
 set statusline+=\ %{Panda8hat()}
@@ -47,7 +52,7 @@ set statusline+=%=
 set statusline+=\ %m%m%m%m%m
 
 set statusline+=Battery=>
-set statusline+=%{Battery_mango()}
+"set statusline+=%{Battery_mango()}
 set statusline+=(￣ヘ￣;)^ω^）
 set statusline+=%f
 set statusline+=%{StatuslineGit()}
