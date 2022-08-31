@@ -1,6 +1,7 @@
 " v:: PlugStatus        v:: PlugInstall       v:: PlugUpgrade  etc...
 
 "         for nvim go tail here
+"  : w | so %           "  con | concatenamos comandos likea a &&   <3 <3 <3 
 "  :source %  :: so %   " cargar archivo .vimrc actual
 "  :h tabstop    :h noerrorblells    " infoHelp para los opci[ones de confi.
 "  :options      " todas las opciones de configuraci[on   <3 <3 <3 <3 <3 <3 <3 <3 <3 
@@ -103,13 +104,11 @@ let g:indent_guides_enable_on_vim_startup = 1 "" Lineas de identacion enable des
 
 "***********======>>>>> Atajo personalizado <<<<<<<========********************
 imap ;l <Esc>
-"imap vv <Esc>
-"imap Vv <Esc>
+
 " Tecla lider
 let mapleader=" "
 " refrescar archivo, post salto de rama :::git checkout nameBranchHere
 nmap <Leader>r :e<CR>
-nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>q :q<CR>
@@ -238,4 +237,3 @@ set wildmenu    "" command-line copletion shows a list of matches
       "wrapmargin	margin from the right in which to break a line
       "	(local to buffer)
 "set wm=0
-
