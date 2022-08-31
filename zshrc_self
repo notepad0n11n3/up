@@ -1,5 +1,4 @@
 
-
 function cpwd(){
   pwd | tr -d "\n" | xclip -sel clip 
 }
@@ -10,4 +9,8 @@ function q(){
 
 function ports(){
   echo "$(cat ${1} | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip
+}
+
+function notepad0n11n3(){
+  cd $up && git pull origin master && cd $box && git pull origin master && cd $brain && git pull origin master && cd $box && git pull origin master && echo -e "\n\n\t\tOK Ok ok...\n"
 }
