@@ -12,5 +12,5 @@ function ports(){
 }
 
 function notepad0n11n3(){
-  cd $up && git pull origin master && cd $box && git pull origin master && cd $brain && git pull origin master && cd $box && git pull origin master && echo -e "\n\n\t\tOK Ok ok...\n"
+  cd $up && git pull origin master && cd $box && git pull origin master && cd $brain && git pull origin master && cd $bored && git pull origin master && echo -e "\n\n\t\tOK Ok ok...\n"
 }
