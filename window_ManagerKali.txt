@@ -2,7 +2,7 @@
 
 Settings/Windows Manager{
 
-  Close window        Super+Q
+  Close window        Super+-  'Super+Q'
 
   Maximize window     Super+M
   Hide window         Super+N
