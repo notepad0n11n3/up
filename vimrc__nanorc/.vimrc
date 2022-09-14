@@ -8,6 +8,8 @@
 syntax on 
 set encoding=utf-8
 set number 
+set cindent   "indentaci[on special para vimrcRoot, aun tengo que seguir investigando
+
   "set nu " == set number
 "set mouse=a "mouseIntegration
 set relativenumber 
@@ -15,7 +17,7 @@ set numberwidth=1 "number width ==> relative number
 
 " Copy Paste 
 set clipboard=unnamedplus	
-  "::: vim -- version | grep clipboard  ==>> -clipboard -xterm_clipboard ===> sudo apt install vim-gtk
+  "::: vim -- version | grep clipboard =>> -clipboard -xterm_clipboard ===> sudo apt install vim-gtk O vim-gtk3
   "     ARCHLINUX... ... ...  ::: pacman -Si vim  &&  pacman -Si gvim    
   "       unistall vim   and    install gvim     and use vim      +clipboard +xterm_xlipboard por default <3 <3 <3 <3 <3
 
