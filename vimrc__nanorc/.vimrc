@@ -17,9 +17,9 @@ set numberwidth=1 "number width ==> relative number
 
 " Copy Paste 
 set clipboard=unnamedplus	
-  "::: vim -- version | grep clipboard =>> -clipboard -xterm_clipboard ===> sudo apt install vim-gtk O vim-gtk3
-  "     ARCHLINUX... ... ...  ::: pacman -Si vim  &&  pacman -Si gvim    
-  "       unistall vim   and    install gvim     and use vim      +clipboard +xterm_xlipboard por default <3 <3 <3 <3 <3
+  "::: vim --version | grep clipboard =>> -clipboard -xterm_clipboard ==> sudo apt install vim-gtk O vim-gtk3
+  " ARCHLINUX... ... ...  ::: pacman -Si vim  &&  pacman -Si gvim    
+  "   :: unistall vim   and    install gvim     and use vim      +clipboard +xterm_xlipboard por default <3 <3 <3 <3 <3
 
 set showcmd "muestra los comandos que estoy ejecutando NOfuncioaCOMOesperaba :(
 set ruler   "número de linea y número de columna
