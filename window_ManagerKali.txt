@@ -1,0 +1,18 @@
+    Super === windowKey
+
+Settings/Windows Manager{
+
+  Close window      Super+Q
+
+  Maximize window     Super+M
+  Hide window       Super+N
+
+  Move window to next workspace     Super+i
+
+  Tile window to the top      Super+K
+  Tile window to the bottom     Super+J
+  Tile window to the left     Super+A
+  Tile window to the right      Super+D
+
+  Next workspace      Super+O
+}
