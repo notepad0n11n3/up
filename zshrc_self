@@ -12,5 +12,6 @@ function ports(){
 }
 
 function notepad0n11n3(){
-  cd $up && git pull origin master && cd $box && git pull origin master && cd $brain && git pull origin master && cd $bored && git pull origin master && cd $desktop &&  echo -e "\n\n\t\tOK Ok ok...\n"
+  mango=$(pwd)
+  echo -e "\n\n\t\tUP\n" && cd $up && git pull origin master && echo -e "\n\n\t\tBLACKBOX\n" && cd $box && git pull origin master && echo -e "\n\n\t\tBRAIN\n" && cd $brain && git pull origin master && echo -e "\n\n\t\tBORED\n" && cd $bored && git pull origin master && cd ${mango} &&  echo -e "\n\n\t\tOK Ok ok...\n"
 }
