@@ -15,3 +15,11 @@
            Application transparency  9% 
            Terminal transparency 79% 
            Terminal margin 5px 
+
+
+
+#### settings/LigthDM GTK+ Greeter    (xfce)
+          
+          Theme   Kali-Dark
+
+          Image     thumb-1920-1051364.jpg

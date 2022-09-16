@@ -1,16 +1,24 @@
-" v:: PlugStatus        v:: PlugInstall       v:: PlugUpgrade  etc...
+"
+" google:: vim plug      https://github.com/junegunn/vim-plug
+"     v:: PlugStatus        v:: PlugInstall       v:: PlugUpgrade  etc...
 
 "         for nvim go tail here
+"
 "  : w | so %           "  con | concatenamos comandos likea a &&   <3 <3 <3 
+"
 "  :source %  :: so %   " cargar archivo .vimrc actual
-"  :h tabstop    :h noerrorblells    " infoHelp para los opci[ones de confi.
+"
 "  :options      " todas las opciones de configuraci[on   <3 <3 <3 <3 <3 <3 <3 <3 <3 
+"  vim:: help 'mango'     (number, laststatus, cindent, hlsearch, noswapfile,  etc)
+"  vim:: h 'mango'
+"
 syntax on 
 set encoding=utf-8
 set number 
 set cindent   "indentaci[on special para vimrcRoot, aun tengo que seguir investigando
 
-  "set nu " == set number
+  "set nu  == set number
+  "set rnu  
 "set mouse=a "mouseIntegration
 set relativenumber 
 set numberwidth=1 "number width ==> relative number
@@ -40,7 +48,7 @@ set noerrorbells
 set expandtab
 set nowrap "don't work :'u
   "solution
-set wrap
+"set wrap
 set textwidth=0 wrapmargin=0
   "noitulos
 set smartcase
