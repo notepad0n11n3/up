@@ -18,8 +18,12 @@
 
 
 
-#### settings/LigthDM GTK+ Greeter    (xfce)
+#### settings / LigthDM GTK+ Greeter Settings   (xfce)
           
           Theme   Kali-Dark
 
           Image     thumb-1920-1051364.jpg
+
+#### settings / File Manager Settings
+
+          show thumbnails:     'Never'
