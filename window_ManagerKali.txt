@@ -1,11 +1,16 @@
     Super === windowKey
 
-Settings/Windows Manager{
+Settings/Windows Manager
+{
+  Up                  k
+  Down                j
 
   Close window        Super+-  'Super+Q'
 
   Maximize window     Super+M
   Hide window         Super+N
+
+  Move Window         Super+.
 
   Toggle fullscreen   Super+Space
 
