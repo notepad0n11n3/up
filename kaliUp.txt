@@ -1,3 +1,4 @@
+    ///   install--->>>   'central'   time zone   <3 <3 <3 
 
 ::: vim /etc/apt/sources.list 
 					- last #
