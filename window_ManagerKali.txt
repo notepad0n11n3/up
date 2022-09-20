@@ -11,7 +11,6 @@ Settings/Windows Manager
   Hide window         Super+.
   Move window         Super+,
 
-  Move Window         Super+.
 
   Toggle fullscreen   Super+Space
 
