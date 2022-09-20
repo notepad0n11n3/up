@@ -7,8 +7,9 @@ Settings/Windows Manager
 
   Close window        Super+-  'Super+Q'
 
-  Maximize window     Super+M
-  Hide window         Super+N
+  Maximize window     Super+/
+  Hide window         Super+.
+  Move window         Super+,
 
   Move Window         Super+.
 
