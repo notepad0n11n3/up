@@ -94,6 +94,13 @@ Plug 'ycm-core/YouCompleteMe'
 " python3 install.py --clangd-completer --ts-completer --cs-completer --rust-completer --java-completer --all
 
 
+"     https://github.com/ycm-core/YouCompleteMe
+"     https://github.com/ycm-core/YouCompleteMe#linux-64-bit
+" ::: sudo apt install build-essential cmake vim-nox python3-dev
+" ::: sudo apt install mono-complete golang nodejs default-jdk npm
+" ::: cd ~/.vim/plugged/YouCompleteMe  &&  python3 install.py --all
+
+
   " :!git  ===>>>  :Git  :: :G commit/log/status/....
 Plug 'tpope/vim-fugitive' 
 " git left signs[+-~] lineas modificadas
