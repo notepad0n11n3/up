@@ -5,9 +5,9 @@ https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=
  Ctrl   r         recarga sin usar cache, carga limpia  ACTUALIZAR_PESTA~N   <3 <3 <3
  Ctrl   u         codigo fuente p[agina actual
 
- Ctrl   k       editar url
-        j
-        l
+ Ctrl   k       buscar en google
+        j          "    "   "
+ Ctrl   l     SELECIONAR LA URL ('sin el molesto google: ') <3 <3 <3
 
  Ctrl   h       historial menu_Lateral
  Ctrl   b       bookmarks menu_Lateral
@@ -20,6 +20,7 @@ https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=
  Alt  numberHere      saltar a pesta~a n[umero...
 
 Ctrl Shift k      consoleFirefox
+Ctrl Shift y      ventanaDescargas
 
    ******************************EXTENSIONS************************************
 
@@ -30,3 +31,4 @@ HTTPS Everywhere
 uBlock Origin
 Privacy Badger
 Dark Reader
+
