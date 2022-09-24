@@ -3,6 +3,8 @@ https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=
 
 
  Ctrl   r         recarga sin usar cache, carga limpia  ACTUALIZAR_PESTA~N   <3 <3 <3
+ Ctrl Shift r     reemplazar cache
+
  Ctrl   u         codigo fuente p[agina actual
 
  Ctrl   k       buscar en google
@@ -16,13 +18,43 @@ https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=
  Ctrl   t       nueva Pesta~a               ||         Ctrl Shif p     nueva_Pesta~a_PRIVADA
  Ctrl   n       nueva Ventana
  Ctrl   m       mutear la pesta~a
+ Ctrl Shift p   pesta~a privada 
 
- Alt  numberHere      saltar a pesta~a n[umero...
+
+ Ctrl q        Cierra todas las ventanas
+ Ctrl w        cierra la pesta~a actual
+ Ctrl Shift t  reabrir la [ultima pesta~a cerrada
+
+ Alt arrowLeft   retroceder a la anterior p[agina visitada
+ Ctrl [
+
+ Alt arrowRight   !(Alt arrowLeft)
+ Ctrl ]
+
+
+ Ctrl Enter    autocompleta el 'www' alInicio y '.com' alFinal  en la url (Ctrl l)
+
+
+ Espacio          bajarP[agina
+ Shift Espacio    subirPagina
+
+
+
+###PESTA~AS NAVEGADOR
+ Alt  numberHere    saltar a pesta~a n[umero(1-8)
+ Alt  9             salta a la [ultima pesta;a(sin importanElN[umero de pesta;as)
+ Ctrl  Tab          pesta;a Siguiente   <3 <3 <3
+ Ctrl Shift Tab     pesta;a Anterios    <3 <3 <3
+###PESTA~AS NAVEGADOR
 
 Ctrl Shift k      consoleFirefox
 Ctrl Shift y      ventanaDescargas
 
    ******************************EXTENSIONS************************************
+### Mouse
+   Click central en un enlace         Abre el enlace en una pesta~a nueva
+   Click central sobre una pesta~a    Cierra la pesta~a
+### Mouse
 
 Wappalyzer
 FoxyProxy
