@@ -41,8 +41,8 @@ https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=
 
 
 ###PESTA~AS NAVEGADOR
- Alt  numberHere    saltar a pesta~a n[umero(1-8)
- Alt  9             salta a la [ultima pesta;a(sin importanElN[umero de pesta;as)
+ Alt  numberHere    saltar a pesta~a n[umero(1-8) UNIX  ('Ctrl numberHere  WINDOWS')
+ Alt  9             salta a la [ultima pesta;a(sin importanElN[umero de pesta;as)('Ctrl 9  WINDOWS')
  Ctrl  Tab          pesta;a Siguiente   <3 <3 <3
  Ctrl Shift Tab     pesta;a Anterios    <3 <3 <3
 ###PESTA~AS NAVEGADOR
