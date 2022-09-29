@@ -6,6 +6,8 @@ https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=
  Ctrl Shift r     reemplazar cache
 
  Ctrl   u         codigo fuente p[agina actual
+ Ctrl   u      (si estas escribiendo en el boxUrl, permite borrar toda la linea(url) )
+ Ctrl  <-      (si estas escribiendo en el boxUrl, permite borrar una palabra(like a Ctrl+w linux) )
 
  Ctrl   k       buscar en google
         j          "    "   "
