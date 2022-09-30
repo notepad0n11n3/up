@@ -58,4 +58,4 @@
             htb="/home/x89p/Desktop/burningArea/HTB/"
 
 
-    vim::  PATH=...:/home/aeo8/.local/bin       vimEx:: w ! sudo tee %
+    vim::  PATH=...:/home/aeo8/.local/bin       vimEx:: w ! sudo tee %    no necesario POR_AHORA
