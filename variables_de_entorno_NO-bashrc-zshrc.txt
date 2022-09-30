@@ -57,4 +57,5 @@
         desktop="/home/x89p/Desktop/"
             htb="/home/x89p/Desktop/burningArea/HTB/"
 
-### *** ### *** ### *** Variables entorno Globales PERSISTENTES/AllUsers     !!!  post_reinicio POST_REINICIO  !!!
+
+    vim::  PATH=...:/home/aeo8/.local/bin       vimEx:: w ! sudo tee %
