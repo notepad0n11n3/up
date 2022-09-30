@@ -8,3 +8,8 @@
 
   ::: git branch --set-upstream-to origin/master
   ::: git branch -u origin master                 // los 2 son lo mismo (::: git brach --help)
+
+
+      ### si da error dale ...
+        ::: git fetch
+        ::: git branch --set-upstream-to origin/master
