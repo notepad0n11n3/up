@@ -1,2 +1,9 @@
-:::git remote remove origin
-:::git remote add origin https://<personalAccessToken>@github.com/<USERNAME>/<REPO>.git
+
+::: git remote remove origin
+::: git remote add origin https://<personalAccessToken>@github.com/<USERNAME>/<REPO>.git
+
+
+### mostrar las diferencias entre '(HEAD -> master) y (origin/master)'   "git status"
+     repetir para cada repo  :'U
+
+  ::: git branch --set-upstream-to origin/master
