@@ -29,3 +29,6 @@ function notepad0n11n3_checker(){
 function pit(){
   xdg-open $up/Intervalo\ de\ 30\ segundos\ con\ sonido.mp4 >/dev/null 2>&1 & disown
 }
+
+### pip2 
+#export PATH=$PATH:/home/aeo8/.local/bin
