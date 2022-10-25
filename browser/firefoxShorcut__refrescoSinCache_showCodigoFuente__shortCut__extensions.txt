@@ -52,6 +52,7 @@ https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=
 Ctrl Shift k      consoleFirefox
 Ctrl Shift y      ventanaDescargas
 
+
    ******************************EXTENSIONS************************************
 ### Mouse
    Click central en un enlace         Abre el enlace en una pesta~a nueva
@@ -66,3 +67,4 @@ uBlock Origin
 Privacy Badger
 Dark Reader
 
+Cookie-Editor
