@@ -24,3 +24,19 @@
  
 
 
+
+### MELODN
+
+
+  ->          avanzar nota
+  <-          retroceder nota
+  Shift ->    seleccionar notas ( shift <- )
+  alt Espace  Playback Selection
+
+ ## FILE
+
+  New     Ctrl n
+  Open    Ctrl o
+  Close   Ctrl w
+  Save    Ctrl s
+  SaveAs  Ctrl Shift s
