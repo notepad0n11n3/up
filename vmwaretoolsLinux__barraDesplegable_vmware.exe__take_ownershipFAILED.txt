@@ -4,9 +4,9 @@
 
 ### Menu desplegable de vmware.exe (pantallaCompleta)
 
-
     Ctrl Atl      Atl Espace
   (liberaMouse)   (menuContextualAplication__likeLinux)
+
 
 
 ### vmware  TAKE OWNERSHIP   FAILED...!!!
