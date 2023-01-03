@@ -31,3 +31,13 @@
        Updated on Nov 4, 2021: 
 *??*   ZF3R0*?*FHED2*?*M80TY*?*8QYGC*?*NPKYF *?**?**?* >> VMguaRE 16.2.0 build-18760230
 
+
+### VMWARE kLinux
+      
+
+      ::: sudo apt-get install build-essential  linux-headers-`uname -r`
+      ::: sudo apt-get install build-essential  linux-headers-$(uname -r)
+
+      ::: sudo chmod +x ./VMware-Workstation*.bundle
+
+      ::: sudo ./VMware-Workstation*.bundle
