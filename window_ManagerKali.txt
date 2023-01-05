@@ -1,3 +1,11 @@
+            ### vmware.exe
+      Ctrl Alt   'quita el focus de la session de vmware'        Alt Espace  'menu contextual de la barra de vmware(fullScreenMode)'
+      Ctrl Alt Enter  'Full screen mode  vmware' 'vale para volver a dar el focus a la session de vmware, sal y entra del fullScreenMode para regresar el focus'  <3 <3 <3...!!!
+             vmware.exe #
+
+
+    Ctrl Alt D    'minimiza/restaura todas la ventanas <3 <3 <3'
+
     Super === windowKey
 
 Settings/Windows Manager
