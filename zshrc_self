@@ -2,7 +2,14 @@
 
 
 ### ___ <3 <3 <3
-
+# 
+#       cpwd  ->  siempre lo hago manual ewe
+#         q   ->  reFlojo pa teclear eXiT  :u
+#       ports ->  Extraer puertos de archivo -oG (nmap)
+#        pit  ->  Intervalo de 30 segundos Beep <3
+#
+#      notepad0n11n3     ->
+#  notepad0n11n3_checker -> 
 
 function cpwd(){
   pwd | tr -d "\n" | xclip -sel clip 
