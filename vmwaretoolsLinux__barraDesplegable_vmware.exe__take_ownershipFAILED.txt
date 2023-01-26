@@ -10,6 +10,8 @@
     Ctrl Alt   'quita el focus de la session de vmware'        Alt Espace  'menu contextual de la barra de vmware(fullScreenMode)'
     Ctrl Alt Enter  'Full screen mode  vmware' 'vale para volver a dar el focus a la session de vmware, sal y entra del fullScreenMode para regresar el focus'  <3 <3 <3...!!!
 
+    Ctrl g   recupera el focus de la maquina virtual, yo no m[as  Ctrl Alt Enter :'u  <3 <3 <3 
+
 
 
 ### vmware  TAKE OWNERSHIP   FAILED...!!!
