@@ -12,15 +12,15 @@
 
 
   =>     2             2              1             2              1             2           1                      2                          banca(`)   parado\./
-  =>   Legs       Delt/BiceBarra     Back      DelLat/Del||     Bi/Tri         Legs      Pech/TriExter             Legs                         paloLowAbs
+  =>   Legs       Delt/BiceBarra     Back      DelLAT/Del||     Bi/Tri         Legs      Pech/TriExter             Legs                         paloLowAbs
        braqu          anteBr         braqu        anteBr                                                          braqu                        bancaV
-                      palo                         palo                        piso         palo                                 
+       palo                          palo                        palo           piso         palo                                 
 
 
 
 
-        bi/tri        leg             del          leg          bi/tri      pechCable||     del||                bi/tri
-          2            2               2            2             2             1             2                     2
+        bi/tri        leg             del         back          bi/tri      pechCable||     del||                bi/tri
+          2            1               2            1             2             1             2                     2
  
 
 
