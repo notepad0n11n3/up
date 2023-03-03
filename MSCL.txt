@@ -5,16 +5,21 @@
                                              10(5)||post
 
 
-      lunes         martes        miercoles       jueves        viernes        sab         Domngo                 lun
+    Domingo         lunes           martes      miercoles       jueves       viernes      Sabado                Domingo
 
       Bi/Tri         Legs            Pech          Esp           Legs          Del        Braqu/ABS              Bi/Tri
         1             2               1             1             2             1             1                     1
 
 
-  =>     2             2              1             2              1             2           1                      2                          banca(`)   parado\./
-  =>  Legs/Bic  DelLat/pechoCable    Back/Bi   DelLAT/Del||     Bi/Tri         Legs      Pech/TriExter             Legs                         paloLowAbs
-       braqu          /pechoCable    braqu        anteBr                                                          braqu                        bancaV
-       palo           anteBr         palo                        palo           piso         palo                                 
+
+
+       Domingo       lunes            martes      miercoles       jueves        viernes      Sabado                Domingo
+
+  =>     2             2                1            2              1             2            1                     2                         banca(`)   parado\./
+  =>  Legs/Bic   DelLat/pechCable    Back/Bic   DelLAT/Del||     Bi/Tri         Legs      Pech/TriExter           Legs/Bic                     paloLowAbs
+
+       Braqu          anteBr          Braqu        anteBr         Braqu         anteBr                              braqu                        bancaV
+       palo                           palo                         palo          piso         palo                                 
 
 
 
