@@ -13,14 +13,15 @@
 
 
 
-       Domingo           lunes            martes      miercoles       jueves        viernes      Sabado                Domingo
+       Domingo           lunes             martes      miercoles        jueves        viernes       Sabado              Domingo
 
-  =>     2                 2                1            2              1             2            1                     2                         banca(`)   parado\./
-  => Legs/BicEx        Del/pechCable      Back      DelLAT/Del||      Bi/Tri        Legs      Pech/TriExter           Legs/BicEx                   paloLowAbs
-     /triPatadAtra                                                                                                    /triPatadAtra
+  =>     2                 2                 1            2               1             2            1                     2                         banca(`)   parado\./
+  =>    Legs           Del/pechCable        Back      DelLAT/Del||      Bi/Tri         Legs      Pech/TriExter            Legs                       paloLowAbs
+     /triPatadAtra                                                                                                      /triPatadAtra
+      /BicEx                                                                                                             /BicEx
 
-       Braqu              anteBr          Braqu        anteBr         Braqu         anteBr                              braqu                        bancaV
-       palo                               palo                         palo          piso         palo                                 
+       Braqu              anteBr           Braqu        anteBr          Braqu         anteBr                              braqu                        bancaV
+       palo                                palo                          palo          piso         palo                                 
 
 
 
