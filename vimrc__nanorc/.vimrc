@@ -4,11 +4,11 @@
 
 "         for nvim go tail here
 "
-"  : w | so %           "  con | concatenamos comandos likea a &&   <3 <3 <3 
+""  : w | so %           "  con | concatenamos comandos likea a &&   <3 <3 <3 
 "
-"  :source %  :: so %   " cargar archivo .vimrc actual
+""  :source %  :: so %   " cargar archivo .vimrc actual
 "
-"  :options      " todas las opciones de configuraci[on   <3 <3 <3 <3 <3 <3 <3 <3 <3 
+""  :options      " todas las opciones de configuraci[on   <3 <3 <3 <3 <3 <3 <3 <3 <3 
 "  vim:: help 'mango'     (number, laststatus, cindent, hlsearch, noswapfile,  etc)
 "  vim:: h 'mango'
 "
@@ -19,7 +19,7 @@ set cindent   "indentaci[on special para vimrcRoot, aun tengo que seguir investi
 
   "set nu  == set number
   "set rnu  
-"set mouse=a "mouseIntegration
+"" set mouse=a "mouseIntegration
 set relativenumber 
 set numberwidth=1 "number width ==> relative number
 
@@ -41,7 +41,7 @@ set shiftwidth=2
 set smartindent
 set incsearch "no espera a dar ENTER para mostrar resultados de busqueda con /
 set hlsearch "Resalta las letras al hacer búsquedas
-"set ignorecase  " Ignore capital letters during search.
+"" set ignorecase  " Ignore capital letters during search.
 
 "ThePrimeagen
 set noerrorbells
@@ -148,7 +148,7 @@ nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
   " https://github.com/ycm-core/YouCompleteMe#the-gycm_autoclose_preview_window_after_completion-option
 nnoremap <silent> <Leader>yd :YcmCompleter GoTo<CR>
 nnoremap <silent> <Leader>yf :YcmCompleter FixIt<CR>
-"let g:ycm_autoclose_preview_window_after_insertion = 1  "cerrar despu[esDeElegir splitSuperior con las sugerencias
+"" let g:ycm_autoclose_preview_window_after_insertion = 1  "cerrar despu[esDeElegir splitSuperior con las sugerencias
 set completeopt-=preview  " noMostrarSplitSuperior con las sugerencias  <3...
 
               "" GIT GIT GIT GIT en vim...**********************************
