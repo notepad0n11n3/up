@@ -25,6 +25,9 @@ Settings/Windows Manager
 
     Toggle fullscreen   Super+Space
 
+    Move window to lower monitor      Super+N
+    Move window to upper monitor      Super+Y
+
     Move window to next workspace     Super+i
 
     Tile window to the top            Super+K
@@ -37,8 +40,6 @@ Settings/Windows Manager
     Tile window to the bottom-left    Super+X
     Tile window to the bottom-right   Super+C
 
-    Move window to lower monitor      Super+N
-    Move window to upper monitor      Super+Y
 
     Next workspace                Super+O
   }

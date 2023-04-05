@@ -69,7 +69,7 @@ set copyindent    " copy the previous indentation on autoindenting
 "set hidden
 
 call plug#begin('~/.vim/plugged')
-                                        "" google:: vim plug   && v::PlugStatus   PlugInstall  PlugUpdate PlugUpgrade 
+"    google:: vim plug   && v::PlugStatus   PlugInstall  PlugUpdate PlugUpgrade 
 " busqueda por coincidencia <Espace>+s
 Plug 'easymotion/vim-easymotion' 
 
@@ -151,7 +151,7 @@ nnoremap <silent> <Leader>yf :YcmCompleter FixIt<CR>
 "" let g:ycm_autoclose_preview_window_after_insertion = 1  "cerrar despu[esDeElegir splitSuperior con las sugerencias
 set completeopt-=preview  " noMostrarSplitSuperior con las sugerencias  <3...
 
-              "" GIT GIT GIT GIT en vim...**********************************
+"               GIT GIT GIT GIT en vim...**********************************
 " resaltado de lineas modificadas git LIGHT DARKNES  vim-gitgutter
 nmap <Leader>o :GitGutterLineHighlightsEnable<CR>
 nmap <Leader>O :GitGutterLineHighlightsDisable<CR>
