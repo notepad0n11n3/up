@@ -17,8 +17,12 @@ set encoding=utf-8
 set number 
 set cindent   "indentaci[on special para vimrcRoot, aun tengo que seguir investigando
 
+set wildmenu
+set wildoptions=pum   " muestra las sugerencias de 'vim:: color'  en vertical <3 <3
+                      "  vim:: PlugStatus  PlugInstall  PlugClean
+
   "set nu  == set number
-  "set rnu  
+  "set rnu  == relative number
 "" set mouse=a "mouseIntegration
 set relativenumber 
 set numberwidth=1 "number width ==> relative number
