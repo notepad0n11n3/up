@@ -16,3 +16,10 @@
   &!spa4rk&&testitesttost&&&gooool
   &cl4nn6r4vt&gogogo3gogo2&&maoool
 
+   NULL     0      x
+    00     48     120 
+    0     \x30    \x78
+
+  &?@0x00x300x786ndaeo80x00&gooool
+
+  &ov!cKm@?00481206ndaeo800&gooool
