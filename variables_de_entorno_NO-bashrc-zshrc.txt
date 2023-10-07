@@ -48,12 +48,13 @@
     burn="/home/aeo8/Desktop/burningArea"
 
 
-             up="/home/x89p/Desktop/0n11n3/up/"
-            box="/home/x89p/Desktop/0n11n3/blackbox/"
+          up="/home/x89p/Desktop/0n11n3/up/"
+          box="/home/x89p/Desktop/0n11n3/blackbox/"
           brain="/home/x89p/Desktop/0n11n3/brain/"
           bored="/home/x89p/Desktop/0n11n3/bored/"
 
            burn="/home/x89p/Desktop/burningArea/"
-        desktop="/home/x89p/Desktop/"
-            htb="/home/x89p/Desktop/burningArea/HTB/"
+           desktop="/home/x89p/Desktop/"
+           down="/home/x89p/Downloads/"
+           htb="/home/x89p/Desktop/burningArea/HTB/"
 
