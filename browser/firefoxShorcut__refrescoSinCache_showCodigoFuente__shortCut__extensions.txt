@@ -59,10 +59,10 @@ Ctrl Shift y      ventanaDescargas
    Click central sobre una pesta~a    Cierra la pesta~a
 ### Mouse
 
+
 Wappalyzer
 FoxyProxy
 
-HTTPS Everywhere
 uBlock Origin
 Privacy Badger
 Dark Reader
