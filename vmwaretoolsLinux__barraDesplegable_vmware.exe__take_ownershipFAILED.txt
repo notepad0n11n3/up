@@ -37,10 +37,10 @@
 *??*   ZF3R0*?*FHED2*?*M80TY*?*8QYGC*?*NPKYF *?**?**?* >> VMguaRE 16.2.0 build-18760230
 
 
-    windows                                  kli
+                                    windows       kli
 
-      Number of processors          '1'      '4'
-    Number of cores per processor   '4'      '1'
+      Number of processors           '1'          '1'
+    Number of cores per processor    '4'          '6'
 
 ### VMWARE kLinux
       
