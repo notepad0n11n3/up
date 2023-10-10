@@ -6,7 +6,7 @@
     CtrlDerecho f    'pantalla completa'
 
     **Personalizaci[on de shortcuts <3 <3 <3... File/Preferences/Input
-      Ctrl f  'fullScreen'  Ctrl g 'minimiza maquina virtual, regresa a la maquina rapido Ctrl shift tab '
+      rightAlt f 'fullScreen'  rAlt g 'minimiza maquina virtual, regresa a la maquina rapido Ctrl shift tab '
 
 ### Menu desplegable de vmware.exe (pantallaCompleta)
 
