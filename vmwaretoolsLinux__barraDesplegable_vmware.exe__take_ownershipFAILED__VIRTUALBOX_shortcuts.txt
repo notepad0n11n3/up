@@ -1,6 +1,12 @@
 
 	::: apt-get install open-vm-tools
 
+###   VIRTUALBOX        para resoluci[on pantalla completa no olvides instalar: " Devices/insert guest addition CD image "
+    CtrlDerecho m    'minimiza la maquina virtual, parecido a 'Ctrl g'  en vmware(no tenemos de otro POR AHORA)'
+    CtrlDerecho f    'pantalla completa'
+
+    **Personalizaci[on de shortcuts <3 <3 <3... File/Preferences/Input
+      Ctrl f  'fullScreen'  Ctrl g 'minimiza maquina virtual, regresa a la maquina rapido Ctrl shift tab '
 
 ### Menu desplegable de vmware.exe (pantallaCompleta)
 
@@ -11,7 +17,6 @@
     Ctrl Alt Enter  'Full screen mode  vmware' 'vale para volver a dar el focus a la session de vmware, sal y entra del fullScreenMode para regresar el focus'  <3 <3 <3...!!!
 
     Ctrl g   recupera el focus de la maquina virtual, yo no m[as  Ctrl Alt Enter :'u  <3 <3 <3 
-
 
 
 ### vmware  TAKE OWNERSHIP   FAILED...!!!
