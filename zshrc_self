@@ -41,3 +41,10 @@ function pit(){
 
 ### pip2 
 #export PATH=$PATH:/home/aeo8/.local/bin
+
+function createCertificate(){
+  echo -e "\xA [1] ::: openssl genrsa -out x89p.key 2048 \x9\x9 (Generate a key)"
+  echo -e " [2] ::: openssl req -new -key x89p.key -out x89p.csr \x9\x9 (Generate a Certificate Signing Request - CSR File)"
+  echo -e " [3] ::: openssl x509 -req -in x89p.csr -CA file.cert -CAkey file.key -CAcreateserial -out x89p.pem -days 365 -sha256 \x9\x9 (Create PEM file)"
+  echo -e " [4] ::: openssl pkcs12 -export -out x89p.pfx -inkey x89p.key -in x89p.pem -certfile file.cert \xA"
+}
