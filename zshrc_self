@@ -40,7 +40,7 @@ function pit(){
 }
 
 ### pip2 
-#export PATH=$PATH:/home/aeo8/.local/bin
+#export PATH=$PATH:/home/x89p/.local/bin
 #                     $(whoami)
 
 function createCertificate(){

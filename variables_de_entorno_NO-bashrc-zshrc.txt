@@ -48,7 +48,7 @@
     burn="/home/aeo8/Desktop/burningArea"
 
 
-          on="/home/x89p/0n11n3/"
+          on="/home/x89p/.0n11n3/"
 
           up="/home/x89p/.0n11n3/up/"
           box="/home/x89p/.0n11n3/blackbox/"
