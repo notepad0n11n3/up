@@ -103,6 +103,9 @@ Plug 'ycm-core/YouCompleteMe'
 " ::: sudo apt install build-essential cmake vim-nox python3-dev
 " ::: sudo apt install mono-complete golang nodejs default-jdk npm
 " ::: cd ~/.vim/plugged/YouCompleteMe  &&  python3 install.py --all
+"
+"    google:: youcompleteme
+"         :::  apt install build-essential cmake vim-nox python3-dev
 
 
   " :!git  ===>>>  :Git  :: :G commit/log/status/....
