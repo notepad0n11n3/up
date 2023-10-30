@@ -107,6 +107,7 @@ Plug 'ycm-core/YouCompleteMe'
 "
 " ::: cd ~/.vim/plugged/YouCompleteMe  &&  python3 install.py --all
 "
+"         ::: python3 install.py --clangd-completer     ... ... ... <3 <3 <3 
 
 
   " :!git  ===>>>  :Git  :: :G commit/log/status/....
