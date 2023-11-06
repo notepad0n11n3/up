@@ -56,3 +56,6 @@
       ::: sudo chmod +x ./VMware-Workstation*.bundle
 
       ::: sudo ./VMware-Workstation*.bundle
+
+      'error al terminar la instalacion... <3 <3 <3'
+  https://www.kali.org/docs/virtualization/install-vmware-host/#too-newer-kernel
