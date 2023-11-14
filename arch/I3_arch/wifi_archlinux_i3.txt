@@ -1,0 +1,26 @@
+
+
+::: sudo pacman -Ss iwd    ::: sudo pacman -S iwd     
+
+	::: sudo systemctl enable iwd
+	::: sudo systemctl start iwd
+	::: sudo systemctl status iwd
+
+
+::: which dhcpcd
+::: sudo pacman -S dhcpcd
+
+	::: sudo systemctl enable dhcpcd
+	::: sudo systemctl start dhcpcd
+	::: sudo systemctl status dhcpcd
+
+::: iwctl
+
+		 iwd:: device list
+		 iwd:: station wlan0 scan
+		 iwd:: station wlan0 get-networks  (' > '  si ya estas conectado a laRed)
+
+		 iwd:: station wlan0 connect "nombreRed"  (dale enter, despuesPedira elPassword)
+
+		 iwd:: exit
+	
