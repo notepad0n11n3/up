@@ -196,4 +196,7 @@ bar {
 
 # no border de ventanas ...<3 <3 <3
 for_window [class="^.*"] border pixel 3
+
+focus_follows_mouse no
 exec qterminal
+#exec qterminal -e "tmux"
