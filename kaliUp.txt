@@ -3,7 +3,7 @@
   Corregir hora en dual boot  win/kali  {
     https://www.kali.org/docs/installation/dual-boot-kali-with-windows/
 
-          ::: timedatectl set-local-rtc 1 --adjust-system-clock
+          ::: timedatectl set-local-rtc 1 --adjust-system-clock         ... <3 <3 <3
 
                  'To undo this we can simply do:'
                  ::: timedatectl set-local-rtc 0 --adjust-system-clock
