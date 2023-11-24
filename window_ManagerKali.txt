@@ -8,7 +8,6 @@
 
              
 
-
  Ctrl Alt D    'minimiza/restaura todas la ventanas <3 <3 <3'
 
   Super === windowKey
@@ -17,9 +16,6 @@ Settings/Windows Manager
             
             Keyboard
   {
-    Up                  k
-    Down                j
-
     Close window        Super+-  'Super+Q'
 
     Maximize window     Super+/
