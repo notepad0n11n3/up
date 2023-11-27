@@ -1,37 +1,38 @@
+"                        for nvim go tail here
 "
 " google:: vim plug      https://github.com/junegunn/vim-plug
-"     v:: PlugStatus        v:: PlugInstall       v:: PlugUpgrade  etc...
-
-"         for nvim go tail here
+"     v:: PlugStatus        v:: PlugInstall       v:: PlugUpgrade   v::   PlugClean  etc...
 "
-""  : w | so %           "  con | concatenamos comandos likea a &&   <3 <3 <3 
+"   : w | so %           "  con | concatenamos comandos likea a &&   <3 <3 <3 
 "
-""  :source %  :: so %   " cargar archivo .vimrc actual
+"   :source %  :: so %   " cargar archivo .vimrc actual
 "
-""  :options      " todas las opciones de configuraci[on   <3 <3 <3 <3 <3 <3 <3 <3 <3 
+"   :options      " todas las opciones de configuraci[on   <3 <3 <3 <3 <3 <3 <3 <3 <3 
 "  vim:: help 'mango'     (number, laststatus, cindent, hlsearch, noswapfile,  etc)
 "  vim:: h 'mango'
 "
-syntax on 
 set encoding=utf-8
-set number 
+syntax on 
+
+set number relativenumber numberwidth=1   "number width ==> relative number
+"    set nu  == set number         set rnu  == relative number        set mouse=a mouseIntegration
+
+
 set cindent   "indentaci[on special para vimrcRoot, aun tengo que seguir investigando
 
 set wildmenu
 set wildoptions=pum   " muestra las sugerencias de 'vim:: color'  en vertical <3 <3
                       "  vim:: PlugStatus  PlugInstall  PlugClean
 
-  "set nu  == set number
-  "set rnu  == relative number
-"" set mouse=a "mouseIntegration
-set relativenumber 
-set numberwidth=1 "number width ==> relative number
 
-" Copy Paste 
+"                         Copy Paste 
 set clipboard=unnamedplus	
-  "::: vim --version | grep clipboard =>> -clipboard -xterm_clipboard ==> sudo apt install vim-gtk O vim-gtk3
-  " ARCHLINUX... ... ...  ::: pacman -Si vim  &&  pacman -Si gvim    
-  "   :: unistall vim   and    install gvim     and use vim      +clipboard +xterm_xlipboard por default <3 <3 <3 <3 <3
+"          ::: vim --version | grep clipboard  =>>  stdout(' -clipboard -xterm_clipboard ')  ==>   ::: sudo apt install vim-gtk O vim-gtk3
+ 
+"   ARCHLINUX... ... ...  
+"     ::: pacman -Si vim  &&  pacman -Si gvim    
+"      :: unistall vim   and    install(pacman -S gvim)  gvim     and use vim      +clipboard +xterm_xlipboard por default <3 <3 <3 <3 <3
+
 
 set showcmd "muestra los comandos que estoy ejecutando NOfuncioaCOMOesperaba :(
 set ruler   "número de linea y número de columna
@@ -39,9 +40,7 @@ set showmatch "si me paro sobre un ({[]}) muestra el otro que esta cerrando
 set laststatus=2  "muestra barra inferior ( si we si... esaBarra de color :u )
 set noshowmode   "quita el aviso -- INSERTAR --  al entrar en modo inserción noFunciona:(
 
-set sw=2  "tabulador   ahora es 2 espacios
-set tabstop=2 softtabstop=2
-set shiftwidth=2
+set tabstop=2 softtabstop=2 sw=2  "tabulador   ahora es 2 espacios  shiftwidth=2
 set smartindent
 set incsearch "no espera a dar ENTER para mostrar resultados de busqueda con /
 set hlsearch "Resalta las letras al hacer búsquedas
@@ -50,16 +49,16 @@ set hlsearch "Resalta las letras al hacer búsquedas
 "ThePrimeagen
 set noerrorbells
 set expandtab
-set nowrap "don't work :'u
-  "solution
-"set wrap
+"set nowrap   "no rompe las lineas !set wrap
+
 set textwidth=0 wrapmargin=0
-  "noitulos
+  "notitulos
 set smartcase
 
 set noswapfile
 set nobackup
   "pre- mkdir $HOME/.vim/undodir
+
 set undodir=~/.vim/undodir
 set undofile
 
@@ -107,7 +106,9 @@ Plug 'ycm-core/YouCompleteMe'
 "
 " ::: cd ~/.vim/plugged/YouCompleteMe  &&  python3 install.py --all
 "
+"
 "         ::: python3 install.py --clangd-completer     ... ... ... <3 <3 <3 
+"
 
 
   " :!git  ===>>>  :Git  :: :G commit/log/status/....
@@ -217,7 +218,7 @@ endif
 "           export TERM=xterm-256color
 
 
-" Transparencia en grubox *********************************
+"    Transparencia en grubox *********************************
 set t_Co=256
 colorscheme gruvbox
 let g:gruvbox_transparent_bg=1
@@ -227,20 +228,11 @@ colorscheme gruvbox
 
 hi! Normal ctermbg=NONE guibg=NONE
 
-" no lineas al infinito :') *************************************
+" no lineas al infinito :') ************************************* ...<3 <3 <3
 set wrap
 set textwidth=0 wrapmargin=0
 
-"""""""""""""""""""""""""'NVIM""""""""""""""""""""""""""""""""""""''
-"mismo archivo de configuraci[on para vim nvim
-"
-"       $HOME/.config/nvim/init.vim
-"     ::: vim init.vim
-"
-"         set runtimepath^=~/.vim runtimepath+=~/.vim/after
-"         let &packpath=&runtimepath
-"         source ~/.vimrc
-"
+
 "set cursorline cursorcolumn
 
 set scrolloff=10  " No scroll hasta el fondo <3
@@ -263,3 +255,15 @@ set wildmenu    "" command-line copletion shows a list of matches
       "wrapmargin	margin from the right in which to break a line
       "	(local to buffer)
 "set wm=0
+
+
+"""""""""""""""""""""""""'NVIM""""""""""""""""""""""""""""""""""""''
+"mismo archivo de configuraci[on para vim nvim
+"
+"       $HOME/.config/nvim/init.vim
+"     ::: vim init.vim
+"
+"         set runtimepath^=~/.vim runtimepath+=~/.vim/after
+"         let &packpath=&runtimepath
+"         source ~/.vimrc
+
