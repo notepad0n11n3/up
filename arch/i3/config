@@ -119,15 +119,15 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "Main"
-set $ws2 "slave"
+set $ws2 "Slave"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9"
-set $ws10 "music"
+set $ws9 "UnU"
+set $ws10 "Audio"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -197,6 +197,8 @@ bindsym $mod+r mode "resize"
 bar {
   status_command i3status
   position top
+# disable clicking on workspace buttons
+  bindsym button1 nop
 }
 
 #bloquear la session ... <3 <3 <3
@@ -205,10 +207,24 @@ bindsym $mod+b exec burpsuite
 bindsym $mod+f exec firefox
 bindsym $mod+p exec parole
 
-#ejecutar programa en workspace asignado   # por ahora no funciona... :(
-assign [class="parole"] $ws10
-assign [class="firefox"] $ws2
-assign [class="^spotify*"] $ws10
+#ejecutar programa en workspace asignado  (assign avisa(alertColor) al ejecutar, for_window no avisa)
+#   para encontrar 'WM_CLASS(STRING) = "parole", "Parole"' dale a ::: xprop   y despues la click en el programa 'abierto' que quieres examinar
+#     ::: xprop | grep "WM_CLASS"       (tienes que dar click en la appAbierta despues ...<3 <3 <3)
+
+for_window [class="^Parole$"] move to workspace $ws10
+#assign [class="^Parole$"] $ws10
+for_window [class="^Firefox-esr$"] move to workspace $ws2
+#assign [class="firefox"] $ws2
+#assign [class="^spotify*"] $ws10
+
+
+#   Mover workspace entre monitores
+bindsym $mod+y move workspace to output right
+bindsym $mod+n move workspace to output left
+
+# presiona el mismo $mod+numberWorkspace para saltar entre los 2 ultimos workspaces
+workspace_auto_back_and_forth yes
+
 
 # no border de ventanas ...<3 <3 <3
 for_window [class="^.*"] border pixel 2
