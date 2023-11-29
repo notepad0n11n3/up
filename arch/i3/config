@@ -12,6 +12,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Set mod key ( Mod4 = Super/Window  && Mod1 = Alt)
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -31,7 +32,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -44,6 +45,12 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+bindsym $mod+Up exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +25% && $refresh_i3status
+bindsym $mod+Down exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -25% && $refresh_i3status
+bindsym $mod+Left exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+# MicMute
+bindsym $mod+Right exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -54,9 +61,11 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym $mod+Return exec qterminal
 bindsym $mod+t exec qterminal
+bindsym $mod+F8 exec qterminal
 
-# kill focused window
+# kill focused window    like XFCE  window + - ...<3 <3 <3
 bindsym $mod+Shift+q kill
+bindsym $mod+minus kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -72,11 +81,11 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+## alternatively, you can use the cursor keys:
+#bindsym $mod+Left focus left
+#bindsym $mod+Down focus down
+#bindsym $mod+Up focus up
+#bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -90,10 +99,10 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
+# split in horizontal orientation $mod+v
 bindsym $mod+v split h
 
-# split in vertical orientation
+# split in vertical orientation	  $mod+s
 bindsym $mod+s split v
 
 # enter fullscreen mode for the focused container
@@ -105,13 +114,13 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+o floating toggle
 
 # change focus between tiling / floating windows
-#bindsym $mod+space focus mode_toggle
+bindsym $mod+o focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -195,10 +204,13 @@ bindsym $mod+r mode "resize"
 # sudo apt show feh						'fondos de pantalla'
 
 bar {
-  status_command i3status
+# status_command i3status
+  status_command i3status -c ~/.config/i3/.i3status.conf
   position top
+
 # disable clicking on workspace buttons
   bindsym button1 nop
+
 }
 
 #bloquear la session ... <3 <3 <3
@@ -214,20 +226,24 @@ bindsym $mod+p exec parole
 for_window [class="^Parole$"] move to workspace $ws10
 #assign [class="^Parole$"] $ws10
 for_window [class="^Firefox-esr$"] move to workspace $ws2
+for_window [class="^qterminal$"] move to workspace $ws1
+for_window [class="^burp-StartBurp$"] move to workspace $ws2
 #assign [class="firefox"] $ws2
 #assign [class="^spotify*"] $ws10
 
 
 #   Mover workspace entre monitores
-bindsym $mod+y move workspace to output right
-bindsym $mod+n move workspace to output left
+#bindsym $mod+y move workspace to output right
+#bindsym $mod+n move workspace to output left
+bindsym $mod+y move workspace to output up
+bindsym $mod+n move workspace to output down
 
 # presiona el mismo $mod+numberWorkspace para saltar entre los 2 ultimos workspaces
-workspace_auto_back_and_forth yes
+#workspace_auto_back_and_forth yes
 
 
 # no border de ventanas ...<3 <3 <3
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 gaps inner 4
 gaps outer 3
 #smart_gaps on			#sin margen si es la unica ventana
@@ -235,7 +251,13 @@ gaps outer 3
 #gaps outer 1
 #gaps inner 3
 
-exec_always feh --bg-fill $up/8/23.jpg
 focus_follows_mouse no
+
+# sudo apt-get install arandr && arandr &>/dev/null & disown  ...<3 <3 <3
+exec_always xrandr --output eDP --primary --mode 1920x1080 --pos 0x1080 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --rotate normal
+
+exec_always --no-startup-id --no-fehbg feh --bg-fill $up/8/23.jpg
+
 #exec qterminal
 exec qterminal -e "tmux new -s main -c $desk -n go"
+

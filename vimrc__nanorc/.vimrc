@@ -1,5 +1,5 @@
 "                        for nvim go tail here
-"
+" v:: e      'reload file, por si editaste el mismo archivo en otra ventana/panel/etc..'
 " google:: vim plug      https://github.com/junegunn/vim-plug
 "     v:: PlugStatus        v:: PlugInstall       v:: PlugUpgrade   v::   PlugClean  etc...
 "
