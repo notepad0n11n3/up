@@ -251,13 +251,12 @@ gaps outer 3
 #gaps outer 1
 #gaps inner 3
 
+exec_always feh --bg-fill $up/8/23.jpg
 focus_follows_mouse no
 
 # sudo apt-get install arandr && arandr &>/dev/null & disown  ...<3 <3 <3
-exec_always xrandr --output eDP --primary --mode 1920x1080 --pos 0x1080 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --rotate normal
-
-exec_always --no-startup-id --no-fehbg feh --bg-fill $up/8/23.jpg
 
 #exec qterminal
 exec qterminal -e "tmux new -s main -c $desk -n go"
 
+exec_always xrandr --output eDP --primary --mode 1920x1080 --pos 0x1080 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --rotate normal
