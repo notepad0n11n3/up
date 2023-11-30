@@ -1,0 +1,15 @@
+
+::: amixer | grep "Front Left: Capture"
+
+::: amixer scontrols                'gets a list of simple mixer controls'
+
+::: amixer sset Capture toggle      'on/off microfono... <3 <3'
+::: amixer set Capture toggle       'on/off microfono... <3 <3'
+
+
+::: amixer sset 'Master' 40%       'Volumen'
+::: amixer set Master 40%          'Volumen'
+
+
+
+::: amixer sset 'Capture' 0% toggle
