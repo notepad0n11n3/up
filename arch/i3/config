@@ -210,6 +210,7 @@ bar {
 
 # disable clicking on workspace buttons
   bindsym button1 nop
+  separator_symbol "::"
 
 }
 
@@ -237,6 +238,8 @@ for_window [class="^burp-StartBurp$"] move to workspace $ws2
 #bindsym $mod+n move workspace to output left
 bindsym $mod+y move workspace to output up
 bindsym $mod+n move workspace to output down
+#saltar entre el workspace actual y el anterior like "'tmux:: Alt-m Ctrl-i'"...<3 <3 <3
+bindsym $mod+i workspace back_and_forth  
 
 # presiona el mismo $mod+numberWorkspace para saltar entre los 2 ultimos workspaces
 #workspace_auto_back_and_forth yes
