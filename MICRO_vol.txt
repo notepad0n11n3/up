@@ -1,4 +1,8 @@
 
+                    toggle    'on/off'
+                    cap     'on'
+                    nocap   'off'
+
 ::: amixer | grep "Front Left: Capture"
 
 ::: amixer scontrols                'gets a list of simple mixer controls'
@@ -13,3 +17,4 @@
 
 
 ::: amixer sset 'Capture' 0% toggle
+::: amixer sset Capture 0% nocap                (crontab -e  "@reboot amixer sset Captur...")
