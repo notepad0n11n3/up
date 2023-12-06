@@ -59,8 +59,8 @@ set noswapfile
 set nobackup
   "pre- mkdir $HOME/.vim/undodir
 
-set undodir=~/.vim/undodir
-set undofile
+"set undodir=~/.vim/undodir
+"set undofile
 
 set colorcolumn=80,75,70,1
 highlight ColorColumn ctermbg=0 guibg=lightgrey
