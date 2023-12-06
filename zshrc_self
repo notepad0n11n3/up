@@ -25,16 +25,57 @@ function ports(){
 
 #function notepad0n11n3(){
 function 0n11n3(){
-  mango=$(pwd)
-  echo -e "\n\n\t\tUP\n" && cd $up && git pull origin master && echo -e "\n\n\t\tBLACKBOX\n" && cd $box && git pull origin master && echo -e "\n\n\t\tBRAIN\n" && cd $brain && git pull origin master && echo -e "\n\n\t\tBORED\n" && cd $bored && git pull origin master && cd ${mango} &&  echo -e "\n\n\n\t Update notepad0n11n3 OK Ok ok...\n"
+  if [ ${#} -eq 1 ]; then
+
+    if [ ${1} = "--checker" ]; then
+      mango=$(pwd)
+      echo -e "\n\n\t\tUP\n" && cd $up && git status && echo -e "\n\n\t\tBLACKBOX\n" && cd $box && git status && echo -e "\n\n\t\tBRAIN\n" && cd $brain && git status && echo -e "\n\n\t\tBORED\n" && cd $bored && git status && cd ${mango} &&  echo -e "\n\n\n\t Checker... OK Ok ok...\n"
+
+    elif [ ${1} = "--files" ]; then
+      diff ~/.vimrc $up/vimrc__nanorc/.vimrc &>/dev/null
+      if [ $? = 0 ]; then
+        echo -e "\xA\xA\x9   .vimrc  \x9Ready...<3\xA"
+      else
+        echo -e "\x9 ! .vimrc  WAIT...!!!***\xA"
+      fi
+
+      diff ~/.tmux.conf $up/tmux/.tmux.conf &>/dev/null
+      if [ $? = 0 ]; then
+        echo -e "\x9   .tmux.conf  Ready...<3\xA"
+      else
+        echo -e "\x9 ! .tmux.conf  WAIT...!!!***\xA"
+      fi
+
+      diff ~/.config/i3/config $up/arch/i3/config
+      if [ $? = 0 ]; then
+        echo -e "\x9    config  \x9Ready...<3\xA"
+      else
+        echo -e "\x9 !  config  WAIT...!!!***\xA"
+      fi
+
+      diff ~/.config/i3/.i3status.conf $up/arch/i3/.i3status.conf
+      if [ $? = 0 ]; then
+        echo -e "\x9   .i3status.conf  Ready...<3\xA"
+      else
+        echo -e "\x9 ! .i3status.conf  WAIT...!!!***\xA"
+      fi
+
+
+    elif [ ${1} = "--pull" ]; then
+      mango=$(pwd)
+      echo -e "\n\n\t\tUP\n" && cd $up && git pull origin master && echo -e "\n\n\t\tBLACKBOX\n" && cd $box && git pull origin master && echo -e "\n\n\t\tBRAIN\n" && cd $brain && git pull origin master && echo -e "\n\n\t\tBORED\n" && cd $bored && git pull origin master && cd ${mango} &&  echo -e "\n\n\n\t Update notepad0n11n3 OK Ok ok...\n"
+
+    else
+      echo -e "\xA Options:\xA\x9 --checker\xA\x9 --files\xA\x9 --pull\xA"
+    fi
+  else
+    echo -e "\xA Options:\xA\x9 --checker\xA\x9 --files\xA\x9 --pull\xA"
+  fi
+
 }
 
-#function notepad0n11n3_checker(){
-function 0n11n3_checker(){
-  mango=$(pwd)
-  echo -e "\n\n\t\tUP\n" && cd $up && git status && echo -e "\n\n\t\tBLACKBOX\n" && cd $box && git status && echo -e "\n\n\t\tBRAIN\n" && cd $brain && git status && echo -e "\n\n\t\tBORED\n" && cd $bored && git status && cd ${mango} &&  echo -e "\n\n\n\t Checker... OK Ok ok...\n"
-}
 
+### 
 function pit(){
   xdg-open $up/Intervalo\ de\ 30\ segundos\ con\ sonido.mp4 >/dev/null 2>&1 & disown
 }
@@ -45,6 +86,7 @@ function pit(){
 #export PATH=$PATH:/home/x89p/.local/bin
 #                     $(whoami)
 
+###
 function createCertificate(){
   echo -e "\xA [1] ::: openssl genrsa -out x89p.key 2048 \x9\x9 (Generate a key)"
   echo -e " [2] ::: openssl req -new -key x89p.key -out x89p.csr \x9\x9 (Generate a Certificate Signing Request - CSR File)"
