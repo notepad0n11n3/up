@@ -32,11 +32,17 @@ function 0n11n3(){
       echo -e "\n\n\t\tUP\n" && cd $up && git status && echo -e "\n\n\t\tBLACKBOX\n" && cd $box && git status && echo -e "\n\n\t\tBRAIN\n" && cd $brain && git status && echo -e "\n\n\t\tBORED\n" && cd $bored && git status && cd ${mango} &&  echo -e "\n\n\n\t Checker... OK Ok ok...\n"
 
     elif [ ${1} = "--files" ]; then
-      diff ~/.vimrc $up/vimrc__nanorc/.vimrc &>/dev/null
+      diff ~/.vimrcMAIN $up/vimrc__nanorc/.vimrcMAIN &>/dev/null
       if [ $? = 0 ]; then
-        echo -e "\xA\xA\x9   .vimrc  \x9Ready...<3\xA"
+        echo -e "\xA\xA\x9   .vimrcMAIN  \x9Ready...<3\xA"
       else
-        echo -e "\x9 ! .vimrc  WAIT...!!!***\xA"
+        echo -e "\x9 ! .vimrcMAIN  WAIT...!!!***\xA"
+      fi
+      diff ~/.vimrcESSENTIAL $up/vimrc__nanorc/.vimrcESSENTIAL &>/dev/null
+      if [ $? = 0 ]; then
+        echo -e "\x9   .vimrcESSENTIAL  \x9Ready...<3\xA"
+      else
+        echo -e "\x9 ! .vimrcESSENTIAL  WAIT...!!!***\xA"
       fi
 
       diff ~/.tmux.conf $up/tmux/.tmux.conf &>/dev/null
