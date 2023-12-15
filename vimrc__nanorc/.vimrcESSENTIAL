@@ -17,3 +17,7 @@ color industry
 
 set smartindent
 syntax on
+
+"set statusline+=%F
+"set statusline+=
+"set statusline+=%{winnr()}
