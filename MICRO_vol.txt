@@ -16,5 +16,5 @@
 
 
 
-::: amixer sset 'Capture' 0% toggle
-::: amixer sset Capture 0% nocap                (crontab -e  "@reboot amixer sset Captur...")
+::: amixer sset/set 'Capture' 0% toggle
+::: amixer sset/set Capture 0% nocap                (crontab -e  "@reboot amixer sset Captur...")
