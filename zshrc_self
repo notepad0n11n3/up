@@ -34,36 +34,36 @@ function 0n11n3(){
     elif [ ${1} = "--files" ]; then
       diff ~/.vimrcMAIN $up/vimrc__nanorc/.vimrcMAIN &>/dev/null
       if [ $? = 0 ]; then
-        echo -e "\xA\xA\x9   .vimrcMAIN  \x9Ready...<3\xA"
+        echo -e "\xA\xA\x9   .vimrcMAIN  \x9\x9Ready...<3\xA"
       else
-        echo -e "\x9 ! .vimrcMAIN  WAIT...!!!***\xA"
+        echo -e "\x9 ! .vimrcMAIN  \x9\x9WAIT...!!!***\xA"
       fi
       diff ~/.vimrcESSENTIAL $up/vimrc__nanorc/.vimrcESSENTIAL &>/dev/null
       if [ $? = 0 ]; then
         echo -e "\x9   .vimrcESSENTIAL  \x9Ready...<3\xA"
       else
-        echo -e "\x9 ! .vimrcESSENTIAL  WAIT...!!!***\xA"
+        echo -e "\x9 ! .vimrcESSENTIAL  \x9WAIT...!!!***\xA"
       fi
 
       diff ~/.tmux.conf $up/tmux/.tmux.conf &>/dev/null
       if [ $? = 0 ]; then
-        echo -e "\x9   .tmux.conf  Ready...<3\xA"
+        echo -e "\x9   .tmux.conf  \x9\x9Ready...<3\xA"
       else
-        echo -e "\x9 ! .tmux.conf  WAIT...!!!***\xA"
+        echo -e "\x9 ! .tmux.conf  \x9\x9WAIT...!!!***\xA"
       fi
 
       diff ~/.config/i3/config $up/arch/i3/config
       if [ $? = 0 ]; then
-        echo -e "\x9    config  \x9Ready...<3\xA"
+        echo -e "\x9    config  \x9\x9Ready...<3\xA"
       else
-        echo -e "\x9 !  config  WAIT...!!!***\xA"
+        echo -e "\x9 !  config  \x9\x9WAIT...!!!***\xA"
       fi
 
       diff ~/.config/i3/.i3status.conf $up/arch/i3/.i3status.conf
       if [ $? = 0 ]; then
-        echo -e "\x9   .i3status.conf  Ready...<3\xA"
+        echo -e "\x9   .i3status.conf  \x9Ready...<3\xA"
       else
-        echo -e "\x9 ! .i3status.conf  WAIT...!!!***\xA"
+        echo -e "\x9 ! .i3status.conf  \x9WAIT...!!!***\xA"
       fi
 
 
