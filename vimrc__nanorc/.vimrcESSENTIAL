@@ -1,23 +1,27 @@
-set number
-set relativenumber
-set numberwidth=1
+set statusline=%F\ %m%h%r%=\ %{winnr()}\ %l,%c%V\ \ \ \ %P
+"set statusline=%F\ %m%=\ %m%{winnr()}\ %l,%c\ %P
 
-set sw=2
-set tabstop=2
-set softtabstop=2
+set number relativenumber numberwidth=1
+set sw=2 tabstop=2 softtabstop=2
 set laststatus=2
 
 set noswapfile
 set wrap
 
-imap ;l <Esc>
-
-color industry
-
-
 set smartindent
+set hlsearch incsearch
+
 syntax on
 
-"set statusline+=%F
-"set statusline+=
-"set statusline+=%{winnr()}
+"imap ;l <Esc>
+color industry
+
+set scrolloff=10
+
+
+"set statusline=%{winnr()}     numberPanel...<3 <3 <3
+"set statusline+=%P            all/ porcentaje del archivo
+"set statusline+=%m            [+] [-]
+"set statusline+=%=            switch to the right side...<3 ( %= )
+
+"set modifiable 		 no [-] ..<3 ::help statusline ::help modifiable (permiteModificarArchivosRO)
