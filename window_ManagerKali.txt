@@ -6,7 +6,6 @@
       Ctrl g    'remota el focus de la maquina virtual'
 
 
-             
 
  Ctrl Alt D    'minimiza/restaura todas la ventanas <3 <3 <3'
 
@@ -20,7 +19,6 @@ Settings/Windows Manager
 
     Maximize window     Super+/
     Hide window         Super+.
-    Move window         Super+,
 
     Toggle fullscreen   Super+Space
 
