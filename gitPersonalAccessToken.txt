@@ -13,3 +13,11 @@
       ### si da error dale ...
         ::: git fetch
         ::: git branch --set-upstream-to origin/master
+
+kK
+
+vK_K
+vW_K
+
+vK_W
+vW_W
