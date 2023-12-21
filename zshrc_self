@@ -66,6 +66,13 @@ function 0n11n3(){
         echo -e "\x9 ! .i3status.conf  \x9WAIT...!!!***\xA"
       fi
 
+			diff ~/.vimrc ~/.vimrcESSENTIAL &>/dev/null
+			if [ $? = 0 ]; then
+				echo -e "\x9 ~/.vimrc == ~/.vimrcESSENTIAL \x9Ready...<3\xA"
+			else
+				echo -e "\x9 ~/.vimrc != ~/.vimrcESSENTIAL \x9WAIT ...!!!***"
+			fi
+
 
     elif [ ${1} = "--pull" ]; then
       mango=$(pwd)
