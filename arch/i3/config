@@ -254,7 +254,7 @@ gaps outer 3
 #gaps outer 1
 #gaps inner 3
 
-exec_always feh --bg-fill $up/8/23.jpg
+exec_always feh --bg-fill $up/8/biosho_bigDaddy_littleSstr.jpg
 focus_follows_mouse no
 
 #el mouse AHORA no meSigue alCambiar workspace ('por default se va la medio de workspaceFocus')... <3 <3 <3
