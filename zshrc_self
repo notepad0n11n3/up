@@ -27,11 +27,11 @@ function ports(){
 function 0n11n3(){
   if [ ${#} -eq 1 ]; then
 
-    if [ ${1} = "--checker" ]; then
+    if [ ${1} = "--checker" -o ${1} = "-c" ]; then
       mango=$(pwd)
       echo -e "\n\n\t\tUP\n" && cd $up && git status && echo -e "\n\n\t\tBLACKBOX\n" && cd $box && git status && echo -e "\n\n\t\tBRAIN\n" && cd $brain && git status && echo -e "\n\n\t\tBORED\n" && cd $bored && git status && cd ${mango} &&  echo -e "\n\n\n\t Checker... OK Ok ok...\n"
 
-    elif [ ${1} = "--files" ]; then
+    elif [ ${1} = "--files" -o ${1} = "-f" ]; then
       diff ~/.vimrcMAIN $up/vimrc__nanorc/.vimrcMAIN &>/dev/null
       if [ $? = 0 ]; then
         echo -e "\xA\xA\x9   .vimrcMAIN  \x9\x9Ready...<3\xA"
@@ -74,7 +74,7 @@ function 0n11n3(){
 			fi
 
 
-    elif [ ${1} = "--pull" ]; then
+    elif [ ${1} = "--pull" -o ${1} = "-p" ]; then
       mango=$(pwd)
       echo -e "\n\n\t\tUP\n" && cd $up && git pull origin master && echo -e "\n\n\t\tBLACKBOX\n" && cd $box && git pull origin master && echo -e "\n\n\t\tBRAIN\n" && cd $brain && git pull origin master && echo -e "\n\n\t\tBORED\n" && cd $bored && git pull origin master && cd ${mango} &&  echo -e "\n\n\n\t Update notepad0n11n3 OK Ok ok...\n"
 
