@@ -16,9 +16,9 @@
 
 kK
 
-vK_K
-vW_K
+vk_K
+vw_K
 
-vK_W
-vW_W
+vk_W
+vw_W
 
