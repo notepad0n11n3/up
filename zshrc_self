@@ -29,8 +29,7 @@ function 0n11n3(){
 
     if [ ${1} = "--checker" -o ${1} = "-c" ]; then
       mango=$(pwd)
-      echo -e "\n\n\t\tUP\n" && cd $up && git status && echo -e "\n\n\t\tBLACKBOX\n" && cd $box && git status && echo -e "\n\n\t\tBRAIN\n" && cd $brain && git status && echo -e "\n\n\t\tBORED\n" && cd $bored && git status && cd ${mango} &&  echo -e "\n\n\n\t Checker... OK Ok ok...\n"
-
+      echo -e "\n\n\t\tUP\n" && cd $up && git fetch && git status && echo -e "\n\n\t\tBLACKBOX\n" && cd $box && git fetch && git status && echo -e "\n\n\t\tBRAIN\n" && cd $brain && git fetch && git status && echo -e "\n\n\t\tBORED\n" && cd $bored && git fetch && git status && cd ${mango} &&  echo -e "\n\n\n\t Checker... OK Ok ok...\n"
     elif [ ${1} = "--files" -o ${1} = "-f" ]; then
       diff ~/.vimrcMAIN $up/vimrc__nanorc/.vimrcMAIN &>/dev/null
       if [ $? = 0 ]; then
@@ -106,3 +105,4 @@ function createCertificate(){
   echo -e " [3] ::: openssl x509 -req -in x89p.csr -CA file.cert -CAkey file.key -CAcreateserial -out x89p.pem -days 365 -sha256 \x9\x9 (Create PEM file)"
   echo -e " [4] ::: openssl pkcs12 -export -out x89p.pfx -inkey x89p.key -in x89p.pem -certfile file.cert \xA"
 }
+

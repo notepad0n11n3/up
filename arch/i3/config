@@ -210,7 +210,7 @@ bar {
 
 # disable clicking on workspace buttons
   bindsym button1 nop
-  separator_symbol "::"
+  separator_symbol ":"
 
 }
 
@@ -246,9 +246,9 @@ bindsym $mod+i workspace back_and_forth
 
 
 # no border de ventanas ...<3 <3 <3
-for_window [class="^.*"] border pixel 3
-gaps inner 4
-gaps outer 3
+for_window [class="^.*"] border pixel 1
+gaps inner 2
+gaps outer 2
 #smart_gaps on			#sin margen si es la unica ventana
 # espacio entre ventanas... <3 <3 <3
 #gaps outer 1
