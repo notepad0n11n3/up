@@ -1,5 +1,5 @@
 " help statusline					echo expand(winnr()) == numberPanel...<3 <3 <3
-set statusline=%F\ %m%h%r%=\ <3\ %{winnr()}\ %l,%c%V\ \ \ \ %P
+set statusline=%F\ %m%h%r%=\ <3\ %{winnr()}\ \ %l,%c%V\ \ \ \ %P
 
 set number relativenumber numberwidth=1
 set sw=2 tabstop=2 softtabstop=2
@@ -15,7 +15,8 @@ syntax on
 "imap ;l <Esc>
 set scrolloff=10
 
-set wildmenu wildmode=list:longest	" vim:: e [Tab]
+"vim:: e [Tab]
+set wildmenu wildmode=list:longest	
 
 color lunaperche
 
