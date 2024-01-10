@@ -68,6 +68,7 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym $mod+Return exec qterminal
 bindsym $mod+t exec qterminal
+bindsym $mod+semicolon exec qterminal
 bindsym $mod+F8 exec qterminal
 
 # kill focused window    like XFCE  window + - ...<3 <3 <3
