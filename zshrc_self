@@ -2,6 +2,7 @@
 
 
 ### ___ <3 <3 <3
+#										::: echo "source ~/zshrc_self" >> $HOME/.zshrc   ||	 .bashrc
 # 
 #       cpwd  ->  siempre lo hago manual ewe
 #         q   ->  reFlojo pa teclear eXiT  :u
