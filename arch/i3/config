@@ -147,12 +147,12 @@ bindsym $mod+o focus mode_toggle
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "Main"
 set $ws2 "Slave"
-set $ws3 "3"
+set $ws3 "x89p"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8"
+set $ws8 "testo"
 set $ws9 "UnU"
 set $ws10 "Audio"
 
@@ -237,6 +237,7 @@ bar {
 bindsym $mod+b exec burpsuite
 bindsym $mod+f exec firefox
 bindsym $mod+p exec parole
+bindsym $mod+g exec vmware
 
 #ejecutar programa en workspace asignado  (assign avisa(alertColor) al ejecutar, for_window no avisa)
 #   para encontrar 'WM_CLASS(STRING) = "parole", "Parole"' dale a ::: xprop   y despues la click en el programa 'abierto' que quieres examinar
@@ -247,6 +248,7 @@ for_window [class="^Parole$"] move to workspace $ws10
 for_window [class="^Firefox-esr$"] move to workspace $ws2
 for_window [class="^qterminal$"] move to workspace $ws1
 for_window [class="^burp-StartBurp$"] move to workspace $ws2
+for_window [class="^Vmware$"] move to workspace $ws3
 #assign [class="firefox"] $ws2
 #assign [class="^spotify*"] $ws10
 
