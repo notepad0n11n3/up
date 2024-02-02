@@ -135,7 +135,7 @@ imap ;l <Esc>
 " Tecla lider
 let mapleader=" "
 " refrescar archivo, post salto de rama :::git checkout nameBranchHere
-nmap <Leader>r :e<CR>
+nmap <Leader>e :e<CR>
 nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>q :q<CR>
