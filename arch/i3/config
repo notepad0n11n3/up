@@ -244,7 +244,7 @@ bindsym $mod+g exec vmware
 
 for_window [class="^Parole$"] move to workspace $ws10
 #assign [class="^Parole$"] $ws10
-for_window [class="^Firefox-esr$"] move to workspace $ws2
+for_window [class="^firefox-esr$"] move to workspace $ws2
 for_window [class="^qterminal$"] move to workspace $ws1
 for_window [class="^burp-StartBurp$"] move to workspace $ws2
 for_window [class="^Vmware$"] move to workspace $ws3
