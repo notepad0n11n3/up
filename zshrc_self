@@ -2,7 +2,7 @@
 
 
 ### ___ <3 <3 <3
-#										::: echo "source ~/zshrc_self" >> $HOME/.zshrc   ||	 .bashrc
+#										::: echo "source ~/.zshrc_self" >> $HOME/.zshrc   ||	 .bashrc
 # 
 #       cpwd  ->  siempre lo hago manual ewe
 #         q   ->  reFlojo pa teclear eXiT  :u
@@ -46,11 +46,11 @@ function 0n11n3(){
         echo -e "\x9 ! .vimrcESSENTIAL  \x9WAIT...!!!***\xA"
       fi
 
-      diff ~/zshrc_self $up/zshrc_self &>/dev/null
+      diff ~/.zshrc_self $up/zshrc_self &>/dev/null
       if [ $? = 0 ]; then
-        echo -e "\x9   zshrc_self  \x9\x9Ready...<3\xA"
+        echo -e "\x9   .zshrc_self  \x9Ready...<3\xA"
       else
-        echo -e "\x9 ! zshrc_self  \x9\x9WAIT...!!!***\xA"
+        echo -e "\x9 ! .zshrc_self  \x9\x9WAIT...!!!***\xA"
       fi
 
       diff ~/.tmux.conf $up/tmux/.tmux.conf &>/dev/null
