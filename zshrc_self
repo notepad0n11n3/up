@@ -104,7 +104,7 @@ function pit(){
 ### pip2 
 # https://bootstrap.pypa.io/                 ../pip/2.7/
 #      ::: python2 $up/get-pip.py   
-#export PATH=$PATH:/home/x89p/.local/bin
+export PATH=$PATH:/home/x89p/.local/bin
 #                     $(whoami)
 
 ###
