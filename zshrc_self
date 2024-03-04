@@ -50,7 +50,7 @@ function 0n11n3(){
       if [ $? = 0 ]; then
         echo -e "\x9   .zshrc_self  \x9Ready...<3\xA"
       else
-        echo -e "\x9 ! .zshrc_self  \x9\x9WAIT...!!!***\xA"
+        echo -e "\x9 ! .zshrc_self  \x9WAIT...!!!***\xA"
       fi
 
       diff ~/.tmux.conf $up/tmux/.tmux.conf &>/dev/null
