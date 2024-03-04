@@ -1,12 +1,21 @@
 
 	::: apt-get install open-vm-tools
 
-###   VIRTUALBOX        para resoluci[on pantalla completa no olvides instalar: " Devices/insert guest addition CD image "
+###			  VIRTUALBOX *** *** ***         para resoluci[on pantalla completa no olvides instalar: " Devices/insert guest addition CD image "
+
+				Insert Guest Additions CD image
+		https://download.virtualbox.org/virtualbox
+		https://download.virtualbox.org/virtualbox/7.0.14/VBoxGuestAdditions_7.0.14.iso
+				
+				Upgrade Guest Additions
+
+
     CtrlDerecho m    'minimiza la maquina virtual, parecido a 'Ctrl g'  en vmware(no tenemos de otro POR AHORA)'
     CtrlDerecho f    'pantalla completa'
 
     **Personalizaci[on de shortcuts <3 <3 <3... File/Preferences/Input
       rightAlt f 'fullScreen'  rAlt g 'minimiza maquina virtual, regresa a la maquina rapido Ctrl shift tab '
+
 
 ### Menu desplegable de vmware.exe (pantallaCompleta)
 
