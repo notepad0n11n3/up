@@ -56,11 +56,12 @@
       Number of processors           '1'          '1'
     Number of cores per processor    '4'          '6'
 
-### VMWARE kLinux
+### VMWARE kLinux				(valido para VirtualBox, error 'Failed to start virtualbox.service  Linux kernel module'){
       
 
       ::: sudo apt-get install build-essential  linux-headers-`uname -r`
       ::: sudo apt-get install build-essential  linux-headers-$(uname -r)
+																																											}
 
       ::: sudo chmod +x ./VMware-Workstation*.bundle
 
