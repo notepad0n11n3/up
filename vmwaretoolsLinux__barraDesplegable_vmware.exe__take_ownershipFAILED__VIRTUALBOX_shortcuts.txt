@@ -16,6 +16,10 @@
     **Personalizaci[on de shortcuts <3 <3 <3... File/Preferences/Input
       rightAlt f 'fullScreen'  rAlt g 'minimiza maquina virtual, regresa a la maquina rapido Ctrl shift tab '
 
+					
+					linux kernel virtual box error:...          ::: sudo apt-get reinstall virtualbox-dkms -y					...<3 <3 <3
+
+
 
 ### Menu desplegable de vmware.exe (pantallaCompleta)
 
