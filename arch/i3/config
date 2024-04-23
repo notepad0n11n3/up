@@ -285,6 +285,7 @@ mouse_warping none
 focus_wrapping workspace
 
 #exec qterminal
+#exec --no-startup-id qterminal
 exec qterminal -e "tmux new -s main -c $desk -n go"
 
 # sudo apt-get install arandr && arandr &>/dev/null & disown  ...<3 <3 <3
