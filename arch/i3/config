@@ -284,9 +284,9 @@ mouse_warping none
 #ya no te puedes saltar a otro workspace con $mod+h/j/k/l ...<3 <3
 focus_wrapping workspace
 
-#exec qterminal
-#exec --no-startup-id qterminal
-exec qterminal -e "tmux new -s main -c $desk -n go"
-
 # sudo apt-get install arandr && arandr &>/dev/null & disown  ...<3 <3 <3
 exec_always xrandr --output eDP --primary --mode 1920x1080 --pos 0x1080 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --rotate normal
+
+#exec qterminal
+#exec --no-startup-id qterminal
+exec qterminal -e "tmux new -s Main -c $desk -n Go"
