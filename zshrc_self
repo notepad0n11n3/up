@@ -152,3 +152,7 @@ function x89p(){
 function aeo8(){
 	tmux new -s "Main" -c $desk -n "Go"
 }
+
+function mvnb(){
+	tmux display-message -p "#W" | tr -d "vpn ? w u () [] \n"
+}
