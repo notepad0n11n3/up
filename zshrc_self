@@ -146,7 +146,7 @@ function createCertificate(){
 # tmux split-window -v / -h
 
 function x89p(){
-	tmux new-session -t -d -s "htb" -c $htb \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_burn" M-a \; select-pane -t 1 \; send-key "clear && ifconfig tun0" M-a \; split-window -v \; send-key "vim ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c $htb \; send-key "bash" C-m \; send-key "clear && ls -lah" C-m \; split-window -h \; split-window -v \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
+	tmux new-session -t -d -s "htb" -c $htb \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_burn" M-a \; select-pane -t 1 \; send-key "clear && ifconfig tun0" M-a \; split-window -v \; send-key "ipTarged all && vim ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c $htb \; send-key "bash" C-m \; send-key "clear && ls -lah" C-m \; split-window -h \; split-window -v \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
 }
 
 function aeo8(){
@@ -170,14 +170,15 @@ function ipTarged(){
 		read my_ip
 
 		if [ ! -z "${my_ip}" ]; then
-			tmux rename-window -t 0 $(tmux display-message -t "htb:vpn()" -p "#w" | sed "s/\(.*\)/\(${my_ip}\)/g" | tr -d "\n")
+			tmux rename-window -t 0 $(tmux display-message -t "htb:vpn()" -p "#W" | sed "s/(.*)/(${my_ip})/g" | tr -d "\n")
 		fi
 		
 		echo -e -n "\xA Ip a morder: "
 		read ip_targed
 
 		if [ ! -z "${ip_targed}" ]; then
-			tmux rename-window -t 1 $(tmux display-message -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
+			#tmux rename-window -t 1 $(tmux display-message -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
+			tmux rename-window -t 1 $(tmux display-message -t "htb:?[]" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
 		fi
 
 	else
