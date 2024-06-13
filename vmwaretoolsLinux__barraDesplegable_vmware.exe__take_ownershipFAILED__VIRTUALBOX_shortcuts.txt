@@ -18,6 +18,7 @@
 
 					
 					linux kernel virtual box error:...          ::: sudo apt-get reinstall virtualbox-dkms -y					...<3 <3 <3
+								::: sudo apt-get install build-essential  linux-headers-$(uname -r)
 
 
 
