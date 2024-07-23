@@ -157,7 +157,7 @@ function aeo8(){
 # x89p x89p x89p x89p  extra... <3 <3 <3
 
 function mvnb(){
-	tmux display-message -p "#W" | tr -d "vpn ? w u () [] \n"
+	tmux display-message -p "#W" | grep -oP '\[.*?\]' | tr -d "[] \n"
 }
 
 function ipTarged(){
