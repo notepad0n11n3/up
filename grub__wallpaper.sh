@@ -16,3 +16,6 @@ sudo cp /home/${mango}/.0n11n3/up/8/wallhaven-01339g.png /boot/grub/themes/kali/
         # fondeDelGrub postSelecci[on fondoCargaPreSystem     <<== este no es tan importantePOR AHORA
 sudo cp ${umu}/8/wallhaven-01339g.png /usr/share/grub/themes/kali/grub-4x3.png
 sudo cp ${umu}/8/wallhaven-01339g.png /usr/share/grub/themes/kali/grub-16x9.png
+
+# cat /etc/default/grub
+sudo update-grub
