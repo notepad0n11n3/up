@@ -3,6 +3,8 @@
 
 ### ___ <3 <3 <3
 #										::: echo "source ~/.zshrc_self" >> $HOME/.zshrc   ||	 .bashrc
+#										::: echo "source ~/.vimrc_self" >> $HOME/.vimrc
+#										::: echo "source-file ~/.tmux.conf_self" >> $HOME/.tmux.conf
 # 
 #       cpwd  ->  siempre lo hago manual ewe
 #         q   ->  reFlojo pa teclear eXiT  :u
