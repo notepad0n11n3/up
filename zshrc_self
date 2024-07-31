@@ -155,6 +155,10 @@ function aeo8(){
 	tmux new -s "Main" -c $desk -n "Go"
 }
 
+function pwnbx(){
+	tmux new -s "Main" -c ~/.test/burn -n "?[]" \; split-window -h \; split-window -v \; send-key "vim ." C-m
+}
+
 
 # x89p x89p x89p x89p  extra... <3 <3 <3
 
