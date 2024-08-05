@@ -152,7 +152,7 @@ function x89p(){
 }
 
 function aeo8(){
-	tmux new -s "Main" -c $desk -n "Go"
+	tmux new -s "Main" -c $desk -n "Go" \; split-window -h \; send-key "vim -c term ." C-m \; select-pane -t 0
 }
 
 function pwnbx(){
