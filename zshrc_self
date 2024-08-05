@@ -23,7 +23,11 @@ function q(){
 }
 
 function ports(){
-  echo "$(cat ${1} | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip
+	if [ $# -eq 0 ]; then
+		echo "$(cat ./nmap/a01*G | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip && echo "\xA\x9Ready...\xA"
+	else
+		echo "$(cat ${1} | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip
+	fi
 }
 
 #function notepad0n11n3(){
