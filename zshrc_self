@@ -197,5 +197,4 @@ function ipTarged(){
 		ip_targed="$1"
 		tmux rename-window -t 1 $(tmux display-message -t "htb:1" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
 	fi
-
 }
