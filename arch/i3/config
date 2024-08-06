@@ -289,4 +289,4 @@ exec_always xrandr --output eDP --primary --mode 1920x1080 --pos 0x1080 --rotate
 
 #exec qterminal
 #exec --no-startup-id qterminal
-exec qterminal -e "tmux new -s 'Ready' -c $desk -n 'Go'"
+exec qterminal -e "tmux new -s Ready -c $desk -n Go"
