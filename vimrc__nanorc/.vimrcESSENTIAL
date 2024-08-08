@@ -34,6 +34,12 @@ hi NonText ctermfg=NONE ctermbg=NONE
 
 
 
+""  Mvnb  -  imprime el ipTarged para usar con gx  (http y https)
+""  Lcd   -  mueve la ubicacion actual(pwd) a la del archivo en edicion 'expand('%:p')'
+""  Lterm -  abre terminal en la ubicacion del archivo en edicion.
+""  Lex   -  abre Ex en la ubicacion actual 'pwd'  'cd -'
+""  Whereami  -  print ubicacion del archivo en edicion 'expand('%:p')' y pwdWorkDir 'pwd'.
+
 " :r ! tmux display-message -p "\#W" | grep -oP "\[.*?\]" | tr -d "[] \n"  "" Puto # en vim :u
 function! Mvnb()
 	let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
@@ -47,10 +53,42 @@ function! Mvnb()
 	let l:line1 = 'https://' . l:output
 	let l:line2 = 'http://' . l:output
 
+	echo "Targed... Ready..."
+
 	call append(line('.'), l:line1)
 	call append(line('.') + 1, l:line2)
 "extrA
 
 endfunction
-
 command Mvnb call Mvnb()
+
+"  : let mango=expand('%:p') | execute 'cd ' . mango | term
+function! Lcd()
+	let l:mango = expand('%:p:h')
+	execute 'lcd ' . l:mango
+	echo "new PWD WorkDir: " . l:mango
+endfunction
+command Lcd call Lcd()
+
+" : let mango=getcwd() | execute 'Ex ' . mango			getcwd() === pwd
+function! Lex()
+	let l:mango = getcwd()
+	execute 'Ex ' . mango
+	echo "Ex new pwdWorkDir"
+endfunction
+command Lex call Lex()
+
+function! Lterm()
+	let l:mango = expand('%:p:h')
+	execute 'lcd ' . l:mango
+	echo ":term  fileWorkDir: " . l:mango
+	execute 'term'
+endfunction
+command Lterm call Lterm()
+
+function! Whereami()
+	let l:mango = expand('%:p')
+	let l:mango2 = getcwd()
+	echo "  =>fileActual: " . l:mango . "    =>PWD Actual: " . l:mango2
+endfunction
+command Whereami call Whereami()
