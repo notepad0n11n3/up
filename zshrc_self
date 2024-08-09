@@ -1,7 +1,24 @@
 
+if [ -n "$ZSH_VERSION" ]; then
+	bindkey '^P' up-line-or-history
+	bindkey '^N' down-line-or-history
+	# en BASH esto esta por defecto... <3 <3
+fi
 
-bindkey '^P' up-line-or-history
-bindkey '^N' down-line-or-history
+#if [ -n "$BASH_VERSION" ]; then
+#	function exec_and_stay() {
+#		local command
+#		# Guarda el comando actual
+#		command=$(history 1 | sed 's/^[ ]*[0-9]*[ ]*//')
+#		# Ejecuta el comando
+#		eval "$command"
+#		# Mueve el cursor a la misma línea
+#		echo -ne "\r$ "
+#	}
+#
+#	# Asigna la función a `Alt-a`
+#	bind -x '"\ea": exec_and_stay'
+#fi
 
 
 ### ___ <3 <3 <3
