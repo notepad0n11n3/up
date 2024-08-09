@@ -1,3 +1,5 @@
+" : set number relativenumber numberwidth=1 sw=2 tabstop=2 softtabstop=2 wrap noswapfile | map <C-j> <CR> | color murphy
+
 " help statusline					echo expand(winnr()) == numberPanel...<3 <3 <3
 set statusline=%F\ %m%h%r%=\ <3\ %{winnr()}\ \ %l,%c%V\ \ \ \ %P
 
@@ -13,6 +15,7 @@ set hlsearch incsearch
 
 syntax on
 "imap ;l <Esc>
+map <C-j> <CR>
 set scrolloff=10
 
 "vim:: e [Tab]
@@ -33,6 +36,9 @@ hi NonText ctermfg=NONE ctermbg=NONE
 "set modifiable 		 no [-] ..<3 ::help statusline ::help modifiable (permiteModificarArchivosRO)
 
 
+""  ----------------------------------------------------------------------------------------------------
+" : Ex $desk | call Lcd() | call Whereami()		(no funciona  :Whereami | Lcd  ... :'u)
+" : call Whereami() | call Lcd()							(no funciona  :Whereami | Lcd  ... :'u)
 
 ""  Mvnb  -  imprime el ipTarged para usar con gx  (http y https)
 ""  Lcd   -  mueve la ubicacion actual(pwd) a la del archivo en edicion 'expand('%:p')'
