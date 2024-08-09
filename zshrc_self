@@ -1,5 +1,8 @@
 
 
+bindkey '^P' up-line-or-history
+bindkey '^N' down-line-or-history
+
 
 ### ___ <3 <3 <3
 #										::: echo "source ~/.zshrc_self" >> $HOME/.zshrc   ||	 .bashrc
