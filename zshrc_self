@@ -180,7 +180,7 @@ function aeo8(){
 }
 
 function pwnbx(){
-	tmux new -s "x89p" -c ~/.test/burn -n  "vpn()" \; send-key "clear && ifconfig" C-m \; new-window -n "?[]" -c ~/.test/burn \; send-key "clear && pwd" C-m \; split-window -h \; send-key "clear" C-m \; split-window -v \; send-key "clear && vim ." C-m \; select-window -t 0 \; split-window -v \; send-key "clear && ipTarged" C-m
+	tmux new -t -d -s "x89p" -c ~/.test/burn -n  "vpn()" \; send-key "clear && ifconfig" C-m \; new-window -n "?[]" -c ~/.test/burn \; send-key "clear && pwd" C-m \; split-window -h \; send-key "clear" C-m \; split-window -v \; send-key "clear && vim ." C-m \; select-window -t 0 \; split-window -v \; send-key "clear && ipTarged" C-m
 }
 
 
