@@ -171,6 +171,11 @@ function createCertificate(){
 # tmux new -s "Go" -c $htb -n "main" 
 # tmux split-window -v / -h
 
+#---
+#		watch -n 3 'clear && ifconfig tun0'
+#		while true; do clear && ifconfig tun0; sleep 3; done
+#---
+
 function x89p(){
 	tmux new-session -t -d -s "x89p" -c $htb \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_burn" M-a \; select-pane -t 1 \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \; split-window -v \; send-key "clear && ipTarged all && vim ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c $htb \; send-key "bash" C-m \; send-key "clear && ls -lah" C-m \; split-window -h \; split-window -v \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
 }
