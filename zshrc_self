@@ -177,7 +177,14 @@ function createCertificate(){
 #---
 
 function x89p(){
-	tmux new-session -t -d -s "x89p" -c $htb \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_burn" M-a \; select-pane -t 1 \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \; split-window -v \; send-key "clear && ipTarged all && vim ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c $htb \; send-key "bash" C-m \; send-key "clear && ls -lah" C-m \; split-window -h \; split-window -v \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
+	echo -e "\n\t Working dir -> "
+	read -r work_dir_name
+	if [ -z "${work_dir_name}" ]; then
+		work_dir_name="test"
+	fi
+	new_work_dir_path="${htb}${work_dir_name}"
+	mkdir -p ${new_work_dir_path}
+	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_burn" M-a \; select-pane -t 1 \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \; split-window -v \; send-key "clear && ipTarged all && vim ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "clear && ls -lah" C-m \; split-window -h \; split-window -v \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
 }
 
 function aeo8(){
@@ -185,7 +192,15 @@ function aeo8(){
 }
 
 function pwnbx(){
-	tmux new -s "pwnbx" -c ~/.test/burn -n  "vpn()" \; send-key "clear && ifconfig" C-m \; new-window -n "?[]" -c ~/.test/burn \; send-key "clear && pwd" C-m \; split-window -h \; send-key "clear" C-m \; split-window -v \; send-key "clear && vim ." C-m \; select-window -t 0 \; split-window -h \; send-key "clear && ipTarged all" C-m
+	echo -e "\n\t Working dir -> "
+	read -r work_dir_name
+	if [ -z "${work_dir_name}" ]; then
+		work_dir_name="test"
+	fi
+	new_work_dir_path="$HOME/.test/burn/${work_dir_name}"
+	mkdir -p "${new_work_dir_path}"
+
+	tmux new -t -d -s "pwnbx" -c ${new_work_dir_path} \; rename-window "vpn()" \; send-key "clear && ifconfig" C-m \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "clear && pwd" C-m \; split-window -h \; send-key "clear" C-m \; split-window -v \; send-key "clear && vim ." C-m \; select-window -t 0 \; split-window -h \; send-key "clear && ipTarged all" C-m
 }
 
 
