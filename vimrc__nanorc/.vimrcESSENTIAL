@@ -16,6 +16,7 @@ set hlsearch incsearch
 syntax on
 "imap ;l <Esc>
 map <C-j> <CR>
+cmap <C-v> <Left>|cmap <C-m> <Right>
 set scrolloff=10
 
 "vim:: e [Tab]
