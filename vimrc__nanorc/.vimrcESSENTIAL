@@ -100,3 +100,9 @@ function! Whereami()
 	echo "  =>fileActual: " . l:mango . "    =>PWD Actual: " . l:mango2
 endfunction
 command Whereami call Whereami()
+
+function! Pterm()
+	execute "call popup_create(term_start('bash', #{hidden: 1}), #{highlight: 'WarningMsg', border: [], minwidth: 70, minheight: 50})"
+	"call popup_setoptions('1006', #{minwidth: 70, minheight: 50})
+endfunction
+command Pterm call Pterm()
