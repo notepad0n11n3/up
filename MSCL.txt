@@ -30,25 +30,25 @@
           2            1               2            1             2             1             2                     2
  
 
-LUNES
+LUNES - MONDAY
   pierna [ cuadriceps / gemelos(pantorrillas) ]
 
-MARTES
+MARTES - TUESDAY
   pecho/triceps
 
-MIERCOLes
+MIERCOLes - WEDNESDAY
   espalda/biceps
 
-JUEVES
+JUEVES - THURSDAY
   pierna [ femorales / gluteos ]
 
-VIERNES
+VIERNES - FRIDAY
   deltoides
 
-SABADO
+SABADO - SATURDAY
   antebrazo/EXTRA
 
-DOMINGO
+DOMINGO - SUNDAY
   recuperaci[on
 
 
