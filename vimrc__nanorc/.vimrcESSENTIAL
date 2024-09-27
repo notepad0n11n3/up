@@ -64,12 +64,25 @@ function! Mvnb()
 
 	echo "Targed... Ready..."
 
-	call append(line('.'), l:line1)
-	call append(line('.') + 1, l:line2)
+	"call append(line('.'), l:line1)			" me dejaba una linea en blanco al inicio
+	"call append(line('.') + 1, l:line2)
+
+	call setline(line('.'), l:line1)   " sin linea en blanco al inicio <3 <3 <3
+	call append(line('.'), l:line2)
 "extrA
 
 endfunction
 command Mvnb call Mvnb()
+
+function! Ip()
+	let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+	let l:output = system(l:cmd)
+	let l:output = substitute(l:output, '\n', '', 'g')
+
+	"call append(line('.'), l:output)
+	call setline(line('.'), l:output)
+endfunction
+command Ip call Ip()
 
 "  : let mango=expand('%:p') | execute 'cd ' . mango | term
 function! Lcd()
