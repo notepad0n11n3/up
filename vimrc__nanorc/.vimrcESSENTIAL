@@ -50,29 +50,37 @@ hi NonText ctermfg=NONE ctermbg=NONE
 ""  Whereami  -  print ubicacion del archivo en edicion 'expand('%:p')' y pwdWorkDir 'pwd'.
 
 " :r ! tmux display-message -p "\#W" | grep -oP "\[.*?\]" | tr -d "[] \n"  "" Puto # en vim :u
-function! Mvnb()
-	let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
-	let l:output = system(l:cmd)
-	let l:output = substitute(l:output, '\n', '', 'g')
+function! Mvnb(arg = '')
+	if a:arg == '-ip'
+		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+		let l:output = system(l:cmd)
+		let l:output = substitute(l:output, '\n', '', 'g')
 
-	"call setline('.', l:output)
-	" hasta ac[a solo ip ...<3
+		call setline(line('.'), l:output)
+	else
+		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+		let l:output = system(l:cmd)
+		let l:output = substitute(l:output, '\n', '', 'g')
 
-"Extra
-	let l:line1 = 'https://' . l:output
-	let l:line2 = 'http://' . l:output
+		"call setline('.', l:output)
+		" hasta ac[a solo ip ...<3
 
-	echo "Targed... Ready..."
+					"Extra
+		let l:line1 = 'https://' . l:output
+		let l:line2 = 'http://' . l:output
 
-	"call append(line('.'), l:line1)			" me dejaba una linea en blanco al inicio
-	"call append(line('.') + 1, l:line2)
+		echo "Targed... Ready..."
 
-	call setline(line('.'), l:line1)   " sin linea en blanco al inicio <3 <3 <3
-	call append(line('.'), l:line2)
-"extrA
+		"call append(line('.'), l:line1)			" me dejaba una linea en blanco al inicio
+		"call append(line('.') + 1, l:line2)
 
+		call setline(line('.'), l:line1)   " sin linea en blanco al inicio <3 <3 <3
+		call append(line('.'), l:line2)
+					"extrA
+	endif
 endfunction
-command Mvnb call Mvnb()
+command! -nargs=* Mvnb call Mvnb(<f-args>)
+"command Mvnb call Mvnb()
 
 function! Ip()
 	let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
@@ -120,3 +128,14 @@ function! Pterm()
 	"call popup_setoptions('1006', #{minwidth: 70, minheight: 50})
 endfunction
 command Pterm call Pterm()
+
+function! Test(arg = '')
+	if a:arg == '-ip'
+		echo "Hello world IF IF IF "
+	else
+		echo " Else ELSE Else "
+	endif
+endfunction
+command! -nargs=* Test call Test(<f-args>)
+"function! Test(arg)
+"command! -nargs=1 Test call Test(<f-args>)
