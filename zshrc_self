@@ -212,11 +212,14 @@ function mvnb(){
 		tmux display-message -t ${session_name}:1 -p "#W" | grep -oP '\[.*?\]' | tr -d "[] \n"
 	elif [ $1 == '--here' ]; then
 		tmux display-message -p "#W" | grep -oP '\[.*?\]' | tr -d "[] \n"
-	elif [ $1 == '--help' ]; then
-		echo -e "\n --here \n --local \n \t'*For MAIN Targed no arguments*"
-	elif [ $1 == '--local' ]; then
+	elif [ $1 == '--vpn' ]; then
 		session_name=$(tmux display-message -p '#S' | tr -d "\n")
 		tmux display-message -t ${session_name}:0 -p "#W" | grep -oP '\(.*?\)' | tr -d "() \n"
+	elif [ $1 == '--targed' ]; then
+		session_name=$(tmux display-message -p '#S' | tr -d "\n")
+		tmux display-message -t ${session_name}:1 -p "#W" | grep -oP '\[.*?\]' | tr -d "[] \n"
+	elif [ $1 == '--help' ]; then
+		echo -e "\n --here \n --vpn \n --targed \n \t'*For MAIN Targed no arguments*"
 	fi
 }
 

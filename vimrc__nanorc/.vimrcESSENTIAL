@@ -51,12 +51,25 @@ hi NonText ctermfg=NONE ctermbg=NONE
 
 " :r ! tmux display-message -p "\#W" | grep -oP "\[.*?\]" | tr -d "[] \n"  "" Puto # en vim :u
 function! Mvnb(arg = '')
-	if a:arg == '-ip'
+	if a:arg == '--here'
 		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
 		let l:output = system(l:cmd)
 		let l:output = substitute(l:output, '\n', '', 'g')
 
-		call setline(line('.'), l:output)
+		"call setline(line('.'), l:output) "reemplaza la linea focus con el output
+		call append(line('.') - 1, l:output)  "agrega el output una linea arriba del focus... <3
+	elseif a:arg == '--vpn'
+		let l:cmd = 'tmux display-message -t :0 -p "#W" | grep -oP "\(.*?\)" | tr -d "() \n"'
+		let l:output = system(l:cmd)
+		let l:output = substitute(l:output, '\n', '', 'g')
+
+		"call setline(line('.'), l:output)
+		call append(line('.') - 1, l:output)  "agrega el output una linea arriba del focus... <3
+	elseif a:arg == '--targed'
+		let l:cmd = 'tmux display-message -t :1 -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+		let l:output = system(l:cmd)
+		let l:output = substitute(l:output, '\n', '', 'g')
+		call append(line('.') - 1, l:output)  
 	else
 		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
 		let l:output = system(l:cmd)
