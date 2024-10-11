@@ -1,5 +1,8 @@
 " : set number relativenumber numberwidth=1 sw=2 tabstop=2 softtabstop=2 wrap noswapfile | map <C-j> <CR> | color murphy
 
+
+"set viminfo=	" ~/.viminfo  desactivacion total, historialComandos, HistorialBusqueda, Registros, NumerosLinea
+
 " help statusline					echo expand(winnr()) == numberPanel...<3 <3 <3
 set statusline=%F\ %m%h%r%=\ <3\ %{winnr()}\ \ %l,%c%V\ \ \ \ %P
 
