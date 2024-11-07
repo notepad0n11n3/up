@@ -219,7 +219,7 @@ function mvnb(){
 		session_name=$(tmux display-message -p '#S' | tr -d "\n")
 		tmux display-message -t ${session_name}:1 -p "#W" | grep -oP '\[.*?\]' | tr -d "[] \n"
 	elif [ $1 == '--help' ]; then
-		echo -e "\n --here \n --vpn \n --targed \n \t'*For MAIN Targed no arguments*"
+		echo -e "\n --vpn \n --targed \n --here \n \t'* noArguments ==  --targed  *"
 	fi
 }
 
