@@ -74,9 +74,9 @@ function! Mvnb(arg = '')
 		let l:output = substitute(l:output, '\n', '', 'g')
 		call append(line('.') - 1, l:output)  
 	elseif a:arg == '--help'
-		echo "--vpn"
-		echo "--targed"
-		echo "--here"
+		echo " --vpn"
+		echo " --targed"
+		echo " --here"
 		echo "  noArguments ( http/https ipTarged ) "
 	else
 		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
