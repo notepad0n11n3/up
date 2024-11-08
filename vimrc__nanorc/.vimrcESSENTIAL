@@ -41,16 +41,26 @@ hi NonText ctermfg=NONE ctermbg=NONE
 
 "set modifiable 		 no [-] ..<3 ::help statusline ::help modifiable (permiteModificarArchivosRO)
 
-
 ""  ----------------------------------------------------------------------------------------------------
+""  ----------------------------------------------------------------------------------------------------
+
 " : Ex $desk | call Lcd() | call Whereami()		(no funciona  :Whereami | Lcd  ... :'u)
 " : call Whereami() | call Lcd()							(no funciona  :Whereami | Lcd  ... :'u)
 
-""  Mvnb  -  imprime el ipTarged para usar con gx  (http y https)
-""  Lcd   -  mueve la ubicacion actual(pwd) a la del archivo en edicion 'expand('%:p')'
-""  Lterm -  abre terminal en la ubicacion del archivo en edicion.
-""  Lex   -  abre Ex en la ubicacion actual 'pwd'  'cd -'
-""  Whereami  -  print ubicacion del archivo en edicion 'expand('%:p')' y pwdWorkDir 'pwd'.
+""     Mvnb  -  imprime ipTarged pa usar con gx (http/https), ipTmux... :Mvnb --help  <3
+""     Lcd   -  mueve la ubicacion actual(pwd) a la del archivo en edicion 'expand('%:p')'
+""     Lterm -  abre terminal en la ubicacion del archivo en edicion.
+""     Lex   -  abre Ex en la ubicacion actual 'pwd'  'cd -'
+""     Whereami  -  print ubicacion del archivo en edicion 'expand('%:p')' y pwdWorkDir 'pwd'.
+
+function! LookBack()
+	echo "  Mvnb  -  imprime ipTarged pa usar con gx (http/https), ipTmux... :Mvnb --help  <3"
+	echo "  Lcd   -  mueve la ubicacion actual(pwd) a la del archivo en edicion 'expand('%:p')'"
+	echo "  Lterm -  abre terminal en la ubicacion del archivo en edicion."
+	echo "  Lex   -  abre Ex en la ubicacion actual 'pwd'  'cd -'"
+	echo "  Whereami  -  print ubicacion del archivo en edicion 'expand('%:p')' y pwdWorkDir 'pwd'."
+endfunction
+command LookBack call LookBack()
 
 " :r ! tmux display-message -p "\#W" | grep -oP "\[.*?\]" | tr -d "[] \n"  "" Puto # en vim :u
 function! Mvnb(arg = '')
