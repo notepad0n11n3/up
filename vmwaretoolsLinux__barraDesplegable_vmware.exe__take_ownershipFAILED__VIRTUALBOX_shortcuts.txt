@@ -3,10 +3,15 @@
 
 ###			  VIRTUALBOX *** *** ***         para resoluci[on pantalla completa no olvides instalar: " Devices/insert guest addition CD image "
 																					"pa kali basta con ajustar la resolu en Display (agrandar pantalla)"
-				Insert Guest Additions CD image
+
+				Insert Guest Additions CD image  (en la maquina virtual ps... :u)
 		https://download.virtualbox.org/virtualbox
 		https://download.virtualbox.org/virtualbox/7.0.14/VBoxGuestAdditions_7.0.14.iso
-				
+		
+				::: sudo mount $down/VBoxGuestAddition_7...iso /mnt
+				 :: cd /mnt && sudo ./VBosLinuxAdditions.run
+				 :: restart/reboot
+
 				Upgrade Guest Additions
 
 
