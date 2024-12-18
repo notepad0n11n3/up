@@ -236,7 +236,9 @@ function mvnb(){
 function ipTarged(){
 	session_name=$(tmux display-message -p '#S' | tr -d "\n")
 	if [ $# -ne 1 ]; then
-		echo -e "\xA\x9 1. ipTarged --all \xA\x9 2. ipTarged 'ipTargedHere'\xA"
+		echo -e "\xA\x9 1. ipTarged --all (ipVpn, ipTarged)\xA\x9 2. ipTarged 'ipTargedHere'\xA"
+	elif [ $1 == "--help" ]; then
+		echo -e "\xA\x9 1. ipTarged --all (ipVpn, ipTarged)\xA\x9 2. ipTarged 'ipTargedHere'\xA"
 	elif [ $1 == "--all" ]; then
 		echo -e -n "\xA My ip: "
 		read my_ip
