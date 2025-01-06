@@ -265,6 +265,6 @@ function ipTarged(){
 
 }
 
-function full-update(){
+function fullUpdate(){
 	cd $desk && sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y && 0n11n3 --pull && sudo updatedb && ./grub__wallpaper.sh && echo -e "\xA\x9\x9 ewe \xA"
 }
