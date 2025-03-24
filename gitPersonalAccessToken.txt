@@ -8,17 +8,27 @@
      repetir para cada repo  :'U
 
 
-  ::: git branch --set-upstream-to origin/master
+		::: git branch --set-upstream-to origin/master
 
-      ### si da error dale ...
-        ::: git fetch
-        ::: git branch --set-upstream-to origin/master
+	### si da error dale ...
 
-kK
+		::: git fetch
+		::: git branch --set-upstream-to origin/master
 
-vk_K
-vw_K
 
-vk_W
-vw_W
+git () {
+	kaliMain:					KK
+		vkali:		vk_K
+		vArch:		va_K
+		vWin:			vw_K
 
+	winMain:					WW
+		vkali:		vk_W
+		vArch:		va_W
+		vWin:			vw_W
+
+	archMain:					AA
+		vkali:		vk_A
+		vArch:		va_A
+		vWin:			vw_A
+}

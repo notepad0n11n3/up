@@ -47,3 +47,13 @@
 	: Devices  ->  Optical Drivers -> SATA -> VBoxGuestAdditions_7.0.20.iso					'reboot'
 	: View	->	Virtual Screen 1	->	1920 x 1080
 	: View	->	Adjust Window Size
+
+
+::::  VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL.... <3 <3 <3 <3
+
+	::: vboxmanage list vms					"lista maquinas virtuales disponibles"
+
+	::: vboxmanage startvm "name_here" --type headless				"inicia maquina virtual   headless(sin interfaz grafica) "
+	::: vboxmanage startvm /ruta/a/la/maquina.vbox --type headless
+
+	::: vboxmange controlvm "name_here" poweroff

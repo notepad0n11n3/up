@@ -1,4 +1,7 @@
 
+
+							::: vmware -x "D:\vMachines\kali\kali.vmx							iniciar maquina virtual desde terminal (WINDOWS  CMD)
+
 	::: apt-get install open-vm-tools
 
 ### Menu desplegable de vmware.exe (pantallaCompleta)
