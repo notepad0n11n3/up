@@ -68,42 +68,42 @@ function 0n11n3(){
     elif [ ${1} = "--files" -o ${1} = "-f" ]; then
       diff ~/.vimrcMAIN $up/vimrc__nanorc/.vimrcMAIN &>/dev/null
       if [ $? = 0 ]; then
-        echo -e "\xA\xA\x9   .vimrcMAIN  \x9\x9Ready...<3\xA"
+        echo -e "\xA\xA\x9   .vimrcMAIN  \x9\x9\x9Ready...<3\xA"
       else
         echo -e "\x9 ! .vimrcMAIN  \x9\x9WAIT...!!!***\xA"
       fi
 
       diff ~/.vimrcESSENTIAL $up/vimrc__nanorc/.vimrcESSENTIAL &>/dev/null
       if [ $? = 0 ]; then
-        echo -e "\x9   .vimrcESSENTIAL  \x9Ready...<3\xA"
+        echo -e "\x9   .vimrcESSENTIAL  \x9\x9Ready...<3\xA"
       else
         echo -e "\x9 ! .vimrcESSENTIAL  \x9WAIT...!!!***\xA"
       fi
 
       diff ~/.zshrc_self $up/zshrc_self &>/dev/null
       if [ $? = 0 ]; then
-        echo -e "\x9   .zshrc_self  \x9Ready...<3\xA"
+        echo -e "\x9   .zshrc_self  \x9\x9Ready...<3\xA"
       else
         echo -e "\x9 ! .zshrc_self  \x9WAIT...!!!***\xA"
       fi
 
       diff ~/.tmux.conf $up/tmux/.tmux.conf &>/dev/null
       if [ $? = 0 ]; then
-        echo -e "\x9   .tmux.conf  \x9\x9Ready...<3\xA"
+        echo -e "\x9   .tmux.conf  \x9\x9\x9Ready...<3\xA"
       else
         echo -e "\x9 ! .tmux.conf  \x9\x9WAIT...!!!***\xA"
       fi
 
       diff ~/.config/i3/config $up/arch/i3/config &>/dev/null
       if [ $? = 0 ]; then
-        echo -e "\x9    config  \x9\x9Ready...<3\xA"
+        echo -e "\x9    config  \x9\x9\x9Ready...<3\xA"
       else
         echo -e "\x9 !  config  \x9\x9WAIT...!!!***\xA"
       fi
 
       diff ~/.config/i3/.i3status.conf $up/arch/i3/.i3status.conf &>/dev/null
       if [ $? = 0 ]; then
-        echo -e "\x9   .i3status.conf  \x9Ready...<3\xA"
+        echo -e "\x9   .i3status.conf  \x9\x9Ready...<3\xA"
       else
         echo -e "\x9 ! .i3status.conf  \x9WAIT...!!!***\xA"
       fi
@@ -265,5 +265,6 @@ function ipTarged(){
 }
 
 function fullUpdate(){
-	cd $desk && sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y && 0n11n3 --pull && sudo updatedb && bash $up/grub__wallpaper_noSUDO.sh && echo -e "\xA\x9\x9 ewe \xA" && cd $OLDPWD
+	local_dir=$(pwd)
+	cd $desk && sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y && 0n11n3 --pull && sudo updatedb && bash $up/grub__wallpaper_noSUDO.sh && echo -e "\xA\x9\x9 ewe \xA" && cd ${local_dir}
 }

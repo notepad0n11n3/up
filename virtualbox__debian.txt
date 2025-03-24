@@ -20,11 +20,13 @@
       rightAlt f 'fullScreen'  rAlt g 'minimiza maquina virtual, regresa a la maquina rapido Ctrl shift tab '
 
 					
-					linux kernel virtual box error:...          ::: sudo apt-get reinstall virtualbox-dkms -y					...<3 <3 <3
+
+					linux kernel virtual box error:...          					...<3 <3 <3
+
 								::: sudo apt-get install build-essential  linux-headers-$(uname -r)
+								::: sudo apt-get reinstall virtualbox-dkms -y
 
-											::: sudo modprobe vboxdrv					(opcional, solo si persiste el error... eso creo)
-
+									::: sudo modprobe vboxdrv														(opcional, solo si persiste el error... eso creo)
 
 
 
