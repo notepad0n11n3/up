@@ -1,4 +1,4 @@
-#						sudo apt install i3 i3blocks feh 
+#						sudo apt install i3 i3blocks feh -y
 
 #		::: dm-tool lock					' tool to control the display manager "lightdm" '
 

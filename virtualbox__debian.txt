@@ -1,5 +1,7 @@
 
-###			  VIRTUALBOX *** *** ***         para resoluci[on pantalla completa no olvides instalar: " Devices/insert guest addition CD image "
+###			  VIRTUALBOX *** *** ***					
+
+		para RESOLUCI[ON PANTALLA COMPLETA no olvides instalar: " Devices/insert guest addition CD image "
 																					"pa kali basta con ajustar la resolu en Display (agrandar pantalla)"
 
 				Insert Guest Additions CD image  (en la maquina virtual ps... :u)
@@ -21,19 +23,23 @@
 
 					
 
-					linux kernel virtual box error:...          					...<3 <3 <3
+###  LINUX KERNEL VIRTUAL BOX ERROR:...          					...<3 <3 <3
 
-								::: sudo apt-get install build-essential  linux-headers-$(uname -r)
-								::: sudo apt-get reinstall virtualbox-dkms -y
+			::: sudo apt-get install build-essential  linux-headers-$(uname -r)
+			::: sudo apt-get reinstall virtualbox-dkms -y
 
-									::: sudo modprobe vboxdrv														(opcional, solo si persiste el error... eso creo)
-
-
+				::: sudo modprobe vboxdrv														(opcional, solo si persiste el error... eso creo)
 
 
-	###  ShortCut  
 
-			virtualbox-> File-> Preferences-> Input-> VirtualMachine-> :::
+###  ShortCut  
+
+		virtualbox-> File-> Preferences-> Input-> VirtualMachine-> :::
 
 								Name						 |			Shortcut
 		:::		Host key Combination	 |	Left Ctrl + Left Alt 
+
+
+##	Windows 11 
+		
+			
