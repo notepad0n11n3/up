@@ -54,7 +54,8 @@
 
 		https://wiki.archlinux.org/title/VirtualBox/Install_Arch_Linux_as_a_guest#Install_the_Guest_Additions
 
-		::: sudo pacman -S virtualbox-guest-utils
+		::: sudo pacman -S virtualbox-guest-utils							(" Settings -> Display ->  VMSVGA ")	
+																																("virtualbox-guest-utils-nox    ->>     VBoxVGA")
 		::: sudo systemctl enable vboxservice.service && reboot
 
 		virtualbox -> View -> Virtual Screen1 -> 1920 x 1080
