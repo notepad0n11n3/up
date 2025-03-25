@@ -49,7 +49,19 @@
 	: View	->	Adjust Window Size
 
 
-::::  VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL.... <3 <3 <3 <3
+## Arch Linux				guest additions  (resolucion de pantalla)
+																																						::: sudo pacman -S linux-header && sudo pacman -Syu		("opcional... no testeado...")
+
+		https://wiki.archlinux.org/title/VirtualBox/Install_Arch_Linux_as_a_guest#Install_the_Guest_Additions
+
+		::: sudo pacman -S virtualbox-guest-utils
+		::: sudo systemctl enable vboxservice.service && reboot
+
+		virtualbox -> View -> Virtual Screen1 -> 1920 x 1080
+		virtualbox -> View -> Auto-resize Guest Display
+
+
+###   VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL.... <3 <3 <3 <3
 
 	::: vboxmanage list vms					"lista maquinas virtuales disponibles"
 
