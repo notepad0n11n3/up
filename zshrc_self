@@ -62,61 +62,61 @@ function ports(){
 function 0n11n3(){
   if [ ${#} -eq 1 ]; then
 
-    if [ ${1} = "--checker" -o ${1} = "-c" ]; then
+    if [ ${1} == "--checker" -o ${1} == "-c" ]; then
       mango=$(pwd)
       echo -e "\n\n\t\tUP\n" && cd $up && git fetch && git status && echo -e "\n\n\t\tBLACKBOX\n" && cd $box && git fetch && git status && echo -e "\n\n\t\tBRAIN\n" && cd $brain && git fetch && git status && echo -e "\n\n\t\tBORED\n" && cd $bored && git fetch && git status && cd ${mango} &&  echo -e "\n\n\n\t Checker... OK Ok ok...\n"
-    elif [ ${1} = "--files" -o ${1} = "-f" ]; then
+    elif [ ${1} == "--files" -o ${1} == "-f" ]; then
       diff ~/.vimrcMAIN $up/vimrc__nanorc/.vimrcMAIN &>/dev/null
-      if [ $? = 0 ]; then
+      if [ $? == 0 ]; then
         echo -e "\xA\xA\x9   .vimrcMAIN  \x9\x9\x9Ready...<3\xA"
       else
         echo -e "\x9 ! .vimrcMAIN  \x9\x9WAIT...!!!***\xA"
       fi
 
       diff ~/.vimrcESSENTIAL $up/vimrc__nanorc/.vimrcESSENTIAL &>/dev/null
-      if [ $? = 0 ]; then
+      if [ $? == 0 ]; then
         echo -e "\x9   .vimrcESSENTIAL  \x9\x9Ready...<3\xA"
       else
         echo -e "\x9 ! .vimrcESSENTIAL  \x9WAIT...!!!***\xA"
       fi
 
       diff ~/.zshrc_self $up/zshrc_self &>/dev/null
-      if [ $? = 0 ]; then
+      if [ $? == 0 ]; then
         echo -e "\x9   .zshrc_self  \x9\x9Ready...<3\xA"
       else
         echo -e "\x9 ! .zshrc_self  \x9WAIT...!!!***\xA"
       fi
 
       diff ~/.tmux.conf $up/tmux/.tmux.conf &>/dev/null
-      if [ $? = 0 ]; then
+      if [ $? == 0 ]; then
         echo -e "\x9   .tmux.conf  \x9\x9\x9Ready...<3\xA"
       else
         echo -e "\x9 ! .tmux.conf  \x9\x9WAIT...!!!***\xA"
       fi
 
       diff ~/.config/i3/config $up/arch/i3/config &>/dev/null
-      if [ $? = 0 ]; then
+      if [ $? == 0 ]; then
         echo -e "\x9    config  \x9\x9\x9Ready...<3\xA"
       else
         echo -e "\x9 !  config  \x9\x9WAIT...!!!***\xA"
       fi
 
       diff ~/.config/i3/.i3status.conf $up/arch/i3/.i3status.conf &>/dev/null
-      if [ $? = 0 ]; then
+      if [ $? == 0 ]; then
         echo -e "\x9   .i3status.conf  \x9\x9Ready...<3\xA"
       else
         echo -e "\x9 ! .i3status.conf  \x9WAIT...!!!***\xA"
       fi
 
 			diff ~/.vimrc ~/.vimrcESSENTIAL &>/dev/null
-			if [ $? = 0 ]; then
+			if [ $? == 0 ]; then
 				echo -e "\x9 ~/.vimrc == ~/.vimrcESSENTIAL \x9Ready...<3\xA"
 			else
 				echo -e "\x9 ~/.vimrc != ~/.vimrcESSENTIAL \x9WAIT ...!!!***"
 			fi
 
 
-    elif [ ${1} = "--pull" -o ${1} = "-p" ]; then
+    elif [ ${1} == "--pull" -o ${1} == "-p" ]; then
       mango=$(pwd)
       echo -e "\n\n\t\tUP\n" && cd $up && git pull origin master && echo -e "\n\n\t\tBLACKBOX\n" && cd $box && git pull origin master && echo -e "\n\n\t\tBRAIN\n" && cd $brain && git pull origin master && echo -e "\n\n\t\tBORED\n" && cd $bored && git pull origin master && cd ${mango} &&  echo -e "\n\n\n\t Update notepad0n11n3 OK Ok ok...\n"
 
