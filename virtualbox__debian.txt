@@ -66,7 +66,7 @@
 
 	::: vboxmanage list vms					"lista maquinas virtuales disponibles"
 
-	::: vboxmanage startvm "name_here" --type headless				"inicia maquina virtual   headless(sin interfaz grafica) "
-	::: vboxmanage startvm /ruta/a/la/maquina.vbox --type headless
+	::: vboxmanage startvm "name_here" --type headless  &>/dev/null & disown				"inicia maquina virtual   headless(sin interfaz grafica) "
+	::: vboxmanage startvm /ruta/a/la/maquina.vbox  &>/dev/null & disown
 
 	::: vboxmange controlvm "name_here" poweroff
