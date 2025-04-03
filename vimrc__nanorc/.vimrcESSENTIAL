@@ -1,4 +1,4 @@
-" : set number relativenumber numberwidth=1 sw=2 tabstop=2 softtabstop=2 wrap noswapfile | map <C-j> <CR> | color murphy
+" : set number relativenumber numberwidth=1 sw=2 tabstop=2 softtabstop=2 wrap noswapfile | map <C-j> <CR> | color murphy			  | nnoremap ci( f(ci( | nnoremap ci< f<ci<
 
 
 "set viminfo=	" ~/.viminfo  desactivacion total, historialComandos, HistorialBusqueda, Registros, NumerosLinea
