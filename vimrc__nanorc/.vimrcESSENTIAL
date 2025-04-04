@@ -27,7 +27,7 @@ set scrolloff=10
 "vim:: e [Tab]
 set wildmenu wildmode=list:longest	
 
-color lunaperche
+"color lunaperche
 
 "por default tiene transparencia, otros necesitan de hi...
 "transparencia en vim ... <3 <3 <3   hi == highlight
@@ -170,3 +170,4 @@ endfunction
 command! -nargs=* Test call Test(<f-args>)
 "function! Test(arg)
 "command! -nargs=1 Test call Test(<f-args>)
+color habamax
