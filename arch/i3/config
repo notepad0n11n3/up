@@ -250,6 +250,7 @@ for_window [class="^qterminal$"] move to workspace $ws1
 for_window [class="^burp-StartBurp$"] move to workspace $ws2
 #for_window [class="^Vmware$"] move to workspace $ws3
 for_window [class="^VirtualBox Manager$"] move to workspace $ws3
+for_window [class="^VirtualBox Machine$"] move to workspace $ws3
 #assign [class="firefox"] $ws2
 #assign [class="^spotify*"] $ws10
 
