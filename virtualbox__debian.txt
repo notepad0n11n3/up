@@ -31,6 +31,10 @@
 				::: sudo modprobe vboxdrv														(opcional, solo si persiste el error... eso creo)
 
 
+ ##  Problemas de red eth0 no reconoce...							...<3 <3 <3 <3
+
+		 ::: sudo modprobe vboxnetflt			
+
 
 ###  ShortCut  
 
