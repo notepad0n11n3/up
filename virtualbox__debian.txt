@@ -4,23 +4,24 @@
 		para RESOLUCI[ON PANTALLA COMPLETA no olvides instalar: " Devices/insert guest addition CD image "
 																					"pa kali basta con ajustar la resolu en Display (agrandar pantalla)"
 
+	#   Problema visualizacion de mouse/puntero, maldito redondo csm :u
 				Insert Guest Additions CD image  (en la maquina virtual ps... :u)
+																									Help -> About VirtualBox ->  current version VirtualBox men <3
 		https://download.virtualbox.org/virtualbox
 		https://download.virtualbox.org/virtualbox/7.0.14/VBoxGuestAdditions_7.0.14.iso
+
+				("virtual machine vk_KK"){
+					::: thunar &>/dev/null & disown			||		::: cd /media/cdrom0
+					::: sudo bash ./VBoxLinuxAdditions.run
+				}
 		
-				::: sudo mount $down/VBoxGuestAddition_7...iso /mnt
-				 :: cd /mnt && sudo ./VBosLinuxAdditions.run
-				 :: restart/reboot
-
-				Upgrade Guest Additions
-
-
+			
+### ShortCuts virtualBox
     CtrlDerecho m    'minimiza la maquina virtual, parecido a 'Ctrl g'  en vmware(no tenemos de otro POR AHORA)'
     CtrlDerecho f    'pantalla completa'
 
     **Personalizaci[on de shortcuts <3 <3 <3... File/Preferences/Input
       rightAlt f 'fullScreen'  rAlt g 'minimiza maquina virtual, regresa a la maquina rapido Ctrl shift tab '
-
 					
 
 ###  LINUX KERNEL VIRTUAL BOX ERROR:...          					...<3 <3 <3
