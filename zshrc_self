@@ -185,10 +185,14 @@ function createCertificate(){
 #---
 
 function x89p(){
-	echo -e -n "\n\t Working dir -> "
-	read -r work_dir_name
-	if [ -z "${work_dir_name}" ]; then
-		work_dir_name="test"
+	if [ -z $1 ];then
+		echo -e -n "\n\t Working dir -> "
+		read -r work_dir_name
+		if [ -z "${work_dir_name}" ]; then
+			work_dir_name="test"
+		fi
+	else
+		work_dir_name=$1
 	fi
 	new_work_dir_path="${htb}${work_dir_name}"
 	mkdir -p ${new_work_dir_path}
