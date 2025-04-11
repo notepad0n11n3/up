@@ -47,6 +47,7 @@
     burn="/home/aeo8/Desktop/burningArea/"    el '/' al final PUEDE causar conflictos enOtro entorno/sistema OJO
     burn="/home/aeo8/Desktop/burningArea"
 
+																															DISCO DE ACRECIÓN
 
           on="/home/x89p/.0n11n3/"
 
@@ -56,7 +57,7 @@
           bored="/home/x89p/.0n11n3/bored/"
 
           burn="/home/x89p/.burningArea/"
-          htb="/home/x89p/.burningArea/accretion/"
+          htb="/home/x89p/.burningArea/accretion_disk/"
 
           desk="/home/x89p/Desktop/"
           down="/home/x89p/Downloads/"
