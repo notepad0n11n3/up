@@ -21,6 +21,8 @@ syntax on
 map <C-j> <CR>
 cmap <C-b> <Left>|cmap <C-n> <Right>|cmap <C-v> <S-Left>|cmap <C-m> <S-Right>|cmap <C-a> <Home>
 imap <C-b> <Left>|imap <C-f> <Right>
+nnoremap <C-l> :bnext<CR>
+nnoremap <C-k> :bprevious<CR>
 
 set scrolloff=10
 
