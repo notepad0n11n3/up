@@ -42,7 +42,7 @@ function LookBack(){			# MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  
 
 
 function cpwd(){
-  pwd | tr -d "\n" | xclip -sel clip 
+  pwd | tr -d "\n" | xclip -sel clip
 }
 
 function q(){
@@ -130,14 +130,14 @@ function 0n11n3(){
 }
 
 
-### 
+###
 function pit(){
   xdg-open $up/Intervalo\ de\ 30\ segundos\ con\ sonido.mp4 >/dev/null 2>&1 & disown
 }
 
-### pip2 
+### pip2
 # https://bootstrap.pypa.io/                 ../pip/2.7/
-#      ::: python2 $up/get-pip.py   
+#      ::: python2 $up/get-pip.py
 export PATH=$PATH:/home/x89p/.local/bin
 #                     $(whoami)
 
@@ -168,7 +168,7 @@ function createCertificate(){
 #	tmux send-key "clear && ifconfig tun0" && sleep ${tiempo}
 #
 #	tmux select-pane -t 2
-#	tmux send-key "clear && ping -c 4 -4 " 
+#	tmux send-key "clear && ping -c 4 -4 "
 #
 #	tmux select-pane -t 0
 #
@@ -176,7 +176,7 @@ function createCertificate(){
 #	tmux select-window -t 0
 #}
 
-# tmux new -s "Go" -c $htb -n "main" 
+# tmux new -s "Go" -c $htb -n "main"
 # tmux split-window -v / -h
 
 #---
