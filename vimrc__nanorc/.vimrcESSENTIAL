@@ -31,6 +31,10 @@ set wildmenu wildmode=list:longest
 
 "color lunaperche
 
+"Lineas guia identacion
+set list | set listchars=tab::\ ,trail::
+
+
 "por default tiene transparencia, otros necesitan de hi...
 "transparencia en vim ... <3 <3 <3   hi == highlight
 hi Normal ctermfg=NONE ctermbg=NONE
