@@ -27,7 +27,7 @@ nnoremap <C-k> :bprevious<CR>
 set scrolloff=10
 
 "vim:: e [Tab]
-set wildmenu wildmode=list:longest	
+set wildmenu wildmode=list:longest
 
 "color lunaperche
 
@@ -88,7 +88,7 @@ function! Mvnb(arg = '')
 		let l:cmd = 'tmux display-message -t :1 -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
 		let l:output = system(l:cmd)
 		let l:output = substitute(l:output, '\n', '', 'g')
-		call append(line('.') - 1, l:output)  
+		call append(line('.') - 1, l:output)
 	elseif a:arg == '--help'
 		echo " --vpn"
 		echo " --targed"
