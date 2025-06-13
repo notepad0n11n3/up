@@ -47,11 +47,16 @@
 
 ##	Windows 11		'resolucion de pantalla... <3 <3 <3'
 		
-	: 'primero descarga la iso de virtualbox guest addition para la version del virtualbox actual'....!!!!
+		: 'primero descarga la iso de virtualbox guest addition para la version del virtualbox actual'....!!!!
 
-	: Devices  ->  Optical Drivers -> SATA -> VBoxGuestAdditions_7.0.20.iso					'reboot'
-	: View	->	Virtual Screen 1	->	1920 x 1080						'aveces necesitas cambiar la resolusion en el sistemaWin para poder usar las opciones de virtualBox'
-	: View	->	Adjust Window Size
+		: Devices  ->  Optical Drivers -> SATA -> VBoxGuestAdditions_7.0.20.iso					'reboot'
+		: View	->	Virtual Screen 1	->	1920 x 1080						'aveces necesitas cambiar la resolusion en el sistemaWin para poder usar las opciones de virtualBox'
+		: View	->	Adjust Window Size
+
+	"thema oscuro en vWin11 por cmd... <3 <3 <3  barbosaModeXD"
+		reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v AppsUseLightTheme /t REG_DWORD /d 1 /f
+		reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v SystemUsesLightTheme /t REG_DWORD /d 1 /f
+
 
 
 
