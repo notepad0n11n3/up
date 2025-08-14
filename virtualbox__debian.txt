@@ -33,6 +33,7 @@
 
 				::: sudo modprobe vboxnetflt			##  Problemas de red eth0 no reconoce...							...<3 <3 <3 <3
 
+!sudo apt-get install build-essential  linux-headers-$(uname -r) -y && sudo apt-get reinstall virtualbox-dkms -y && sudo modprobe vboxdrv && sudo modprobe vboxnetflt
 
 ###  ShortCut  
 
