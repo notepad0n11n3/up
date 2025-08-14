@@ -131,6 +131,12 @@ bindsym $mod+q layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
+#Ventanas en Win-w por defecto
+#for_window [class=".*"] layout tabbed 
+
+#Ventanas en Win-w por defecto solo para Win-3 (area de trabajo 3 'x89p')
+for_window [workspace="x89p"] layout tabbed
+
 # toggle tiling / floating		"anclar/desanclar ventanaFlotante"
 bindsym $mod+Shift+o floating toggle
 # change focus between tiling / floating windows
@@ -152,7 +158,7 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "testo"
-set $ws9 "UnU"
+set $ws9 "ewe"
 set $ws10 "Audio"
 
 # switch to workspace
@@ -242,6 +248,7 @@ bindsym $mod+g exec virtualbox
 #ejecutar programa en workspace asignado  (assign avisa(alertColor) al ejecutar, for_window no avisa)
 #   para encontrar 'WM_CLASS(STRING) = "parole", "Parole"' dale a ::: xprop   y despues la click en el programa 'abierto' que quieres examinar
 #     ::: xprop | grep "WM_CLASS"       (tienes que dar click en la appAbierta despues ...<3 <3 <3)
+
 
 for_window [class="^Parole$"] move to workspace $ws10
 #assign [class="^Parole$"] $ws10
