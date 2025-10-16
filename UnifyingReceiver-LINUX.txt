@@ -1,0 +1,5 @@
+		
+			sudo apt-get install solaar     /// SI DOBLE A  :0
+			
+
+					ahora todo ready en linux :)

@@ -1,0 +1,137 @@
+set cindent   "indentaci[on special para vimrcRoot, aun tengo que seguir investigando
+imap ;l <Esc>
+set number relativenumber numberwidth=1 clipboard=unnamedplus
+set tabstop=2 softtabstop=2 sw=2 
+set smartindent smartcase expandtab
+set copyindent
+" autoindent 
+colorscheme habamax "desert_5.4(noWallQterm)  habamax 6  ron 6.8  murphy.4(noWallpaperQterminal)  industry 4
+syntax on
+set encoding=utf-8
+
+" cambio de color statusBar  (colores tomados de $up/tmux/colores.sh) beginning
+function! InsertStatuslineColor(mode)
+  if a:mode == 'i'
+    hi statusline guibg=Cyan ctermfg=47 guifg=Black ctermbg=232
+									 """primer ctermfg=colorFondo      ctermbg=colorLetra   vim::help hi
+  elseif a:mode == 'r'
+    hi statusline guibg=DarkGrey ctermfg=233 guifg=Black ctermbg=198
+										  """primer ctermfg=colorFondo    ctermbg=colorLetra   vim::help hi
+  else
+    hi statusline guibg=DarkRed ctermfg=83 guifg=Black ctermbg=89
+  endif
+endfunction
+" cambio de color statusBar  (colores tomados de $up/tmux/colores.sh) end
+
+au InsertEnter * call InsertStatuslineColor(v:insertmode)
+au InsertLeave * hi statusline guibg=Black ctermfg=215 guifg=Black ctermbg=237  
+																 """primer ctermfg=colorFondo    ctermbg=colorLetra   vim::help hi
+
+" default the statusline to green when entering Vim
+hi statusline guibg=Silver ctermfg=230 guifg=Black ctermbg=235 
+								 """primer ctermfg=colorLETRAa...  ctermbg=colorFONDO   vim::help hi
+
+
+" PANDA8HAT begin
+function! GitBranch()
+	return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+	let l:branchname = GitBranch()
+	return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+
+function! Panda8hatPre()
+	return system("whoami 2>/dev/null | tr -d '\n' | tr '[:lower:]' '[:upper:]' ")
+endfunction
+
+function! Panda8hat()
+	let l:panda = Panda8hatPre()
+	return strlen(l:panda) > 0?'  '.l:panda.' ':''
+endfunction
+
+"function! Battery_mango()
+"	return system("upower --dump 2>/dev/null | grep -E 'DisplayDevice' -A 15 | grep -E 'state|percentage' | awk '{print $2}' | tr '\n' ':' | tr -d '\n' ")
+"endfunction
+" PANDA8HAT end
+
+" STATUSLINE begin
+set laststatus=2
+" \ === espacio entre stdout,  % === variables,  vim:: help statusline
+set statusline=
+"set statusline+=%#LineNr#  " color negreo  statusBar
+set statusline+=%m
+set statusline+=%{Panda8hat()}
+set statusline+=🔥
+set statusline+=\%m
+
+set statusline+=(ノ｀⌒´)ノ~>>
+set statusline+=%{StatuslineGit()}
+set statusline+=\ %Y
+set statusline+=%m
+set statusline+=\ %p%%
+set statusline+=_%l:%c
+set statusline+=\ %F
+
+set statusline+=\ %m%m%m%m%m%m%m
+
+set statusline+=%=
+
+set statusline+=\ %m%m%m%m%m
+
+set statusline+=\ [%b][0x%B]\               " ASCII and byte code under <3 <3 <3
+set statusline+=Battery=>
+"set statusline+=%{Battery_mango()}
+set statusline+=💪(￣ヘ￣;)^ω^）
+set statusline+=%f
+set statusline+=%{StatuslineGit()}
+set statusline+=%m
+set statusline+=\ %p%%
+set statusline+=_%l:%c
+set statusline+=\ %Y
+set statusline+=%m
+"set statusline+=\ %{Panda8hat()}
+set statusline+=\ 🔥
+set statusline+=\ %m
+" STATUSLINE end
+
+
+set scrolloff=10  " No scroll hasta el fondo <3
+set nocompatible   " disable compatibility with vi which can cause unexpected issues.
+set wildmenu    "" command-line copletion shows a list of matches
+
+
+let mapleader=" "
+nmap <Leader>r :e<CR>
+nmap <Leader>q :q<CR>
+nmap <Leader>w :w<CR>
+nmap <Leader>. :nohlsearch<CR> 
+
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+
+set incsearch "no espera a dar ENTER para mostrar resultados de busqueda con /
+set hlsearch "Resalta las letras al hacer búsquedas
+set noswapfile
+set nobackup
+
+"transparencia con wallpaperTerminal beginning
+hi! Normal ctermbg=NONE guibg=NONE
+"transparencia con wallpaperTerminal end
+
+" no lineas al infinito :') *************************************
+set wrap
+set textwidth=0 wrapmargin=0
+
+set colorcolumn=80,75,70,1
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+
+set updatetime=1000 " este se QUEDA :)
+set wildmenu    "" command-line copletion shows a list of matches
+set nocompatible   " disable compatibility with vi which can cause unexpected issues.
+"set signcolumn=yes
+

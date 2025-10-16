@@ -1,0 +1,95 @@
+links zimbolicos desde root a /home/kali   .vimrc   .zshrc   .p10k.zsh                      ya cumpli tu deseo men, quedate tranquilo <3
+  ln -s -f /home/kali/*.*    .vimrc  .zshrc  .p10k.zsh  .tmux.conf.local  .tmux/.tmux.conf
+
+                                    FOR .p10k.zsh  GOT TAIL here *************
+      antiForence...!!!
+scrub  ==>>  borra la tabla de indices  
+shred  ==>>  
+
+function rmk () {
+  scrub -p dod $1; shred -zun 10 -v $1
+}
+
+function rmk () {
+  scrub -p dod $1; shred -zun 10 -v $1
+}
+
+
+   ::: r ! echo $PATH
+
+
+........p10k.zsh .p10k.zsh .p10k.zsh .p10k.zsh .p10k.zsh .............
+
+::: vim .p10k.zsh
+
+  ##############################[ context: user@hostname ]###############################
+  # Context color when running with privileges.
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=83   '''''''''''''''''''''''''''''''''''''''''''''''''''''''""" set COLOR HERE HERE....!!!!!!***
+  # Context color in SSH without privileges.
+  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND=180
+  # Default context color (no privileges, no SSH).
+  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=140 '''''''''''''''''''''''''''''''''''''''''''''''''''''''""" set COLOR HERE HERE....!!!!!!***
+
+  # Context format when running with privileges: bold user@hostname.
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%n (ノ｀⌒´)ノ***' '''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+  # Context format when in SSH without privileges: user@hostname.
+  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
+  # Default context format (no privileges, no SSH): user@hostname.
+  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n (~‾▿‾)~' '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
+
+  # Tip: Remove the next line to always show context. ...''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''READ READ....!!!!!!******!!!!!!*****
+  #typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION=        ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' """coment this line
+
+
+  #typeset -g POWERLEVEL9K_CONTEXT_PREFIX='%246Fwith '    """coment this line
+ 
+  
+ 
+
+  ########################[ status: exit code of the last command ]######################
+  
+  
+  # it will signify success by turning green.
+  typeset -g POWERLEVEL9K_STATUS_OK=true  #goro goro goro goro
+  typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=70
+  typeset -g POWERLEVEL9K_STATUS_OK_VISUAL_IDENTIFIER_EXPANSION='✔'
+
+  COLORE COLORES COLOREE...
+  colores     83    verdeLimon inten.
+              85    unVerde precioso csm :')
+              86    hermoso men :')
+              39    azul brillante
+              81    celecte sutil brillante
+             145    blanco   
+             140    morado
+
+
+  # it will signify error by turning red.
+  typeset -g POWERLEVEL9K_STATUS_ERROR=true  #goro goro goro goro
+  typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=160
+  typeset -g POWERLEVEL9K_STATUS_ERROR_VISUAL_IDENTIFIER_EXPANSION='✘'
+
+
+
+
+
+::: vim $HOME/.p10k.zsh
+
+  # The list of segments shown on the left. Fill it with the most important segments.
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+    # =========================[ Line #1 ]=========================
+    # os_icon               # os identifier
+    dir                     # current directory
+    prompt_char             # prompt symbol
+    vcs                     # git status
+    prompt_char             # prompt symbol
+    # =========================[ Line #2 ]=========================
+    newline                 # \n
+    prompt_char             # prompt symbol
+    status                  # exit code of the last command
+    command_execution_time  # duration of the last command
+    vim_shell               # vim shell indicator (:sh)
+    prompt_char             # prompt symbol
+  )

@@ -1,0 +1,23 @@
+
+  cmd:: diskpart
+
+  ::: list disk
+
+        Disk ###    Status       Size    Free     Dyn   Dpt
+
+        Disk 1      Online      476 GB  1024 KB          *
+        Disk 2      Online       14 GB    11 GB          *
+
+  ::: select disk 1
+
+  ::: clean
+
+  ::: clean
+
+  ::: create partition primary
+
+  ::: select partition 1
+
+  ::: format  FS=NTFS  label=nameUSBhere  quick
+
+  ::: exit

@@ -1,0 +1,29 @@
+
+###       YOUT
+
+    j      back 10 seg
+    l      avanza 10 seg
+
+    k      pause  like a EspaceKey (ESP)
+    m      mute
+
+    i      mini-reproductor
+    f      pantalla completa
+
+    t      theater mode / normal mode
+
+    /      focus al textBoxSeach
+
+  0-9      salta entre las 9 divisiones(0-9) del video
+
+
+###       TWIT
+
+   j      baja 1 una publicaci[on 
+   k      sube 1 una publicaci[on 
+   l      like XD
+   u      mutea la cuenta de la publicaci[on XD XD
+   b      tweet a bookmarks
+   x      bloquear cuenta XD
+
+   /      focus textBoxSearch

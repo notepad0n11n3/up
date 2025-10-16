@@ -1,0 +1,33 @@
+pactl list sources short						("::: sudo apt install pulseaudio-utils")
+
+															(revisa ' apt install alsa-utils ', lo tengo intalado, pulseaudio si esta intalado por pactl, con alsa amixer tiene otra version que no me deja usarla como antes :( , prueba en vm )
+
+				amixer sset Master 88% on
+::: pactl set-sink-volume @DEFAULT_SINK@ 88%
+::: pactl set-sink-volume @DEFAULT_SINK@ +5%
+::: pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+
+				amixer sset Capture 0% nocap
+::: pactl set-source-volume @DEFAULT_SOURCE@ 0%				'si, volume en lugar de mute para el %, el resto es mute'
+
+::: pactl set-source-mute @DEFAULT_SOURCE@ 1
+::: pactl set-source-mute @DEFAULT_SOURCE@ 0			("el 0 lo activa")
+::: pactl set-source-mute @DEFAULT_SOURCE@ toggle			("intercambia entre on y off, 0 y 1")
+
+
+
+	### Comprobar estado del microfono   ===   amixer sget Capture
+::: pactl get-source-volume @DEFAULT_SOURCE@
+
+	### Comprobar estado del volumenDelSistema   ===   amixer sget Master
+::: pactl get-sink-volume @DEFAULT_SINK@
+
+
+	### Activar microfono	===	amixer set Capture 100% unmute
+::: pactl set-source-volume @DEFAULT_SOURCE@ 100%
+::: pactl set-source-mute @DEFAULT_SOURCE@ 0
+
+
+
+		arecord -D hw:1,0 -d 22 -f cd prueba.wav			"grabar 22 segundos con microInterno"

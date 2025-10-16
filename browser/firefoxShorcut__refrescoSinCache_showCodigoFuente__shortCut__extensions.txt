@@ -1,0 +1,70 @@
+
+https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
+
+
+ Ctrl   r         recarga sin usar cache, carga limpia  ACTUALIZAR_PESTA~N   <3 <3 <3
+ Ctrl Shift r     reemplazar cache
+
+ Ctrl   u         codigo fuente p[agina actual
+ Ctrl   u      (si estas escribiendo en el boxUrl, permite borrar toda la linea(url) )
+ Ctrl  <-      (si estas escribiendo en el boxUrl, permite borrar una palabra(like a Ctrl+w linux) )
+
+ Ctrl   k       buscar en google
+        j          "    "   "
+ Ctrl   l     SELECIONAR LA URL ('sin el molesto google: ') <3 <3 <3
+
+ Ctrl   h       historial menu_Lateral
+ Ctrl   b       bookmarks menu_Lateral
+ Ctrl   d       agregar a bookMark_Menu
+
+ Ctrl   t       nueva Pesta~a               ||         Ctrl Shif p     nueva_Pesta~a_PRIVADA
+ Ctrl   n       nueva Ventana
+ Ctrl   m       mutear la pesta~a
+ Ctrl Shift p   pesta~a privada 
+
+
+ Ctrl q        Cierra todas las ventanas
+ Ctrl w        cierra la pesta~a actual
+ Ctrl Shift t  reabrir la [ultima pesta~a cerrada
+
+ Alt arrowLeft   retroceder a la anterior p[agina visitada
+ Ctrl [
+
+ Alt arrowRight   !(Alt arrowLeft)
+ Ctrl ]
+
+
+ Ctrl Enter    autocompleta el 'www' alInicio y '.com' alFinal  en la url (Ctrl l)
+
+
+ Espacio          bajarP[agina
+ Shift Espacio    subirPagina
+
+
+
+###PESTA~AS NAVEGADOR
+ Alt  numberHere    saltar a pesta~a n[umero(1-8) UNIX  ('Ctrl numberHere  WINDOWS')
+ Alt  9             salta a la [ultima pesta;a(sin importanElN[umero de pesta;as)('Ctrl 9  WINDOWS')
+ Ctrl  Tab          pesta;a Siguiente   <3 <3 <3
+ Ctrl Shift Tab     pesta;a Anterios    <3 <3 <3
+###PESTA~AS NAVEGADOR
+
+Ctrl Shift k      consoleFirefox
+Ctrl Shift y      ventanaDescargas
+
+
+   ******************************EXTENSIONS************************************
+### Mouse
+   Click central en un enlace         Abre el enlace en una pesta~a nueva
+   Click central sobre una pesta~a    Cierra la pesta~a
+### Mouse
+
+
+Wappalyzer
+FoxyProxy
+
+uBlock Origin
+Privacy Badger
+Dark Reader
+
+Cookie-Editor

@@ -1,0 +1,99 @@
+
+*****************************************************************************************
+::: vim $HOME/.tmux/.tmux.conf
+
+Cambiar el prefijo tmux de Ctrl + B a Ctrl + A agregando la siguiente línea en el archivo .tmux/.tmux.conf 
+
+
+  #set -g prefix2 C-a                 # GNU-Screen compatible prefix
+  #bind C-a send-prefix -2
+
+  set -g prefix2 C-k
+  bind C-k send-prefix -2
+  unbind C-b
+
+
+          set -g prefix C-k                 # con prefix2 tengo problemas ocn Ctrl b en terminal :(
+          bind C-k send-prefix                 
+          unbind C-b                  ------   <3
+
+::: Ctrl + k + r      #! recargar archivo de configuraci[on
+
+ <3 --->>Desvincular la clave predeterminada nos permite reasignarla para un comando diferente. Entonces, la segunda línea es una buena pr[actica, nada obligatorio.
+
+
+*****************************************************************************************
+::: vim $HOME/.tmux.conf.local
+
+# new window retains current path, possible values are:
+#   - true
+#   - false (default)
+tmux_conf_new_window_retain_current_path=true   <<--  false to true
+
+
+tmux_conf_theme_colour_9="#00ff08"    # yellow
+tmux_conf_theme_colour_10="#000000"   # pink
+
+tmux_conf_battery_bar_symbol_full="☢"
+tmux_conf_battery_bar_symbol_empty="☣"
+
+tmux_conf_battery_status_charging="↑"       # U+2191
+#tmux_conf_battery_status_discharging="↓"    # U+2193
+#tmux_conf_battery_status_charging="🔌"     # U+1F50C
+tmux_conf_battery_status_discharging="🔋"  # U+1F50B
+
+
+    # -- clipboard -----------------------------------------------------------------
+
+# in copy mode, copying selection also copies to the OS clipboard
+#   - true
+#   - false (default)
+# on macOS, this requires installing reattach-to-user-namespace, see README.md
+# on Linux, this requires xsel or xclip
+tmux_conf_copy_to_os_clipboard=true     <<--  false to true
+
+*****************************************************************************************
+::: vim $HOME/.p10k.zsh
+
+  # The list of segments shown on the left. Fill it with the most important segments.
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+    # =========================[ Line #1 ]=========================
+    # os_icon               # os identifier
+    dir                     # current directory
+    prompt_char             # prompt symbol
+    vcs                     # git status
+    prompt_char             # prompt symbol
+    # =========================[ Line #2 ]=========================
+    newline                 # \n
+    prompt_char             # prompt symbol
+    status                  # exit code of the last command
+    command_execution_time  # duration of the last command
+    vim_shell               # vim shell indicator (:sh)
+    prompt_char             # prompt symbol
+  )
+
+
+
+********************  TMUX TMUX TMUX TMUX TMUX  ===========================
+*****************************************************************************************
+===---  $HOME/.tmux.conf.local 
+
+# new window retains current path, possible values are:
+#   - true
+#   - false (default)
+tmux_conf_new_window_retain_current_path=true
+
+
+tmux_conf_theme_colour_9="#00ff08"    # yellow
+tmux_conf_theme_colour_10="#000000"   # pink
+
+tmux_conf_battery_bar_symbol_full="☢"
+tmux_conf_battery_bar_symbol_empty="☣"
+
+tmux_conf_battery_status_charging="↑"       # U+2191
+#tmux_conf_battery_status_discharging="↓"    # U+2193
+#tmux_conf_battery_status_charging="🔌"     # U+1F50C
+tmux_conf_battery_status_discharging="🔋"  # U+1F50B
+
+
+tmux_conf_theme_status_left="=> #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} (~‾▿‾)~ "

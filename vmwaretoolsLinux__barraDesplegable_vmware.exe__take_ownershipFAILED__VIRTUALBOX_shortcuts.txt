@@ -1,0 +1,58 @@
+
+
+							::: vmware -x "D:\vMachines\kali\kali.vmx							iniciar maquina virtual desde terminal (WINDOWS  CMD)
+
+	::: apt-get install open-vm-tools
+
+### Menu desplegable de vmware.exe (pantallaCompleta)
+
+    Ctrl Atl      Atl Espace
+  (liberaMouse)   (menuContextualAplication__likeLinux)
+
+    Ctrl Alt   'quita el focus de la session de vmware'        Alt Espace  'menu contextual de la barra de vmware(fullScreenMode)'
+    Ctrl Alt Enter  'Full screen mode  vmware' 'vale para volver a dar el focus a la session de vmware, sal y entra del fullScreenMode para regresar el focus'  <3 <3 <3...!!!
+
+    Ctrl g   recupera el focus de la maquina virtual, yo no m[as  Ctrl Alt Enter :'u  <3 <3 <3 
+
+
+### vmware  TAKE OWNERSHIP   FAILED...!!!
+
+ ==> dentro de la carpeta de la maquina_Virtual elimina la 'carpeta' ***.vmx.lck (solo_tiene_unArchivo)    Ready...<3 <3 <3
+
+
+          *17*17*17*17*
+
+*??*   MC60H*?*DWHD5*?*H80U9*?*6V85M*?*8280D <<< worked for me!... <3 <3 <3 <3 <3 ...!!!
+*??*   4A4RR*?*813DK*?*M81A9*?*4U35H*?*06KND
+*??*   NZ4RR*?*FTK5H*?*H81C1*?*Q30QH*?*1V2LA
+*??*   JU090*?*6039P*?*08409*?*8J0QH*?*2YR7F
+*??*   4Y09U*?*AJK97*?*089Z0*?*A3054*?*83KLA
+*??*   4C21U*?*2KK9Q*?*M8130*?*4V2QH*?*CF810
+    
+               *16*16*16*16*
+*??*   ZF3R0*?*FHED2*?*M80TY*?*8QYGC*?*NPKYF >>>  VMguaRE 16.1.1 build-17801498
+*??*   YF390*?*0HF8P*?*M81RQ*?*2DXQE*?*M2UT6
+*??*   ZF71R*?*DMX85*?*08DQY*?*8YMNC*?*PPHV8
+    
+       Updated on Nov 4, 2021: 
+*??*   ZF3R0*?*FHED2*?*M80TY*?*8QYGC*?*NPKYF *?**?**?* >> VMguaRE 16.2.0 build-18760230
+
+
+                                    windows       kli
+
+      Number of processors           '1'          '1'
+    Number of cores per processor    '4'          '6'
+
+### VMWARE kLinux				(valido para VirtualBox, error 'Failed to start virtualbox.service  Linux kernel module'){
+      
+
+      ::: sudo apt-get install build-essential  linux-headers-`uname -r`
+      ::: sudo apt-get install build-essential  linux-headers-$(uname -r)
+																																											}
+
+      ::: sudo chmod +x ./VMware-Workstation*.bundle
+
+      ::: sudo ./VMware-Workstation*.bundle
+
+      'error al terminar la instalacion... <3 <3 <3'
+  https://www.kali.org/docs/virtualization/install-vmware-host/#too-newer-kernel

@@ -1,0 +1,32 @@
+" help statusline					echo expand(winnr()) == numberPanel...<3 <3 <3
+set statusline=%F\ %m%h%r%=\ <3\ %{winnr()}\ %l,%c%V\ \ \ \ %P
+
+set number relativenumber numberwidth=1
+set sw=2 tabstop=2 softtabstop=2
+set laststatus=2
+
+set noswapfile
+set wrap
+
+set smartindent
+set hlsearch incsearch
+
+syntax on
+"imap ;l <Esc>
+set scrolloff=10
+
+"set wildmenu wildmode=list:longest	 vim:: e [Tab]
+
+color industry
+
+"por default tiene transparencia, otros necesitan de hi...
+"transparencia en vim ... <3 <3 <3   hi == highlight
+"hi Normal ctermfg=NONE ctermbg=NONE
+"hi NonText ctermfg=NONE ctermbg=NONE
+
+"quiet       todo blanco :3 <3
+"sorbet      <3 <3 <3
+"lunaperche  <3 <3 <
+"habamax     <3 <3
+
+"set modifiable 		 no [-] ..<3 ::help statusline ::help modifiable (permiteModificarArchivosRO)

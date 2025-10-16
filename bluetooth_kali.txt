@@ -1,0 +1,13 @@
+
+
+::: sudo systemctl status bluetooth
+
+
+### enable es persistente al reinicio, continua activo... <3 <3 <3
+		::: sudo systemctl enable bluetooth
+		::: sudo systemctl disable bluetooth
+
+### start no tiene persistencia al reinicio. :( 
+		::: sudo systemctl start bluetooth
+		::: sudo systemctl stop bluetooth
+

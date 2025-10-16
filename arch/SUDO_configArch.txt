@@ -1,0 +1,13 @@
+
+        vim::: w ! sudo tee %         ...Ready <3 <3 <3
+
+root:::  pacman -S sudo
+
+root:::  usermod -aG wheel aeo8
+
+root:::  vim /etc/sudoers
+
+      Descomenta la opci[on de grupo wheel
+
+    81 ## Uncomment to allow members of group wheel to execute any command
+       #%wheel ALL=(ALL:ALL) ALL            //#=>       %wheel ALL=(ALL:ALL) ALL

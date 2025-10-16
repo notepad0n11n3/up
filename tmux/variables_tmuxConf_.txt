@@ -1,0 +1,11 @@
+
+#D  == retorna un porcentaje, a[un desconocido %0  %1
+#F  == retorna un '*' literal... raro
+#H  == retorna nombre del host/namePc 'panda8hat'
+#T  ==   "      "      "   "  "   "       "
+
+#P  == retorna numero del panel(pantallaDividida) en el que estamos     <3
+#I  ==   "      "     de  pesta~a en la que estamos                     <3
+#S  == nombre de session de tmux actual                                 <3 <3 <3 
+#W  == nombre de la pesta~a actual                                      <3 <3 <3
+

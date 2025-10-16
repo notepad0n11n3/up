@@ -1,0 +1,21 @@
+
+ Fn+Shift+Esc    ~
+ Fn+Shift+Esc    ~
+
+### teclas F en unix      extra...::: Fn Ctrl    CambioFilaN[umeros  a F1-F12  o teclasFuncion enMac
+
+  Cambia a distribuci[on de teclas para Mac OS, ahora con fn + number accedemos a la fila de las F
+
+    Fn + a     Cambiar a distribuci[on de teclas para WINDOWS
+    Fn + s     Cambiar a distribuci[on de teclas para MAC OS
+
+      -->> Tecla 'Windows' ahora es 'Alt' y viceversa, el resto por ahora todo OK. 
+
+### teclas F en unix:
+
+
+### SCREENSHOT  'imp pnt'
+
+    FN Supr('arriba del arrowUp')  "Linux"
+
+### SCREENSHOT  'imp pnt'

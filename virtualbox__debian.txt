@@ -1,0 +1,112 @@
+
+					settings -> audio -> pulseaudio		(virtualbox => kali/parrot noSound FIX <3 <3 <3)
+
+###			  VIRTUALBOX *** *** ***					
+
+		para RESOLUCI[ON PANTALLA COMPLETA no olvides instalar: " Devices/insert guest addition CD image "
+																					"pa kali basta con ajustar la resolu en Display (agrandar pantalla)"
+
+	#   Problema visualizacion de mouse/puntero, maldito redondo csm :u
+				Insert Guest Additions CD image  (en la maquina virtual ps... :u)
+																									Help -> About VirtualBox ->  current version VirtualBox men <3
+		https://download.virtualbox.org/virtualbox
+		https://download.virtualbox.org/virtualbox/7.0.14/VBoxGuestAdditions_7.0.14.iso
+
+				("virtual machine vk_KK"){
+					::: thunar &>/dev/null & disown			||		::: cd /media/cdrom0
+					::: sudo bash ./VBoxLinuxAdditions.run
+				}
+		
+			
+### ShortCuts virtualBox
+    CtrlDerecho m    'minimiza la maquina virtual, parecido a 'Ctrl g'  en vmware(no tenemos de otro POR AHORA)'
+    CtrlDerecho f    'pantalla completa'
+
+    **Personalizaci[on de shortcuts <3 <3 <3... File/Preferences/Input
+      rightAlt f 'fullScreen'  rAlt g 'minimiza maquina virtual, regresa a la maquina rapido Ctrl shift tab '
+					
+
+###  LINUX KERNEL VIRTUAL BOX ERROR:...          					...<3 <3 <3
+
+			::: sudo apt-get install build-essential  linux-headers-$(uname -r)
+			::: sudo apt-get reinstall virtualbox-dkms -y
+
+				::: sudo modprobe vboxdrv														(opcional, solo si persiste el error... eso creo)
+
+				::: sudo modprobe vboxnetflt			##  Problemas de red eth0 no reconoce...							...<3 <3 <3 <3
+
+!sudo apt-get install build-essential  linux-headers-$(uname -r) -y && sudo apt-get reinstall virtualbox-dkms -y && sudo modprobe vboxdrv && sudo modprobe vboxnetflt
+
+###  ShortCut  
+
+		virtualbox-> File-> Preferences-> Input-> VirtualMachine-> :::
+
+								Name						 |			Shortcut
+		:::		Host key Combination	 |	Left Ctrl + Left Alt 
+
+
+##	Windows 11		'resolucion de pantalla... <3 <3 <3'
+		
+		: 'primero descarga la iso de virtualbox guest addition para la version del virtualbox actual'....!!!!
+
+		: Devices  ->  Optical Drivers -> SATA -> VBoxGuestAdditions_7.0.20.iso					'reboot'
+		: View	->	Virtual Screen 1	->	1920 x 1080						'aveces necesitas cambiar la resolusion en el sistemaWin para poder usar las opciones de virtualBox'
+		: View	->	Adjust Window Size
+
+	"thema oscuro en vWin11 por cmd... <3 <3 <3  barbosaModeXD"
+		reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v AppsUseLightTheme /t REG_DWORD /d 0 /f
+		reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v SystemUsesLightTheme /t REG_DWORD /d 0 /f
+
+		reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 0 /f
+		reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize /v SystemUsesLightTheme /t REG_DWORD /d 0 /f
+
+										Para volver al tema claro, repite los comandos pero cambia /d 0 por /d 1
+
+
+
+###   VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL.... <3 <3 <3 <3
+
+	::: vboxmanage list vms					"lista maquinas virtuales disponibles"
+
+	::: vboxmanage startvm "name_here" --type headless  &>/dev/null & disown				"inicia maquina virtual   headless(sin interfaz grafica) "
+	::: vboxmanage startvm /ruta/a/la/maquina.vbox  &>/dev/null & disown
+
+	::: vboxmange controlvm "name_here" poweroff
+
+
+## Arch Linux				guest additions  (resolucion de pantalla){
+																																						::: sudo pacman -S linux-header && sudo pacman -Syu		("opcional... no testeado...")
+
+		https://wiki.archlinux.org/title/VirtualBox/Install_Arch_Linux_as_a_guest#Install_the_Guest_Additions
+
+		::: sudo pacman -S virtualbox-guest-utils							(" Settings -> Display ->  VMSVGA ")	
+																																("virtualbox-guest-utils-nox    ->>     VBoxVGA")
+		::: sudo systemctl enable vboxservice.service && reboot
+
+		virtualbox -> View -> Virtual Screen1 -> 1920 x 1080
+		virtualbox -> View -> Auto-resize Guest Display
+
+ ## virtualbox en Manjaro y Arch	(valido para MANJARO, no probado en ARCH, pero puede funcionar)
+		::: uname -r 
+									6.12.19-1-MANJARO
+
+		::: sudo pacman -S virtualbox
+
+									#) linux612-virtualbox-host				<<=====>>        6.12.19-1-MANJARO
+									#) linux612-rt-virtualbox-host     ('rt = real time'... este no men :u )
+
+		::: sudo pacman -S linux-header							(""pre::: uname -r "")
+											 linux-lts-header					'si la versionDistro es LTS, dale LTS ps :v'
+
+				:: Repository core
+					 1) linux510-headers  2) linux515-headers  3) linux54-headers  4) linux61-headers  5) linux61-rt-headers  6) linux612-headers
+					 7) linux612-rt-headers  8) linux613-headers  9) linux613-rt-headers  10) linux66-headers  11) linux66-rt-headers
+
+				Enter a number (default=1): 6
+
+		::: sudo vboxreload
+		::: sudo modprobe vboxdrv
+		::: lsmod | grep vbox
+		::: restart
+}
+

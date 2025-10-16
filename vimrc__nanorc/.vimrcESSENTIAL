@@ -1,0 +1,179 @@
+" : set number relativenumber numberwidth=1 sw=2 tabstop=2 softtabstop=2 wrap noswapfile | map <C-j> <CR> | color murphy			  | nnoremap ci( f(ci( | nnoremap ci< f<ci<
+
+
+"set viminfo=	" ~/.viminfo  desactivacion total, historialComandos, HistorialBusqueda, Registros, NumerosLinea
+
+" help statusline					echo expand(winnr()) == numberPanel...<3 <3 <3
+set statusline=%F\ %m%h%r%=\ <3\ %{winnr()}\ \ %l,%c%V\ \ \ \ %P
+
+set number relativenumber numberwidth=1
+set sw=2 tabstop=2 softtabstop=2
+set laststatus=2
+
+set noswapfile
+set wrap
+
+set smartindent
+set hlsearch incsearch
+
+syntax on
+"imap ;l <Esc>
+map <C-j> <CR>
+cmap <C-b> <Left>|cmap <C-n> <Right>|cmap <C-v> <S-Left>|cmap <C-m> <S-Right>|cmap <C-a> <Home>
+imap <C-b> <Left>|imap <C-f> <Right>
+nnoremap <C-l> :bnext<CR>
+nnoremap <C-k> :bprevious<CR>
+
+set scrolloff=10
+
+"vim:: e [Tab]
+set wildmenu wildmode=list:longest
+
+"color lunaperche
+
+"Lineas guia identacion
+set list | set listchars=tab::\ ,trail::
+
+
+"por default tiene transparencia, otros necesitan de hi...
+"transparencia en vim ... <3 <3 <3   hi == highlight
+hi Normal ctermfg=NONE ctermbg=NONE
+hi NonText ctermfg=NONE ctermbg=NONE
+
+"quiet       todo blanco :3 <3
+"sorbet      <3 <3 <3
+"lunaperche  <3 <3 <
+"habamax     <3 <3
+
+"set modifiable 		 no [-] ..<3 ::help statusline ::help modifiable (permiteModificarArchivosRO)
+
+""  ----------------------------------------------------------------------------------------------------
+""  ----------------------------------------------------------------------------------------------------
+
+" : Ex $desk | call Lcd() | call Whereami()		(no funciona  :Whereami | Lcd  ... :'u)
+" : call Whereami() | call Lcd()							(no funciona  :Whereami | Lcd  ... :'u)
+
+""     Mvnb  -  imprime ipTarged pa usar con gx (http/https), ipTmux... :Mvnb --help  <3
+""     Lcd   -  mueve la ubicacion actual(pwd) a la del archivo en edicion 'expand('%:p')'
+""     Lterm -  abre terminal en la ubicacion del archivo en edicion.
+""     Lex   -  abre Ex en la ubicacion actual 'pwd'  'cd -'
+""     Whereami  -  print ubicacion del archivo en edicion 'expand('%:p')' y pwdWorkDir 'pwd'.
+
+function! LookBack()
+	echo "  Mvnb  -  imprime ipTarged pa usar con gx (http/https), ipTmux... :Mvnb --help  <3"
+	echo "  Lcd   -  mueve la ubicacion actual(pwd) a la del archivo en edicion 'expand('%:p')'"
+	echo "  Lterm -  abre terminal en la ubicacion del archivo en edicion."
+	echo "  Lex   -  abre Ex en la ubicacion actual 'pwd'  'cd -'"
+	echo "  Whereami  -  print ubicacion del archivo en edicion 'expand('%:p')' y pwdWorkDir 'pwd'."
+endfunction
+command LookBack call LookBack()
+
+" :r ! tmux display-message -p "\#W" | grep -oP "\[.*?\]" | tr -d "[] \n"  "" Puto # en vim :u
+function! Mvnb(arg = '')
+	if a:arg == '--here'
+		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+		let l:output = system(l:cmd)
+		let l:output = substitute(l:output, '\n', '', 'g')
+
+		"call setline(line('.'), l:output) "reemplaza la linea focus con el output
+		call append(line('.') - 1, l:output)  "agrega el output una linea arriba del focus... <3
+	elseif a:arg == '--vpn'
+		let l:cmd = 'tmux display-message -t :0 -p "#W" | grep -oP "\(.*?\)" | tr -d "() \n"'
+		let l:output = system(l:cmd)
+		let l:output = substitute(l:output, '\n', '', 'g')
+
+		"call setline(line('.'), l:output)
+		call append(line('.') - 1, l:output)  "agrega el output una linea arriba del focus... <3
+	elseif a:arg == '--targed'
+		let l:cmd = 'tmux display-message -t :1 -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+		let l:output = system(l:cmd)
+		let l:output = substitute(l:output, '\n', '', 'g')
+		call append(line('.') - 1, l:output)
+	elseif a:arg == '--help'
+		echo " --vpn"
+		echo " --targed"
+		echo " --here"
+		echo "  noArguments ( http/https ipTarged ) "
+	else
+		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+		let l:output = system(l:cmd)
+		let l:output = substitute(l:output, '\n', '', 'g')
+
+		"call setline('.', l:output)
+		" hasta ac[a solo ip ...<3
+
+					"Extra
+		let l:line1 = 'https://' . l:output
+		let l:line2 = 'http://' . l:output
+
+		echo "Targed... Ready..."
+
+		"call append(line('.'), l:line1)			" me dejaba una linea en blanco al inicio
+		"call append(line('.') + 1, l:line2)
+
+		call setline(line('.'), l:line1)   " sin linea en blanco al inicio <3 <3 <3
+		call append(line('.'), l:line2)
+					"extrA
+	endif
+endfunction
+command! -nargs=* Mvnb call Mvnb(<f-args>)
+"command Mvnb call Mvnb()
+
+function! Ip()
+	let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+	let l:output = system(l:cmd)
+	let l:output = substitute(l:output, '\n', '', 'g')
+
+	"call append(line('.'), l:output)
+	call setline(line('.'), l:output)
+endfunction
+command Ip call Ip()
+
+"  : let mango=expand('%:p') | execute 'cd ' . mango | term
+function! Lcd()
+	let l:mango = expand('%:p:h')
+	execute 'lcd ' . l:mango
+	echo "new PWD WorkDir: " . l:mango
+endfunction
+command Lcd call Lcd()
+
+" : let mango=getcwd() | execute 'Ex ' . mango			getcwd() === pwd
+function! Lex()
+	let l:mango = getcwd()
+	execute 'Ex ' . mango
+	echo "Ex new pwdWorkDir"
+endfunction
+command Lex call Lex()
+
+function! Lterm()
+	let l:mango = expand('%:p:h')
+	execute 'lcd ' . l:mango
+	echo ":term  fileWorkDir: " . l:mango
+	execute 'term'
+endfunction
+command Lterm call Lterm()
+
+function! Whereami()
+	let l:mango = expand('%:p')
+	let l:mango2 = getcwd()
+	echo "  =>fileActual: " . l:mango . "    =>PWD Actual: " . l:mango2
+endfunction
+command Whereami call Whereami()
+
+function! Pterm()
+	execute "call popup_create(term_start('bash', #{hidden: 1}), #{highlight: 'WarningMsg', border: [], minwidth: 123, minheight: 55})"
+	"call popup_setoptions('1006', #{minwidth: 70, minheight: 50})
+endfunction
+command Pterm call Pterm()
+
+function! Test(arg = '')
+	if a:arg == '-ip'
+		echo "Hello world IF IF IF "
+	else
+		echo " Else ELSE Else "
+	endif
+endfunction
+command! -nargs=* Test call Test(<f-args>)
+"function! Test(arg)
+"command! -nargs=1 Test call Test(<f-args>)
+color habamax

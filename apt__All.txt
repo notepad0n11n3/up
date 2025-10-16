@@ -1,0 +1,13 @@
+
+::: sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y && sudo updatedb && echo -e "\n\n\t\t UmU \n" 
+
+::: sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y && sudo updatedb && echo -e "\xA\xA\x9\x9 UmU \xA" 
+
+                                    0xA   \n
+                                    0x9   \t
+
+
+::: sudo apt-get -h
+
+::: sudo apt-get autoclean            // Erase OLD downloaded archive files
+::: sudo apt-get clean                // Erase downloaded archive files

@@ -1,0 +1,19 @@
+
+::: pacman -Sy base-devel     ///     build-essential en debian
+
+::: pacman -S gcc
+
+::: pacman -S cmake
+
+::: pacman -S nodejs
+
+::: pacman -S npm
+
+::: pacman -S go
+
+::: pacman -S rust
+
+::: pacman jre11-openjdk
+
+
+::: python3 install.py --all

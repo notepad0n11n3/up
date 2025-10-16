@@ -1,0 +1,39 @@
+    ///   install--->>>   'central'   time zone   <3 <3 <3 
+
+  Corregir hora en dual boot  win/kali  {
+    https://www.kali.org/docs/installation/dual-boot-kali-with-windows/
+
+          ::: timedatectl set-local-rtc 1 --adjust-system-clock         ... <3 <3 <3
+
+                 'To undo this we can simply do:'
+                 ::: timedatectl set-local-rtc 0 --adjust-system-clock
+  }
+
+::: vim /etc/apt/sources.list 
+					- last #
+
+::: sudo su
+
+::: apt update
+
+::: apt-get full-upgrade -y
+
+
+
+####  QTERMINAL  
+
+           Application transparency  9% 
+           Terminal transparency 79% 
+           Terminal margin 5px 
+
+
+
+#### settings / LigthDM GTK+ Greeter Settings   (xfce)
+          
+          Theme   Kali-Dark
+
+          Image     thumb-1920-1051364.jpg
+
+#### settings / File Manager Settings
+
+          show thumbnails:     'Never'

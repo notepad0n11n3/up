@@ -1,0 +1,35 @@
+
+======================= extraEXTRAextra ==================
+::: neofetch      // printConsola InfoDetalladaDeSystema
+==========================================================
+
+
+*** *** opci[on m[as liviana
+
+::: sudo pacman -S lightdm  lightdm-gtk-greeter   // sessionManger apt-get READY...lubuKaliOK
+
+::: systemctl  enable  lightdm.service
+
+
+::: sudo pacman -Syu          // aveces si el sistema no esta actualizado da error
+::: sudo pacman -S  xfce4  xfce4-goodies              // escritorio xfce  <3  lubuKaliOK
+
+
+
+
+
+
+::: hostname -I
+::: ip route show 
+::: ip link
+::: ip address 
+
+::: nmcli
+::: nmcli device show
+
+    ipPublica
+::: curl ipinfo.io.ip
+::: curl ipconfig.me
+
+
+

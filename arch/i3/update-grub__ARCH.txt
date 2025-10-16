@@ -1,0 +1,5 @@
+::: which update-grub
+::: cat $(whihc update-grub)
+
+
+::: sudo grub-mkconfig -o /boot/grub/grub.cfg

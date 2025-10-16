@@ -1,0 +1,42 @@
+      prueba instalando !!!   1 a la vez y reinicia, creo q no son todos necesarios
+
+::: sudo pacman -S wpa_supplicant     OK
+
+::: sudo pacman -S wireless_tools     !!!
+
+::: sudo pacman -S networkmanager     OK
+
+::: sudo pacman -S network-manager-applet  !!! 
+
+::: sudo pacman -S gnome-keyring           !!!
+
+
+
+
+::: sudo systemctl enable NetworkManager.service
+
+::: systemctl disable dhcpcd.service
+
+::: systemctl stop dhcpcd.service
+
+::: systemctl enable wpa_supplicant.service
+
+
+::: gpasswd -a aeo8 network
+
+
+::: ip link set down eth0
+
+::: ip link set down wlan0
+
+
+::: systemctl start wpa_supplicant.service
+
+::: systemctl start NetworkManager.service
+
+
+
+no testeado, supuestamente hasta aqu[i esta ok
+
+::: sudo Networkmanager
+::: nm-applet

@@ -1,0 +1,41 @@
+
+            ###         VMWARE.EXE
+
+      Ctrl Alt   'quita el focus de la session de vmware'        Alt Espace  'menu contextual de la barra de vmware(fullScreenMode)'
+      Ctrl Alt Enter  'Full screen mode  vmware' 'vale para volver a dar el focus a la session de vmware'  <3 <3 <3...!!!
+      Ctrl g    'remota el focus de la maquina virtual'
+
+
+
+ Ctrl Alt D    'minimiza/restaura todas la ventanas <3 <3 <3'
+
+  Super === windowKey
+
+Settings/Windows Manager
+            
+            Keyboard
+  {
+    Close window        Super+-  'Super+Q'
+
+    Maximize window     Super+/
+    Hide window         Super+.
+
+    Toggle fullscreen   Super+Space
+
+    Move window to lower monitor      Super+N
+    Move window to upper monitor      Super+Y
+
+    Move window to next workspace     Super+i
+
+    Tile window to the top            Super+K
+    Tile window to the bottom         Super+J
+    Tile window to the left           Super+A
+    Tile window to the right          Super+D
+
+    Tile window to the top-left       Super+Z
+    Tile window to the top-right      Super+V
+    Tile window to the bottom-left    Super+X
+    Tile window to the bottom-right   Super+C
+
+    Next workspace                Super+O
+  }

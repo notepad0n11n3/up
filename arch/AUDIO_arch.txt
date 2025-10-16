@@ -1,0 +1,1 @@
+::: pacman -S pulseaudio pulseaudio-alsa

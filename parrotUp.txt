@@ -1,0 +1,30 @@
+
+::: sudo su
+
+::: apt update   # OK OK OK OK....!!!
+
+::: apt list --upgradable ## muestra lista de los paquetes que se pueden actualizar...!!!
+
+
+	::: apt upgrade   !!??!!??!!??    no apt upgrade parrotBurn no apt NO NO no
+
+
+	::: parrot-upgrade     *** *** ***      yes...!!!  <<<===<<<    OK OK OK OK....!!!
+
+
+
+
+
+
+::: vim /etc/apt/sources.list.d/parrot.list
+
+    deb https://deb.parrot.sh/parrot/ rolling main contrib non-free
+    deb https://deb.parrot.sh/parrot/ rolling-security main contrib non-free
+
+  v:: w ! sudo tee
+
+
+
+// homeEdition upgradeFullSecurityEdition
+
+  ::: sudo apt install parrot-tools-full

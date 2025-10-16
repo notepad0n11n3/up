@@ -1,0 +1,23 @@
+
+::: sudo  fdisk  -l          // listar los dispositivos conectados
+      
+        /dev/sda1       32 G
+
+
+::: umount  /dev/sda1        // desmontar el usb
+
+
+
+::: sudo  mkfs.vfat  -F  32  /dev/sda  -I     // formateo de usb  ( si... solo sda  no "sda1" )
+
+
+
+::: cd $HOME/Downloads/
+
+ :: sudo  dd  if=kali_mango.iso  of=/dev/sda          // Ready de 8-13 minutos <3 <3 <3...
+
+
+
+			https://www.kali.org/docs/usb/live-usb-install-with-linux/
+::: sudo  dd  if=kali_mango.iso  of=/dev/sda conv=fsync bs=4M  status=progress
+

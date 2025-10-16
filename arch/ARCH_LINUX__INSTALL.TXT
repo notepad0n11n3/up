@@ -1,0 +1,147 @@
+                                    Apuntes Arch
+
+
+WIFI{
+  ::: ip link  
+  ::: ip link set wlan0 up
+  ::: iwlist wlan0 scan           /// escanearRedesWifi  juega con  " | less " para verComodamente
+}
+
+INGRESAR A UNA RED WIFI{
+  ::: iwconfig wlan0 essid nombreWifiHere                     /// redAbierta
+  ::: iwconfig wlan0 essid nombreWifiHere key s:PASSWORDhERE   /// WEP             s:
+
+  ::: wpa_passphrase nombreWifi passwordWifi > /etc/wifi       /// WPA-WPA2
+   :: cat /etc/wifi
+   :: wpa_supplicant -B -i wlan0 -D wext -c /etc/wifi
+                //  -B ejecutarSegundoPlano; -i nameHere  interface/tarjetaWifi; -D wext  usarControlador wext; -D archivo  rutaArchivoConfiguraci[on
+          #! salen algunos mensajes de error, no problem GO
+
+  ::: dhclient            ///  direccion ip  ;  dns
+   :: ping google.com     
+}
+
+
+PARTICIONAR DISCO{
+  ::: fdisk -l            /// mostrar discosDisponibles(discoDuro y usb) y particiones  /dev/sda  mainDisc
+
+  ::: fdisk /dev/sda    
+   :: m      // help
+   :: p      // mostrar particiones
+   :: d      // eliminar particion
+
+  ::: o      // creaNueva tabla de particiones limpiaTodo
+  ::: n      // nueva partici[on
+  ::: p      // primary
+  ::: 1      // (1-4) mbr solo permite 4 particionesPrimarias, gpt aveces me da problemas
+  :::        // el primerSector vacio
+  ::: +192G  // 192 gigas de tama~o asignado
+
+  ::: n
+  ::: e     //partici[onExtendida
+  :::
+  :::        primer y ultimo sector en blanco para ocupar todo el restoDelDisco
+
+  ::: n
+  ::: 
+  ::: +192G   // para el home
+
+  ::: n
+  :::
+  :::        // el resto para swap
+
+
+  ::: t      // CAMBIAR TIPO DE PARTICI[ON
+  ::: 6      // /dev/sda6
+  ::: L      // mostrar codigosTipoPartici[on
+  ::: 82     //  swap - 82
+
+
+  ::: a      // ASIGNAR BOOT FLAG A UNA PARTICI[ON
+  ::: 1      //  /dev/sda1
+  ::: p      // mostrar particiones
+
+
+  ::: w     // escribirTodos losCambios
+}
+
+SWAP{
+  ::: mkswap /dev/sda6    // obvio el n[umero se ajusta a tu situaci[on   UUID=  UUID= UUID=
+  ::: swapon
+}
+
+
+::: mkfs.ext4 /dev/sda1         // partitionRaizSystem    flagboot
+::: mkfs.ext4 /dev/sda5         // home partition
+
+
+MONTAR_PARTICIONES{
+  ::: fdisk -l      // mostrar particiones
+
+  ::: mount /dev/sda1  /mnt           // /dev/sda1 == partitionRaizSystem
+
+  ::: mkdir /mnt/home
+  ::: mount /dev/sda5  /mnt/home      //  /dev/sda5 == partitionHome
+
+  ::: pacstrap /mnt  base base-devel linux linux-firmware vim nano grub networkmanager dhcpcd netctl wpa_supplicant dialog  
+
+  ::: genfstab /mnt >> /mnt/etc/fstab
+
+  ::: arch-chroot /mnt
+}
+
+SISTEMA_LIMPIO{
+  ::: echo "panda8hat" > /etc/hostname
+
+  ::: echo "127.0.0.1 localhost" > /etc/host
+
+  ::: vim /etc/locale.gen
+      descomenta UTF-8
+  
+  ::: locale-gen
+
+
+  ::: passwd                    // asignarClaveRoot
+
+  ::: useradd -m newUserNameHere              // -m  crearCarpetaUsuario
+
+  ::: passwd  newUserNameHere     // asignarClave usuario
+
+  ::: grub-install /dev/sda
+
+  ::: grub-mkconfig -o /boot/grub/grub.cfg
+
+  ::: mkinitcpio -P                           // actualizar imagenArranque
+
+  ::: exit
+  ::: reboot now
+}
+
+INTERNET POST_REBOOT{
+  ::: su
+  ::: systemctl start NetworkManager.service
+
+  ::: systemctl enable NetworkManager.service
+
+  ::: ip link
+
+  ::: ip link set wlan0 up
+
+  ::: nmcli dev wifi connect nombreWIFIhere password passWIFIhere
+}
+
+ESCRITORIO__SESSION-MANAGER__PROGRAMS{
+
+  ::: pacman -S pulseaudio pulseaudio-alsa
+
+  ::: pacman -S xorg xorg-server xorg-xinit xf86.... lightdm lightdm-gtk-greeter xfce4 xfce4-goodies
+                
+                      xf86-video-amdgpu                  //   archlinux.com/packages     busca el controlador para tu tarjeta de video
+
+  ::: systemctl enable lightdm.service
+
+  ::: systemctl start lightdm.service
+}
+
+
+    #### Unistall vim...  install gvim    

@@ -1,0 +1,269 @@
+"                        for nvim go tail here
+" v:: e      'reload file, por si editaste el mismo archivo en otra ventana/panel/etc..'
+" google:: vim plug      https://github.com/junegunn/vim-plug
+"     v:: PlugStatus        v:: PlugInstall       v:: PlugUpgrade   v::   PlugClean  etc...
+"
+"   : w | so %           "  con | concatenamos comandos likea a &&   <3 <3 <3 
+"
+"   :source %  :: so %   " cargar archivo .vimrc actual
+"
+"   :options      " todas las opciones de configuraci[on   <3 <3 <3 <3 <3 <3 <3 <3 <3 
+"  vim:: help 'mango'     (number, laststatus, cindent, hlsearch, noswapfile,  etc)
+"  vim:: h 'mango'
+"
+set encoding=utf-8
+syntax on 
+
+set number relativenumber numberwidth=1   "number width ==> relative number
+"    set nu  == set number         set rnu  == relative number        set mouse=a mouseIntegration
+
+
+set cindent   "indentaci[on special para vimrcRoot, aun tengo que seguir investigando
+
+set wildmenu
+set wildoptions=pum   " muestra las sugerencias de 'vim:: color'  en vertical <3 <3
+                      "  vim:: PlugStatus  PlugInstall  PlugClean
+
+
+"                         Copy Paste 
+set clipboard=unnamedplus	
+"          ::: vim --version | grep clipboard  =>>  stdout(' -clipboard -xterm_clipboard ')  ==>   ::: sudo apt install vim-gtk O vim-gtk3
+ 
+"   ARCHLINUX... ... ...  
+"     ::: pacman -Si vim  &&  pacman -Si gvim    
+"      :: unistall vim   and    install(pacman -S gvim)  gvim     and use vim      +clipboard +xterm_xlipboard por default <3 <3 <3 <3 <3
+
+
+set showcmd "muestra los comandos que estoy ejecutando NOfuncioaCOMOesperaba :(
+set ruler   "número de linea y número de columna
+set showmatch "si me paro sobre un ({[]}) muestra el otro que esta cerrando 
+set laststatus=2  "muestra barra inferior ( si we si... esaBarra de color :u )
+set noshowmode   "quita el aviso -- INSERTAR --  al entrar en modo inserción noFunciona:(
+
+set tabstop=2 softtabstop=2 sw=2  "tabulador   ahora es 2 espacios  shiftwidth=2
+set smartindent
+set incsearch "no espera a dar ENTER para mostrar resultados de busqueda con /
+set hlsearch "Resalta las letras al hacer búsquedas
+"" set ignorecase  " Ignore capital letters during search.
+
+"ThePrimeagen
+set noerrorbells
+set expandtab
+"set nowrap   "no rompe las lineas !set wrap
+
+set textwidth=0 wrapmargin=0
+  "notitulos
+set smartcase
+
+set noswapfile
+set nobackup
+  "pre- mkdir $HOME/.vim/undodir
+
+"set undodir=~/.vim/undodir
+"set undofile
+
+set colorcolumn=80,75,70,1
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+set copyindent    " copy the previous indentation on autoindenting
+" TP 21
+"colorscheme gruvbox ==>> 'gruvbox-community/gruvbox'    nvim???
+"highlight Normal guibg=none     ##fondo transparente    nvim???
+"set hidden
+
+call plug#begin('~/.vim/plugged')
+"    google:: vim plug   && v::PlugStatus   PlugInstall  PlugUpdate PlugUpgrade 
+" busqueda por coincidencia <Espace>+s
+Plug 'easymotion/vim-easymotion' 
+
+" explorador lateral carpetaActual
+Plug 'scrooloose/nerdtree'
+
+"Themes
+Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
+Plug 'dikiaap/minimalist'
+
+"Linea celeste INSERT 
+Plug 'itchyny/lightline.vim'
+
+"Lineas de identacion
+Plug 'yggdroot/indentline'
+
+"Auto completado  go github for help men... go github ...
+Plug 'ycm-core/YouCompleteMe'
+  "https://www.youtube.com/watch?v=n9k9scbTuvQ
+  "al reinstalar da un error ./.vim/***/***/YouCompleteMe/ ::: ./install.py --ts-completer
+" python3 install.py --clangd-completer --ts-completer --cs-completer --rust-completer --java-completer --all
+
+
+"   google:: youcompleteme
+"                           https://github.com/ycm-core/YouCompleteMe
+"                           https://github.com/ycm-core/YouCompleteMe#linux-64-bit
+"  ::: sudo apt install build-essential cmake vim-nox python3-dev
+"
+" ::: sudo apt install mono-complete golang nodejs default-jdk npm
+"
+" ::: cd ~/.vim/plugged/YouCompleteMe  &&  python3 install.py --all
+"
+"
+"         ::: python3 install.py --clangd-completer     ... ... ... <3 <3 <3 
+"
+
+
+  " :!git  ===>>>  :Git  :: :G commit/log/status/....
+Plug 'tpope/vim-fugitive' 
+" git left signs[+-~] lineas modificadas
+Plug 'airblade/vim-gitgutter'
+" commit trees
+Plug 'junegunn/gv.vim'
+  " [c   ]c salta entre las modificaciones del archivo, arriba/abajo :) hunks
+
+  " time tree
+Plug 'mbbill/undotree'
+  
+call plug#end()
+
+" Cerrar nerdTree despues de seleccionar un archivo
+let NERDTreeQuitOnOpen=1
+" Lineas de identacion desde el inicio
+let g:indent_guides_enable_on_vim_startup = 1 "" Lineas de identacion enable desde inicio
+
+"***********======>>>>> Atajo personalizado <<<<<<<========********************
+imap ;l <Esc>
+
+" Tecla lider
+let mapleader=" "
+" refrescar archivo, post salto de rama :::git checkout nameBranchHere
+nmap <Leader>e :e<CR>
+nmap <Leader>nt :NERDTreeFind<CR>
+nmap <Leader>s <Plug>(easymotion-s2)
+nmap <Leader>q :q<CR>
+nmap <Leader>w :w<CR>
+nmap <Leader>z :! clear && zsh<CR>
+nmap <Leader>x :! 
+nmap <Leader>. :nohlsearch<CR> 
+nmap <Leader>g :Git<CR>
+    " :nohl === :noh  === :nohlsearch
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+
+"like a nerdTree pero con Ex
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+
+" YCM      *****************************************************************
+  " The best part
+  " https://github.com/ycm-core/YouCompleteMe#the-gycm_autoclose_preview_window_after_completion-option
+nnoremap <silent> <Leader>yd :YcmCompleter GoTo<CR>
+nnoremap <silent> <Leader>yf :YcmCompleter FixIt<CR>
+"" let g:ycm_autoclose_preview_window_after_insertion = 1  "cerrar despu[esDeElegir splitSuperior con las sugerencias
+set completeopt-=preview  " noMostrarSplitSuperior con las sugerencias  <3...
+
+"               GIT GIT GIT GIT en vim...**********************************
+" resaltado de lineas modificadas git LIGHT DARKNES  vim-gitgutter
+nmap <Leader>o :GitGutterLineHighlightsEnable<CR>
+nmap <Leader>O :GitGutterLineHighlightsDisable<CR>
+
+" commit tree  junegunn/gv.vim  *****************************
+nmap <Leader>ct :GV<CR>
+" file commit's junegunn/gv.vim
+nmap <Leader>cf :GV!<CR>
+
+" time tree  mbbill/undotree     ****************************
+nmap <Leader>tt :UndotreeToggle<CR>
+
+" disable all key mappings vim-gitgutter ********************
+let g:gitgutter_map_keys = 0
+let g:gitgutter_preview_win_floating = 1
+" signos git desde arranque  vim-gitgutter
+set signcolumn=yes
+"refresco de vim para EJECUTAR vim-gitgutter
+set updatetime=100 " este se QUEDA :)
+
+" config addd  https://github.com/itchyny/lightline.vim  *********************
+" LEFT left
+  " branch 
+let g:lightline = {
+      \ 'colorscheme': 'powerline',
+      \ 'active': {
+      \   'left': [ 
+      \             [ 'x89p', 'modified' ],
+      \             [ 'filename', 'percent', 'modified' ], 
+      \             [ 'lineinfo' ],
+      \             [ 'readonly', 'gitbranch'], [ 'goewe', 'modified' ] ],
+      \  'right': [ 
+      \             [ 'modified', 'mode', 'paste', 'fire' ],
+      \             [ 'modified', 'lineinfo', 'filename' ],
+      \             [ 'percent', 'gitbranch' ],
+      \             [ 'fileformat', 'fileencoding', 'rightHere' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ 'component': {
+      \      'x89p': '🔥ψ(｀∇´)ψ(ノ｀⌒´)ノ🔥',
+      \      'goewe': ' (~‾▿‾)~🔥ﾉ(° -°ﾉ)',
+      \     'rightHere': '🎼♩♪♫ 💪(￣ヘ￣;)',
+      \      'fire': '🔥'
+      \ },
+      \ }
+
+" ayuda a que el color de la lineaCeleste cambieColor
+if !has('gui_running')
+  set t_Co=256
+endif
+"  Si no funciona add   .zshrc
+"           export TERM=xterm-256color
+
+
+"    Transparencia en grubox *********************************
+set t_Co=256
+colorscheme gruvbox
+let g:gruvbox_transparent_bg=1
+
+colorscheme minimalist "tambien vale onedark :)  <3<3<3
+colorscheme gruvbox
+
+hi! Normal ctermbg=NONE guibg=NONE
+
+" no lineas al infinito :') ************************************* ...<3 <3 <3
+set wrap
+set textwidth=0 wrapmargin=0
+
+
+"set cursorline cursorcolumn
+
+set scrolloff=10  " No scroll hasta el fondo <3
+set nocompatible   " disable compatibility with vi which can cause unexpected issues.
+
+set scr=10     "" number of lines to scroll for Ctrl-u  and Ctrl-d  <3 <3 <3 <3 <3 <3 <3 
+
+set wildmenu    "" command-line copletion shows a list of matches
+
+    "linebreak	wrap long lines at a character in 'breakat'
+    " (local to window)
+"set nolbr	lbr
+
+    "window	number of lines to scroll for CTRL-F and CTRL-B
+"set window=64
+
+      "textwidth	line length above which to break a line
+      "	(local to buffer)
+"set tw=0
+      "wrapmargin	margin from the right in which to break a line
+      "	(local to buffer)
+"set wm=0
+
+
+"""""""""""""""""""""""""'NVIM""""""""""""""""""""""""""""""""""""''
+"mismo archivo de configuraci[on para vim nvim
+"
+"       $HOME/.config/nvim/init.vim
+"     ::: vim init.vim
+"
+"         set runtimepath^=~/.vim runtimepath+=~/.vim/after
+"         let &packpath=&runtimepath
+"         source ~/.vimrc
+

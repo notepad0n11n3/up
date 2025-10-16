@@ -1,0 +1,6 @@
+set tabsize 4
+set autoindent
+set smooth
+set linenumbers
+set tabsize 2
+set titlecolor green,black

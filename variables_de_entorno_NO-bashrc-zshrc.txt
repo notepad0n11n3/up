@@ -1,0 +1,64 @@
+
+::: printenv | less
+
+::: printenv HOME          // sin $   <<--!!
+
+    /home/aeo8
+
+::: echo $HOME
+
+    /home/aeo8
+
+
+::: export BURNINGAREA="/home/aeo8/Desktop/burningArea"
+
+
+*** *** *** Cambiar el valor de la variable TZ (zona horaria)
+
+::: date      // revisamos la hora
+
+::: export TZ="US/Pacific"          // alterar la zona horaria
+
+    *** *** REVERTIR el valor de una VARIABLE de entorno
+    ::: unset TZ              // restablecer valor predeterminado
+
+
+*** ***  Variables de Entorno LOCAL
+                              //solo disponible en la shell actual
+::: mango_caliente=desunee
+ :: echo $mango_caliente
+
+*** *** *** Variables de Entorno GLOBAL
+::: export mango_fresa=umuowo
+ :: echo $mango_fresa
+
+
+### *** ### *** ### *** Variables entorno Globales PERSISTENTES/AllUsers     !!!  post_reinicio POST_REINICIO  !!!
+
+::: vim /etc/environment
+    
+    brain="/home/aeo8/Desktop/brain/"
+    brain="$HOME/Desktop/brain/"     <<-<<< con $HOME noFunciona, tiene que ser rutaAbsoluta, noRelativa  :/
+
+    bored="/home/$(whoami)/Desktop/bored/"
+    bored="$HOME/Desktop/bored/"  <<-- $HOME don't work, we need absolute path. <3 <3 <3
+
+
+    burn="/home/aeo8/Desktop/burningArea/"    el '/' al final PUEDE causar conflictos enOtro entorno/sistema OJO
+    burn="/home/aeo8/Desktop/burningArea"
+
+																															DISCO DE ACRECIÓN
+
+          on="/home/x89p/.0n11n3/"
+
+          up="/home/x89p/.0n11n3/up/"
+          box="/home/x89p/.0n11n3/blackbox/"
+          brain="/home/x89p/.0n11n3/brain/"
+          bored="/home/x89p/.0n11n3/bored/"
+
+          burn="/home/x89p/.burningArea/"
+          htb="/home/x89p/.burningArea/accretion_disk/"
+
+          desk="/home/x89p/Desktop/"
+          down="/home/x89p/Downloads/"
+

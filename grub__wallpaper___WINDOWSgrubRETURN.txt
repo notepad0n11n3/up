@@ -1,0 +1,19 @@
+
+  :::vim  /etc/default/grub
+
+  ::: sudo update-grub
+
+
+WALLPAPER_GRUB 
+  remplaza todo por la nueva imagen    (  grub-4x3.png  ,   grub-16x9.png  ) nuevaImagenPEROConservaElNombre!!!
+
+  /boot/grub/themes/kali/
+  /usr/share/grub/themes/kali/      /// llegu[e aqu[i gracias al archivo .sh del anteriorDirectorio <3  :)
+
+  ::: sudo update-grub           /// solo para asegurar, lo prob[e sin esto, NO ES NECESARIO!!!  pero... noTaDemas
+
+
+OS WINDOWS NO DETECTADO...!!! <<3 <3
+
+ ::: sudo  echo "#Activar os-prober" >> /etc/default/grub
+ ::: sudo  echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub

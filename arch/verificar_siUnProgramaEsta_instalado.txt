@@ -1,0 +1,4 @@
+
+::: dpkg -s vim
+::: apt list vim
+::: pacman -Qs vim
