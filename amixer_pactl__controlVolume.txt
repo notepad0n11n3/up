@@ -26,6 +26,7 @@ pactl list sources short						("::: sudo apt install pulseaudio-utils")
 
 	### Activar microfono	===	amixer set Capture 100% unmute
 ::: pactl set-source-volume @DEFAULT_SOURCE@ 100%
+::: pactl set-source-volume @DEFAULT_SOURCE@ 50%
 ::: pactl set-source-mute @DEFAULT_SOURCE@ 0
 
 
