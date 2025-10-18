@@ -1,4 +1,5 @@
 #						sudo apt install i3 i3blocks feh -y
+#														 pulseaudio-utils -y				(' pactl set/get-sink/source-volume @DEFAULT_SINK/SOURCE@ ')
 
 #		::: dm-tool lock					' tool to control the display manager "lightdm" '
 
