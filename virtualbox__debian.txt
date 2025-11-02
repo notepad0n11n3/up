@@ -63,18 +63,34 @@
 										Para volver al tema claro, repite los comandos pero cambia /d 0 por /d 1
 
 
-
-###   VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL....VIRTUALBOX desde TERMINAL.... <3 <3 <3 <3
+###   VIRTUALBOX desde TERMINAL....<3 <3 <3 <3
 
 	::: vboxmanage list vms					"lista maquinas virtuales disponibles"
 
-	::: vboxmanage startvm "name_here" --type headless  &>/dev/null & disown				"inicia maquina virtual   headless(sin interfaz grafica) "
-	::: vboxmanage startvm /ruta/a/la/maquina.vbox  &>/dev/null & disown
+	::: vboxmanage list runningvms		(listar maquinasEncendidas...<3 <3 <3)
 
-	::: vboxmange controlvm "name_here" poweroff
+	::: vboxmanage snapshot "vm_name" list		"lista snapshots"
+	::: vboxmanage snapshot "vm_name" take "snapshot_name" --description "Ready to burn..."
+	::: vboxmanage snapshot "vm_name" restore "snapshot_name"
+	::: vboxmanage snapshot "vm_name" delete "snapshot_name"
+
+	::: vboxmanage startvm "vm_name" --type headless  &>/dev/null & disown		"headless(sin interfaz grafica) "
+	::: vboxmanage startvm /path/a/vm_name.vbox  &>/dev/null & disown
+
+	::: vboxmanage controlvm "vm_name" poweroff	(apagaEnSeco,puedeCorromperDatos siVMesta scribiendoEnDisco...ojo)
+	::: vboxmanage controlvm "vm_name" acpipowerbutton
+	::: vboxmanage controlvm "vm_name" reset
+
+										"* VM APAGADA... ojo... *"
+	::: vboxmanage modifyvm "vm_name" --memory 2048					(memoriaRAM)
+	::: vboxmanage modifyvm "vm_name" --cpus 3					(CPUs)
+	::: vboxmanage modifyvm "vm_name" --vram 69					(memoria de Video vram '128 MAX' )
+	::: vboxmanage modifyvm "vm_name" --memory 4096 --cpus 4 --vram 69
+
+	::: vboxmanage showvminfo "vm_name" | grep -E "CPUs|Memory size:"
 
 
-## Arch Linux				guest additions  (resolucion de pantalla){
+## ARCH LINUX				guest additions  (resolucion de pantalla){
 																																						::: sudo pacman -S linux-header && sudo pacman -Syu		("opcional... no testeado...")
 
 		https://wiki.archlinux.org/title/VirtualBox/Install_Arch_Linux_as_a_guest#Install_the_Guest_Additions
