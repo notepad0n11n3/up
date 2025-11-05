@@ -32,3 +32,27 @@ pactl list sources short						("::: sudo apt install pulseaudio-utils")
 
 
 		arecord -D hw:1,0 -d 22 -f cd prueba.wav			"grabar 22 segundos con microInterno"
+
+
+
+###										AMIXER												amixer
+
+                    toggle    'on/off'
+                    cap     'on'
+                    nocap   'off'
+
+::: amixer | grep "Front Left: Capture"
+
+::: amixer scontrols                'gets a list of simple mixer controls'
+
+::: amixer sset Capture toggle      'on/off microfono... <3 <3'
+::: amixer set Capture toggle       'on/off microfono... <3 <3'
+
+
+::: amixer sset 'Master' 40%       'Volumen'
+::: amixer set Master 40%          'Volumen'
+
+
+
+::: amixer sset/set 'Capture' 0% toggle
+::: amixer sset/set Capture 0% nocap                (crontab -e  "@reboot amixer sset Captur...") pactl es mas efectivoPersistencia 0%mute Micro
