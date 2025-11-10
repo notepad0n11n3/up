@@ -11,8 +11,8 @@ pactl list sources short						("::: sudo apt install pulseaudio-utils")
 				amixer sset Capture 0% nocap
 ::: pactl set-source-volume @DEFAULT_SOURCE@ 0%				'si, volume en lugar de mute para el %, el resto es mute'
 
-::: pactl set-source-mute @DEFAULT_SOURCE@ 1
-::: pactl set-source-mute @DEFAULT_SOURCE@ 0			("el 0 lo activa")
+::: pactl set-source-mute @DEFAULT_SOURCE@ 1			("mic OFF=1")
+::: pactl set-source-mute @DEFAULT_SOURCE@ 0			("el 0 lo activa 0=ON")
 ::: pactl set-source-mute @DEFAULT_SOURCE@ toggle			("intercambia entre on y off, 0 y 1")
 
 
