@@ -7,6 +7,9 @@ pactl list sources short						("::: sudo apt install pulseaudio-utils")
 ::: pactl set-sink-volume @DEFAULT_SINK@ +5%
 ::: pactl set-sink-volume @DEFAULT_SINK@ -5%
 
+::: pactl set-sink-mute @DEFAULT_SINK@ 1		(1==off)
+::: pactl set-sink-mute @DEFAULT_SINK@ 0		(0==on)
+
 
 				amixer sset Capture 0% nocap
 ::: pactl set-source-volume @DEFAULT_SOURCE@ 0%				'si, volume en lugar de mute para el %, el resto es mute'
@@ -15,6 +18,8 @@ pactl list sources short						("::: sudo apt install pulseaudio-utils")
 ::: pactl set-source-mute @DEFAULT_SOURCE@ 0			("el 0 lo activa 0=ON")
 ::: pactl set-source-mute @DEFAULT_SOURCE@ toggle			("intercambia entre on y off, 0 y 1")
 
+::: pactl get-source-mute @DEFAULT_SOURCE@
+				"Mute: yes"		<-> 	"Mute: no"
 
 
 	### Comprobar estado del microfono   ===   amixer sget Capture
