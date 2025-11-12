@@ -139,7 +139,10 @@ function pit(){
 ### pip2
 # https://bootstrap.pypa.io/                 ../pip/2.7/
 #      ::: python2 $up/get-pip.py
-export PATH=$PATH:/home/x89p/.local/bin
+
+# TODO: usar variable de entorno para abajo:
+#export PATH=$PATH:/home/x89p/.local/bin
+export PATH=$PATH:/home/$(whoami)/.local/bin
 #                     $(whoami)
 
 ###
