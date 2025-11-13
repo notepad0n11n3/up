@@ -273,8 +273,16 @@ function ipTarged(){
 }
 
 function fullUpdate(){
-	local_dir=$(pwd)
-	cd $desk && sudo apt clean && sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y && 0n11n3 --pull && sudo updatedb && bash $up/grub__wallpaper_noSUDO.sh && echo -e "\xA\x9\x9 ewe \xA" && cd ${local_dir}
+	which parrot-upgrade &>/dev/null
+	if[ $? -eq 0 ];then
+		echo -e "\xA\x9\x9 >>> PARROT DETECTED::: parrot-upgrade\xA"
+		local_dir=$(pwd)
+		cd $desk && sudo parrot-upgrade && sudo apt clean && sudo apt autoremove -y && sudo updatedb && 0n11n3 --pull && echo -e "\xA\xA\xA\x9 ewe... Ready PARROT>>>--- \xA\xA" && cd ${local_dir}
+	else
+		echo -e "\xA\x9\x9 >>> KALI DETECTED::: full-upgrade\xA"
+		local_dir=$(pwd)
+		cd $desk && sudo apt clean && sudo apt update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y && 0n11n3 --pull && sudo updatedb && bash $up/grub__wallpaper_noSUDO.sh && echo -e "\xA\x9\x9 ewe \xA" && cd ${local_dir}
+	fi
 }
 
 function pre_vm(){
