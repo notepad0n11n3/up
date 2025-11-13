@@ -49,16 +49,16 @@
 
 																															DISCO DE ACRECIÓN
 
-          on="/home/x89p/.0n11n3/"
+          on="/home/x89p/.0n11n3"
 
-          up="/home/x89p/.0n11n3/up/"
-          box="/home/x89p/.0n11n3/blackbox/"
-          brain="/home/x89p/.0n11n3/brain/"
-          bored="/home/x89p/.0n11n3/bored/"
+          up="/home/x89p/.0n11n3/up"
+          box="/home/x89p/.0n11n3/blackbox"
+          brain="/home/x89p/.0n11n3/brain"
+          bored="/home/x89p/.0n11n3/bored"
 
-          burn="/home/x89p/.burningArea/"
-          htb="/home/x89p/.burningArea/accretion_disk/"
+          burn="/home/x89p/.burningArea"
+          htb="/home/x89p/.burningArea/accretion_disk"
 
-          desk="/home/x89p/Desktop/"
-          down="/home/x89p/Downloads/"
+          desk="/home/x89p/Desktop"
+          down="/home/x89p/Downloads"
 
