@@ -60,7 +60,7 @@ hi NonText ctermfg=NONE ctermbg=NONE
 ""     Whereami  -  print ubicacion del archivo en edicion 'expand('%:p')' y pwdWorkDir 'pwd'.
 
 function! LookBack()
-	echo "  Mvnb  -  imprime ipTarged pa usar con gx (http/https), ipTmux... :Mvnb --help  <3"
+	echo "  Mvnb  -  imprime ipTarged pa usar con gx (http/https) vim:'<,'>normal gx , ipTmux... :Mvnb --help  <3"
 	echo "  Lcd   -  mueve la ubicacion actual(pwd) a la del archivo en edicion 'expand('%:p')'"
 	echo "  Lterm -  abre terminal en la ubicacion del archivo en edicion."
 	echo "  Lex   -  abre Ex en la ubicacion actual 'pwd'  'cd -'"
