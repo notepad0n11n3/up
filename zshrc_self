@@ -275,6 +275,7 @@ function ipTarged(){
 function fullUpdate(){
 	which parrot-upgrade &>/dev/null
 	if [ $? -eq 0 ]; then
+	#if which parrot-upgrade &>/dev/null; then		# TODO: no testeado...
 		echo -e "\xA\x9\x9 >>> PARROT DETECTED::: parrot-upgrade\xA"
 		local_dir=$(pwd)
 		cd $desk && sudo parrot-upgrade && sudo apt clean && sudo apt autoremove -y && sudo apt autoclean -y && sudo updatedb && 0n11n3 --pull && echo -e "\xA\xA\xA\x9 ewe... Ready PARROT>>>--- \xA\xA" && cd ${local_dir}
