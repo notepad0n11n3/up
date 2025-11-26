@@ -247,6 +247,11 @@ bar {
 bindsym $mod+b exec burpsuite
 bindsym $mod+f exec firefox
 bindsym $mod+p exec parole
+bindsym $mod+Shift+p exec xfce4-screenshooter
+#Toda la pantalla		xfce4-screenshooter -f
+#Ventana focus			xfce4-screenshooter -w
+#Selecciona area		xfce4-screenshooter -r
+
 #bindsym $mod+g exec vmware
 bindsym $mod+g exec virtualbox
 
