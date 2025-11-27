@@ -23,6 +23,12 @@ cmap <C-b> <Left>|cmap <C-n> <Right>|cmap <C-v> <S-Left>|cmap <C-m> <S-Right>|cm
 imap <C-b> <Left>|imap <C-f> <Right>
 nnoremap <C-l> :bnext<CR>
 nnoremap <C-k> :bprevious<CR>
+" Mapeo de Ctrl-S para guardar en Normal mode
+nnoremap <C-s> :w<CR>
+
+" Mapeo de Ctrl-S para guardar en Insert mode
+inoremap <C-s> <Esc>:w<CR>a
+
 
 set scrolloff=10
 
