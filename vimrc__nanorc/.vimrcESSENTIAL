@@ -27,7 +27,7 @@ nnoremap <C-k> :bprevious<CR>
 nnoremap <C-s> :w<CR>
 
 " Mapeo de Ctrl-S para guardar en Insert mode
-inoremap <C-s> <Esc>:w<CR>a
+"inoremap <C-s> <Esc>:w<CR>a
 
 
 set scrolloff=10
