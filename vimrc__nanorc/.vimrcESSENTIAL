@@ -76,7 +76,18 @@ command LookBack call LookBack()
 
 " :r ! tmux display-message -p "\#W" | grep -oP "\[.*?\]" | tr -d "[] \n"  "" Puto # en vim :u
 function! Mvnb(arg = '')
-	if a:arg == '--here'
+	
+  " Si el argumento es un número puro (ej: 3, 12, 0...), lo usamos como índice de ventana
+  if a:arg =~# '^\d\+$'
+    let l:target = a:arg
+    let l:cmd = 'tmux display-message -t :' . l:target . ' -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+		let l:output = system(l:cmd)
+		let l:output = substitute(l:output, '\n', '', 'g')
+
+		"call setline(line('.'), l:output) "reemplaza la linea focus con el output
+		call append(line('.') - 1, l:output)  "agrega el output una linea arriba del focus... <3
+
+	elseif a:arg == '--here'
 		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
 		let l:output = system(l:cmd)
 		let l:output = substitute(l:output, '\n', '', 'g')
@@ -99,6 +110,7 @@ function! Mvnb(arg = '')
 		echo " --vpn"
 		echo " --targed"
 		echo " --here"
+		echo " numberTab"
 		echo "  noArguments ( http/https ipTarged ) "
 	else
 		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
