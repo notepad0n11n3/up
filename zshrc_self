@@ -241,12 +241,13 @@ function mvnb(){
 }
 
 # x89p
+alias it='ipTarged --here'
 function ipTarged(){
 	session_name=$(tmux display-message -p '#S' | tr -d "\n")
 	if [ $# -ne 1 ]; then
-		echo -e "\xA\x9 1. ipTarged --all (ipVpn, ipTarged)\xA\x9 2. ipTarged 'ipTargedHere'\xA"
+		echo -e "\xA\x9 1. ipTarged --all (ipVpn, ipTarged)\xA\x9 2. ipTarged 'ipTargedHere'\xA\x9 3. ipTarged --here -h "
 	elif [ $1 == "--help" ]; then
-		echo -e "\xA\x9 1. ipTarged --all (ipVpn, ipTarged)\xA\x9 2. ipTarged 'ipTargedHere'\xA"
+		echo -e "\xA\x9 1. ipTarged --all (ipVpn, ipTarged)\xA\x9 2. ipTarged 'ipTargedHere'\xA\x9 3. ipTarged --here -h "
 	elif [ $1 == "--all" ]; then
 		echo -e -n "\xA My ip: "
 		read my_ip
@@ -265,12 +266,17 @@ function ipTarged(){
 		fi
 ##tmux rename-window -t 1 $(tmux display-message -t ":1" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")  ":1"  si no especificas en nombreSession, asume que estas trabajando la sesActual
 ##tmux rename-window -t 0 $(tmux display-message -t ":0" -p "#W" | sed "s/(.*)/(${my_ip})/g" | tr -d "\n")
+	elif [[ $1 == "--here" || $1 == "-h" ]]; then
+		echo -e -n "\xA Ip: "
+		read my_ip_here
+		if [ ! -z "my_ip_here" ]; then
+			tmux rename-window $(tmux display-message -t "${session_name}" -p "#W" | sed "s/\[.*\]/\[${my_ip_here}\]/g" | tr -d "\n")
+		fi
 	else
 		ip_targed="$1"
 		#tmux rename-window -t 1 $(tmux display-message -t "x89p:1" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")  *** *** ***
 		tmux rename-window -t 1 $(tmux display-message -t "${session_name}:1" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
 	fi
-
 }
 
 function fullUpdate(){
