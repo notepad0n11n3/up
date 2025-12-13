@@ -1,10 +1,13 @@
-" : set number relativenumber numberwidth=1 sw=2 tabstop=2 softtabstop=2 wrap noswapfile | map <C-j> <CR> | color murphy | nnoremap ci( f(ci( | nnoremap ci< f<ci<
+"    set number relativenumber numberwidth=1 sw=2 tabstop=2 softtabstop=2 wrap noswapfile | map <C-j> <CR> | color murphy | nnoremap ci( f(ci( | nnoremap ci< f<ci<
 
-"   vim -c 'set number relativenumber numberwidth=1 sw=2 tabstop=2 softtabstop=2 wrap noswapfile viminfo="" | map <C-j> <CR>' 
+"    vim         -c 'set number relativenumber numberwidth=1 sw=2 tabstop=2 softtabstop=2 wrap noswapfile viminfo="" | map <C-j> <CR> | nnoremap <C-s> :w<CR>'
+"    vim -i NONE -c 'set number relativenumber numberwidth=1 sw=2 tabstop=2 softtabstop=2 wrap noswapfile | map <C-j> <CR> | nnoremap <C-s> :w<CR>'
 
-"set viminfo=""        "~/.viminfo  desactivacion total, historialComandos, HistorialBusqueda, Registros, NumerosLinea"
+"set viminfo=""        "~/.viminfo  desactivacion total, historialComandos, HistorialBusqueda, Registros, NumerosLinea"  like a ::: vim -i NONE
 
-" help statusline					echo expand(winnr()) == numberPanel...<3 <3 <3
+"        vim -i NONE -u NONE      (-i .viminfo  ,  -u  .vimrc)
+
+" help statusline         echo expand(winnr()) == numberPanel...<3 <3 <3
 set statusline=%F\ %m%h%r%=\ <3\ %{winnr()}\ \ %l,%c%V\ \ \ \ %P
 
 set number relativenumber numberwidth=1
@@ -28,7 +31,7 @@ nnoremap <C-k> :bprevious<CR>
 nnoremap <C-s> :w<CR>
 
 " Mapeo de Ctrl-S para guardar en Insert mode
-"inoremap <C-s> <Esc>:w<CR>a
+" inoremap <C-s> <Esc>:w<CR>a
 
 
 set scrolloff=10
