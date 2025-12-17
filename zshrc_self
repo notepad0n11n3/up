@@ -280,6 +280,7 @@ function ipTarged(){
 }
 
 function fullUpdate(){
+#												sudo apt update && sudo apt -y full-upgrade
 	which parrot-upgrade &>/dev/null
 	if [ $? -eq 0 ]; then
 	#if which parrot-upgrade &>/dev/null; then		# TODO: no testeado...
