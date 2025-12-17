@@ -1,10 +1,9 @@
 
-# Change prefix key to CTRL+A. "C-" stands for CTRL, "M-" stands for ALT key
-set-option -g prefix M-a # set-option -g prefix C-k       M-a
+set-option -g prefix M-n
 unbind-key C-b
-bind-key M-m send-prefix # bind-key C-k send-prefix       M-a
+bind-key M-n send-prefix
 
-bind-key M-i last-window    # salto ultima Pesta~a usada <3 <3 <3 <3
+bind-key M-i last-window
 
 #pane resizing           =Cantidad de lineas modificarDivisi[on beginning
 bind -r H resize-pane -L 6
