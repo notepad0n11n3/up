@@ -3,7 +3,9 @@
 "    vim         -c 'set number relativenumber numberwidth=1 sw=2 tabstop=2 softtabstop=2 wrap noswapfile viminfo="" | map <C-j> <CR> | nnoremap <C-s> :w<CR>'
 "    vim -i NONE -c 'set number relativenumber numberwidth=1 sw=2 tabstop=2 softtabstop=2 wrap noswapfile | map <C-j> <CR> | nnoremap <C-s> :w<CR>'
 
-"set viminfo=""        "~/.viminfo  desactivacion total, historialComandos, HistorialBusqueda, Registros, NumerosLinea"  like a ::: vim -i NONE
+"   alias vim="vim -i NONE -c 'set number relativenumber numberwidth=1 sw=2 tabstop=2 softtabstop=2 wrap noswapfile | map <C-j> <CR> | nnoremap <C-s> :w<CR>'"
+
+"   set viminfo=""    ~/.viminfo  desactivacion total, historialComandos, HistorialBusqueda, Registros, NumerosLinea"  like a ::: vim -i NONE
 
 "        vim -i NONE -u NONE      (-i .viminfo  ,  -u  .vimrc)
 
