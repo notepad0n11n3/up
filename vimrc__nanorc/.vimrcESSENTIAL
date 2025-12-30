@@ -44,7 +44,7 @@ set wildmenu wildmode=list:longest
 "color lunaperche
 
 "Lineas guia identacion
-set list | set listchars=tab::\ ,trail::
+"set list | set listchars=tab::\ ,trail::
 
 
 "por default tiene transparencia, otros necesitan de hi...
