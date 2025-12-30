@@ -12,7 +12,7 @@
 		https://download.virtualbox.org/virtualbox
 		https://download.virtualbox.org/virtualbox/7.0.14/VBoxGuestAdditions_7.0.14.iso
 
-				("virtual machine vk_KK"){
+				("virtual machine vk_K"){
 					::: thunar &>/dev/null & disown			||		::: cd /media/cdrom0
 					::: sudo bash ./VBoxLinuxAdditions.run
 				}

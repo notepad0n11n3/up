@@ -61,3 +61,10 @@ pactl list sources short						("::: sudo apt install pulseaudio-utils")
 
 ::: amixer sset/set 'Capture' 0% toggle
 ::: amixer sset/set Capture 0% nocap                (crontab -e  "@reboot amixer sset Captur...") pactl es mas efectivoPersistencia 0%mute Micro
+
+
+*** *** *** Brillo pantalla *** *** ***
+
+::: sudo apt show brightnessctl  &&  sudo apt install brightnessctl
+::: brightnessctl set 50%
+::: brightnessctl info       brightnessctl get
