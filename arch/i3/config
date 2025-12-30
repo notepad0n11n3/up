@@ -316,7 +316,7 @@ exec qterminal -e "tmux new -s Ready -c $desk -n Go"
 #										::: echo "Xcursor.size: 16" >> $HOME/.Xresources
 #										::: xrdb -merge ~/.Xresources
 #										Win + Shift + e    "Reinicia i3wm, guarda tu avance, CERRARA TODO..."
-set $cursor_size 8
-exec --no-startup-id xsetroot -cursor_name left_ptr
-exec --no-startup-id export XCURSOR_SIZE=$cursor_size
-exec --no-startup-id xrdb -merge ~/.Xresources
+#set $cursor_size 8
+#exec --no-startup-id xsetroot -cursor_name left_ptr
+#exec --no-startup-id export XCURSOR_SIZE=$cursor_size
+#exec --no-startup-id xrdb -merge ~/.Xresources
