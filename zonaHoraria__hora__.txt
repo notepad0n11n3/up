@@ -1,0 +1,17 @@
+
+*** 
+	::: timedatectl status
+
+
+	::: timedatectl list-timezones
+
+	::: sudo timedatectl set-timezone America/Bogota
+
+*** Casi siempre el NTP esta ACTIVO :
+
+	::: sudo timedatectl set-ntp true
+
+
+*** Ajustar hora MANUAL
+
+	::: sudo date -s "2025-12-31 23:59:00"
