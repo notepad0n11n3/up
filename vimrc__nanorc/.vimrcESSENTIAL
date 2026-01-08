@@ -191,10 +191,10 @@ function! Pterm()
 endfunction
 command Pterm call Pterm()
 
-function! Host()
+function! Hosts()
 	execute "tabnew /etc/hosts"
 endfunction
-command Host call Host()
+command Hosts call Hosts()
 
 function! Test(arg = '')
 	if a:arg == '-ip'
