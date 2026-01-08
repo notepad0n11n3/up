@@ -77,6 +77,7 @@ function! LookBack()
 	echo "  Lterm -  abre terminal en la ubicacion del archivo en edicion."
 	echo "  Lex   -  abre Ex en la ubicacion actual 'pwd'  'cd -'"
 	echo "  Whereami  -  print ubicacion del archivo en edicion 'expand('%:p')' y pwdWorkDir 'pwd'."
+	echo "  Host  -  tabnew /etc/hosts "
 endfunction
 command LookBack call LookBack()
 
@@ -189,6 +190,11 @@ function! Pterm()
 	"call popup_setoptions('1006', #{minwidth: 70, minheight: 50})
 endfunction
 command Pterm call Pterm()
+
+function! Host()
+	execute "tabnew /etc/hosts"
+endfunction
+command Host call Host()
 
 function! Test(arg = '')
 	if a:arg == '-ip'
