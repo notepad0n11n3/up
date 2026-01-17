@@ -1,7 +1,7 @@
 client
 dev tun
-proto tcp
-remote edge-eu-dedivip-1.hackthebox.eu 443
+proto udp
+remote edge-eu-dedivip-1.hackthebox.eu 1337
 resolv-retry infinite
 nobind
 persist-key
@@ -62,7 +62,7 @@ rJMxMAUGAytlcANBAAPTKkIZqmlCcod4tNT/ffJJzm41ZHMCZYS3sM6sw71dExol
 MC4CAQAwBQYDK2VwBCIEIEREyHtTJC+lhOyIeCIPUiB/ShcBZV29/6AWeCpCESVV
 -----END PRIVATE KEY-----
 </key>
-<tls-crypt>
+<tls-auth>
 #
 # 2048 bit OpenVPN static key
 #
@@ -84,4 +84,4 @@ c9dfabb1826f75bcafca5f8cca112636
 d3774f01205f0e41e7e65a9ff3edbc41
 4dc74effcd5b40fc4200d2f03e70ecff
 -----END OpenVPN Static key V1-----
-</tls-crypt>
+</tls-auth>
