@@ -50,14 +50,6 @@ function q(){
   exit 0
 }
 
-function ports(){
-	if [ $# -eq 0 ]; then
-		echo "$(cat ./recon/a01*G | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip && echo -e "\xA\x9Ready...\xA"
-	else
-# Puedes pasar por parametro otro archivo para extraer los puertos... <3
-		echo "$(cat ${1} | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip
-	fi
-}
 
 #function notepad0n11n3(){
 function 0n11n3(){
@@ -188,6 +180,8 @@ function createCertificate(){
 #		while true; do clear && ifconfig tun0; sleep 3; done
 #---
 
+#export sN="./01__recon/a01_smell_N"
+#export sG="./01__recon/a01_smell_G"
 function x89p(){
 	if [ -z $1 ];then
 		echo -e -n "\n\t Working dir -> "
@@ -199,9 +193,19 @@ function x89p(){
 		work_dir_name=$1
 	fi
 	new_work_dir_path="${htb}/${work_dir_name}"
-	mkdir -p "${new_work_dir_path}/recon"
-	touch "${new_work_dir_path}/00_MaP.txt"
-	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_x89p" M-a \; select-pane -t 1 \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \; split-window -v \; send-key "clear && ipTarged --all && vim ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "clear && ls -lah" C-m \; split-window -h \; split-window -v \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
+	mkdir -p "${new_work_dir_path}/01__recon"
+	touch "${new_work_dir_path}/00__MaP__.txt"
+	touch "${new_work_dir_path}/00__UrL__.txt"
+	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_x89p" M-a \; select-pane -t 1 \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \; split-window -v \; send-key "clear && ipTarged --all" C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "clear && ls -lah" C-m \; split-window -h \; split-window -v \; send-key " vim -c 'Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | call Hosts() | tabr ' " M-a \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
+}
+
+function ports(){
+	if [ $# -eq 0 ]; then
+		echo "$(cat ./01__recon/a01*G | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip && echo -e "\xA\x9Ready...\xA"
+	else
+# Puedes pasar por parametro otro archivo para extraer los puertos... <3
+		echo "$(cat ${1} | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip
+	fi
 }
 
 function aeo8(){
