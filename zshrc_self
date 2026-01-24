@@ -196,7 +196,10 @@ function x89p(){
 	mkdir -p "${new_work_dir_path}/01__recon"
 	touch "${new_work_dir_path}/00__MaP__.txt"
 	touch "${new_work_dir_path}/00__UrL__.txt"
-	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_x89p" M-a \; select-pane -t 1 \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \; split-window -v \; send-key "clear && ipTarged --all" C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "clear && ls -lah" C-m \; split-window -h \; split-window -v \; send-key " vim -c 'Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | call Hosts() | tabr ' " M-a \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
+	touch "${new_work_dir_path}/01__recon/a01_smell_N"
+	touch "${new_work_dir_path}/01__recon/a01_smell_G"
+	touch "${new_work_dir_path}/01__recon/a02_bite_N"
+	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_x89p" M-a \; select-pane -t 1 \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \; split-window -v \; send-key "clear && ipTarged --all && vim -c 'color default' ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "clear && ls -lah" C-m \; split-window -h \; split-window -v \; send-key " vim -c 'Ex | Sex ./01__recon/ | new ./00__UrL__.txt | silent call Mvnb() | botright vnew ./00__MaP__.txt | call Hosts() | tabr ' " M-a \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
 }
 
 function ports(){
@@ -209,7 +212,7 @@ function ports(){
 }
 
 function aeo8(){
-	tmux new -s "Main" -c $desk -n "Go" \; split-window -h \; send-key "vim -c term ." C-m \; select-pane -t 0
+	tmux new -s "Main" -c $desk -n "Go" \; split-window -h \; send-key "vim -c 'color default | term' ." C-m \; select-pane -t 0
 }
 
 function pwnbx(){
