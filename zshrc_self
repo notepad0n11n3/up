@@ -210,6 +210,9 @@ function ports(){
 		echo "$(cat ${1} | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip
 	fi
 }
+function portsn(){
+	cat ./01__recon/a02_bite_N
+}
 
 function aeo8(){
 	tmux new -s "Main" -c $desk -n "Go" \; split-window -h \; send-key "vim -c 'color default | term' ." C-m \; select-pane -t 0
