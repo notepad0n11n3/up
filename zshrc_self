@@ -182,7 +182,7 @@ function createCertificate(){
 
 #export sN="./01__recon/a01_smell_N"
 #export sG="./01__recon/a01_smell_G"
-export recon="./a01__recon"
+export recon="./01__recon"
 function x89p(){
 	if [ -z $1 ];then
 		echo -e -n "\n\t Working dir -> "
