@@ -9,6 +9,8 @@
 
 "        vim -i NONE -u NONE      (-i .viminfo  ,  -u  .vimrc)
 
+"			NEOVIM		NVIM		  ::: mkdir -p $HOME/.config/nvim && ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim			  NEOVIM		NVIM
+
 " help statusline         echo expand(winnr()) == numberPanel...<3 <3 <3
 set statusline=%F\ %m%h%r%=\ <3\ %{winnr()}\ \ %l,%c%V\ \ \ \ %P
 
