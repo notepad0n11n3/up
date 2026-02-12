@@ -195,8 +195,10 @@ function x89p(){
 	fi
 	new_work_dir_path="${htb}/${work_dir_name}"
 	mkdir -p "${new_work_dir_path}/01__recon"
-	touch "${new_work_dir_path}/00__MaP__.txt"
 	touch "${new_work_dir_path}/00__UrL__.txt"
+	echo -e '\n\n' > ${new_work_dir_path}/00__UrL__.txt
+	touch "${new_work_dir_path}/00__MaP__.txt"
+	echo -e '[\n\t:::\n\t ::\n\t{{{\n\t\n\tROOT:::...?\n\t}}}\n]' > ${new_work_dir_path}/00__MaP__.txt
 	touch "${new_work_dir_path}/01__recon/a01_smell_N"
 	touch "${new_work_dir_path}/01__recon/a01_smell_G"
 	touch "${new_work_dir_path}/01__recon/a02_bite_N"
