@@ -214,7 +214,7 @@ function x89p(){
 
 function ports(){
 	if [ $# -eq 0 ]; then
-		echo "$(cat ./01__recon/a01*G | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip && echo -e "\xA\x9Ready...\xA"
+		echo "$(cat ${recon}/a01*G | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip && echo -e "\xA\x9Ready...\xA"
 	else
 # Puedes pasar por parametro otro archivo para extraer los puertos... <3
 		echo "$(cat ${1} | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')" | tr -d '\n' | xclip -sel clip
@@ -222,7 +222,7 @@ function ports(){
 }
 
 function portsn(){
-	cat ./01__recon/a02_bite_N
+	cat ${recon}/a02_bite_N
 }
 
 function aeo8(){
