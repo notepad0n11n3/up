@@ -177,7 +177,8 @@ function createCertificate(){
 
 #---
 #		watch -n 3 'clear && ifconfig tun0'
-#		while true; do clear && ifconfig tun0; sleep 3; done
+#		while true; do clear && ifconfig tun0; sleep 1.8; done
+#		while :; do clear && ifconfig tun0; sleep 1.8; done
 #---
 
 #export sN="./01__recon/a01_smell_N"
@@ -197,7 +198,7 @@ function x89p(){
 	mkdir -p "${new_work_dir_path}/01__recon"
 	mkdir -p "${new_work_dir_path}/02__extra"
 	touch "${new_work_dir_path}/00__UrL__.txt"
-	touch "${new_work_dir_path}/000__README__.txt"
+	touch "${new_work_dir_path}/000__o__.txt"
 
 	if [ ! -f ${new_work_dir_path}/00__MaP__.txt ];then
 		touch "${new_work_dir_path}/00__MaP__.txt"
@@ -209,7 +210,8 @@ function x89p(){
 	touch "${new_work_dir_path}/01__recon/a01_smell_N"
 	touch "${new_work_dir_path}/01__recon/a01_smell_G"
 	touch "${new_work_dir_path}/01__recon/a02_bite_N"
-	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_x89p" M-a \; select-pane -t 1 \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \; split-window -v \; send-key "clear && ipTarged --all && vim -c 'color default' ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "clear && ls -lah" C-m \; split-window -h \; send-key "clear && ping -c 4 -4 \$(mvnb)" \; split-window -v \; send-key "vim -c \"Ex | Sex ./01__recon/ | new ./00__UrL__.txt | 0put = 'reload Mvnb...' | botright vnew ./00__MaP__.txt | call Hosts() | tabr \"" M-a \; select-pane -t 0 \; select-pane -t 2 \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
+	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_x89p" M-a \; select-pane -t 1 \; send-key "until clear && ip a show tun0;do sleep 1.8;clear ;done" M-a \; split-window -v \; send-key "clear && ipTarged --all && vim -c 'color default' ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "clear && ls -lah" C-m \; split-window -h \; send-key "until ping -c 4 -4 \$(mvnb);do sleep 1.8;clear ;done" C-m \; split-window -v \; send-key "vim -c \"Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | call Hosts() | tabr \"" M-a \; select-pane -t 0 \; select-pane -t 2 \; select-window -t 0 \; select-pane -t 0
+	#.... \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \;....\; select-pane -t 2 \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
 }
 
 function ports(){
@@ -262,6 +264,7 @@ function mvnb(){
 }
 
 # x89p
+alias vimn="vim -c \"Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | tabnew ./hosts | tabr \""
 alias it='ipTarged --here'
 function ipTarged(){
 	session_name=$(tmux display-message -p '#S' | tr -d "\n")
