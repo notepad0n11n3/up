@@ -24,6 +24,13 @@
 set $mod Mod4
 set $mod2 Mod1
 
+# Ventanas en tabbed win-w por default
+workspace_layout tabbed
+# No autoFocus a ventanas nuevas.... <3 <3 <3
+no_focus [all]
+# Ignorar peticiones de foco de apps ya abiertas....<3 <3 <3
+focus_on_window_activation none
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
@@ -145,6 +152,8 @@ bindsym $mod+e layout toggle split
 
 #Ventanas en Win-w por defecto solo para Win-3 (area de trabajo 3 'x89p')
 for_window [workspace="x89p"] layout tabbed
+for_window [workspace="Slave"] layout splith
+#                                     splitv
 
 # toggle tiling / floating		"anclar/desanclar ventanaFlotante"
 bindsym $mod+Shift+o floating toggle
