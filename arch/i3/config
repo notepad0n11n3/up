@@ -24,12 +24,12 @@
 set $mod Mod4
 set $mod2 Mod1
 
-# Ventanas en tabbed win-w por default
-workspace_layout tabbed
-# No autoFocus a ventanas nuevas.... <3 <3 <3
-no_focus [all]
-# Ignorar peticiones de foco de apps ya abiertas....<3 <3 <3
-focus_on_window_activation none
+# Ventanas en tabbed win-w por default  vm_HERE....<<<
+#workspace_layout tabbed
+## No autoFocus a ventanas nuevas.... <3 <3 <3
+#no_focus [all]
+## Ignorar peticiones de foco de apps ya abiertas....<3 <3 <3
+#focus_on_window_activation none
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
