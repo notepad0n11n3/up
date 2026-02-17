@@ -24,12 +24,13 @@
 set $mod Mod4
 set $mod2 Mod1
 
-# Ventanas en tabbed win-w por default  vm_HERE....<<<
+# Ventanas en tabbed win-w por default  {vm_HERE....<<<
 #workspace_layout tabbed
 ## No autoFocus a ventanas nuevas.... <3 <3 <3
 #no_focus [all]
 ## Ignorar peticiones de foco de apps ya abiertas....<3 <3 <3
 #focus_on_window_activation none
+#................vm_HERE};
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -152,7 +153,7 @@ bindsym $mod+e layout toggle split
 
 #Ventanas en Win-w por defecto solo para Win-3 (area de trabajo 3 'x89p')
 for_window [workspace="x89p"] layout tabbed
-for_window [workspace="Slave"] layout splith
+#for_window [workspace="Slave"] layout splith
 #                                     splitv
 
 # toggle tiling / floating		"anclar/desanclar ventanaFlotante"
@@ -268,10 +269,10 @@ bindsym $mod+Shift+p exec xfce4-screenshooter
 #bindsym $mod+g exec vmware
 bindsym $mod+g exec virtualbox
 
+
 #ejecutar programa en workspace asignado  (assign avisa(alertColor) al ejecutar, for_window no avisa)
 #   para encontrar 'WM_CLASS(STRING) = "parole", "Parole"' dale a ::: xprop   y despues la click en el programa 'abierto' que quieres examinar
 #     ::: xprop | grep "WM_CLASS"       (tienes que dar click en la appAbierta despues ...<3 <3 <3)
-
 
 for_window [class="^Parole$"] move to workspace $ws10
 #assign [class="^Parole$"] $ws10
@@ -282,7 +283,8 @@ for_window [class="^burp-StartBurp$"] move to workspace $ws2
 for_window [class="^VirtualBox Manager$"] move to workspace $ws3
 for_window [class="^VirtualBox Machine$"] move to workspace $ws3
 #assign [class="firefox"] $ws2
-#assign [class="^spotify*"] $ws10
+
+#for_window [workspace="MaiN"] layout tabbed
 
 
 #   Mover workspace entre monitores
