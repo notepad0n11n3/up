@@ -86,12 +86,12 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec qterminal
-bindsym $mod+t exec qterminal --drop
-bindsym $mod+apostrophe exec qterminal --drop
-bindsym $mod+semicolon exec qterminal
-bindsym $mod+equal exec qterminal
-bindsym $mod+F8 exec qterminal
+bindsym $mod+Return exec --no-startup-id qterminal
+bindsym $mod+t exec --no-startup-id qterminal --drop
+bindsym $mod+apostrophe exec --no-startup-id qterminal --drop
+bindsym $mod+semicolon exec --no-startup-id qterminal
+bindsym $mod+equal exec --no-startup-id qterminal
+bindsym $mod+F8 exec --no-startup-id qterminal
 
 # kill focused window    like XFCE  window + - ...<3 <3 <3
 bindsym $mod+Shift+q kill
