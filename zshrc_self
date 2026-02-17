@@ -228,7 +228,8 @@ function portsn(){
 }
 
 function aeo8(){
-	tmux new -s "Main" -c $desk -n "Go" \; split-window -h \; send-key "vim -c 'color default | term' ." C-m \; select-pane -t 0
+	#tmux new -s "Main" -c $desk -n "Go" \; split-window -h \; send-key "vim -c 'color default | term' ." C-m \; select-pane -t 0
+	tmux new -s "Main" -c $desk -n "Go" \; split-window -h \; send-key "vim -c 'color default' ." C-m \; select-pane -t 0
 }
 
 function pwnbx(){

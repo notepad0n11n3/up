@@ -169,7 +169,7 @@ bindsym $mod+o focus mode_toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "Main"
+set $ws1 "MaiN"
 set $ws2 "Slave"
 set $ws3 "x89p"
 set $ws4 "4"
@@ -241,10 +241,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-
-# sudo apt show i3blocks			'barra like a i3status' ...<3 <3 <3
-# sudo apt show feh						'fondos de pantalla'
-
+# sudo apt show i3blocks	'barra like a i3status'   # sudo apt show feh	'fondos de pantalla'
 bar {
 # status_command i3status
   status_command i3status -c ~/.config/i3/.i3status.conf
@@ -292,12 +289,10 @@ for_window [class="^VirtualBox Machine$"] move to workspace $ws3
 #bindsym $mod+n move workspace to output left
 bindsym $mod+y move workspace to output up
 bindsym $mod+n move workspace to output down
-#saltar entre el workspace actual y el anterior like "'tmux:: Alt-m Ctrl-i'"...<3 <3 <3
+#saltar entre el workspace actual y el anterior like "'tmux:: Alt-m Ctrl-i'"....<3 <3 <3
 bindsym $mod+i workspace back_and_forth  
 
-# presiona el mismo $mod+numberWorkspace para saltar entre los 2 ultimos workspaces
-#workspace_auto_back_and_forth yes
-
+# Presiona el mismo $mod+numberWorkspace para saltar entre los 2 ultimos workspaces     #workspace_auto_back_and_forth yes
 
 # no border de ventanas ...<3 <3 <3
 for_window [class="^.*"] border pixel 1
@@ -311,18 +306,17 @@ gaps outer 2
 exec_always feh --bg-fill $up/8/biosho_bigDaddy_littleSstr.jpg
 focus_follows_mouse no
 
-#el mouse AHORA no meSigue alCambiar workspace ('por default se va la medio de workspaceFocus')... <3 <3 <3
+# El mouse AHORA no meSigue alCambiar workspace ('por default se va la medio de workspaceFocus')... <3 <3 <3
 mouse_warping none
 
-#ya no te puedes saltar a otro workspace con $mod+h/j/k/l ...<3 <3
+# Ya no puedes saltar a otro workspace con $mod+h/j/k/l ...<3 <3
 focus_wrapping workspace
 
 # sudo apt-get install arandr && arandr &>/dev/null & disown  ...<3 <3 <3
 exec_always xrandr --output eDP --primary --mode 1920x1080 --pos 0x1080 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --rotate normal
 
-#exec qterminal
-#exec --no-startup-id qterminal
-exec qterminal -e "tmux new -s Ready -c $desk -n Go"
+#exec --no-startup-id qterminal -w $desk
+exec --no-startup-id qterminal -e "tmux new -s Ready -c $desk -n Go" 
 
 #										::: echo "Xcursor.size: 16" >> $HOME/.Xresources
 #										::: xrdb -merge ~/.Xresources
