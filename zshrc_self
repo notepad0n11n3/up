@@ -184,6 +184,7 @@ function createCertificate(){
 #export sN="./01__recon/a01_smell_N"
 #export sG="./01__recon/a01_smell_G"
 export recon="./01__recon"
+export hHub="/home/aeo8/.0n11n3/brain/road_hHub/"
 function x89p(){
 	if [ -z $1 ];then
 		echo -e -n "\n\t Working dir -> "
