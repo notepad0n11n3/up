@@ -93,7 +93,6 @@ function! Mvnb(arg = '')
     let l:cmd = 'tmux display-message -t :' . l:target . ' -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
 		let l:output = system(l:cmd)
 		let l:output = substitute(l:output, '\n', '', 'g')
-
 		"call setline(line('.'), l:output) "reemplaza la linea focus con el output
 		call append(line('.') - 1, l:output)  "agrega el output una linea arriba del focus... <3
 
@@ -101,21 +100,40 @@ function! Mvnb(arg = '')
 		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
 		let l:output = system(l:cmd)
 		let l:output = substitute(l:output, '\n', '', 'g')
-
 		"call setline(line('.'), l:output) "reemplaza la linea focus con el output
 		call append(line('.') - 1, l:output)  "agrega el output una linea arriba del focus... <3
+	elseif a:arg == '-here'
+		" :.s/\d\+\.\d\+\.\d\+\.\d\+/\=Mvnb('-here')/g|noh
+		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+		let l:output = system(l:cmd)
+		let l:output = substitute(l:output, '\n', '', 'g')
+		return l:output
+
 	elseif a:arg == '--vpn'
 		let l:cmd = 'tmux display-message -t :0 -p "#W" | grep -oP "\(.*?\)" | tr -d "() \n"'
 		let l:output = system(l:cmd)
 		let l:output = substitute(l:output, '\n', '', 'g')
-
 		"call setline(line('.'), l:output)
 		call append(line('.') - 1, l:output)  "agrega el output una linea arriba del focus... <3
+	elseif a:arg == '-vpn'
+		" :.s/\d\+\.\d\+\.\d\+\.\d\+/\=Mvnb('-vpn')/g|noh
+		let l:cmd = 'tmux display-message -t :0 -p "#W" | grep -oP "\(.*?\)" | tr -d "() \n"'
+		let l:output = system(l:cmd)
+		let l:output = substitute(l:output, '\n', '', 'g')
+		return l:output
+
 	elseif a:arg == '--targed'
 		let l:cmd = 'tmux display-message -t :1 -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
 		let l:output = system(l:cmd)
 		let l:output = substitute(l:output, '\n', '', 'g')
 		call append(line('.') - 1, l:output)
+	elseif a:arg == '-targed'
+		" :.s/\d\+\.\d\+\.\d\+\.\d\+/\=Mvnb('-targed')/g|noh
+		let l:cmd = 'tmux display-message -t :1 -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+		let l:output = system(l:cmd)
+		let l:output = substitute(l:output, '\n', '', 'g')
+		return l:output
+
 	elseif a:arg == '--help'
 		echo " --vpn"
 		echo " --targed"
