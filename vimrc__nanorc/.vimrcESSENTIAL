@@ -131,7 +131,7 @@ function! Mvnb(arg = '')
 		" :.s/\d\+\.\d\+\.\d\+\.\d\+/\=Mvnb('-targed')/g|noh
 		let l:cmd = 'tmux display-message -t :1 -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
 		let l:output = system(l:cmd)
-		let l:output = substitute(l:output, '\n', '', 'g')
+		let l:output = substitute(l:output, '\n', '', 'g')  "  ===   let l:output = trim(l:output)   elimina espacios al inicio y final y \n, trim es mas moderno, limpio y legible
 		return l:output
 
 	elseif a:arg == '--help'
