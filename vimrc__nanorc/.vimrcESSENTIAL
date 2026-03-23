@@ -103,7 +103,7 @@ function! Mvnb(arg = '')
 		"call setline(line('.'), l:output) "reemplaza la linea focus con el output
 		call append(line('.') - 1, l:output)  "agrega el output una linea arriba del focus... <3
 	elseif a:arg == '-here'
-		" :.s/\d\+\.\d\+\.\d\+\.\d\+/\=Mvnb('-here')/g|noh
+		" :.s/\d\+\.\d\+\.\d\+\.\d\+/\=Mvnb('-here')/g|noh|w ! sudo tee %
 		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
 		let l:output = system(l:cmd)
 		let l:output = substitute(l:output, '\n', '', 'g')
@@ -116,7 +116,7 @@ function! Mvnb(arg = '')
 		"call setline(line('.'), l:output)
 		call append(line('.') - 1, l:output)  "agrega el output una linea arriba del focus... <3
 	elseif a:arg == '-vpn'
-		" :.s/\d\+\.\d\+\.\d\+\.\d\+/\=Mvnb('-vpn')/g|noh
+		" :.s/\d\+\.\d\+\.\d\+\.\d\+/\=Mvnb('-vpn')/g|noh|w ! sudo tee %
 		let l:cmd = 'tmux display-message -t :0 -p "#W" | grep -oP "\(.*?\)" | tr -d "() \n"'
 		let l:output = system(l:cmd)
 		let l:output = substitute(l:output, '\n', '', 'g')
@@ -128,7 +128,7 @@ function! Mvnb(arg = '')
 		let l:output = substitute(l:output, '\n', '', 'g')
 		call append(line('.') - 1, l:output)
 	elseif a:arg == '-targed'
-		" :.s/\d\+\.\d\+\.\d\+\.\d\+/\=Mvnb('-targed')/g|noh
+		" :.s/\d\+\.\d\+\.\d\+\.\d\+/\=Mvnb('-targed')/g|noh|w ! sudo tee %
 		let l:cmd = 'tmux display-message -t :1 -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
 		let l:output = system(l:cmd)
 		let l:output = substitute(l:output, '\n', '', 'g')  "  ===   let l:output = trim(l:output)   elimina espacios al inicio y final y \n, trim es mas moderno, limpio y legible
