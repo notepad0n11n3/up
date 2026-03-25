@@ -6,31 +6,32 @@ if [ -n "$ZSH_VERSION" ]; then
 fi
 
 if [ -n "$BASH_VERSION" ]; then
-echo -e ";cc:::::cl::oxxoccdKXXXKKKKKKKK0:                        ...................... "
-echo -e ";;::::::loc;::coxOKXXXKKKKK0000O;                           ..................  "
-echo -e ",'',;;;:okkxk0KXXKKKKKK000OOOO0k;                           ....... ...';'...   "
-echo -e ",'.',;;lxKXNNKOxoclOKK00OOOOO00O;                        ...............co,.... "
-echo -e "',,,;;cxOKKOdc::codO00O0OOOOO00O;                      .................,xx;... "
-echo -e ";;;;:cox00x:;cxO0K0000OOOOOOO00O:                     ..................'cOk;.. "
-echo -e ":,,;;;;:xkl,:kXXK00OOOOOkkOOOO0Oc                     ....''''',,,,,;;;;,;dKk;. "
-echo -e ":,,;;c:,lkc,;lk0K00OOOOOkkOOOOO0l.                   ....'',;cdkOkkxolcc;':xKx' "
-echo -e ",,,;cdl,lOo,;:ok00OOOOkkkkkkkkOOo.                   ....',,ckXWWWXOdc,'..'cOKd."
-echo -e "'',;cdc,oK0kO0000OOkkkkkkkOOOOOOx,                   ......';ok00ko:,......,dKKo"
-echo -e "..';colo0XXXXKKK00OOOOOkkkkkkkkOk:                    .......',;;,'....    'ckK0"
-echo -e "..',cdk0XNNXXKkxxkOOkkkkkkkkkkkkkl.              .          ........       .,oOX"
-echo -e "..',:ok0KXXXk;. ..;okkkkkkkxxkkkkx,             .''.                       .'lkK"
-echo -e "...':oxOKKXKl.     .;xOkkxxxxkkkkkc.            ..;:;.                      .',;"
-echo -e "...';cdk0KKKOc.     .okkxxxxxxkxxxo;,:cloddxxxxddl::cl,.                        "
-echo -e " ...':lxO0KKK0xc;'',cxkxxxdddddxxkO0KXXNNNNNNNNNXXXk:cxdc,,.                    "
-echo -e " ....,cdxO000OOOOkkkkxxxxxdodxk0K0kdlc:;;:lkXNNNNNNXx;ckOxoc;.                  "
-echo -e "   ..';ldxOOOOOkkkkxxxxxdooxOK0xc,..        cKNXXNNXXx;:x00ko:'.                "
-echo -e "    ..';ldxkkkkkkxxxxxdlcok0Kk;.'...        ;0XXXXXXXKk;,lk00x;.                "
-echo -e "     ..';codxxxxxxddxo:coxO00o.           .lOKKKKKKKKKKkc,:ll,                  "
-echo -e "       .';clddddddddd:;lxkkOOkc.        ,oO0000000000000Ol.                     "
-echo -e "..      ..,:clooooddl,;ldxkkxkkoc:,'...cxkOOOOOOOOOOOOkOd,                      "
-echo -e "..       ..';:cllllo:',coddxddxxxxxxoc:odxxxxxxkxxxkkxkx;                       "
-echo -e ".          ..';:cccl:.':lloooooododdol;;looddddddddddddc.                       "
-echo -e "            ..',;:::;..,:llllllloloolc'.':clloooooooooo;                        "
+	clear
+	echo -e "\t;cc:::::cl::oxxoccdKXXXKKKKKKKK0:                        ...................... "
+	echo -e "\t;;::::::loc;::coxOKXXXKKKKK0000O;                           ..................  "
+	echo -e "\t,'',;;;:okkxk0KXXKKKKKK000OOOO0k;                           ....... ...';'...   "
+	echo -e "\t,'.',;;lxKXNNKOxoclOKK00OOOOO00O;                        ...............co,.... "
+	echo -e "\t',,,;;cxOKKOdc::codO00O0OOOOO00O;                      .................,xx;... "
+	echo -e "\t;;;;:cox00x:;cxO0K0000OOOOOOO00O:                     ..................'cOk;.. "
+	echo -e "\t:,,;;;;:xkl,:kXXK00OOOOOkkOOOO0Oc                     ....''''',,,,,;;;;,;dKk;. "
+	echo -e "\t:,,;;c:,lkc,;lk0K00OOOOOkkOOOOO0l.                   ....'',;cdkOkkxolcc;':xKx' "
+	echo -e "\t,,,;cdl,lOo,;:ok00OOOOkkkkkkkkOOo.                   ....',,ckXWWWXOdc,'..'cOKd."
+	echo -e "\t'',;cdc,oK0kO0000OOkkkkkkkOOOOOOx,                   ......';ok00ko:,......,dKKo"
+	echo -e "\t..';colo0XXXXKKK00OOOOOkkkkkkkkOk:                    .......',;;,'....    'ckK0"
+	echo -e "\t..',cdk0XNNXXKkxxkOOkkkkkkkkkkkkkl.              .          ........       .,oOX"
+	echo -e "\t..',:ok0KXXXk;. ..;okkkkkkkxxkkkkx,             .''.                       .'lkK"
+	echo -e "\t...':oxOKKXKl.     .;xOkkxxxxkkkkkc.            ..;:;.                      .',;"
+	echo -e "\t...';cdk0KKKOc.     .okkxxxxxxkxxxo;,:cloddxxxxddl::cl,.                        "
+	echo -e "\t ...':lxO0KKK0xc;'',cxkxxxdddddxxkO0KXXNNNNNNNNNXXXk:cxdc,,.                    "
+	echo -e "\t ....,cdxO000OOOOkkkkxxxxxdodxk0K0kdlc:;;:lkXNNNNNNXx;ckOxoc;.                  "
+	echo -e "\t   ..';ldxOOOOOkkkkxxxxxdooxOK0xc,..        cKNXXNNXXx;:x00ko:'.                "
+	echo -e "\t    ..';ldxkkkkkkxxxxxdlcok0Kk;.'...        ;0XXXXXXXKk;,lk00x;.                "
+	echo -e "\t     ..';codxxxxxxddxo:coxO00o.           .lOKKKKKKKKKKkc,:ll,                  "
+	echo -e "\t       .';clddddddddd:;lxkkOOkc.        ,oO0000000000000Ol.                     "
+	echo -e "\t..      ..,:clooooddl,;ldxkkxkkoc:,'...cxkOOOOOOOOOOOOkOd,                      "
+	echo -e "\t..       ..';:cllllo:',coddxddxxxxxxoc:odxxxxxxkxxxkkxkx;                       "
+	echo -e "\t.          ..';:cccl:.':lloooooododdol;;looddddddddddddc.                       "
+	echo -e "\t            ..',;:::;..,:llllllloloolc'.':clloooooooooo;                        "
 #	function exec_and_stay() {
 #		local command
 #		# Guarda el comando actual
@@ -228,7 +229,7 @@ function x89p(){
 
 	if [ ! -f ${new_work_dir_path}/00__MaP__.txt ];then
 		touch "${new_work_dir_path}/00__MaP__.txt"
-		echo -e '[\n\t:::\n\t ::\n\n\t{{{\n\t:::\n\n\tROOT:::...?\n\t}}}\n]\n\n{[\n\t:::\n\t ::\n\n\t{{{\n\t:::\n\n\tROOT:::...?\n\t}}}\n]}' > ${new_work_dir_path}/00__MaP__.txt
+		echo -e '[\n\t:::\n\t ::\n\n\t### user-targed\n\t user-targed:::\n\n\tROOT:::...?\n]\n\n{[\n\t:::\n\t ::\n\n\t### user_targed\n\t user_targed:::\n\n\tROOT:::...?\n]}' > ${new_work_dir_path}/00__MaP__.txt
 	else
 		touch "${new_work_dir_path}/00__MaP__.txt"
 	fi
@@ -236,7 +237,7 @@ function x89p(){
 	touch "${new_work_dir_path}/01__recon/a01_smell_N"
 	touch "${new_work_dir_path}/01__recon/a01_smell_G"
 	touch "${new_work_dir_path}/01__recon/a02_bite_N"
-	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_x89p" M-a \; select-pane -t 1 \; send-key "until clear && ip a show tun0;do sleep 1.8;clear ;done" M-a \; split-window -v \; send-key "clear && ipTarged --all && vim -c 'color default' ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "clear && ls -lah" C-m \; split-window -h \; send-key "until ping -c 4 -4 \$(mvnb);do sleep 1.8;clear ;done" C-m \; split-window -v \; send-key "vim -c \"Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | call Hosts() | tabr \"" M-a \; select-pane -t 0 \; select-pane -t 2 \; select-window -t 0 \; select-pane -t 0
+	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_x89p" M-a \; select-pane -t 1 \; send-key "until clear && ip a show tun0;do sleep 1.8;clear ;done" M-a \; split-window -v \; send-key "clear && ipTarged --all && vim -c 'color default' ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "ls -lah" C-m \; split-window -h \; send-key "until ping -c 4 -4 \$(mvnb);do sleep 1.8;clear ;done" C-m \; split-window -v \; send-key "vim -c \"Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | call Hosts() | tabr \"" M-a \; select-pane -t 0 \; select-pane -t 2 \; select-window -t 0 \; select-pane -t 0
 	#.... \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \;....\; select-pane -t 2 \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
 }
 
