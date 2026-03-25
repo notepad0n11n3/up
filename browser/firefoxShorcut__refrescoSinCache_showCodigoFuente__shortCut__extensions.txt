@@ -15,12 +15,13 @@ https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=
 
  Ctrl   h       historial menu_Lateral
  Ctrl   b       bookmarks menu_Lateral
+ Ctrl Shift b   oculta/muestra la barra de bookmarks....<3 <3 <3
  Ctrl   d       agregar a bookMark_Menu
 
  Ctrl   t       nueva Pesta~a               ||         Ctrl Shif p     nueva_Pesta~a_PRIVADA
  Ctrl   n       nueva Ventana
  Ctrl   m       mutear la pesta~a
- Ctrl Shift p   pesta~a privada 
+ Ctrl Shift p   pesta~a privada
 
  Ctrl  f       buscar por palabra clave
 
