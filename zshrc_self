@@ -11,9 +11,9 @@ if [ -n "$BASH_VERSION" ]; then
 	echo -e "\t;;::::::loc;::coxOKXXXKKKKK0000O;                           ..................  "
 	echo -e "\t,'',;;;:okkxk0KXXKKKKKK000OOOO0k;                           ....... ...';'...   "
 	echo -e "\t,'.',;;lxKXNNKOxoclOKK00OOOOO00O;                        ...............co,.... "
-	echo -e "\t',,,;;cxOKKOdc::codO00O0OOOOO00O;                      .................,xx;... "
-	echo -e "\t;;;;:cox00x:;cxO0K0000OOOOOOO00O:                     ..................'cOk;.. "
-	echo -e "\t:,,;;;;:xkl,:kXXK00OOOOOkkOOOO0Oc                     ....''''',,,,,;;;;,;dKk;. "
+	echo -e "\t',,,;;cxDon't;::codO00O0OOOOO00O;                      .................,xx;... "
+	echo -e "\t;;;;:cox0Be:;cxO0K0000OOOOOOO00O:                     ..................'cOk;.. "
+	echo -e "\t:,,;;;;:xkEvilXXK00OOOOOkkOOOO0Oc                     ....''''',,,,,;;;;,;dKk;. "
 	echo -e "\t:,,;;c:,lkc,;lk0K00OOOOOkkOOOOO0l.                   ....'',;cdkOkkxolcc;':xKx' "
 	echo -e "\t,,,;cdl,lOo,;:ok00OOOOkkkkkkkkOOo.                   ....',,ckXWWWXOdc,'..'cOKd."
 	echo -e "\t'',;cdc,oK0kO0000OOkkkkkkkOOOOOOx,                   ......';ok00ko:,......,dKKo"
@@ -32,6 +32,7 @@ if [ -n "$BASH_VERSION" ]; then
 	echo -e "\t..       ..';:cllllo:',coddxddxxxxxxoc:odxxxxxxkxxxkkxkx;                       "
 	echo -e "\t.          ..';:cccl:.':lloooooododdol;;looddddddddddddc.                       "
 	echo -e "\t            ..',;:::;..,:llllllloloolc'.':clloooooooooo;                        "
+	echo -e "\t                         Don't be Evil'.':......;;;                             "
 #	function exec_and_stay() {
 #		local command
 #		# Guarda el comando actual
