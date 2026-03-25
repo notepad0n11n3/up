@@ -22,6 +22,7 @@ https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=
  Ctrl   m       mutear la pesta~a
  Ctrl Shift p   pesta~a privada 
 
+ Ctrl  f       buscar por palabra clave
 
  Ctrl q        Cierra todas las ventanas
  Ctrl w        cierra la pesta~a actual
@@ -50,7 +51,9 @@ https://addons.mozilla.org/en-US/firefox/addon/animated-blue-plexus/?utm_source=
 ###PESTA~AS NAVEGADOR
 
 Ctrl Shift k      consoleFirefox
+Ctrl Shift e      network
 Ctrl Shift y      ventanaDescargas
+Ctrl Shift i      CERRAR DevTools Console
 
 
    ******************************EXTENSIONS************************************
