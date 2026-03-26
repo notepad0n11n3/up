@@ -230,7 +230,7 @@ function x89p(){
 
 	if [ ! -f ${new_work_dir_path}/00__MaP__.txt ];then
 		touch "${new_work_dir_path}/00__MaP__.txt"
-		echo -e '[\n\t:::\n\t ::\n\n\t### user-targed : password \n\t user-targed:::\n\n\tROOT:::...?\n]\n\n{[\n\t:::\n\t ::\n\n\t### user_targed : password \n\t user_targed:::\n\n\tROOT:::...?\n]}' > ${new_work_dir_path}/00__MaP__.txt
+		echo -e '[\n\t:::\n\t ::\n\n\n\n\t### user-targed : password \n\t user-targed:::\n\n\tROOT:::...?\n]\n\n{[\n\t:::\n\t ::\n\n\n\t### user_targed : password \n\t user_targed:::\n\n\tROOT:::...?\n]}' > ${new_work_dir_path}/00__MaP__.txt
 	else
 		touch "${new_work_dir_path}/00__MaP__.txt"
 	fi
