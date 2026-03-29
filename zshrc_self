@@ -54,18 +54,28 @@ fi
 #										::: echo "source-file ~/.tmux.conf_self" >> $HOME/.tmux.conf
 
 function zshrc_self(){			# MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP
-	echo -E "  cpwd  ->  copia al clipboard la ubicacion actual 'pwd | tr -d '\n' | xclip -sel clip'"
-	echo "  q   ->  reFlojo pa teclear eXiT  :u"
-	echo "  0n11n3 --help ->  ......"
-	echo "  pit  ->  Intervalo de 30 segundos Beep <3"
-	echo "  fullUpdate  ->   apt update full-upgrade autoremove autoclean 0n11n3 updatedb etc..."
-	echo "	x89p  ->  panda8hat Session tmux <3 "
+	echo -E "	cpwd  ->  copia al clipboard la ubicacion actual 'pwd | tr -d '\n' | xclip -sel clip'"
+	echo "	q   ->  reFlojo pa teclear eXiT  :u"
+	echo "	0n11n3 --help ->  ......"
+	echo "	pit  ->  Intervalo de 30 segundos Beep <3"
+	echo "	fullUpdate  ->   apt update full-upgrade autoremove autoclean 0n11n3 updatedb etc..."
 	echo "	aeo8 -> mainSession tmux <3 "
 	echo "	pwnbx -> tmux \xA\xA"
-	echo "	ports ->  Extraer puertos de archivo -oG (nmap)"
-	echo "	mvnb --help -> print ipTarged | ipVpn | ipHere"
+	echo "	x89p  ->  Session tmux , x89p newWork...<3 "
 	echo "	ipTarged -> (x89pIP | targedIP) post x89p \xA\xA"
+	echo "	mvnb --help -> print ipTarged | ipVpn | ipHere"
+	echo "	ports ->  Extraer puertos de archivo -oG (nmap)"
+	echo "	portsn ->  Muestra el a02_bite_N  x89pWork actual"
 	echo "	pre_vm -->  virtualbox fix "
+	echo "	vimn  -  reOpen x89pWork"
+	echo "	it   ->  ipTarged --here"
+	echo "	\$recon  ->  -oG \$recon/a01_smell_G a01_smell_N a02_bite_N"
+	echo "	createCertificate "
+	echo "	\$hHub  -> /home/aeo8/.0n11n3/brain/road_hHub/"
+	echo "	"
+# '<,'>s/\(^\s\+echo\s\+\(-E\)\?\(\s\+\)\?"\)\s\+/\1\t/g
+
+# '<,'>s/ \( ^\s\+echo\s\+ \(-E\)\? \(\s\+\)\? " \) \s\+ / \1\t /g
 }
 
 
@@ -298,9 +308,9 @@ alias it='ipTarged --here'
 function ipTarged(){
 	session_name=$(tmux display-message -p '#S' | tr -d "\n")
 	if [ $# -ne 1 ]; then
-		echo -e "\xA\x9 1. ipTarged --all (ipVpn, ipTarged)\xA\x9 2. ipTarged 'ipTargedHere'\xA\x9 3. ipTarged --here -h "
+		echo -e "\xA\x9 1. ipTarged --all (ipVpn, ipTarged)\xA\x9 2. ipTarged 'ipTargedHere'\xA\x9 3. ipTarged --here -h \xA\x9 4. ipTarged --vpn -v"
 	elif [ $1 == "--help" ]; then
-		echo -e "\xA\x9 1. ipTarged --all (ipVpn, ipTarged)\xA\x9 2. ipTarged 'ipTargedHere'\xA\x9 3. ipTarged --here -h "
+		echo -e "\xA\x9 1. ipTarged --all (ipVpn, ipTarged)\xA\x9 2. ipTarged 'ipTargedHere'\xA\x9 3. ipTarged --here -h \xA\x9 4. ipTarged --vpn -v"
 	elif [ $1 == "--all" ]; then
 		echo -e -n "\xA My ip: "
 		read my_ip
@@ -324,6 +334,12 @@ function ipTarged(){
 		read my_ip_here
 		if [ ! -z "my_ip_here" ]; then
 			tmux rename-window $(tmux display-message -t "${session_name}" -p "#W" | sed "s/\[.*\]/\[${my_ip_here}\]/g" | tr -d "\n")
+		fi
+	elif [[ $1 == "--vpn" || $1 == "-v" ]]; then
+		echo -e -n "\xA My ip: "
+		read my_ip
+		if [ ! -z "${my_ip}" ]; then
+			tmux rename-window -t 0 $(tmux display-message -t "${session_name}:0" -p "#W" | sed "s/(.*)/(${my_ip})/g" | tr -d "\n")
 		fi
 	else
 		ip_targed="$1"
