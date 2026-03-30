@@ -72,6 +72,7 @@ function zshrc_self(){			# MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP
 	echo "	\$recon  ->  -oG \$recon/a01_smell_G a01_smell_N a02_bite_N"
 	echo "	createCertificate "
 	echo "	\$hHub  -> /home/aeo8/.0n11n3/brain/road_hHub/"
+	echo "	check_tmux  ->  /tmp/tmux-\$(id -u)/*"
 	echo "	"
 # '<,'>s/\(^\s\+echo\s\+\(-E\)\?\(\s\+\)\?"\)\s\+/\1\t/g
 
@@ -267,7 +268,7 @@ function portsn(){
 
 function aeo8(){
 	#tmux new -s "Main" -c $desk -n "Go" \; split-window -h \; send-key "vim -c 'color default | term' ." C-m \; select-pane -t 0
-	tmux new -s "Main" -c $desk -n "Go" \; split-window -h \; send-key "vim -c 'color default' ." C-m \; select-pane -t 0
+	tmux -L defaults -f /dev/null new -s "Main" -c $desk -n "Go" \; split-window -h \; send-key "vim -c 'color default' ." C-m \; select-pane -t 0
 }
 
 function pwnbx(){
@@ -365,4 +366,9 @@ function fullUpdate(){
 
 function pre_vm(){
 	sudo apt-get install build-essential  linux-headers-$(uname -r) -y && sudo apt-get reinstall virtualbox-dkms -y && sudo modprobe vboxdrv && sudo modprobe vboxnetflt
+}
+
+function check_tmux(){
+	ls -lah /tmp/tmux-$(id -u)/ | tail -n +4 | awk '{print $NF}' | xargs -I {} tmux -L {} ls
+# ls -1 /tmp/tmux-$(id -u)/ | xargs -I {} tmux -L {} ls
 }
