@@ -93,7 +93,7 @@ MONTAR_PARTICIONES{
 SISTEMA_LIMPIO{
   ::: echo "panda8hat" > /etc/hostname
 
-  ::: echo "127.0.0.1 localhost" > /etc/host
+  ::: echo "127.0.0.1 localhost" >> /etc/host
 
   ::: vim /etc/locale.gen
       descomenta UTF-8
