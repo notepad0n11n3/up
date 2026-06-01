@@ -1,5 +1,12 @@
 
 					settings -> audio -> pulseaudio		(virtualbox => kali/parrot noSound FIX <3 <3 <3)
+					System / Acceleration -> Hyper-V o KVM		(mejora el rendimiento....<3 <3 <3)
+																			KVM  ->  linux      || Hyper-V -> windows y Linux ... <3 <3 <3
+																			Hyper-V -> parrot va mejor...<3 <3 <3
+
+					System / Processor ->  PAE/NX               [*]
+					System / Procesor  ->  Nested  VT-x/AMD-V   [ ]  vm anidado, puede agregar un poco de sobrecarga al cpu
+
 
 ###			  VIRTUALBOX *** *** ***					
 
