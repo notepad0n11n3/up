@@ -54,7 +54,7 @@ fi
 #										::: echo "source-file ~/.tmux.conf_self" >> $HOME/.tmux.conf
 
 function zshrc_self(){			# MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP
-	echo -E " \xA\xA\x9\x9 echo 'exec i3' > ~/.xinitrc   ||| pre startx  NO lightdm enable"
+	echo "\xA\x9\x9 echo 'exec i3' > ~/.xinitrc   ||| pre startx  NO lightdm enable \xA"
 	echo -E "	cpwd  ->  copia al clipboard la ubicacion actual 'pwd | tr -d '\n' | xclip -sel clip'"
 	echo "	q   ->  reFlojo pa teclear eXiT  :u"
 	echo "	0n11n3 --help ->  ......"
