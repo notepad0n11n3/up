@@ -1,0 +1,42 @@
+
+					MAIN PC
+
+### Verificar nombre de la conexion
+	::: nmcli connection show
+
+		NAME                UUID                                  TYPE      DEVICE 
+		Wired connection 1  1e356e7e-95fd-44a9-8fa8-01a53ade816e  ethernet  eth0   <<--
+		lo                  58eff282-47d6-4d28-ad81-795dd5ec034a  loopback  lo     
+		0xpmB.2.4Ghz        303f81df-a09e-450a-8015-6f4717819621  wifi      --     
+
+
+### Modificar Ip   *.*.*.100
+	::: sudo nmcli connection modify "Wired connection 1" \
+			ipv4.method manual \
+			ipv4.addresses 192.168.18.100/24 \
+			ipv4.gateway 192.168.18.1 \
+			ipv4.dns "8.8.8.8 1.1.1.1"
+
+### Reinicia la conexion
+	::: sudo nmcli connection down "Wired connection 1"
+	::: sudo nmcli connection up "Wired connection 1"
+
+
+
+					SLAVE PC					*.*.*.201
+
+	::: nmcli connection show
+	
+		NAME                UUID                                  TYPE      DEVICE
+		0xpmB.2.4Ghz        73295d46-e0a6-45ad-9f68-1edce17ce0a4  wifi      wlan1   <<--
+		lo                  a877c571-f041-4592-b061-66abc551e20f  loopback  lo
+		Wired connection 1  d93f250d-a9bb-357f-9dfe-4c20448c8750  ethernet  --
+
+	::: sudo nmcli connection modify "0xpmB.2.4Ghz" \
+			ipv4.method manual \
+			ipv4.addresses 192.168.18.201/24 \
+			ipv4.gateway 192.168.18.1 \
+			ipv4.dns "8.8.8.8 1.1.1.1"
+
+	::: sudo nmcli connection down "0xpmB.2.4Ghz"
+	::: sudo nmcli connection up "0xpmB.2.4Ghz"
