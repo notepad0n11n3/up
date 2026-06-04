@@ -1,0 +1,22 @@
+
+### Todas las combinaciones disponibles en PowerShell
+
+	::: Get-PSReadLineKeyHandler
+
+
+### Revisar si Ctrl+M tiene algo asignado
+
+	Get-PSReadLineKeyHandler | Where-Object Key -eq Ctrl+M
+
+	Get-PSReadLineKeyHandler | Where-Object Key -eq Ctrl+P
+	Get-PSReadLineKeyHandler | Where-Object Key -eq Ctrl+N
+
+### Asignar funcion
+
+	Set-PSReadLineKeyHandler -Chord Ctrl+m -Function AcceptLine
+
+	Set-PSReadLineKeyHandler -Chord Ctrl+p -Function PreviousHistory
+	Set-PSReadLineKeyHandler -Chord Ctrl+n -Function NextHistory
+
+	Set-PSReadLineKeyHandler -Chord Ctrl+b -Function BackwardChar
+	Set-PSReadLineKeyHandler -Chord Ctrl+f -Function ForwardChar
