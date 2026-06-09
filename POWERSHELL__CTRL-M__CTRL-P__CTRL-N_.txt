@@ -6,17 +6,44 @@
 
 ### Revisar si Ctrl+M tiene algo asignado
 
-	Get-PSReadLineKeyHandler | Where-Object Key -eq Ctrl+M
+	::: Get-PSReadLineKeyHandler | Where-Object Key -eq Ctrl+M
 
-	Get-PSReadLineKeyHandler | Where-Object Key -eq Ctrl+P
-	Get-PSReadLineKeyHandler | Where-Object Key -eq Ctrl+N
+	::: Get-PSReadLineKeyHandler | Where-Object Key -eq Ctrl+P
+	::: Get-PSReadLineKeyHandler | Where-Object Key -eq Ctrl+N
 
 ### Asignar funcion
 
-	Set-PSReadLineKeyHandler -Chord Ctrl+m -Function AcceptLine
+	::: Set-PSReadLineKeyHandler -Chord Ctrl+m -Function AcceptLine
 
-	Set-PSReadLineKeyHandler -Chord Ctrl+p -Function PreviousHistory
-	Set-PSReadLineKeyHandler -Chord Ctrl+n -Function NextHistory
+	::: Set-PSReadLineKeyHandler -Chord Ctrl+p -Function PreviousHistory
+	::: Set-PSReadLineKeyHandler -Chord Ctrl+n -Function NextHistory
 
-	Set-PSReadLineKeyHandler -Chord Ctrl+b -Function BackwardChar
-	Set-PSReadLineKeyHandler -Chord Ctrl+f -Function ForwardChar
+	::: Set-PSReadLineKeyHandler -Chord Ctrl+b -Function BackwardChar
+	::: Set-PSReadLineKeyHandler -Chord Ctrl+f -Function ForwardChar
+
+	::: set-psreadlinekeyhandler -chord alt+b -function backwardword
+	::: set-psreadlinekeyhandler -chord alt+f -function forwardword
+
+	::: set-psreadlinekeyhandler -chord alt+a -function beginningofline
+	::: set-psreadlinekeyhandler -chord alt+e -function endofline
+
+	::: set-psreadlinekeyhandler -chord ctrl-u -function BackwardKillLine
+	::: set-psreadlinekeyhandler -chord ctrl-k -function KillLine
+
+
+### ### GUARDAR EN PERFIL DE PS
+
+
+	::: Get-ExecutionPolicy
+
+				Restricted
+
+	::: Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+
+	::: vim $PROFILE
+	
+				get-psreadline.....
+				...
+				...
+				...
