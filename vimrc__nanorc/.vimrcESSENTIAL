@@ -228,4 +228,5 @@ command! -nargs=* Test call Test(<f-args>)
 "function! Test(arg)
 "command! -nargs=1 Test call Test(<f-args>)
 "color habamax
+set background=dark
 color retrobox
