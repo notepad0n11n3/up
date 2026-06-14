@@ -1,0 +1,10 @@
+[font]
+size=9
+
+[colors.primary]
+background="#000000"
+
+[cursor]
+blink_interval=500
+blink_timeout=0
+style={shape="Beam", blinking="Always"}
