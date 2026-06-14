@@ -317,6 +317,8 @@ exec_always xrandr --output eDP --primary --mode 1920x1080 --pos 0x1080 --rotate
 
 #exec --no-startup-id qterminal -w $desk
 exec --no-startup-id qterminal -e "tmux new -s Ready -c $desk -n Go" 
+#exec --no-startup-id alacritty -e tmux new -s Ready -c $desk -n Go
+#exec --no-startup-id alacritty -e sh -c 'tmux new -s Ready'
 
 exec --no-startup-id sh -c 'sleep 3 && pactl set-source-mute @DEFAULT_SOURCE@ 1 && pactl set-source-volume @DEFAULT_SOURCE@ 0%'
 
