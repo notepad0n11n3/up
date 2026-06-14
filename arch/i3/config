@@ -89,7 +89,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec --no-startup-id qterminal
 bindsym $mod+t exec --no-startup-id qterminal --drop
 bindsym $mod+apostrophe exec --no-startup-id qterminal --drop
-bindsym $mod+semicolon exec --no-startup-id qterminal
+bindsym $mod+semicolon exec --no-startup-id alacritty
 bindsym $mod+equal exec --no-startup-id qterminal
 bindsym $mod+F8 exec --no-startup-id qterminal
 
@@ -315,9 +315,12 @@ focus_wrapping workspace
 # sudo apt-get install arandr && arandr &>/dev/null & disown  ...<3 <3 <3
 exec_always xrandr --output eDP --primary --mode 1920x1080 --pos 0x1080 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --rotate normal
 
+# slave
 #exec --no-startup-id qterminal -w $desk
-exec --no-startup-id qterminal -e "tmux new -s Ready -c $desk -n Go" 
-#exec --no-startup-id alacritty -e tmux new -s Ready -c $desk -n Go
+#exec --no-startup-id alacritty --working-directory $desk
+
+#exec --no-startup-id qterminal -e "tmux new -s Ready -c $desk -n Go" 
+exec --no-startup-id alacritty -e tmux new -s Ready -c $desk -n Go
 #exec --no-startup-id alacritty -e sh -c 'tmux new -s Ready'
 
 exec --no-startup-id sh -c 'sleep 3 && pactl set-source-mute @DEFAULT_SOURCE@ 1 && pactl set-source-volume @DEFAULT_SOURCE@ 0%'
