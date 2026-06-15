@@ -139,6 +139,20 @@ function 0n11n3(){
       else
         echo -e "\x9 ! .i3status.conf  \x9WAIT...!!!***\xA"
       fi
+		
+      diff ~/.config/alacritty/alacritty.toml $up/vimrc__nanorc/alacritty/alacritty.toml &>/dev/null
+      if [ $? == 0 ]; then
+        echo -e "\x9    alacritty.toml  \x9\x9Ready...<3\xA"
+      else
+        echo -e "\x9 !  alacritty.toml  \x9WAIT...!!!***\xA"
+      fi
+
+      diff ~/.config/nvim/init.lua $up/vimrc__nanorc/nvim/init.lua &>/dev/null
+      if [ $? == 0 ]; then
+        echo -e "\x9    nvim/init.lua  \x9\x9Ready...<3\xA"
+      else
+        echo -e "\x9 !  nvim/init.lua  \x9WAIT...!!!***\xA"
+      fi
 
 			diff ~/.vimrc ~/.vimrcESSENTIAL &>/dev/null
 			if [ $? == 0 ]; then
