@@ -2,6 +2,9 @@
 #include <string.h>
 #include <stdlib.h>
 
+//	::: sha256sum ./vm_slave_autoConf
+//			47a6f9287f7073019ea86b0663178727b886f765a446a5a626d20d2130369c32  ./vm_slave_autoConf
+
 // TODO::  el .i3status.conf y ./config   se copian manualmente para no romper configuraciones en i3blocks
 
 int main(int argc, char **argv){
