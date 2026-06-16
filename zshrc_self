@@ -392,3 +392,12 @@ function check_tmux(){
 	ls -lah /tmp/tmux-$(id -u)/ | tail -n +4 | awk '{print $NF}' | xargs -I {} tmux -L {} ls
 # ls -1 /tmp/tmux-$(id -u)/ | xargs -I {} tmux -L {} ls
 }
+
+function check_mic(){
+	if [[ $1 == "--get" ]]; then
+		pactl get-source-volume @DEFAULT_SOURCE@ && pactl get-source-mute @DEFAULT_SOURCE@
+	else
+		pactl set-source-volume @DEFAULT_SOURCE@ 0% && pactl set-source-mute @DEFAULT_SOURCE@ 1
+		pactl get-source-volume @DEFAULT_SOURCE@ && pactl get-source-mute @DEFAULT_SOURCE@
+	fi
+}
