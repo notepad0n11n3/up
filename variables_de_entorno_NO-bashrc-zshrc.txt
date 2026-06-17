@@ -50,7 +50,7 @@
 
 																															DISCO DE ACRECIÓN
 
-          on="/home/x89p/.0n11n3"
+          _0n="/home/x89p/.0n11n3"
 
           up="/home/x89p/.0n11n3/up"
           box="/home/x89p/.0n11n3/blackbox"
@@ -59,7 +59,7 @@
 
           burn="/home/x89p/.burningArea"
           _69="/home/x89p/.burningArea/accretion_disk"
-					null="/home/x89p/.burningArea/null"
+					_null="/home/x89p/.burningArea/null"
 
           desk="/home/x89p/Desktop"
           down="/home/x89p/Downloads"
