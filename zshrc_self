@@ -249,7 +249,7 @@ function x89p(){
 	else
 		work_dir_name=$1
 	fi
-	new_work_dir_path="${htb}/${work_dir_name}"
+	new_work_dir_path="${_69}/${work_dir_name}"
 	mkdir -p "${new_work_dir_path}/01__recon"
 	mkdir -p "${new_work_dir_path}/02__extra"
 	touch "${new_work_dir_path}/00__UrL__.txt"
