@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 //	::: sha256sum ./vm_slave_autoConf
-//			47a6f9287f7073019ea86b0663178727b886f765a446a5a626d20d2130369c32  ./vm_slave_autoConf
+//					0ad4d12ac14e0cc7b4b02bb9b2f28728efa9daff49ae92be15700d4cf79c97bf  vm_slave_autoConf
 
 // TODO::  el .i3status.conf y ./config   se copian manualmente para no romper configuraciones en i3blocks
 
@@ -20,11 +20,12 @@ int main(int argc, char **argv){
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/8/wallhaven-01339g.png",\
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/8/terminal_Finale.jpg",\
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/8/biosho_bigDaddy_littleSstr.jpg",\
+											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/.Xresources",\
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/tmux/.tmux.conf"};
 
 	const char *paths={"bash -c \"mkdir -p ~/.config/{nvim,alacritty,i3} ~/.0n11n3/{up/8,vimrc__nanorc/{nvim,alacritty},tmux} \""};
 	const char *zshrc_tmux={"mv ./zshrc_self ~/.zshrc_self && mv ./.tmux.conf ~/.tmux.conf && echo 'source ~/.zshrc_self' >> ~/.bashrc && echo 'source ~/.zshrc_self' >> ~/.zshrc"};
-	const char *img_nvim_alac={"mv ./*.jpg ~/.0n11n3/up/8/ && mv ./*.png ~/.0n11n3/up/8/ && mv ./.vimrcESSENTIAL ~/.vimrc && mv ./alacritty.toml ~/.config/alacritty/ && mv ./init.lua ~/.config/nvim/"};
+	const char *img_nvim_alac_punt={"mv ./*.jpg ~/.0n11n3/up/8/ && mv ./*.png ~/.0n11n3/up/8/ && mv ./.Xresources ~/ && mv ./.vimrcESSENTIAL ~/.vimrc && mv ./alacritty.toml ~/.config/alacritty/ && mv ./init.lua ~/.config/nvim/"};
 	system(paths);
 
 
@@ -38,7 +39,7 @@ int main(int argc, char **argv){
 		system(mochimango);
 	}
 	system(zshrc_tmux);
-	system(img_nvim_alac);
+	system(img_nvim_alac_punt);
 
 	return 0;
 }
