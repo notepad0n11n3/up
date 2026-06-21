@@ -33,18 +33,6 @@ if [ -n "$BASH_VERSION" ]; then
 	echo -e "\t.          ..';:cccl:.':lloooooododdol;;looddddddddddddc.                       "
 	echo -e "\t            ..',;:::;..,:llllllloloolc'.':clloooooooooo;                        "
 	echo -e "\t                         Don't be Evil'.':......;;;                             "
-#	function exec_and_stay() {
-#		local command
-#		# Guarda el comando actual
-#		command=$(history 1 | sed 's/^[ ]*[0-9]*[ ]*//')
-#		# Ejecuta el comando
-#		eval "$command"
-#		# Mueve el cursor a la misma línea
-#		echo -ne "\r$ "
-#	}
-#
-#	# Asigna la función a `Alt-a`
-#	bind -x '"\ea": exec_and_stay'
 fi
 
 
@@ -56,8 +44,7 @@ fi
 function zshrc_self(){			# MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP
 	echo "\xA\x9\x9 echo 'exec i3' > ~/.xinitrc   ||| pre startx  NO lightdm enable \xA"
 	echo -E "	cpwd  ->  copia al clipboard la ubicacion actual 'pwd | tr -d '\n' | xclip -sel clip'"
-	echo "	q   ->  reFlojo pa teclear eXiT  :u"
-	echo "	0n11n3 --help ->  ......"
+	echo "	0n11n3 --help  '-f/-c/-p/--pull' "
 	echo "	pit  ->  Intervalo de 30 segundos Beep <3"
 	echo "	fullUpdate   '--slave' "
 	echo "	aeo8 ->  session anidada con serverTmux propio  default/defaults "
@@ -86,11 +73,6 @@ function zshrc_self(){			# MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP
 function cpwd(){
   pwd | tr -d "\n" | xclip -sel clip
 }
-
-function q(){
-  exit 0
-}
-
 
 #function notepad0n11n3(){
 function 0n11n3(){
@@ -202,11 +184,16 @@ function createCertificate(){
 
 
 
+##---------------------------------------------------------------------------------
 #---
 #		watch -n 3 'clear && ifconfig tun0'
 #		while true; do clear && ifconfig tun0; sleep 1.8; done
 #		while :; do clear && ifconfig tun0; sleep 1.8; done
 #---
+
+#				Oneliner Forever.... pero por ahora vamos por el maximo rendimiento  :') 
+# tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_x89p" M-a \; select-pane -t 1 \; send-key "until clear && ip a show tun0;do sleep 1.8;clear ;done" M-a \; split-window -v \; send-key "clear && ipTarged --all && vim -c 'color default' ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "ls -lah" C-m \; split-window -h \; send-key "until ping -c 4 -4 \$(mvnb);do sleep 1.8;clear ;done" C-m \; split-window -v \; send-key "vim -c \"Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | call Hosts() | tabr \"" M-a \; select-pane -t 0 \; select-pane -t 2 \; select-window -t 0 \; select-pane -t 0
+#.... \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \;....\; select-pane -t 2 \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
 
 #export sN="./01__recon/a01_smell_N"
 #export sG="./01__recon/a01_smell_G"
@@ -215,16 +202,98 @@ export hHub="/home/aeo8/.0n11n3/brain/road_hHub"
 export __69="/home/$(whoami)/.burningArea/accretion_disk"
 export __null="/home/$(whoami)/.burningArea/null"
 function x89p(){
-	if [ -z $1 ];then
+	base_path="$__69"
+	work_dir_name=""
+	mode="bb"
+
+	for arg in "$@"; do # parametros --null --69 --ctf (default: bb)
+		case "$arg" in
+			--null) base_path="$__null" ;;
+			--69)   base_path="$__69" ;;
+			--ctf)  mode="ctf" ;;
+			*)      work_dir_name="$arg" ;;
+		esac
+	done
+
+	if [ -z "${work_dir_name}" ]; then
 		echo -e -n "\n\t Working dir -> "
 		read -r work_dir_name
 		if [ -z "${work_dir_name}" ]; then
 			work_dir_name="test"
 		fi
-	else
-		work_dir_name=$1
 	fi
-	new_work_dir_path="${_69}/${work_dir_name}"
+
+	if [ "$mode" = "ctf" ]; then
+		x89p_ctf "${base_path}" "${work_dir_name}"
+	else
+		x89p_bb "${base_path}" "${work_dir_name}"
+	fi
+}
+
+function x89p_bb(){
+	new_work_dir_path="${1}/${2}"
+
+	mkdir -p "${new_work_dir_path}/00__scope"
+	mkdir -p "${new_work_dir_path}/01__recon/a01_passive"
+	mkdir -p "${new_work_dir_path}/01__recon/a02_active"
+	mkdir -p "${new_work_dir_path}/02__vulns"
+	mkdir -p "${new_work_dir_path}/03__poc"
+	mkdir -p "${new_work_dir_path}/04__report"
+
+	touch "${new_work_dir_path}/000___o___.txt"
+	touch "${new_work_dir_path}/000__UrL__.txt"
+
+	# Scope
+	[ ! -f "${new_work_dir_path}/00__scope/a01_in_scope" ]  && echo -e '# In-scope targets\n# target | severity range | notes' > "${new_work_dir_path}/00__scope/a01_in_scope"
+	[ ! -f "${new_work_dir_path}/00__scope/a02_out_scope" ] && echo -e '# Out-of-scope targets\n# explicit exclusions' > "${new_work_dir_path}/00__scope/a02_out_scope"
+	[ ! -f "${new_work_dir_path}/00__scope/a03_rules" ]     && echo -e '# Program rules & notes' > "${new_work_dir_path}/00__scope/a03_rules"
+
+	# Recon
+	touch "${new_work_dir_path}/01__recon/a01_passive/0_subdomains"
+	touch "${new_work_dir_path}/01__recon/a01_passive/0_technologies"
+	touch "${new_work_dir_path}/01__recon/a01_passive/0_leaks"
+	touch "${new_work_dir_path}/01__recon/a02_active/0_live_hosts"
+	touch "${new_work_dir_path}/01__recon/a02_active/0_crawl"
+	touch "${new_work_dir_path}/01__recon/a02_active/0_params"
+
+	# Vulns
+	touch "${new_work_dir_path}/02__vulns/a01_idor"
+	touch "${new_work_dir_path}/02__vulns/a02_xss"
+	touch "${new_work_dir_path}/02__vulns/a03_injection"
+	touch "${new_work_dir_path}/02__vulns/a04_ssrf"
+	touch "${new_work_dir_path}/02__vulns/a05_bac"
+	touch "${new_work_dir_path}/02__vulns/a06_info"
+
+	# POC
+	touch "${new_work_dir_path}/03__poc/a01_screenshots"
+	touch "${new_work_dir_path}/03__poc/a02_requests"
+	touch "${new_work_dir_path}/03__poc/a03_exploits"
+
+	# Report
+	touch "${new_work_dir_path}/04__report/a01_findings"
+	touch "${new_work_dir_path}/04__report/a02_template"
+
+	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; \
+		split-window -h \; \
+		select-pane -t 0 \; \
+		send-key "clear && sudo openvpn ${up}/0x/lab_x89p" M-a \; \
+		select-pane -t 1 \; \
+		send-key "until clear && ip a show tun0;do sleep 1.8;clear ;done" M-a \; \
+		split-window -v \; \
+		send-key "clear && vim -c 'color default' ." C-m \; \
+		rename-window "vpn()" \; \
+		new-window -n "?[]" -c ${new_work_dir_path} \; \
+		send-key "bash" C-m \; \
+		send-key "ls -lah" C-m \; \
+		split-window -h \; \
+		send-key "vim -c \"Ex | Sex ./01__recon/ | new ./02__vulns/ | botright vnew ./00__scope/ | tabr \"" M-a \; \
+		select-pane -t 0 \; \
+		select-window -t 0 \; \
+		select-pane -t 0
+}
+
+function x89p_ctf(){
+	new_work_dir_path="${1}/${2}"
 	mkdir -p "${new_work_dir_path}/01__recon"
 	mkdir -p "${new_work_dir_path}/02__extra"
 	touch "${new_work_dir_path}/00__UrL__.txt"
@@ -233,16 +302,34 @@ function x89p(){
 	if [ ! -f ${new_work_dir_path}/00__MaP__.txt ];then
 		touch "${new_work_dir_path}/00__MaP__.txt"
 		echo -e '[\n\t:::\n\t ::\n\n\n\n\t### user-targed : password \n\t user-targed:::\n\n\tROOT:::...?\n]\n\n{[\n\t:::\n\t ::\n\n\n\t### user_targed : password \n\t user_targed:::\n\n\tROOT:::...?\n]}' > ${new_work_dir_path}/00__MaP__.txt
-	else
-		touch "${new_work_dir_path}/00__MaP__.txt"
 	fi
 
 	touch "${new_work_dir_path}/01__recon/a01_smell_N"
 	touch "${new_work_dir_path}/01__recon/a01_smell_G"
 	touch "${new_work_dir_path}/01__recon/a02_bite_N"
-	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_x89p" M-a \; select-pane -t 1 \; send-key "until clear && ip a show tun0;do sleep 1.8;clear ;done" M-a \; split-window -v \; send-key "clear && ipTarged --all && vim -c 'color default' ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "ls -lah" C-m \; split-window -h \; send-key "until ping -c 4 -4 \$(mvnb);do sleep 1.8;clear ;done" C-m \; split-window -v \; send-key "vim -c \"Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | call Hosts() | tabr \"" M-a \; select-pane -t 0 \; select-pane -t 2 \; select-window -t 0 \; select-pane -t 0
-	#.... \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \;....\; select-pane -t 2 \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
+	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; \
+		split-window -h \; \
+		select-pane -t 0 \; \
+		send-key "clear && sudo openvpn ${up}/0x/lab_x89p" M-a \; \
+		select-pane -t 1 \; \
+		send-key "until clear && ip a show tun0;do sleep 1.8;clear ;done" M-a \; \
+		split-window -v \; \
+		send-key "clear && ipTarged --all && vim -c 'color default' ." C-m \; \
+		rename-window "vpn()" \; \
+		new-window -n "?[]" -c ${new_work_dir_path} \; \
+		send-key "bash" C-m \; \
+		send-key "ls -lah" C-m \; \
+		split-window -h \; \
+		send-key "until ping -c 4 -4 \$(mvnb);do sleep 1.8;clear ;done" C-m \; \
+		split-window -v \; \
+		send-key "vim -c \"Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | call Hosts() | tabr \"" M-a \; \
+		select-pane -t 0 \; \
+		select-pane -t 2 \; \
+		select-window -t 0 \; \
+		select-pane -t 0
 }
+
+##---------------------------------------------------------------------------------
 
 function ports(){
 	if [ $# -eq 0 ]; then
