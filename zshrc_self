@@ -59,10 +59,10 @@ function zshrc_self(){			# MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP
 	echo "	q   ->  reFlojo pa teclear eXiT  :u"
 	echo "	0n11n3 --help ->  ......"
 	echo "	pit  ->  Intervalo de 30 segundos Beep <3"
-	echo "	fullUpdate  ->   apt update full-upgrade autoremove autoclean 0n11n3 updatedb etc..."
-	echo "	aeo8 -> mainSession tmux <3 "
+	echo "	fullUpdate   '--slave' "
+	echo "	aeo8 ->  session anidada con serverTmux propio  default/defaults "
 	echo "	pwnbx -> tmux \xA\xA"
-	echo "	x89p  ->  Session tmux , x89p newWork...<3 "
+	echo "	x89p  workDir  --bb/--ctf  --69/--null  '--69 default' "
 	echo "	ipTarged -> (x89pIP | targedIP) post x89p \xA\xA"
 	echo "	mvnb --help -> print ipTarged | ipVpn | ipHere"
 	echo "	ports ->  Extraer puertos de archivo -oG (nmap)"
@@ -74,6 +74,8 @@ function zshrc_self(){			# MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP
 	echo "	createCertificate "
 	echo "	\$hHub  -> /home/aeo8/.0n11n3/brain/road_hHub/"
 	echo "	check_tmux  ->  /tmp/tmux-\$(id -u)/*"
+	echo "	check_mic		'--get'"
+	echo "	alvi --on/--off  screeen saver"
 	echo "	"
 # '<,'>s/\(^\s\+echo\s\+\(-E\)\?\(\s\+\)\?"\)\s\+/\1\t/g
 
@@ -199,34 +201,6 @@ function createCertificate(){
 }
 
 
-#function x89p(){
-#	tiempo=0.5
-#
-#	tmux new-session -d -t "htb" -c $htb && sleep ${tiempo}
-#	tmux rename-session "HTB"
-#	tmux rename-window "vpn()" && tmux split-window -h -c $htb && tmux split-window -v -c $htb
-#
-##tmux send-key "bash" C-m && tmux send-key "clear" C-m && sleep ${tiempo}
-##tmux send-key "bash" C-m && tmux send-key "clear && vim ." C-m && sleep ${tiempo}
-#
-#	tmux select-pane -t 0
-##tmux send-key "sudo openvpn $up/0x/lab_burn" M-a && sleep ${tiempo}
-#	tmux send-key "clear && sudo openvpn $up/0x/lab_burn" M-a && sleep ${tiempo}
-#
-#	tmux select-pane -t 1
-#	tmux send-key "clear && ifconfig tun0" && sleep ${tiempo}
-#
-#	tmux select-pane -t 2
-#	tmux send-key "clear && ping -c 4 -4 "
-#
-#	tmux select-pane -t 0
-#
-#	tmux new-window -t HTB:1 -n "?[]" -c $htb && sleep ${tiempo} && tmux send-key "ls -lah" C-m
-#	tmux select-window -t 0
-#}
-
-# tmux new -s "Go" -c $htb -n "main"
-# tmux split-window -v / -h
 
 #---
 #		watch -n 3 'clear && ifconfig tun0'
@@ -237,9 +211,9 @@ function createCertificate(){
 #export sN="./01__recon/a01_smell_N"
 #export sG="./01__recon/a01_smell_G"
 export recon="./01__recon"
-export hHub="/home/aeo8/.0n11n3/brain/road_hHub/"
-export __69="/home/$(whoami)/.burningArea/accretion_disk/"
-export __null="/home/$(whoami)/.burningArea/null/"
+export hHub="/home/aeo8/.0n11n3/brain/road_hHub"
+export __69="/home/$(whoami)/.burningArea/accretion_disk"
+export __null="/home/$(whoami)/.burningArea/null"
 function x89p(){
 	if [ -z $1 ];then
 		echo -e -n "\n\t Working dir -> "
@@ -401,5 +375,16 @@ function check_mic(){
 	else
 		pactl set-source-volume @DEFAULT_SOURCE@ 0% && pactl set-source-mute @DEFAULT_SOURCE@ 1
 		pactl get-source-volume @DEFAULT_SOURCE@ && pactl get-source-mute @DEFAULT_SOURCE@
+	fi
+}
+
+function alvi(){
+	if [[ $1 = "--off" ]]; then
+		$(xset s on &&  xset +dpms)
+	elif [[ $1 = "--on" ]]; then
+		$(xset s off &&  xset -dpms)
+	else
+		$(xset s off &&  xset -dpms)
+		firefox "https://www.youtube.com/feed/playlists" &>/dev/null & disown
 	fi
 }
