@@ -462,9 +462,11 @@ function check_mic(){
 	elif [[ $1 == "--on" ]]; then
 		pactl set-source-volume @DEFAULT_SOURCE@ 80% && pactl set-source-mute @DEFAULT_SOURCE@ 0
 		pactl get-source-volume @DEFAULT_SOURCE@ && pactl get-source-mute @DEFAULT_SOURCE@
-	else
+	elif [[ $1 == "--off" ]]; then
 		pactl set-source-volume @DEFAULT_SOURCE@ 0% && pactl set-source-mute @DEFAULT_SOURCE@ 1
 		pactl get-source-volume @DEFAULT_SOURCE@ && pactl get-source-mute @DEFAULT_SOURCE@
+	else
+		echo -e "\xA\x9  --get / --on / --off \xA"
 	fi
 }
 
