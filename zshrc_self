@@ -459,6 +459,9 @@ function check_tmux(){
 function check_mic(){
 	if [[ $1 == "--get" ]]; then
 		pactl get-source-volume @DEFAULT_SOURCE@ && pactl get-source-mute @DEFAULT_SOURCE@
+	elif [[ $1 == "--on" ]]; then
+		pactl set-source-volume @DEFAULT_SOURCE@ 80% && pactl set-source-mute @DEFAULT_SOURCE@ 0
+		pactl get-source-volume @DEFAULT_SOURCE@ && pactl get-source-mute @DEFAULT_SOURCE@
 	else
 		pactl set-source-volume @DEFAULT_SOURCE@ 0% && pactl set-source-mute @DEFAULT_SOURCE@ 1
 		pactl get-source-volume @DEFAULT_SOURCE@ && pactl get-source-mute @DEFAULT_SOURCE@
