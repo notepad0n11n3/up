@@ -211,6 +211,7 @@ function x89p(){
 			--null) base_path="$__null" ;;
 			--69)   base_path="$__69" ;;
 			--ctf)  mode="ctf" ;;
+			--bb)		mode="bb" ;;
 			*)      work_dir_name="$arg" ;;
 		esac
 	done
@@ -240,6 +241,7 @@ function x89p_bb(){
 	mkdir -p "${new_work_dir_path}/03__poc"
 	mkdir -p "${new_work_dir_path}/04__report"
 
+	touch "${new_work_dir_path}/000___ReadmE___.txtt"
 	touch "${new_work_dir_path}/000___o___.txt"
 	touch "${new_work_dir_path}/000__UrL__.txt"
 
@@ -273,7 +275,7 @@ function x89p_bb(){
 	touch "${new_work_dir_path}/04__report/a01_findings"
 	touch "${new_work_dir_path}/04__report/a02_template"
 
-	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; \
+	tmux -L x89p new-session -t -d -s "x89p" -c ${new_work_dir_path} \; \
 		split-window -h \; \
 		select-pane -t 0 \; \
 		send-key "clear && sudo openvpn ${up}/0x/lab_x89p" M-a \; \
@@ -286,8 +288,10 @@ function x89p_bb(){
 		send-key "bash" C-m \; \
 		send-key "ls -lah" C-m \; \
 		split-window -h \; \
-		send-key "vim -c \"Ex | Sex ./01__recon/ | new ./02__vulns/ | botright vnew ./00__scope/ | tabr \"" M-a \; \
+		split-window -v \; \
+		send-key "vim -c 'Ex | Sex ./01__recon/ | new ./02__vulns/ | botright vnew ./000___ReadmE___/ | tabnew | exec(\"term ++shell opencode;exec \$SHELL\") | wincmd w | q | tabr '" M-a \; \
 		select-pane -t 0 \; \
+		select-pane -t 2 \; \
 		select-window -t 0 \; \
 		select-pane -t 0
 }
@@ -296,8 +300,10 @@ function x89p_ctf(){
 	new_work_dir_path="${1}/${2}"
 	mkdir -p "${new_work_dir_path}/01__recon"
 	mkdir -p "${new_work_dir_path}/02__extra"
+
+	touch "${new_work_dir_path}/000___ReadmE___.txtt"
 	touch "${new_work_dir_path}/00__UrL__.txt"
-	touch "${new_work_dir_path}/000__o__.txt"
+	touch "${new_work_dir_path}/000___o___.txt"
 
 	if [ ! -f ${new_work_dir_path}/00__MaP__.txt ];then
 		touch "${new_work_dir_path}/00__MaP__.txt"
@@ -307,7 +313,7 @@ function x89p_ctf(){
 	touch "${new_work_dir_path}/01__recon/a01_smell_N"
 	touch "${new_work_dir_path}/01__recon/a01_smell_G"
 	touch "${new_work_dir_path}/01__recon/a02_bite_N"
-	tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; \
+	tmux -L x89p new-session -t -d -s "x89p" -c ${new_work_dir_path} \; \
 		split-window -h \; \
 		select-pane -t 0 \; \
 		send-key "clear && sudo openvpn ${up}/0x/lab_x89p" M-a \; \
@@ -322,7 +328,7 @@ function x89p_ctf(){
 		split-window -h \; \
 		send-key "until ping -c 4 -4 \$(mvnb);do sleep 1.8;clear ;done" C-m \; \
 		split-window -v \; \
-		send-key "vim -c \"Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | call Hosts() | tabr \"" M-a \; \
+		send-key "vim -c 'Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | call Hosts() | tabnew | exec(\"term ++shell=opencode;exec \$SHELL\") | wincmd w | q | tabr'" M-a \; \
 		select-pane -t 0 \; \
 		select-pane -t 2 \; \
 		select-window -t 0 \; \
@@ -361,7 +367,6 @@ function pwnbx(){
 	tmux new -t -d -s "pwnbx" -c ${new_work_dir_path} \; rename-window "vpn()" \; send-key "clear && ifconfig" C-m \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "clear && pwd" C-m \; split-window -h \; send-key "clear" C-m \; split-window -v \; send-key "clear && vim ." C-m \; select-window -t 0 \; split-window -h \; send-key "clear && ipTarged --all" C-m
 }
 
-
 # x89p x89p x89p x89p  extra... <3 <3 <3
 
 function mvnb(){
@@ -382,7 +387,7 @@ function mvnb(){
 }
 
 # x89p
-alias vimn="vim -c \"Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | tabnew ./hosts | tabr \""
+alias vimn="vim -c 'Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | tabnew ./hosts | tabnew | exec(\"term ++shell opencode;exec $SHELL\") | wincmd w | q | tabr'"
 alias it='ipTarged --here'
 function ipTarged(){
 	session_name=$(tmux display-message -p '#S' | tr -d "\n")
