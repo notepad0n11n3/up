@@ -191,6 +191,11 @@ function createCertificate(){
 #		while :; do clear && ifconfig tun0; sleep 1.8; done
 #---
 
+#	if [ ! -f ${new_work_dir_path}/00__MaP__.txt ];then
+#		touch "${new_work_dir_path}/00__MaP__.txt"
+#		echo -e '[\n\t:::\n\t ::\n\n\n\n\t### user-targed : password \n\t user-targed:::\n\n\tROOT:::...?\n]\n\n{[\n\t:::\n\t ::\n\n\n\t### user_targed : password \n\t user_targed:::\n\n\tROOT:::...?\n]}' > ${new_work_dir_path}/00__MaP__.txt
+#	fi
+
 #				Oneliner Forever.... pero por ahora vamos por el maximo rendimiento  :') 
 # tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_x89p" M-a \; select-pane -t 1 \; send-key "until clear && ip a show tun0;do sleep 1.8;clear ;done" M-a \; split-window -v \; send-key "clear && ipTarged --all && vim -c 'color default' ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "ls -lah" C-m \; split-window -h \; send-key "until ping -c 4 -4 \$(mvnb);do sleep 1.8;clear ;done" C-m \; split-window -v \; send-key "vim -c \"Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | call Hosts() | tabr \"" M-a \; select-pane -t 0 \; select-pane -t 2 \; select-window -t 0 \; select-pane -t 0
 #.... \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \;....\; select-pane -t 2 \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
@@ -235,20 +240,22 @@ function x89p_bb(){
 	new_work_dir_path="${1}/${2}"
 
 	mkdir -p "${new_work_dir_path}/00__scope"
-	mkdir -p "${new_work_dir_path}/01__recon/a01_passive"
-	mkdir -p "${new_work_dir_path}/01__recon/a02_active"
+	mkdir -p "${new_work_dir_path}/01__recon/"{a01_passive,a02_active,a03_enum,a04_vps}
 	mkdir -p "${new_work_dir_path}/02__vulns"
 	mkdir -p "${new_work_dir_path}/03__poc"
 	mkdir -p "${new_work_dir_path}/04__report"
 
-	touch "${new_work_dir_path}/000___ReadmE___.txtt"
-	touch "${new_work_dir_path}/000___o___.txt"
+#	touch "${new_work_dir_path}/000___ReadmE___.txtt"
+#	touch "${new_work_dir_path}/000___o___.txtt"
 	touch "${new_work_dir_path}/000__UrL__.txt"
 
 	# Scope
 	[ ! -f "${new_work_dir_path}/00__scope/a01_in_scope" ]  && echo -e '# In-scope targets\n# target | severity range | notes' > "${new_work_dir_path}/00__scope/a01_in_scope"
 	[ ! -f "${new_work_dir_path}/00__scope/a02_out_scope" ] && echo -e '# Out-of-scope targets\n# explicit exclusions' > "${new_work_dir_path}/00__scope/a02_out_scope"
 	[ ! -f "${new_work_dir_path}/00__scope/a03_rules" ]     && echo -e '# Program rules & notes' > "${new_work_dir_path}/00__scope/a03_rules"
+	[ ! -f "${new_work_dir_path}/AGEND.md" ]     && echo -e '# Programa de Bug Bounty, analista senior' > "${new_work_dir_path}/AGEND.md"
+	[ ! -f "${new_work_dir_path}/000___ReadmE___.txtt" ]     && echo -e "# Personal notes, progress documentation...\n\t-Fecha: $(date)\n\t-Scope: *.target.com\n\t-Program: HackerOne/Bugcrowd/Intigriti/YesWeHack" > "${new_work_dir_path}/000___ReadmE___.txtt"
+	[ ! -f "${new_work_dir_path}/000___o___.txtt" ]     && echo -e "# Vulnerabilidades Encontradas, moreInfo: ./02__vulns <-- \n\t* RCE -- $(date)" > "${new_work_dir_path}/000___o___.txtt"
 
 	# Recon
 	touch "${new_work_dir_path}/01__recon/a01_passive/0_subdomains"
@@ -288,8 +295,9 @@ function x89p_bb(){
 		send-key "bash" C-m \; \
 		send-key "ls -lah" C-m \; \
 		split-window -h \; \
+		send-key "clear && ls -lah ./01__recon" C-m \; \
 		split-window -v \; \
-		send-key "vim -c 'Ex | Sex ./01__recon/ | new ./02__vulns/ | botright vnew ./000___ReadmE___/ | tabnew | exec(\"term ++shell opencode;exec \$SHELL\") | wincmd w | q | tabr '" M-a \; \
+		send-key "vim -c 'e ./00__scope/a03_rules | Sex ./00__scope/ | new ./000___o___.txtt | botright vnew ./000___ReadmE___.txtt | tabnew | exec(\"term ++shell opencode; exec $SHELL\") | wincmd w | q | tabr '" M-a \; \
 		select-pane -t 0 \; \
 		select-pane -t 2 \; \
 		select-window -t 0 \; \
@@ -298,17 +306,15 @@ function x89p_bb(){
 
 function x89p_ctf(){
 	new_work_dir_path="${1}/${2}"
-	mkdir -p "${new_work_dir_path}/01__recon"
-	mkdir -p "${new_work_dir_path}/02__extra"
+	mkdir -p "${new_work_dir_path}/"{01__recon,02__extra}
 
 	touch "${new_work_dir_path}/000___ReadmE___.txtt"
-	touch "${new_work_dir_path}/00__UrL__.txt"
-	touch "${new_work_dir_path}/000___o___.txt"
 
-	if [ ! -f ${new_work_dir_path}/00__MaP__.txt ];then
-		touch "${new_work_dir_path}/00__MaP__.txt"
-		echo -e '[\n\t:::\n\t ::\n\n\n\n\t### user-targed : password \n\t user-targed:::\n\n\tROOT:::...?\n]\n\n{[\n\t:::\n\t ::\n\n\n\t### user_targed : password \n\t user_targed:::\n\n\tROOT:::...?\n]}' > ${new_work_dir_path}/00__MaP__.txt
-	fi
+
+	[ ! -f "${new_work_dir_path}/AGEND.md" ] && echo -e '# Laboratorio de practica para Pentesting en HackTheBox' > "${new_work_dir_path}/AGEND.md"
+	[ ! -f "${new_work_dir_path}/00__MaP__.txtt" ] && echo -e '[\n\t:::\n\t ::\n\n\n\n\t### user-targed : password \n\t user-targed:::\n\n\tROOT:::...?\n]\n\n{[\n\t:::\n\t ::\n\n\n\t### user_targed : password \n\t user_targed:::\n\n\tROOT:::...?\n]}' > "${new_work_dir_path}/00__MaP__.txtt"
+	[ ! -f "${new_work_dir_path}/000___o___.txtt" ] && echo -e '# Vulnerabilidades usadas: \n' > "${new_work_dir_path}/000___o___.txtt"
+	[ ! -f "${new_work_dir_path}/00__UrL__.txtt" ] && echo -e '# Url Targed: \n' > "${new_work_dir_path}/00__UrL__.txtt"
 
 	touch "${new_work_dir_path}/01__recon/a01_smell_N"
 	touch "${new_work_dir_path}/01__recon/a01_smell_G"
@@ -328,7 +334,7 @@ function x89p_ctf(){
 		split-window -h \; \
 		send-key "until ping -c 4 -4 \$(mvnb);do sleep 1.8;clear ;done" C-m \; \
 		split-window -v \; \
-		send-key "vim -c 'Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | call Hosts() | tabnew | exec(\"term ++shell=opencode;exec \$SHELL\") | wincmd w | q | tabr'" M-a \; \
+		send-key "vim -c 'Ex | Sex ./01__recon/ | new ./00__UrL__.txtt | botright vnew ./00__MaP__.txtt | call Hosts() | tabnew | exec(\"term ++shell=opencode;exec \$SHELL\") | wincmd w | q | tabr'" M-a \; \
 		select-pane -t 0 \; \
 		select-pane -t 2 \; \
 		select-window -t 0 \; \
@@ -387,7 +393,8 @@ function mvnb(){
 }
 
 # x89p
-alias vimn="vim -c 'Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | tabnew ./hosts | tabnew | exec(\"term ++shell opencode;exec $SHELL\") | wincmd w | q | tabr'"
+alias vimn="vim -c 'Ex | Sex ./01__recon/ | new ./00__UrL__.txtt | botright vnew ./00__MaP__.txtt | tabnew ./hosts | tabnew | exec(\"term ++shell opencode;exec $SHELL\") | wincmd w | q | tabr'"
+alias vimb="vim -c 'e ./00__scope/a03_rules | Sex ./00__scope/ | new ./000___o___.txtt | botright vnew ./000___ReadmE___.txtt | tabnew | exec(\"term ++shell opencode; exec $SHELL\") | wincmd w | q | tabr '"
 alias it='ipTarged --here'
 function ipTarged(){
 	session_name=$(tmux display-message -p '#S' | tr -d "\n")
@@ -457,6 +464,8 @@ function pre_vm(){
 }
 
 function check_tmux(){
+	echo -e "\xA"
+	ls -lah /tmp/tmux-$(id -u)/ | tail -n +4 | cut -d" " -f1,4,11,13 && echo -e "\xA"
 	ls -lah /tmp/tmux-$(id -u)/ | tail -n +4 | awk '{print $NF}' | xargs -I {} tmux -L {} ls
 # ls -1 /tmp/tmux-$(id -u)/ | xargs -I {} tmux -L {} ls
 }
