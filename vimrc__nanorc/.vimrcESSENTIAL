@@ -135,11 +135,14 @@ function! Mvnb(arg = '')
 		return l:output
 
 	elseif a:arg == '--help'
+		echo " noArguments ( http/https ipTarged ) "
 		echo " --vpn"
 		echo " --targed"
 		echo " --here"
-		echo "  numberTab_tmux"
-		echo " noArguments ( http/https ipTarged ) "
+		echo " =Mvnb('-targed')"
+		echo " =Mvnb('-vpn')"
+		echo " =Mvnb('-here')"
+		echo ":Mvnb numberTab_tmux"
 	else
 		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
 		let l:output = system(l:cmd)
