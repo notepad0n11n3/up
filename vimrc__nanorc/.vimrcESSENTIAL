@@ -84,27 +84,29 @@ function! LookBack()
 endfunction
 command LookBack call LookBack()
 
-" :r ! tmux display-message -p "\#W" | grep -oP "\[.*?\]" | tr -d "[] \n"  "" Puto # en vim :u
+"" :r ! tmux display-message :0 -p "\#W" | grep -oP "\[.*?\]" | tr -d "[] \n"  "" Puto # en vim :u
+"														 :numberWindowHere
 function! Mvnb(arg = '')
 	
   " Si el argumento es un número puro (ej: 3, 12, 0...), lo usamos como índice de ventana
   if a:arg =~# '^\d\+$'
     let l:target = a:arg
-    let l:cmd = 'tmux display-message -t :' . l:target . ' -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+    let l:cmd = 'tmux display-message -t :' . l:target . ' -p "#W" | grep -oP "\[.*?\]|\(.*?\)" | tr -d "[]() \n"'
 		let l:output = system(l:cmd)
 		let l:output = substitute(l:output, '\n', '', 'g')
-		"call setline(line('.'), l:output) "reemplaza la linea focus con el output
-		call append(line('.') - 1, l:output)  "agrega el output una linea arriba del focus... <3
+		"""call setline(line('.'), l:output) "reemplaza la linea focus con el output
+		"call append(line('.') - 1, l:output)  "agrega el output una linea arriba del focus... <3
+		return l:output
 
 	elseif a:arg == '--here'
-		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]|\(.*?\)" | tr -d "[]() \n"'
 		let l:output = system(l:cmd)
 		let l:output = substitute(l:output, '\n', '', 'g')
 		"call setline(line('.'), l:output) "reemplaza la linea focus con el output
 		call append(line('.') - 1, l:output)  "agrega el output una linea arriba del focus... <3
 	elseif a:arg == '-here'
 		" :.s/\d\+\.\d\+\.\d\+\.\d\+/\=Mvnb('-here')/g|noh|w ! sudo tee %
-		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
+		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]|\(.*?\)" | tr -d "[]() \n"'
 		let l:output = system(l:cmd)
 		let l:output = substitute(l:output, '\n', '', 'g')
 		return l:output
@@ -117,7 +119,7 @@ function! Mvnb(arg = '')
 		call append(line('.') - 1, l:output)  "agrega el output una linea arriba del focus... <3
 	elseif a:arg == '-vpn'
 		" :.s/\d\+\.\d\+\.\d\+\.\d\+/\=Mvnb('-vpn')/g|noh|w ! sudo tee %
-		let l:cmd = 'tmux display-message -t :0 -p "#W" | grep -oP "\(.*?\)" | tr -d "() \n"'
+		let l:cmd = 'tmux display-message -t :0 -p "#W" | grep -oP "\(.*?\)|\[.*?\]" | tr -d "()[] \n"'
 		let l:output = system(l:cmd)
 		let l:output = substitute(l:output, '\n', '', 'g')
 		return l:output
@@ -142,7 +144,10 @@ function! Mvnb(arg = '')
 		echo " =Mvnb('-targed')"
 		echo " =Mvnb('-vpn')"
 		echo " =Mvnb('-here')"
-		echo ":Mvnb numberTab_tmux"
+		echo " :Mvnb numWin_tmx"
+		echo " =Mvnb('numWin_tmx')"
+		echo " =Mvnb(numWin_tmx)"
+		echo " .put ='' Ctrl-=Mvnb(numWin_tmx)"
 	else
 		let l:cmd = 'tmux display-message -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"'
 		let l:output = system(l:cmd)
@@ -185,6 +190,20 @@ function! Lcd()
 	echo "new PWD WorkDir: " . l:mango
 endfunction
 command Lcd call Lcd()
+
+function! Code()
+	let l:mango = expand('%:p:h')
+	execute 'silent exec("vertical rightbelow term ++shell opencode; exec $SHELL") | wincmd w'
+	echo " Opencode pathWorking: " . l:mango
+endfunction
+command Code call Code()
+
+function! Clau()
+	let l:mango = expand('%:p:h')
+	execute 'silent exec("vertical rightbelow term ++shell claude; exec $SHELL") | wincmd w'
+	echo " Opencode pathWorking: " . l:mango
+endfunction
+command Clau call Clau()
 
 " : let mango=getcwd() | execute 'Ex ' . mango			getcwd() === pwd
 function! Lex()
