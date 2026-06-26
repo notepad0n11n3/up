@@ -49,7 +49,7 @@
 		virtualbox-> File-> Preferences-> Input-> VirtualMachine-> :::
 
 								Name						 |			Shortcut
-		:::		Host key Combination	 |	Left Ctrl + Left Alt 
+		:::		Host key Combination	 |	Left Ctrl + Right Alt 
 
 
 ##	Windows 11		'resolucion de pantalla... <3 <3 <3'
