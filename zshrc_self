@@ -221,6 +221,12 @@ function x89p(){
 		esac
 	done
 
+	if [[ -d "${base_path}/${work_dir_name}.${mode}" ]]; then
+		echo -e "\xA\x9 -> '${work_dir_name}.${mode}' Already exists: '${base_path}'  | ${mode} | \xA"
+		echo -e -n " forzar el ingreso? (y/N): "
+		read -r resp
+		[[ "$resp" != "y" && "${resp}" != "Y" && "$resp" != "yes" ]] && return 1
+	fi
 	if [ -z "${work_dir_name}" ]; then
 		echo -e -n "\n\t Working dir -> "
 		read -r work_dir_name
@@ -230,9 +236,9 @@ function x89p(){
 	fi
 
 	if [ "$mode" = "ctf" ]; then
-		x89p_ctf "${base_path}" "${work_dir_name}"
+		x89p_ctf "${base_path}" "${work_dir_name}.${mode}" "${work_dir_name}"
 	else
-		x89p_bb "${base_path}" "${work_dir_name}"
+		x89p_bb "${base_path}" "${work_dir_name}.${mode}" "${work_dir_name}"
 	fi
 }
 
@@ -243,7 +249,7 @@ function x89p_bb(){
 	mkdir -p "${new_work_dir_path}/01__recon/"{a01_passive,a02_active,a03_enum,a04_vps}
 	mkdir -p "${new_work_dir_path}/02__vulns"
 	mkdir -p "${new_work_dir_path}/03__poc"
-	mkdir -p "${new_work_dir_path}/04__report"
+	mkdir -p "${new_work_dir_path}/04__FinalE"
 
 #	touch "${new_work_dir_path}/000___ReadmE___.txtt"
 #	touch "${new_work_dir_path}/000___o___.txtt"
@@ -253,9 +259,9 @@ function x89p_bb(){
 	[ ! -f "${new_work_dir_path}/00__scope/a01_in_scope" ]  && echo -e '# In-scope targets\n# target | severity range | notes' > "${new_work_dir_path}/00__scope/a01_in_scope"
 	[ ! -f "${new_work_dir_path}/00__scope/a02_out_scope" ] && echo -e '# Out-of-scope targets\n# explicit exclusions' > "${new_work_dir_path}/00__scope/a02_out_scope"
 	[ ! -f "${new_work_dir_path}/00__scope/a03_rules" ]     && echo -e '# Program rules & notes' > "${new_work_dir_path}/00__scope/a03_rules"
-	[ ! -f "${new_work_dir_path}/AGEND.md" ]     && echo -e '# Programa de Bug Bounty, analista senior' > "${new_work_dir_path}/AGEND.md"
-	[ ! -f "${new_work_dir_path}/000___ReadmE___.txtt" ]     && echo -e "# Personal notes, progress documentation...\n\t-Fecha: $(date)\n\t-Scope: *.target.com\n\t-Program: HackerOne/Bugcrowd/Intigriti/YesWeHack" > "${new_work_dir_path}/000___ReadmE___.txtt"
-	[ ! -f "${new_work_dir_path}/000___o___.txtt" ]     && echo -e "# Vulnerabilidades Encontradas, moreInfo: ./02__vulns <-- \n\t* RCE -- $(date)" > "${new_work_dir_path}/000___o___.txtt"
+	[ ! -f "${new_work_dir_path}/AGENTS.md" ]     && echo -e '# Programa de Bug Bounty, analista senior' > "${new_work_dir_path}/AGENTS.md"
+	[ ! -f "${new_work_dir_path}/000___ReadmE___.txtt" ]     && echo -e "# Personal notes, progress documentation...\n\n\t-Fecha: $(date +'%Y-%m-%d %H:%M %Z')\n\t\t\t\t\t$(date -u +'%Y-%m-%d %H:%M %Z')\n\t-Program: *.target.com\n\t-Platform: HackerOne/Bugcrowd/Intigriti/YesWeHack" > "${new_work_dir_path}/000___ReadmE___.txtt"
+	[ ! -f "${new_work_dir_path}/000___o___.txtt" ]     && echo -e "# Vulnerabilidades Encontradas, moreInfo: ./02__vulns/ <--\t date +'%Y-%m-%d %H:%M %Z' \n\t* RCE -- $(date +'%Y-%m-%d %H:%M %Z')" > "${new_work_dir_path}/000___o___.txtt"
 
 	# Recon
 	touch "${new_work_dir_path}/01__recon/a01_passive/0_subdomains"
@@ -270,7 +276,7 @@ function x89p_bb(){
 	touch "${new_work_dir_path}/02__vulns/a02_xss"
 	touch "${new_work_dir_path}/02__vulns/a03_injection"
 	touch "${new_work_dir_path}/02__vulns/a04_ssrf"
-	touch "${new_work_dir_path}/02__vulns/a05_bac"
+	touch "${new_work_dir_path}/02__vulns/a05_brokenAccesControl"
 	touch "${new_work_dir_path}/02__vulns/a06_info"
 
 	# POC
@@ -279,18 +285,18 @@ function x89p_bb(){
 	touch "${new_work_dir_path}/03__poc/a03_exploits"
 
 	# Report
-	touch "${new_work_dir_path}/04__report/a01_findings"
-	touch "${new_work_dir_path}/04__report/a02_template"
+	touch "${new_work_dir_path}/04__FinalE/a01_findings"
+	touch "${new_work_dir_path}/04__FinalE/a02_template"
 
-	tmux -L x89p new-session -t -d -s "x89p" -c ${new_work_dir_path} \; \
+	tmux -L x89p new-session -t -d -s "${3}" -c ${new_work_dir_path} \; \
 		split-window -h \; \
 		select-pane -t 0 \; \
-		send-key "clear && sudo openvpn ${up}/0x/lab_x89p" M-a \; \
+		send-key "clear && sudo openvpn ${up}/0x/ceretta" M-a \; \
 		select-pane -t 1 \; \
-		send-key "until clear && ip a show tun0;do sleep 1.8;clear ;done" M-a \; \
+		send-key "echo -e '\xA\xA\xA\x9\x9 VPS test preWork \xA\xA'" C-m \; \
 		split-window -v \; \
 		send-key "clear && vim -c 'color default' ." C-m \; \
-		rename-window "vpn()" \; \
+		rename-window "vps()" \; \
 		new-window -n "?[]" -c ${new_work_dir_path} \; \
 		send-key "bash" C-m \; \
 		send-key "ls -lah" C-m \; \
@@ -311,15 +317,15 @@ function x89p_ctf(){
 	touch "${new_work_dir_path}/000___ReadmE___.txtt"
 
 
-	[ ! -f "${new_work_dir_path}/AGEND.md" ] && echo -e '# Laboratorio de practica para Pentesting en HackTheBox' > "${new_work_dir_path}/AGEND.md"
-	[ ! -f "${new_work_dir_path}/00__MaP__.txtt" ] && echo -e '[\n\t:::\n\t ::\n\n\n\n\t### user-targed : password \n\t user-targed:::\n\n\tROOT:::...?\n]\n\n{[\n\t:::\n\t ::\n\n\n\t### user_targed : password \n\t user_targed:::\n\n\tROOT:::...?\n]}' > "${new_work_dir_path}/00__MaP__.txtt"
-	[ ! -f "${new_work_dir_path}/000___o___.txtt" ] && echo -e '# Vulnerabilidades usadas: \n' > "${new_work_dir_path}/000___o___.txtt"
-	[ ! -f "${new_work_dir_path}/00__UrL__.txtt" ] && echo -e '# Url Targed: \n' > "${new_work_dir_path}/00__UrL__.txtt"
+	[ ! -f "${new_work_dir_path}/AGENTS.md" ] && echo -e '# Laboratorio de Pentesting en HackTheBox' > "${new_work_dir_path}/AGENTS.md"
+	[ ! -f "${new_work_dir_path}/00__MaP__.txtt" ] && echo -e '# ip_targed = \n# ip_x89p = \n\n[\n\t:::\n\t ::\n\n\n\n\t### user-targed : password \n\t user-targed:::\n\n\tROOT:::...?\n]\n\n{[\n\t:::\n\t ::\n\n\n\t### user_targed : password \n\t user_targed:::\n\n\tROOT:::...?\n]}' > "${new_work_dir_path}/00__MaP__.txtt"
+	[ ! -f "${new_work_dir_path}/000___o___.txtt" ] && echo -e '# Vulnerabilidades, tecnologias, tecnicas usadas: \n' > "${new_work_dir_path}/000___o___.txtt"
+	[ ! -f "${new_work_dir_path}/00__UrL__.txtt" ] && echo -e '# Urls Targed, http/https : \n' > "${new_work_dir_path}/00__UrL__.txtt"
 
 	touch "${new_work_dir_path}/01__recon/a01_smell_N"
 	touch "${new_work_dir_path}/01__recon/a01_smell_G"
 	touch "${new_work_dir_path}/01__recon/a02_bite_N"
-	tmux -L x89p new-session -t -d -s "x89p" -c ${new_work_dir_path} \; \
+	tmux -L x89p new-session -t -d -s "${3}" -c ${new_work_dir_path} \; \
 		split-window -h \; \
 		select-pane -t 0 \; \
 		send-key "clear && sudo openvpn ${up}/0x/lab_x89p" M-a \; \
@@ -378,17 +384,20 @@ function pwnbx(){
 function mvnb(){
 	if [ $# -eq 0 ]; then
 		session_name=$(tmux display-message -p '#S' | tr -d "\n")
-		tmux display-message -t ${session_name}:1 -p "#W" | grep -oP '\[.*?\]' | tr -d "[] \n"
-	elif [ $1 == '--here' ]; then
+		tmux display-message -t ${session_name}:1 -p "#W" | grep -oP "\[.*?\]|\(.*?\)" | tr -d "[]\n"
+	elif [ "$1" == '--here' ]; then
 		tmux display-message -p "#W" | grep -oP '\[.*?\]' | tr -d "[] \n"
-	elif [ $1 == '--vpn' ]; then
+	elif [ "$1" == '--vpn' || "$1" == '--vps' ]; then
 		session_name=$(tmux display-message -p '#S' | tr -d "\n")
-		tmux display-message -t ${session_name}:0 -p "#W" | grep -oP '\(.*?\)' | tr -d "() \n"
-	elif [ $1 == '--targed' ]; then
+		tmux display-message -t ${session_name}:0 -p "#W" | grep -oP "\(.*?\)" | tr -d "() \n"
+	elif [ "$1" == '--targed' ]; then
 		session_name=$(tmux display-message -p '#S' | tr -d "\n")
-		tmux display-message -t ${session_name}:1 -p "#W" | grep -oP '\[.*?\]' | tr -d "[] \n"
-	elif [ $1 == '--help' ]; then
-		echo -e "\n --vpn \n --targed \n --here \n \t'* noArguments ==  --targed  *"
+		tmux display-message -t ${session_name}:1 -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"
+	elif [ "$1" == '--help' ]; then
+		echo -e "\n --vpn \n --targed \n --here \n\t* noArguments ==  --targed  *\n\n\t mvnb numberWinHere"
+	else
+		session_name=$(tmux display-message -p '#S' | tr -d "\n")
+		tmux display-message -t ${session_name}:"$1" -p "#W" | grep -oP "\[.*?\]|\(.*?\)" | tr -d "()[]\n"
 	fi
 }
 
@@ -465,7 +474,7 @@ function pre_vm(){
 
 function check_tmux(){
 	echo -e "\xA"
-	ls -lah /tmp/tmux-$(id -u)/ | tail -n +4 | cut -d" " -f1,4,11,13 && echo -e "\xA"
+	ls -lah /tmp/tmux-$(id -u)/ | tail -n +4 && echo -e "\xA"
 	ls -lah /tmp/tmux-$(id -u)/ | tail -n +4 | awk '{print $NF}' | xargs -I {} tmux -L {} ls
 # ls -1 /tmp/tmux-$(id -u)/ | xargs -I {} tmux -L {} ls
 }

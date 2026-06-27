@@ -137,7 +137,7 @@ function! Mvnb(arg = '')
 		return l:output
 
 	elseif a:arg == '--help'
-		echo " noArguments ( http/https ipTarged ) "
+		echo " noArguments ( http/https ipTarged.tmux ), obtiene la ip de tmux OJO "
 		echo " --vpn"
 		echo " --targed"
 		echo " --here"
@@ -162,11 +162,11 @@ function! Mvnb(arg = '')
 
 		echo "Targed... Ready..."
 
-		"call append(line('.'), l:line1)			" me dejaba una linea en blanco al inicio
-		"call append(line('.') + 1, l:line2)
+		call append(line('.'), l:line1)			" me deja una linea en blanco al inicio, me deja el comentario <3
+		call append(line('.') + 1, l:line2)
 
-		call setline(line('.'), l:line1)   " sin linea en blanco al inicio <3 <3 <3
-		call append(line('.'), l:line2)
+		"call setline(line('.'), l:line1)   " sin linea en blanco al inicio.... <3 <3 <3 <3 <3
+		"call append(line('.'), l:line2)
 					"extrA
 	endif
 endfunction
@@ -193,15 +193,17 @@ command Lcd call Lcd()
 
 function! Code()
 	let l:mango = expand('%:p:h')
-	execute 'silent exec("vertical rightbelow term ++shell opencode; exec $SHELL") | wincmd w'
+	execute 'lcd ' . l:mango
+	execute 'silent exec("vertical rightbelow term ++shell opencode; exec $SHELL") | wincmd p'
 	echo " Opencode pathWorking: " . l:mango
 endfunction
 command Code call Code()
 
 function! Clau()
 	let l:mango = expand('%:p:h')
-	execute 'silent exec("vertical rightbelow term ++shell claude; exec $SHELL") | wincmd w'
-	echo " Opencode pathWorking: " . l:mango
+	execute 'lcd ' . l:mango
+	execute 'silent exec("vertical rightbelow term ++shell claude; exec $SHELL") | wincmd p'
+	echo " Claude pathWorking: " . l:mango
 endfunction
 command Clau call Clau()
 
