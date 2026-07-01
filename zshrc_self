@@ -338,7 +338,7 @@ function x89p_ctf(){
 	tmux -L x89p new-session -t -d -s "${3}" -c ${new_work_dir_path} \; \
 		split-window -h \; \
 		select-pane -t 0 \; \
-		send-key "clear && gpg -dq ${up}/0x/lab_x89p && gpg -dq ${up}/0x/lab_x89p | sudo openvpn --config /dev/stdin" M-a \; \
+		send-key "echo RELOADAGENT | gpg-connect-agent && clear && gpg -dq ${up}/0x/lab_x89p &>/dev/null && gpg -dq ${up}/0x/lab_x89p | sudo openvpn --config /dev/stdin" M-a \; \
 		select-pane -t 1 \; \
 		send-key "until clear && ip a show tun0;do sleep 1.8;clear ;done" M-a \; \
 		split-window -v \; \
