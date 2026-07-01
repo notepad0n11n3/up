@@ -50,13 +50,13 @@ function zshrc_self(){			# MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP  MAIN HELP
 	echo "	aeo8 ->  session anidada con serverTmux propio  default/defaults "
 	echo "	pwnbx -> tmux \xA\xA"
 	echo "	x89p  proyectNameDir  --bb/--ctf  --69/--null  '--69 default' "
-	echo "	ipTarged -> (x89pIP | targedIP) post x89p \xA\xA"
-	echo "	mvnb --help -> print ipTarged | ipVpn | ipHere"
+	echo "	ipTarget -> (x89pIP | targetIP) post x89p \xA\xA"
+	echo "	mvnb --help -> print ipTarget | ipVpn | ipHere"
 	echo "	ports ->  Extraer puertos de archivo -oG (nmap)"
 	echo "	portsn ->  Muestra el a02_bite_N  x89pWork actual"
 	echo "	pre_vm -->  virtualbox fix "
 	echo "	vimn  -  reOpen x89pWork"
-	echo "	it   ->  ipTarged --here"
+	echo "	it   ->  ipTarget --here"
 	echo "	\$recon  ->  -oG \$recon/a01_smell_G a01_smell_N a02_bite_N"
 	echo "	createCertificate "
 	echo "	\$hHub  -> /home/aeo8/.0n11n3/brain/road_hHub/"
@@ -193,19 +193,22 @@ function createCertificate(){
 
 #	if [ ! -f ${new_work_dir_path}/00__MaP__.txt ];then
 #		touch "${new_work_dir_path}/00__MaP__.txt"
-#		echo -e '[\n\t:::\n\t ::\n\n\n\n\t### user-targed : password \n\t user-targed:::\n\n\tROOT:::...?\n]\n\n{[\n\t:::\n\t ::\n\n\n\t### user_targed : password \n\t user_targed:::\n\n\tROOT:::...?\n]}' > ${new_work_dir_path}/00__MaP__.txt
+#		echo -e '[\n\t:::\n\t ::\n\n\n\n\t### user-target : password \n\t user-target:::\n\n\tROOT:::...?\n]\n\n{[\n\t:::\n\t ::\n\n\n\t### user_target : password \n\t user_target:::\n\n\tROOT:::...?\n]}' > ${new_work_dir_path}/00__MaP__.txt
 #	fi
 
 #				Oneliner Forever.... pero por ahora vamos por el maximo rendimiento  :') 
-# tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_x89p" M-a \; select-pane -t 1 \; send-key "until clear && ip a show tun0;do sleep 1.8;clear ;done" M-a \; split-window -v \; send-key "clear && ipTarged --all && vim -c 'color default' ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "ls -lah" C-m \; split-window -h \; send-key "until ping -c 4 -4 \$(mvnb);do sleep 1.8;clear ;done" C-m \; split-window -v \; send-key "vim -c \"Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | call Hosts() | tabr \"" M-a \; select-pane -t 0 \; select-pane -t 2 \; select-window -t 0 \; select-pane -t 0
+# tmux new-session -t -d -s "x89p" -c ${new_work_dir_path} \; split-window -h \; select-pane -t 0 \; send-key "clear && sudo openvpn $up/0x/lab_x89p" M-a \; select-pane -t 1 \; send-key "until clear && ip a show tun0;do sleep 1.8;clear ;done" M-a \; split-window -v \; send-key "clear && ipTarget --all && vim -c 'color default' ." C-m \; rename-window "vpn()" \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "bash" C-m \; send-key "ls -lah" C-m \; split-window -h \; send-key "until ping -c 4 -4 \$(mvnb);do sleep 1.8;clear ;done" C-m \; split-window -v \; send-key "vim -c \"Ex | Sex ./01__recon/ | new ./00__UrL__.txt | botright vnew ./00__MaP__.txt | call Hosts() | tabr \"" M-a \; select-pane -t 0 \; select-pane -t 2 \; select-window -t 0 \; select-pane -t 0
 #.... \; send-key "watch -n 3 'clear && ifconfig tun0'" M-a \;....\; select-pane -t 2 \; set synchronize-panes \; select-window -t 0 \; select-pane -t 0
 
 #export sN="./01__recon/a01_smell_N"
 #export sG="./01__recon/a01_smell_G"
 export recon="./01__recon"
 export hHub="/home/aeo8/.0n11n3/brain/road_hHub"
-export __69="/home/$(whoami)/.burningArea/accretion_disk"
-export __null="/home/$(whoami)/.burningArea/null"
+#export __69="/home/$(whoami)/.burningArea/accretion_disk"
+export __69="$HOME/.burningArea/accretion_disk"
+#export __null="/home/$(whoami)/.burningArea/null"
+export __null="$HOME/.burningArea/null"
+[[ -d "$__69" && -d "$__null" ]] || mkdir -p $__null $__69
 function x89p(){
 	base_path="$__69"
 	work_dir_name=""
@@ -328,9 +331,9 @@ function x89p_ctf(){
 	touch "${new_work_dir_path}/session.md"
 
 	[ ! -f "${new_work_dir_path}/AGENTS.md" ] && echo -e '# Laboratorio de Pentesting en HackTheBox' > "${new_work_dir_path}/AGENTS.md"
-	[ ! -f "${new_work_dir_path}/00__MaP__00" ] && echo -e '# ip_targed = \n# ip_x89p = \n\n[\n\t:::\n\t ::\n\n\n\n\t### user-targed : password \n\t user-targed:::\n\n\tROOT:::...?\n]\n\n{[\n\t:::\n\t ::\n\n\n\t### user_targed : password \n\t user_targed:::\n\n\tROOT:::...?\n]}' > "${new_work_dir_path}/00__MaP__00"
+	[ ! -f "${new_work_dir_path}/00__MaP__00" ] && echo -e '# ip_target = \n# ip_x89p = \n\n[\n\t:::\n\t ::\n\n\n\n\t### user-target : password \n\t user-target:::\n\n\tROOT:::...?\n]\n\n{[\n\t:::\n\t ::\n\n\n\t### user_target : password \n\t user_target:::\n\n\tROOT:::...?\n]}' > "${new_work_dir_path}/00__MaP__00"
 	[ ! -f "${new_work_dir_path}/00___o___00" ] && echo -e '# Vulnerabilidades, tecnologias, tecnicas usadas: \n' > "${new_work_dir_path}/00___o___00"
-	[ ! -f "${new_work_dir_path}/00__UrL__00" ] && echo -e '# Urls Targed, http/https : \n' > "${new_work_dir_path}/00__UrL__00"
+	[ ! -f "${new_work_dir_path}/00__UrL__00" ] && echo -e '# Urls Target, http/https : \n' > "${new_work_dir_path}/00__UrL__00"
 
 	touch "${new_work_dir_path}/01__recon/a01_smell_N"
 	touch "${new_work_dir_path}/01__recon/a01_smell_G"
@@ -342,7 +345,7 @@ function x89p_ctf(){
 		select-pane -t 1 \; \
 		send-key "until clear && ip a show tun0;do sleep 1.8;clear ;done" M-a \; \
 		split-window -v \; \
-		send-key "clear && ipTarged --all && vim -c 'color default' ." C-m \; \
+		send-key "clear && ipTarget --all && vim -c 'color default' ." C-m \; \
 		rename-window "vpn()" \; \
 		new-window -n "?[]" -c ${new_work_dir_path} \; \
 		send-key "bash" C-m \; \
@@ -386,7 +389,7 @@ function pwnbx(){
 	new_work_dir_path="$HOME/.test/burn/${work_dir_name}"
 	mkdir -p "${new_work_dir_path}"
 
-	tmux new -t -d -s "pwnbx" -c ${new_work_dir_path} \; rename-window "vpn()" \; send-key "clear && ifconfig" C-m \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "clear && pwd" C-m \; split-window -h \; send-key "clear" C-m \; split-window -v \; send-key "clear && vim ." C-m \; select-window -t 0 \; split-window -h \; send-key "clear && ipTarged --all" C-m
+	tmux new -t -d -s "pwnbx" -c ${new_work_dir_path} \; rename-window "vpn()" \; send-key "clear && ifconfig" C-m \; new-window -n "?[]" -c ${new_work_dir_path} \; send-key "clear && pwd" C-m \; split-window -h \; send-key "clear" C-m \; split-window -v \; send-key "clear && vim ." C-m \; select-window -t 0 \; split-window -h \; send-key "clear && ipTarget --all" C-m
 }
 
 # x89p x89p x89p x89p  extra... <3 <3 <3
@@ -400,11 +403,11 @@ function mvnb(){
 	elif [ "$1" == '--vpn' || "$1" == '--vps' ]; then
 		session_name=$(tmux display-message -p '#S' | tr -d "\n")
 		tmux display-message -t ${session_name}:0 -p "#W" | grep -oP "\(.*?\)" | tr -d "() \n"
-	elif [ "$1" == '--targed' ]; then
+	elif [ "$1" == '--target' ]; then
 		session_name=$(tmux display-message -p '#S' | tr -d "\n")
 		tmux display-message -t ${session_name}:1 -p "#W" | grep -oP "\[.*?\]" | tr -d "[] \n"
 	elif [ "$1" == '--help' ]; then
-		echo -e "\n --vpn \n --targed \n --here \n\t* noArguments ==  --targed  *\n\n\t mvnb numberWinHere"
+		echo -e "\n --vpn \n --target \n --here \n\t* noArguments ==  --target  *\n\n\t mvnb numberWinHere"
 	else
 		session_name=$(tmux display-message -p '#S' | tr -d "\n")
 		tmux display-message -t ${session_name}:"$1" -p "#W" | grep -oP "\[.*?\]|\(.*?\)" | tr -d "()[]\n"
@@ -414,13 +417,13 @@ function mvnb(){
 # x89p
 alias vimn="vim -c 'Ex | Sex ./01__recon/ | new ./00__UrL__00 | botright vnew ./00__MaP__00 | tabnew ./hosts | tabnew | exec(\"term ++shell opencode;exec $SHELL\") | wincmd w | q | tabr'"
 alias vimb="vim -c 'e ./00__scope/a03_rules | Sex ./00__scope/ | new ./00___o___00 | botright vnew ./000___ReadmE___000 | tabnew | exec(\"term ++shell opencode; exec $SHELL\") | wincmd w | q | tabr '"
-alias it='ipTarged --here'
-function ipTarged(){
+alias it='ipTarget --here'
+function ipTarget(){
 	session_name=$(tmux display-message -p '#S' | tr -d "\n")
 	if [ $# -ne 1 ]; then
-		echo -e "\xA\x9 1. ipTarged --all (ipVpn, ipTarged)\xA\x9 2. ipTarged 'ipTargedHere'\xA\x9 3. ipTarged --here -h \xA\x9 4. ipTarged --vpn -v"
+		echo -e "\xA\x9 1. ipTarget --all (ipVpn, ipTarget)\xA\x9 2. ipTarget 'ipTargetHere'\xA\x9 3. ipTarget --here -h \xA\x9 4. ipTarget --vpn -v"
 	elif [ $1 == "--help" ]; then
-		echo -e "\xA\x9 1. ipTarged --all (ipVpn, ipTarged)\xA\x9 2. ipTarged 'ipTargedHere'\xA\x9 3. ipTarged --here -h \xA\x9 4. ipTarged --vpn -v"
+		echo -e "\xA\x9 1. ipTarget --all (ipVpn, ipTarget)\xA\x9 2. ipTarget 'ipTargetHere'\xA\x9 3. ipTarget --here -h \xA\x9 4. ipTarget --vpn -v"
 	elif [ $1 == "--all" ]; then
 		echo -e -n "\xA My ip: "
 		read my_ip
@@ -430,14 +433,14 @@ function ipTarged(){
 			tmux rename-window -t 0 $(tmux display-message -t "${session_name}:0" -p "#W" | sed "s/(.*)/(${my_ip})/g" | tr -d "\n")
 		fi
 		echo -e -n "\xA Ip a morder: "
-		read ip_targed
-		if [ ! -z "${ip_targed}" ]; then
-      #tmux rename-window -t 1 $(tmux display-message -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
-      #tmux rename-window -t 1 $(tmux display-message -t "htb:?[]" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
-			#tmux rename-window -t 1 $(tmux display-message -t "x89p:1" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n") *** *** ***
-			tmux rename-window -t 1 $(tmux display-message -t "${session_name}:1" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
+		read ip_target
+		if [ ! -z "${ip_target}" ]; then
+      #tmux rename-window -t 1 $(tmux display-message -p "#W" | sed "s/\[.*\]/\[${ip_target}\]/g" | tr -d "\n")
+      #tmux rename-window -t 1 $(tmux display-message -t "htb:?[]" -p "#W" | sed "s/\[.*\]/\[${ip_target}\]/g" | tr -d "\n")
+			#tmux rename-window -t 1 $(tmux display-message -t "x89p:1" -p "#W" | sed "s/\[.*\]/\[${ip_target}\]/g" | tr -d "\n") *** *** ***
+			tmux rename-window -t 1 $(tmux display-message -t "${session_name}:1" -p "#W" | sed "s/\[.*\]/\[${ip_target}\]/g" | tr -d "\n")
 		fi
-        ##tmux rename-window -t 1 $(tmux display-message -t ":1" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")  ":1"  si no especificas en nombreSession, asume que estas trabajando la sesActual
+        ##tmux rename-window -t 1 $(tmux display-message -t ":1" -p "#W" | sed "s/\[.*\]/\[${ip_target}\]/g" | tr -d "\n")  ":1"  si no especificas en nombreSession, asume que estas trabajando la sesActual
         ##tmux rename-window -t 0 $(tmux display-message -t ":0" -p "#W" | sed "s/(.*)/(${my_ip})/g" | tr -d "\n")
 	elif [[ $1 == "--here" || $1 == "-h" ]]; then
 		echo -e -n "\xA Ip: "
@@ -452,9 +455,9 @@ function ipTarged(){
 			tmux rename-window -t 0 $(tmux display-message -t "${session_name}:0" -p "#W" | sed "s/(.*)/(${my_ip})/g" | tr -d "\n")
 		fi
 	else
-		ip_targed="$1"
-		#tmux rename-window -t 1 $(tmux display-message -t "x89p:1" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")  *** *** ***
-		tmux rename-window -t 1 $(tmux display-message -t "${session_name}:1" -p "#W" | sed "s/\[.*\]/\[${ip_targed}\]/g" | tr -d "\n")
+		ip_target="$1"
+		#tmux rename-window -t 1 $(tmux display-message -t "x89p:1" -p "#W" | sed "s/\[.*\]/\[${ip_target}\]/g" | tr -d "\n")  *** *** ***
+		tmux rename-window -t 1 $(tmux display-message -t "${session_name}:1" -p "#W" | sed "s/\[.*\]/\[${ip_target}\]/g" | tr -d "\n")
 	fi
 }
 
