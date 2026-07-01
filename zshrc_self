@@ -311,11 +311,21 @@ function x89p_bb(){
 }
 
 function x89p_ctf(){
+#  gpg password por terminal:::.....<3 <3 <3
+#		apt install pinentry-tty
+#		update-alternatives --config pinentry
+#					-->  pinentry-tty       "selecciona y reloadagent"
+#		echo RELOADAGENT | gpg-connect-agent
+
+#		cifrar:
+#		gpg --symmetric --cipher-algo AES256 ./lab_x89p		<- cifrar x89p
+#		echo RELOADAGENT | gpg-connect-agent
+#		extraer:
+#		gpg -dq ./lab_x89p
 	new_work_dir_path="${1}/${2}"
 	mkdir -p "${new_work_dir_path}/"{01__recon,02__extra}
 
 	touch "${new_work_dir_path}/000___ReadmE___.txtt"
-
 
 	[ ! -f "${new_work_dir_path}/AGENTS.md" ] && echo -e '# Laboratorio de Pentesting en HackTheBox' > "${new_work_dir_path}/AGENTS.md"
 	[ ! -f "${new_work_dir_path}/00__MaP__.txtt" ] && echo -e '# ip_targed = \n# ip_x89p = \n\n[\n\t:::\n\t ::\n\n\n\n\t### user-targed : password \n\t user-targed:::\n\n\tROOT:::...?\n]\n\n{[\n\t:::\n\t ::\n\n\n\t### user_targed : password \n\t user_targed:::\n\n\tROOT:::...?\n]}' > "${new_work_dir_path}/00__MaP__.txtt"
@@ -328,7 +338,7 @@ function x89p_ctf(){
 	tmux -L x89p new-session -t -d -s "${3}" -c ${new_work_dir_path} \; \
 		split-window -h \; \
 		select-pane -t 0 \; \
-		send-key "clear && sudo openvpn ${up}/0x/lab_x89p" M-a \; \
+		send-key "clear && gpg -dq ${up}/0x/lab_x89p && gpg -dq ${up}/0x/lab_x89p | sudo openvpn --config /dev/stdin" M-a \; \
 		select-pane -t 1 \; \
 		send-key "until clear && ip a show tun0;do sleep 1.8;clear ;done" M-a \; \
 		split-window -v \; \
