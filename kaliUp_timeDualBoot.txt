@@ -26,6 +26,19 @@
            Terminal transparency 79% 
            Terminal margin 5px 
 
+#### ...rc_self									apt install gnupg
+
+							-o   output						--symmetric     'password simetrico'					--cipher-algo  'algoritmo de cifrado AES de 256 bits ( AES256 ) '
+
+	::: gpg  -o $HOME/.test/fileHere_clear  --symmetric  --cipher-algo AES256  ./fileHere_crypt
+
+	::: gpg  -dq $HOME/.test/fileHere_clear										"output el contenido"
+
+				vim <(gpg -dq $HOME/.test/fileHere_crypt)
+
+	 :: gpg  -dq  -o $down/fileHere_clear  ./fileHere_crypt
+
+	::: echo RELOADAGENT | gpg-connect-agent				"limpia password de cache, se limpia solo pero para testear el nuevo password es util...<3 <3 <3"
 
 
 #### settings / LigthDM GTK+ Greeter Settings   (xfce)

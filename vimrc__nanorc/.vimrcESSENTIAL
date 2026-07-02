@@ -9,7 +9,7 @@
 
 "        vim -i NONE -u NONE      (-i .viminfo  ,  -u  .vimrc)
 
-"  set cryptmethod=xchacha20	|  X
+"  set cryptmethod=xchacha20v2	|  X
 
 "	NEOVIM	NVIM	  ::: mkdir -p $HOME/.config/nvim && ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim			  NEOVIM		NVIM
 "	NEOVIM	NVIM	.viminfo ::: rm $HOME/.local/state/nvim/shada/main.shada	  NEOVIM		NVIM
@@ -17,7 +17,7 @@
 " help statusline         echo expand(winnr()) == numberPanel...<3 <3 <3
 set statusline=%F\ %m%h%r%=\ <3\ %{winnr()}\ \ %l,%c%V\ \ \ \ %P
 
-set cryptmethod=xchacha20
+set cryptmethod=xchacha20v2
 set number relativenumber numberwidth=1
 set sw=2 tabstop=2 softtabstop=2
 set laststatus=2
