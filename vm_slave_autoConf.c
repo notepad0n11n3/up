@@ -26,8 +26,8 @@ int main(int argc, char **argv){
 	const char *paths={"bash -c \"mkdir -p ~/.config/{nvim,alacritty,i3} ~/.0n11n3/{up/{8,0x},vimrc__nanorc/{nvim,alacritty},tmux} \""};
 	const char *zshrc_tmux={"mv ./zshrc_self ~/.zshrc_self && mv ./.tmux.conf ~/.tmux.conf && echo 'source ~/.zshrc_self' >> ~/.bashrc && echo 'source ~/.zshrc_self' >> ~/.zshrc"};
 	const char *img_nvim_alac_punt={"mv ./*.jpg ~/.0n11n3/up/8/ && mv ./*.png ~/.0n11n3/up/8/ && mv ./lab_x89p ~/.0n11n3/up/0x/ && mv ./.vimrcESSENTIAL ~/.vimrc && mv ./alacritty.toml ~/.config/alacritty/ && mv ./init.lua ~/.config/nvim/"};
-	system(paths);
 
+	system(paths); // Creacion de paths
 
 	char mochimango[2048];
 	int number_urls = sizeof(urls) / sizeof(urls[0]);
