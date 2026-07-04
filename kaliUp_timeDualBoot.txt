@@ -41,6 +41,12 @@
 	::: echo RELOADAGENT | gpg-connect-agent				"limpia password de cache, se limpia solo pero para testear el nuevo password es util...<3 <3 <3"
 
 
+### pinnetry config
+
+			::: sudo apt-get install pinentry-tty
+
+				└─$ sudo update-alternatives --config pinentry
+
 #### settings / LigthDM GTK+ Greeter Settings   (xfce)
           
           Theme   Kali-Dark
