@@ -23,11 +23,16 @@ int main(int argc, char **argv){
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/up/0x/lab_x89p",\
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/tmux/.tmux.conf"};
 
+	// Paths 
 	const char *paths={"bash -c \"mkdir -p ~/.config/{nvim,alacritty,i3} ~/.0n11n3/{up/{8,0x},vimrc__nanorc/{nvim,alacritty},tmux} \""};
 
+	// Config files (tmux, *.jpg , *,png , vim, nvim, alacritty)
 	const char *mv_config_files={"mv ./.tmux.conf ~/.tmux.conf && mv ./*.jpg ~/.0n11n3/up/8/ && mv ./*.png ~/.0n11n3/up/8/ && mv ./.vimrcESSENTIAL ~/.vimrc && mv ./alacritty.toml ~/.config/alacritty/ && mv ./init.lua ~/.config/nvim/"};
 
+	// decifra -> insert -> borra el original (./zshrc_self ./lab_x89p)  :::    
 	const char *gpg_files={"gpg -dq -o ~/.zshrc_self ./zshrc_self && gpg -dq -o ~/.0n11n3/up/0x/lab_x89p ./lab_x89p && rm ./zshrc_self ./lab_x89p && for i in ~/.bashrc ~/.zshrc; do grep 'source ~/.zshrc_self' ${i} || echo 'source ~/.zshrc_self' >> ${i}; done "};
+
+	// i3wm configFiles , copia solo si no existe, si existe muestra el diff (config , .i3status.conf)
 	const char *i3wm_config={"bash -c \"( if [ ! -f ~/.config/i3/config ]; then mv ./config ~/.config/i3/ ; else diff ./config ~/.config/i3/config ;fi) && ( if [ ! -f ~/.config/i3/.i3status.conf ]; then mv ./.i3status.conf ~/.config/i3/ ; else diff ./.i3status.conf ~/.config/i3/.i3status.conf ;fi)\""};
 
 	// if [ -f ./file_here ];then ....
