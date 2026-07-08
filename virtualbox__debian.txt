@@ -70,7 +70,7 @@
 										Para volver al tema claro, repite los comandos pero cambia /d 0 por /d 1
 
 
-###   VIRTUALBOX desde TERMINAL....<3 <3 <3 <3
+###   VIRTUALBOX desde TERMINAL....<3 <3 <3 <3{
 
 	::: vboxmanage list vms					"lista maquinas virtuales disponibles"
 
@@ -96,6 +96,13 @@
 
 	::: vboxmanage showvminfo "vm_name" | grep -E "CPUs|Memory size:"
 
+		
+		::: vboxmanage list vms
+		::: vboxmanage list runningvms
+		::: vboxmanage controlvm "name_vm" savestate
+		::: vboxmanage startvm "name_vm"
+
+virtualbox desde terminal }
 
 ## ARCH LINUX				guest additions  (resolucion de pantalla){
 																																						::: sudo pacman -S linux-header && sudo pacman -Syu		("opcional... no testeado...")
