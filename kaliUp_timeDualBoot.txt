@@ -32,11 +32,14 @@
 
 	::: gpg  -o $HOME/.test/fileHere_clear  --symmetric  --cipher-algo AES256  ./fileHere_crypt
 
+	# Descifrar
 	::: gpg  -dq $HOME/.test/fileHere_clear										"output el contenido"
 
 				vim <(gpg -dq $HOME/.test/fileHere_crypt)
 
-	 :: gpg  -dq  -o $down/fileHere_clear  ./fileHere_crypt
+		# Descifrar con -o 
+
+			::: gpg  -dq  -o $down/fileHere_clear  ./fileHere_crypt
 
 	::: echo RELOADAGENT | gpg-connect-agent				"limpia password de cache, se limpia solo pero para testear el nuevo password es util...<3 <3 <3"
 
