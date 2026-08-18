@@ -20,7 +20,8 @@ int main(int argc, char **argv){
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/8/wallhaven-01339g.png",\
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/8/terminal_Finale.jpg",\
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/8/biosho_bigDaddy_littleSstr.jpg",\
-											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/up/0x/lab_x89p",\
+											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/0x/lab_x89p",\
+											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/grub__wallpaper_noSUDO.sh",\
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/tmux/.tmux.conf"};
 
 	// Paths 
