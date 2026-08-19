@@ -321,7 +321,7 @@ exec_always xrandr --output eDP --primary --mode 1920x1080 --pos 0x1080 --rotate
 
 #exec --no-startup-id qterminal -e "tmux new -s Ready -c $desk -n Go" 
 #exec --no-startup-id alacritty -e tmux new -s Ready -c $desk -n 'MaiN.2?0'
-exec --no-startup-id alacritty -e sh -c 'ip=$(ip -4 route get 1.1.1.1 | awk "{print \$7}"); octet=$(echo "$ip" | awk -F. "{print \$4}"); exec tmux new -s ReadY -c "$desk" -n "MaiN.$octet"'
+exec --no-startup-id alacritty -e sh -c 'unu=$(ip -4 route get 1.1.1.1 | awk "{print \$7}" | awk -F. "{print \$4}"); nam=$(whoami | tr -d '\n'); exec tmux new -s "ReadY.$nam" -c "$desk" -n "MaiN.$unu"'
 #exec --no-startup-id alacritty -e sh -c 'tmux new -s Ready'
 
 exec --no-startup-id sh -c 'sleep 3 && pactl set-source-mute @DEFAULT_SOURCE@ 1 && pactl set-source-volume @DEFAULT_SOURCE@ 0%'
