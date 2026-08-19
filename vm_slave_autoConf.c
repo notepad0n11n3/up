@@ -8,6 +8,16 @@
 
 // TODO::  el .i3status.conf y ./config   se copian manualmente para no romper configuraciones en i3blocks
 
+int run_cmd(const char *cmd){
+	int ret = system(cmd);
+	if( ret == 0 ){
+		fprintf(stdout, "\x9 \033[92m [OK] \033[0m \xA");
+	}else {
+		fprintf(stderr, "\x9 \033[91m [FAIL] (Code: %d ) \033[0m \xA", ret);
+	}
+	return ret;
+}
+
 int main(int argc, char **argv){
 
 	fprintf(stdout, "\xA\x9 Downloading... 0n11n3 files for linux environments... \xA");
@@ -55,7 +65,7 @@ int main(int argc, char **argv){
 	for (int i=0; i<number_urls; i++){
 		fprintf(stdout, "\x9= %d >> %s\xA", i, urls[i]);
 		snprintf(mochimango, sizeof(mochimango), "curl -sS -O \"%s\" ", urls[i]);
-		system(mochimango);
+		run_cmd(mochimango);
 	}
 
 	// mv config files after curl
