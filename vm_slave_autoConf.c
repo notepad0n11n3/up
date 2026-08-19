@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 //	::: sha256sum ./vm_slave_autoConf
-//	3006304894a4d2e6e63940ab4920f11aa90652c8be1a9ef1ce5802a760002012  ./vm_slave_autoConf
+//	3bc9953439c015d73d360a273e7e50a227334d4a872a682a87dc864123cbd57f  ./vm_slave_autoConf
 
 
 // TODO::  el .i3status.conf y ./config   se copian manualmente para no romper configuraciones en i3blocks
@@ -63,7 +63,7 @@ int main(int argc, char **argv){
 	fprintf(stdout, " Number urls: %d \xA", number_urls);
 
 	for (int i=0; i<number_urls; i++){
-		fprintf(stdout, "\x9= %d >> %s  -  ", i, urls[i]);
+		fprintf(stdout, "\x9= %d >> %s  - ", i, urls[i]);
 		snprintf(mochimango, sizeof(mochimango), "curl -sS -O \"%s\" ", urls[i]);
 		run_cmd(mochimango);
 	}
