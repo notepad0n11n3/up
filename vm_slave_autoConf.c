@@ -63,7 +63,7 @@ int main(int argc, char **argv){
 	fprintf(stdout, " Number urls: %d \xA", number_urls);
 
 	for (int i=0; i<number_urls; i++){
-		fprintf(stdout, "\x9= %d >> %s\xA", i, urls[i]);
+		fprintf(stdout, "\x9= %d >> %s  -  ", i, urls[i]);
 		snprintf(mochimango, sizeof(mochimango), "curl -sS -O \"%s\" ", urls[i]);
 		run_cmd(mochimango);
 	}
