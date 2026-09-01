@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 //	::: sha256sum ./vm_slave_autoConf
-//	3bc9953439c015d73d360a273e7e50a227334d4a872a682a87dc864123cbd57f  ./vm_slave_autoConf
+//	3ce039493031e1c0d6aae26f930af053bc8fd8b454fdcb4e1747690cc087efea  ./vm_slave_autoConf
 
 
 // TODO::  el .i3status.conf y ./config   se copian manualmente para no romper configuraciones en i3blocks
@@ -30,6 +30,7 @@ int main(int argc, char **argv){
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/vimrc__nanorc/nvim/init.lua",
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/vimrc__nanorc/alacritty/alacritty.toml",
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/8/wallhaven-01339g.png",
+											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/8/Mono_q_ma.png",
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/8/terminal_Finale.jpg",
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/8/biosho_bigDaddy_littleSstr.jpg",
 											"https://raw.githubusercontent.com/notepad0n11n3/up/refs/heads/master/grub__wallpaper_noSUDO.sh",
