@@ -1,5 +1,5 @@
 
-					settings -> audio -> pulseaudio		(virtualbox => kali/parrot noSound FIX <3 <3 <3)
+					settings -> audio -> pulseaudio		(virtualbox => kali/parrot noSound FIX <3 <3 <3  WINDOWS 11 => pulseAudio)
 					System / Acceleration -> Hyper-V o KVM		(mejora el rendimiento....<3 <3 <3)
 																			KVM  ->  linux      || Hyper-V -> windows y Linux ... <3 <3 <3
 																			Hyper-V -> parrot va mejor...<3 <3 <3
@@ -68,6 +68,9 @@
 		reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize /v SystemUsesLightTheme /t REG_DWORD /d 0 /f
 
 										Para volver al tema claro, repite los comandos pero cambia /d 0 por /d 1
+
+		
+		Audio ->  Host Audio Driver -> 'PulseAudio' ....<3 <3 <3
 
 
 ###   VIRTUALBOX desde TERMINAL....<3 <3 <3 <3{
