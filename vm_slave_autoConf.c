@@ -42,11 +42,11 @@ int main(int argc, char **argv){
 	// Paths 
 	const char *paths={"bash -c \"mkdir -p ~/.config/{nvim,alacritty,i3} ~/.0n11n3/{up/{8,0x},vimrc__nanorc/{nvim,alacritty},tmux} \""};
 
-	// Config files (tmux, *.jpg , *,png , vim, nvim, alacritty)
-	const char *mv_config_files={"mv ./.tmux.conf ~/.tmux.conf && mv ./*.jpg ~/.0n11n3/up/8/ && mv ./*.png ~/.0n11n3/up/8/ && mv ./.vimrcESSENTIAL ~/.vimrc && mv ./alacritty.toml ~/.config/alacritty/ && mv ./init.lua ~/.config/nvim/"};
+	// Config files (tmux, *.jpg , *,png , vim, nvim, alacritty, lab_x89p)
+	const char *mv_config_files={"mv ./.tmux.conf ~/.tmux.conf && mv ./*.jpg ~/.0n11n3/up/8/ && mv ./*.png ~/.0n11n3/up/8/ && mv ./.vimrcESSENTIAL ~/.vimrc && mv ./alacritty.toml ~/.config/alacritty/ && mv ./init.lua ~/.config/nvim/ && mv ./lab_x89p ~/.0n11n3/up/0x/"};
 
-	// decifra -> insert -> borra el original (./zshrc_self ./lab_x89p)  :::    
-	const char *gpg_files={"gpg --yes -dq -o ~/.zshrc_self ./zshrc_self && gpg --yes -dq -o ~/.0n11n3/up/0x/lab_x89p ./lab_x89p ; rm ./zshrc_self ./lab_x89p && echo '\xA\x9 Comprobando los sources\xA' && for i in ~/.bashrc ~/.zshrc; do grep -Hn 'source ~/.zshrc_self' ${i} || echo 'source ~/.zshrc_self' >> ${i}; done "};
+	// decifra -> insert -> borra el original (./zshrc_self )  :::    
+	const char *gpg_files={"gpg --yes -dq -o ~/.zshrc_self ./zshrc_self ; rm ./zshrc_self && echo '\xA\x9 Comprobando los sources\xA' && for i in ~/.bashrc ~/.zshrc; do grep -Hn 'source ~/.zshrc_self' ${i} || echo 'source ~/.zshrc_self' >> ${i}; done "};
 
 	// i3wm configFiles , copia solo si no existe, si existe muestra el diff (config , .i3status.conf)
 	const char *i3wm_config={"bash -c \"( if [ ! -f ~/.config/i3/config ]; then mv ./config ~/.config/i3/ ; else echo -e '\xA\x9 .../i3/config\xA' && diff ./config ~/.config/i3/config ; rm ./config ;fi) && ( if [ ! -f ~/.config/i3/.i3status.conf ]; then mv ./.i3status.conf ~/.config/i3/ ; else echo -e '\xA\x9 .../i3/.i3status.conf\xA' && diff ./.i3status.conf ~/.config/i3/.i3status.conf ; rm ./.i3status.conf ;fi)\""};
