@@ -143,3 +143,20 @@ virtualbox desde terminal }
 		::: restart
 }
 
+
+
+---- Dark Mode -----
+
+     Crea/Edita    :
+       /home/aeo8/.config/gtk-3.0/settings.ini
+
+ [Settings]
+ gtk-theme-name=Adwaita-dark
+ gtk-application-prefer-dark-theme=1
+
+
+
+
+ ::: env XDG_CURRENT_DESKTOP=gtk3 /usr/lib/virtualbox/VirtualBox &>/dev/null & disown
+ ::: env XDG_CURRENT_DESKTOP=gtk3 $(which virtualbox) &>/dev/null & disown
+

@@ -264,7 +264,7 @@ bindsym $mod+Shift+p exec xfce4-screenshooter
 #Selecciona area		xfce4-screenshooter -r
 
 #bindsym $mod+g exec vmware
-bindsym $mod+g exec virtualbox
+bindsym $mod+g exec env XDG_CURRENT_DESKTOP=gtk3 $(which virtualbox) &>/dev/null & disown
 
 
 #ejecutar programa en workspace asignado  (assign avisa(alertColor) al ejecutar, for_window no avisa)
