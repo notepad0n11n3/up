@@ -147,11 +147,13 @@ virtualbox desde terminal }
 
 ---- Dark Mode -----
 
+  ::: ls /usr/share/theme							  			Adwaita-darks
+
      Crea/Edita    :
        /home/aeo8/.config/gtk-3.0/settings.ini
 
  [Settings]
- gtk-theme-name=Adwaita-dark
+ gtk-theme-name=Kali-Pink-Dark
  gtk-application-prefer-dark-theme=1
 
 
